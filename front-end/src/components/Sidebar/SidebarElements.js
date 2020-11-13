@@ -94,7 +94,7 @@ export const SidebarRoute = styled(LinkRouter)`
     font-size: 16px;
     outline: none;
     transition: 0.2s ease-in-out;
-    text-docoration: none;
+    text-decoration: none;
 
     &:hover {
         transition: 0.2s ease-in-out;

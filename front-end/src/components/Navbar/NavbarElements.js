@@ -82,7 +82,7 @@ export const NavLinks = styled(LinkScroll)`
     color: white;
     display: flex;
     align-items: center;
-    text-text-decoration: none;
+    text-decoration: none;
     padding: 0 1rem;
     height: 100%;
     cursor: pointer;
