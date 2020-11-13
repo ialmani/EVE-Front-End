@@ -1,45 +1,44 @@
-import React, { Component } from 'react';
-import {MenuItems} from './MenuItems';
-import './Navbar.css';
-import {Button} from '../Button';
+import React from 'react';
+import {FaBars} from 'react-icons/fa'
+import {Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, NavBtn, NavBtnLink} from './NavbarItems';
 
-class Navbar extends Component {
-    state = {clicked: false}
-    handleClick = () => {
-        this.setState ({clicked : !this.state.clicked})
-    }
-     
-    render() {
-        return (
-            <nav className = 'NavbarItems'>
-                <h1 className = 'navbar-logo'> <i className = 'fab fa-react'>EVE</i></h1>
-                <div className = 'menu-icon' onClick = {this.handleClick}>
-                    <i className  = {this.state.clicked ? 'fas fa-times' : 'fas fa-bars'} ></i>
-                </div>
-
-                <ul className = {this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
-                    {MenuItems.map((item, index) => {
-                        return (
-                            <li key = {index}>
-                            <a className = {item.cName} href = {item.url}>
-                            {item.title}
-                            </a>
-                            </li>
-
-                        )
-                    })}
+const Navbar = ({toggle}) => {
+    return (
+        <>
+            <Nav>
+                <NavbarContainer>
+                    <NavLogo to = '/'>logo</NavLogo>
                     
-                </ul>
-                <Button>Sign Up</Button>
+                    <MobileIcon onClick = {toggle}> 
+                       <FaBars/>
+                    </MobileIcon>
 
-            </nav>
+                    <NavMenu>
+                        <NavItem>
+                            <NavLinks to ='about'>About</NavLinks>
+                        </NavItem>
+                        <NavItem>
+                            <NavLinks to ='discover'>Discover</NavLinks>
+                        </NavItem>
+                        <NavItem>
+                            <NavLinks to ='monthlyblog'>Monthly Blog</NavLinks>
+                        </NavItem>
+                        <NavItem>
+                            <NavLinks to ='contactus'>Contact Us</NavLinks>
+                        </NavItem>
+                        <NavItem>
+                            <NavLinks to ='singup'>Sign Up</NavLinks>
+                        </NavItem>
+                    </NavMenu>
 
-        )
-
-
-    }
-
-
-}
+                    <NavBtn>
+                        <NavBtnLink to = 'to/signin'>Sign In</NavBtnLink>
+                    </NavBtn>
+ 
+                </NavbarContainer>
+            </Nav>
+        </>
+    );
+};
 
 export default Navbar;
