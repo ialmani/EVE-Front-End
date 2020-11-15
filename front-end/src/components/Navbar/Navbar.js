@@ -24,10 +24,10 @@ const Navbar = ({toggle}) => {
                             <NavLinks to ='monthlyblog'>Monthly Blog</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to ='contactus'>Contact Us</NavLinks>
+                            <NavLinks to ='signup'>Sign Up</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to ='singup'>Sign Up</NavLinks>
+                            <NavLinks to ='contactus'>Contact Us</NavLinks>
                         </NavItem>
                     </NavMenu>
 
