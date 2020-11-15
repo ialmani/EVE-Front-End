@@ -86,13 +86,17 @@ export const NavLinks = styled(LinkScroll)`
     padding: 0 1rem;
     height: 100%;
     cursor: pointer;
-
-    &.active {
-        border-bottom: 3px solid #01bf71;
+    
+    &:hover {
+        color: #01bf71;
+        transition: 0.3s ease-out;
+        text-decoration: none;
     }
+     
     @media screen and (max-width: 768px){
         display: none;
     }
+
 
 `
 export const NavBtn = styled.nav`
@@ -121,6 +125,7 @@ export const NavBtnLink = styled (LinkRouter)`
         transition: all 0.2 ease-in-out;
         background: white; 
         color: #010606;
+        
     }
 
 
