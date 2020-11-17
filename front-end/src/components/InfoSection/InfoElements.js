@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-
+import {MdKeyboardArrowRight, MdArrowForward} from 'react-icons/md'
 
 
 export const InfoContainer = styled.div`
@@ -90,10 +90,17 @@ export const Subtitle = styled.p `
 
 `;
 
-export const BtnWrap = styled.div `
-    display: flex;
-    justify-content: flex-start;
+export const BtnWrap = styled.div`
 
+    margin-top: 80px;
+    margin-left: 25px;
+    margin-bottom: 80px;
+    display: grid;
+    grid-template-columns: 0fr;
+    align-items: center;
+  
+    border-radius: none;
+    color: #8861a7;
 
 `;
 export const ImgWrap = styled.div`
@@ -107,3 +114,15 @@ export const Img = styled.img`
     padding-right: 0;
     background-color: black;
 `  
+
+export const ArrowForward = styled(MdArrowForward)`
+    margin-left: 8px;
+    font-size: 20px;
+  
+
+`
+export const ArrowRight = styled(MdKeyboardArrowRight)`
+    margin-left: 8px;
+    font-size: 20px;
+     
+`
