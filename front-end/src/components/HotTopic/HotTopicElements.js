@@ -11,11 +11,11 @@ export const BlogContainer = styled.div`
     background: #010606;
 
     @media screen and (max-width: 768px){
-        height: 1100px;
+        height: 1500px;
     }
 
     @media screen and (max-width: 480px){
-        height: 1300px
+        height: 1300px;
     }
 
 `;
@@ -35,6 +35,8 @@ export const BlogWrapper = styled.div`
     @media screen and (max-width: 768px){
         grid-template-columns: 1fr;
         padding: 0px;
+       
+       
     }
 
 `;
@@ -50,6 +52,7 @@ export const BlogCard = styled.div`
     padding: 30px;
     box-shadow: 0 1px 3px rgba (0,0,0,0.2);
     transition: all 0.2 all ease-in-out;
+    margin-top: 10px;
    
 
     &:hover {
@@ -59,7 +62,7 @@ export const BlogCard = styled.div`
         
     }
 
-
+   
 `;
 
 export const BlogIcon = styled.img `
@@ -72,12 +75,11 @@ export const BlogIcon = styled.img `
 export const BlogH1 = styled.h1 `
     font-size: 2rem;
     color: rgb(1,191,113);
-    margin-bottom: 64px;
+    margin-bottom: 20px;
+    margin-top: 150px;
     
-    @media screen and (max-width: 480px){
-        font-size: 0.2 rem;
-       
-    }
+    
+    
 
 `;
 
@@ -94,14 +96,14 @@ export const BlogP = styled.p`
 
 export const BtnWrap = styled.div`
 
-    margin-top: 80px;
+    margin-top: 20px;
     margin-left: 25px;
     margin-bottom: 80px;
     display: grid;
     grid-template-columns: 0fr;
     align-items: center;
-  
-    border-radius: none;
+    position: relative;
+   
     color: #8861a7;
 
 `
