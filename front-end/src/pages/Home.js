@@ -4,7 +4,7 @@ import { homeObjOne, homeObjTwo, homeObjFour} from '../components/InfoSection/Da
 import InfoSection from '../components/InfoSection/InfoSection'
 import Navbar from '../components/Navbar/Navbar'
 import Sidebar from '../components/Sidebar/Sidebar'
-import Blog from '../components/MonthlyBlog/Blog'
+import Blog from '../components/HotTopic/HotTopic'
 import Footer from '../components/Footer/Footer'
 
 const Home = () => {

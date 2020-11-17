@@ -15,12 +15,13 @@ import {InfoContainer,
        
 } from './InfoElements';
 
-import AboutImg from '../../images/about.svg'
+
+import img from '../../images/about.svg'
 
 
 
 
-const InfoSection = ({lightBg, id, imgStart, topline, headline, darkText, lightText, buttonLabel, img, alt, description, primary, dark, dark2}) => {
+const InfoSection = ({lightBg, id, imgStart, pageId, topline, headline, darkText, lightText, buttonLabel,  alt, description, primary, dark, dark2}) => {
     return (
         <>
             <InfoContainer lightBg = {lightBg} id = {id}>
@@ -32,7 +33,8 @@ const InfoSection = ({lightBg, id, imgStart, topline, headline, darkText, lightT
                                 <Heading lightText = {lightText}> {headline}</Heading>
                                 <Subtitle darkText = {darkText}>{description}</Subtitle>
                                 <BtnWrap>
-                                    <Button to ='home' 
+                                    
+                                    <Button to = {pageId}
                                     smooth = {true}
                                     duration = {500}
                                     spy= {true}
@@ -42,12 +44,14 @@ const InfoSection = ({lightBg, id, imgStart, topline, headline, darkText, lightT
                                     dark = {dark ? 1 : 0}
                                     dart2 = {dark2 ? 1 : 0}
                                     >{buttonLabel}</Button>
+                                    
                                 </BtnWrap>
                             </TextWrapper>
                         </Column1>
                         <Column2>
                             <ImgWrap>
-                                <Img src = {AboutImg} alt = {alt}/>
+                                <Img src = {img} alt = {alt}/>
+                                
                             </ImgWrap>
                         </Column2>
                     </InfoRow>

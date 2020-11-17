@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import {MdKeyboardArrowRight, MdArrowForward} from 'react-icons/md'
+
 export const BlogContainer = styled.div`
     height: 800px;
     display: flex;
@@ -89,3 +91,28 @@ export const BlogP = styled.p`
     font-size: 1rem;
     text-align: center
 `;
+
+export const BtnWrap = styled.div`
+
+    margin-top: 80px;
+    margin-left: 25px;
+    margin-bottom: 80px;
+    display: grid;
+    grid-template-columns: 0fr;
+    align-items: center;
+  
+    border-radius: none;
+    color: #8861a7;
+
+`
+export const ArrowForward = styled(MdArrowForward)`
+    margin-left: 8px;
+    font-size: 20px;
+  
+
+`
+export const ArrowRight = styled(MdKeyboardArrowRight)`
+    margin-left: 8px;
+    font-size: 20px;
+     
+`

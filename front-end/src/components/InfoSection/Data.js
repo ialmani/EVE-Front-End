@@ -1,8 +1,9 @@
-
+import '../../images/about.svg'
 
 export const homeObjOne= {
 
     id: 'about',
+    pageId: '/about',
     lightBg: false,
     lightText: true,
     lightTextDescription: true,
@@ -11,7 +12,7 @@ export const homeObjOne= {
     description: 'We bring key resources to entrepreneurs enabling them to realise their visions and build social capital.',
     buttonLabel: 'Learn more',
     imgStart: false, 
- 
+    img: require('../../images/about.svg'),
     alt: 'Laptop',
     dark: true,
     primary: true,
@@ -22,6 +23,7 @@ export const homeObjOne= {
 export const homeObjTwo= {
 
     id: 'discover',
+    pageId: '/discover',
     lightBg: true,
     lightText: false,
     lightTextDescription: false,
@@ -41,6 +43,7 @@ export const homeObjTwo= {
 export const homeObjFour= {
 
     id: 'signup',
+    pageId: '/signup',
     lightBg: true,
     lightText: false,
     lightTextDescription: false,
