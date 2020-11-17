@@ -30,12 +30,12 @@ export const homeObjTwo= {
     topline: 'Discover yourself',
     headline: 'WANT TO KNOW HOW EVE WORKS?',
     description: 'Sign up as a member or a sponsor to access EVE',
-    buttonLabel: 'I want to know more',
+    buttonLabel: 'Learn more',
     imgStart: true,
     
     alt: 'Laptop',
     dark: false,
-    primary: false,
+    primary: true,
     darkText: true
 
 };
