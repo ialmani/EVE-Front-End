@@ -4,8 +4,8 @@ import { homeObjOne, homeObjTwo, homeObjFour} from '../components/InfoSection/Da
 import InfoSection from '../components/InfoSection/InfoSection'
 import Navbar from '../components/Navbar/Navbar'
 import Sidebar from '../components/Sidebar/Sidebar'
-import Blog from '../components/HotTopic/HotTopic'
 import Footer from '../components/Footer/Footer'
+import HotTopic from '../components/HotTopic/HotTopic'
 
 const Home = () => {
     const[isOpen, setIsOpen] = useState(false)
@@ -21,7 +21,7 @@ const Home = () => {
            <HeroSection />
            <InfoSection {...homeObjOne}/> 
            <InfoSection {...homeObjTwo}/>
-           <Blog/>
+           <HotTopic/>
            <InfoSection {...homeObjFour}/>
            <Footer/>
            
