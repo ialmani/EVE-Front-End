@@ -1,4 +1,6 @@
-import '../../images/about.svg'
+import girlLaptop from '../../images/about.svg'
+import  questionMark from '../../images/discover.svg'
+import  signUp from '../../images/signup.svg'
 
 export const homeObjOne= {
 
@@ -12,7 +14,7 @@ export const homeObjOne= {
     description: 'We bring key resources to entrepreneurs enabling them to realise their visions and build social capital.',
     buttonLabel: 'Learn more',
     imgStart: false, 
-    img: require('../../images/about.svg'),
+    img: girlLaptop,
     alt: 'Laptop',
     dark: true,
     primary: true,
@@ -32,7 +34,7 @@ export const homeObjTwo= {
     description: 'Sign up as a member or a sponsor to access EVE',
     buttonLabel: 'Learn more',
     imgStart: true,
-    
+    img: questionMark,
     alt: 'Laptop',
     dark: false,
     primary: true,
@@ -52,7 +54,7 @@ export const homeObjFour= {
     description: "Get everything set up and ready in under 10 minutes. All you need to do is add your information and you're good to go.",
     buttonLabel: 'Start Now',
     imgStart: false, 
-   
+    img: signUp,
     alt: 'Laptop',
     dark: false,
     primary: true,

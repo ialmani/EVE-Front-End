@@ -18,11 +18,11 @@ import {InfoContainer,
 } from './InfoElements';
 
 
-import img from '../../images/about.svg'
+// import img from '../../images/about.svg'
 
 
 
-const InfoSection = ({lightBg, id, imgStart, pageId, topline, headline, darkText, lightText, buttonLabel,  alt, description, primary, dark, dark2}) => {
+const InfoSection = ({lightBg, id, imgStart, pageId, topline, headline, darkText, lightText, buttonLabel, img, alt, description, primary, dark, dark2}) => {
 
 const [hover, setHover] = useState (false)
 
