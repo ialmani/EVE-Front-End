@@ -23,7 +23,7 @@ const HotTopic = () => {
         setHover(!hover)
     }
     return (
-        <BlogContainer id = 'monthlyblog'>
+        <BlogContainer id = 'resources'>
             <BlogH1>HOT TOPIC OF THE QUARTER</BlogH1>
             <BlogWrapper>
                 <BlogCard>
@@ -43,7 +43,7 @@ const HotTopic = () => {
                 </BlogCard>
             </BlogWrapper>
             <BtnWrap>                                    
-                <Button to = '/monthlyblog'
+                <Button to = '/resources'
                 onMouseEnter={onHover} 
                 onMouseLeave = {onHover}
                 primary ='true'

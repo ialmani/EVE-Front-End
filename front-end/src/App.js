@@ -19,7 +19,7 @@ function App() {
          <Route path = '/about' component = {AboutPage} exact/>
          <Route path = '/signup' component = {SignUpPage} exact/>
          <Route path = '/discover' component = {DiscoverPage} exact/>
-         <Route path = '/monthlyblog' component = {MonthlyBlogPage} exact/>
+         <Route path = '/resources' component = {MonthlyBlogPage} exact/>
       </Switch>
     </Router>
   );
