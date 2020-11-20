@@ -17,22 +17,14 @@ const Footer = () => {
             <FooterLinksContainer>
                 <FooterLinksWrapper>
 
-                    <FooterLinkItems>
-
-                        <FooterLinkTitle> Contact Us </FooterLinkTitle>                                
-                        <FooterLink to = '/sigin'>Contact</FooterLink>
-                        <FooterLink to = '/signin'>Support</FooterLink>
-                        <FooterLink to = '/signin'>FAQ</FooterLink>
-                        <FooterLink to = '/signin'>Sponsors</FooterLink>                            
-                                                        
-                    </FooterLinkItems>
+                    
                     <FooterLinkItems>
                         
                         <FooterLinkTitle> Quick Links </FooterLinkTitle>                                
-                        <FooterLink to = '/sigin'>Sponsor Packages</FooterLink>
-                        <FooterLink to = '/signin'>Terms of Use</FooterLink>
-                        <FooterLink to = '/signin'>Videos</FooterLink>
-                        <FooterLink to = '/signin'>Privacy Policy</FooterLink>                            
+                        <FooterLink to = '/sponsor-packages'>Sponsor Packages</FooterLink>
+                        <FooterLink to = '/contact'>Contact</FooterLink>
+                        <FooterLink to = '/resources'>Videos</FooterLink>
+                        <FooterLink to = '/faq'>FAQ</FooterLink>                            
                                                         
                     </FooterLinkItems>
                 </FooterLinksWrapper>
