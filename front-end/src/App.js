@@ -11,6 +11,7 @@ import DiscoverPage from './pages/DiscoverPage';
 import MonthlyBlogPage from './pages/MonthlyBlogPage'
 import AdminSignInPage from './pages/AdminSignInPage';
 import ForgotPasswordPage from './pages/ForgotPasswordPage';
+import SponsorPackagesPage from './pages/SponsorPackagesPage'
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
          <Route path = '/adminsignin' component = {AdminSignInPage} exact/>
          <Route path = '/resources' component = {MonthlyBlogPage} exact/>
          <Route path = '/forgotpassword' component = {ForgotPasswordPage} exact/>
+         <Route path = '/sponsorpackages' component = {SponsorPackagesPage} exact/>
       </Switch>
     </Router>
   );
