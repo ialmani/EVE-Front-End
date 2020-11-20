@@ -29,7 +29,7 @@ const About = ({id, subtitle, heading1, para1, heading2, para2, ul, li_a, li_b})
         <>
         <AboutContainer id = {id}>
                 <AboutWrap>
-                    <Icon to= '/' >EVE</Icon>
+                    <Icon to= '/' >logo</Icon>
                 </AboutWrap>
                 
                 <AboutSubtitle>{subtitle}</AboutSubtitle>

@@ -150,3 +150,15 @@ export const ArrowRight = styled(MdKeyboardArrowRight)`
     font-size: 20px;
      
 `
+export const Span = styled(Link)`
+    text-decoration: none;
+    
+
+     &:hover {
+        color: #01bf71;
+        transition: 0.3s ease-out;
+        cursor: pointer;
+
+    }
+
+`

@@ -109,7 +109,14 @@ export const FormButton = styled.button`
 
 export const Text = styled(Link)`
     text-align: center;
-    margin-top: 2px;
+    margin-top: 8px;
+  
     color: #fff;
     font-size: 14px;
+
+    &:hover {
+        color: #01bf71;
+        transition: 0.3s ease-out;
+        text-decoration: none;
+    }
 `;

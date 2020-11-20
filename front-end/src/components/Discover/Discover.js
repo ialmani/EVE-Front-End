@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-import {DiscoverContainer, DiscoverWrap, Icon, Column2, InfoRow, Subtitle, TextWrapper, Column1, Heading,  Ul, BtnWrap, ArrowForward, ArrowRight} from './DiscoverElements'
+import {DiscoverContainer, DiscoverWrap, Icon, Column2, InfoRow, Subtitle, TextWrapper, Column1, Heading,  Ul, BtnWrap, ArrowForward, ArrowRight, Span} from './DiscoverElements'
 import {Button} from '../ButtonElements'
 const Discover = () => {
 
@@ -13,7 +13,7 @@ const Discover = () => {
         <>  
         <DiscoverContainer >
             <DiscoverWrap>
-                <Icon to= '/' >EVE</Icon>
+                <Icon to= '/' >logo</Icon>
             </DiscoverWrap>
             <InfoRow>
             <Column1>
@@ -45,7 +45,7 @@ const Discover = () => {
                     <li>Sponsors can watch unlimited videos.</li>
                     <li>Sponsors can comment on videos and blogposts.</li>
                     <li>Sponsors can upload content.</li>
-                    <li>Sponsors can choose from monthly sponsor packages.</li>
+                    <li>Sponsors can choose from monthly <Span to = './sponsorpackages'>sponsor packages.</Span></li>
 
                 </Ul>
                 

@@ -25,10 +25,12 @@ export const FormWrap = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-
+   
+    
 
     @media screen and (max-width: 400px){
         height: 80%;
+        
     }
 `;
 
@@ -112,18 +114,36 @@ export const TextLink = styled(Link)`
     margin-top: 2px;
     color: #fff;
     font-size: 14px;
+    margin-top: 8px;
+    &:hover {
+        color: #01bf71;
+        transition: 0.3s ease-out;
+        text-decoration: none;
+    }
+
 `;
 
 export const Text = styled.div`
-    text-align: Right;
+    text-align: right;
     margin-top: 20px;
     color: #fff;
     font-size: 14px;
-`;
+    
+`  
 
 export const SignUpLink = styled(Link)`
     text-align: right;
-    margin-top: 10px
-    color: #fff
+    margin-top: 10px;
+    color: #fff;
     font-size: 16px;
-`;
+   
+
+
+    text-decoration: none;
+
+    &:hover {
+        color: #01bf71;
+        transition: 0.3s ease-out;
+        text-decoration: none;
+    }
+`
