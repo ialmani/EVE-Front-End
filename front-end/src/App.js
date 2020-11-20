@@ -10,6 +10,7 @@ import SignUpPage from './pages/SignUpPage'
 import DiscoverPage from './pages/DiscoverPage';
 import MonthlyBlogPage from './pages/MonthlyBlogPage'
 import AdminSignInPage from './pages/AdminSignInPage';
+import ForgotPasswordPage from './pages/ForgotPasswordPage';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
          <Route path = '/monthlyblog' component = {MonthlyBlogPage} exact/>
          <Route path = '/adminsignin' component = {AdminSignInPage} exact/>
          <Route path = '/resources' component = {MonthlyBlogPage} exact/>
+         <Route path = '/forgotpassword' component = {ForgotPasswordPage} exact/>
       </Switch>
     </Router>
   );
