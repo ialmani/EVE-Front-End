@@ -107,9 +107,23 @@ export const FormButton = styled.button`
     cursor: pointer;
 `;
 
-export const Text = styled(Link)`
+export const TextLink = styled(Link)`
     text-align: center;
     margin-top: 2px;
     color: #fff;
     font-size: 14px;
+`;
+
+export const Text = styled.div`
+    text-align: Right;
+    margin-top: 20px;
+    color: #fff;
+    font-size: 14px;
+`;
+
+export const SignUpLink = styled(Link)`
+    text-align: right;
+    margin-top: 10px
+    color: #fff
+    font-size: 16px;
 `;
