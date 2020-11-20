@@ -12,6 +12,8 @@ import MonthlyBlogPage from './pages/MonthlyBlogPage'
 import AdminSignInPage from './pages/AdminSignInPage';
 import ForgotPasswordPage from './pages/ForgotPasswordPage';
 import SponsorPackagesPage from './pages/SponsorPackagesPage'
+import SponsorSignUpPage from './pages/SponsorSignUpPage'
+import MemberSignUpPage from './pages/MemberSignUpPage'
 
 function App() {
   return (
@@ -27,6 +29,9 @@ function App() {
          <Route path = '/resources' component = {MonthlyBlogPage} exact/>
          <Route path = '/forgotpassword' component = {ForgotPasswordPage} exact/>
          <Route path = '/sponsorpackages' component = {SponsorPackagesPage} exact/>
+         <Route path = '/sponsorsignup' component = {SponsorSignUpPage} exact/>
+         <Route path = '/membersignup' component = {MemberSignUpPage} exact/>
+
       </Switch>
     </Router>
   );

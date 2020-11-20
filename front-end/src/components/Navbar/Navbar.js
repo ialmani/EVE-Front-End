@@ -28,7 +28,7 @@ const Navbar = ({toggle}) => {
         <>
             <Nav scrollNav = {scrollNav}>
                 <NavbarContainer>
-                    <NavLogo to = '/' onClick = {toggleHome}>logo</NavLogo>
+                    <NavLogo to = '/' onClick = {toggleHome}>EVE</NavLogo>
                     
                     <MobileIcon onClick = {toggle}> 
                        <FaBars/>
