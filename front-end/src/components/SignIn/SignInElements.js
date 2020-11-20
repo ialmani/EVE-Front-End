@@ -107,9 +107,9 @@ export const FormButton = styled.button`
     cursor: pointer;
 `;
 
-export const Text = styled.span`
+export const Text = styled(Link)`
     text-align: center;
     margin-top: 2px;
     color: #fff;
     font-size: 14px;
-`
+`;
