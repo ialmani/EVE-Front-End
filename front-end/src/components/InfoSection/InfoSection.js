@@ -51,7 +51,7 @@ const onHover = ()=> {
                                     onMouseLeave = {onHover}
                                     primary = {primary ? 1 : 0}
                                     dark = {dark ? 1 : 0}
-                                    dart2 = {dark2 ? 1 : 0}
+                                    dark2 = {dark2 ? 1 : 0}
                                     >{buttonLabel}{hover ? <ArrowForward/> : <ArrowRight/>}  
                                     </Button >
                                     
