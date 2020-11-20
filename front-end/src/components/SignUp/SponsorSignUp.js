@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, FormContent, FormH1, FormLabel, FormWrap, Icon, Container, Form, FormInput, TextLink, Text, SignUpLink} from './SponsorSignUpElements'
+import { Button, FormContent, FormH1, FormLabel, FormWrap, Icon, Container, Form, FormInput} from './SponsorSignUpElements'
 
 const SponsorSignUp = () => {
     return (
