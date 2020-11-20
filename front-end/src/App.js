@@ -9,6 +9,7 @@ import AboutPage from './pages/AboutPage';
 import SignUpPage from './pages/SignUpPage'
 import DiscoverPage from './pages/DiscoverPage';
 import MonthlyBlogPage from './pages/MonthlyBlogPage'
+import AdminSignInPage from './pages/AdminSignInPage';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
          <Route path = '/signup' component = {SignUpPage} exact/>
          <Route path = '/discover' component = {DiscoverPage} exact/>
          <Route path = '/monthlyblog' component = {MonthlyBlogPage} exact/>
+         <Route path = '/adminsignin' component = {AdminSignInPage} exact/>
       </Switch>
     </Router>
   );
