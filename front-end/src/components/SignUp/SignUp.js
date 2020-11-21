@@ -30,7 +30,7 @@ const SignUp = () => {
             
             <InfoRow>
             <Column1>
-                <Subtitle>Member Specifications</Subtitle>
+                <Subtitle>Member</Subtitle>
                 <ul style={ulStyle}>
                     <li> Access information from other businesses.</li>
                     <li> Share and comment on blog posts.</li>
@@ -43,7 +43,7 @@ const SignUp = () => {
             </Column1>
            
             <Column2>
-                <Subtitle>Sponsor Specifications</Subtitle>
+                <Subtitle>Sponsor</Subtitle>
                 <ul style={ulStyle}>
                     <li> Able to subscribe and upload videos and blog posts .</li>
                     <li> Able to upload advertisements of your business.</li>
