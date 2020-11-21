@@ -33,7 +33,7 @@ const Navbar = ({toggle}) => {
     return (
             <Nav scrollNav = {scrollNav}>
                 <NavbarContainer>
-                    <NavLogo to = '/' onClick = {toggleHome}>EVE</NavLogo>
+                    <NavLogo to = '/' onClick = {toggleHome}>logo</NavLogo>
                     <MobileIcon onClick = {toggle}> <FaBars/> </MobileIcon>
                     <NavMenu>
                         <NavItem>

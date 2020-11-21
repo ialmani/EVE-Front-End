@@ -13,7 +13,7 @@ const MemberSignUp = () => {
     return (
             <Container>
                 <FormWrap>
-                    <Icon to= '/'>EVE</Icon>
+                    <Icon to= '/'>logo</Icon>
                     <FormContent>
                         <Form action = '#'>
                             <FormH1> Member Sign Up </FormH1>

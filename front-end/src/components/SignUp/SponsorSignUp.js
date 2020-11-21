@@ -13,7 +13,7 @@ const SponsorSignUp = () => {
     return (
             <Container>
                 <FormWrap>
-                    <Icon to= '/'>EVE</Icon>
+                    <Icon to= '/'>logo</Icon>
                     <FormContent>
                         <Form action = '#'>
                             <FormH1> Sponsor Sign Up </FormH1>

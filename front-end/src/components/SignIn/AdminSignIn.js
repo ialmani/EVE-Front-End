@@ -14,7 +14,7 @@ const AdminSignIn = () => {
     return (
             <Container>
                 <FormWrap>
-                    <Icon to= '/'>EVE</Icon>
+                    <Icon to= '/'>logo</Icon>
                     <FormContent>
                         <Form action = '#'>
                             <FormH1> Sign in to your Admin account</FormH1>

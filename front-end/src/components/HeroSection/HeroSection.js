@@ -22,9 +22,7 @@ const HeroSection = () => {
     return (
         <HeroContainer id = 'home'>
             <HeroBg>
-                <VideoBg autoPlay loop muted src = {Video} type = 'video/mp4'>
-
-                </VideoBg>
+                <VideoBg autoPlay loop muted src = {Video} type = 'video/mp4'> </VideoBg>
             </HeroBg>
             <HeroContent>
                 <HeroH1>EVE</HeroH1>
@@ -43,4 +41,4 @@ const HeroSection = () => {
     )
 }
 
-export default HeroSection;
+export default HeroSection
