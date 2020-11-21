@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import {MdKeyboardArrowRight, MdArrowForward} from 'react-icons/md'
 
 export const Icon = styled(Link)`
     position:fixed; 
@@ -15,7 +16,6 @@ export const Icon = styled(Link)`
         margin-top: 8px;
     }
 `;
-
 
 export const PricingSection = styled.div`
   padding: 100px 0 160px;
@@ -117,4 +117,24 @@ export const PricingCardFeatures = styled.ul`
 
 export const PricingCardFeature = styled.li`
   margin-bottom: 10px;
+`;
+
+export const BtnWrap = styled.div`
+    align-content: left;
+    margin-bottom: 20px;
+
+    @media screen and (max-width: 768px){
+        top: 85%;
+        left: 15%;
+    }
+`;
+
+export const ArrowForward = styled(MdArrowForward)`
+    margin-left: 8px;
+    font-size: 20px;
+`;
+
+export const ArrowRight = styled(MdKeyboardArrowRight)`
+    margin-left: 8px;
+    font-size: 20px;
 `;
