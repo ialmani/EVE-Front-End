@@ -13,6 +13,7 @@ export const DiscoverContainer = styled.div`
     overflow: hidden;
     background: #E6FFE5;
     position: relative;
+    
 `
 
 export const Icon = styled(Link)`
@@ -41,7 +42,7 @@ export const DiscoverWrap = styled.div`
 
     font-weight: bold;
     text-decoration: none;
-    color: 'black';
+   
     
     
 
@@ -55,6 +56,7 @@ export const InfoRow = styled.div`
     grid-auto-columns: minmax(auto, 1fr);
     align-items: center;
     grid-template-areas: 'col1 col2';
+    
     
     @media screen and (max-width: 768px){
         grid-template-areas: 
@@ -70,6 +72,8 @@ export const Column1 = styled.div`
     margin-right: 20px;
     padding: 0 40px;    
     grid-area: col1;
+   
+    
 
 `;
 export const Column2 = styled.div`
