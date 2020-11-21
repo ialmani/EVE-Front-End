@@ -1,5 +1,5 @@
 import React from 'react'
-import AdminSignIn from '../components/AdminSignIn/AdminSignIn'
+import AdminSignIn from '../components/SignIn/AdminSignIn'
 
 const AdminSignInPage = () => {
     return (
