@@ -121,7 +121,7 @@ export const PricingCardFeature = styled.li`
 
 export const BtnWrap = styled.div`
     align-content: left;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 
     @media screen and (max-width: 768px){
         top: 85%;

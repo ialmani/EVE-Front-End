@@ -84,7 +84,12 @@ function SponsorPackages() {
           <BtnWrap>                
             <Button to = '/sponsorsignup' onMouseEnter={onHover} onMouseLeave = {onHover}>
             Sign up as a Sponsor{hover ? <ArrowForward/> : <ArrowRight/>}  
-            </Button>                   
+            </Button>              
+          </BtnWrap>
+          <BtnWrap>
+            <Button to = '/discover' onMouseEnter={onHover} onMouseLeave = {onHover}>
+            Back{hover ? <ArrowForward/> : <ArrowRight/>}  
+            </Button>
           </BtnWrap>
         </PricingWrapper>
       </PricingSection>
