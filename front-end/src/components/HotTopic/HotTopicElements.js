@@ -17,7 +17,6 @@ export const BlogContainer = styled.div`
     @media screen and (max-width: 480px){
         height: 1500px;
     }
-
 `;
 
 export const BlogWrapper = styled.div`
@@ -38,10 +37,9 @@ export const BlogWrapper = styled.div`
        
        
     }
-
 `;
-export const BlogCard = styled.div`
 
+export const BlogCard = styled.div`
     background : #fff;
     display: flex;
     flex-direction: column;
@@ -53,16 +51,13 @@ export const BlogCard = styled.div`
     box-shadow: 0 1px 3px rgba (0,0,0,0.2);
     transition: all 0.2 all ease-in-out;
     margin-top: 10px;
-   
 
     &:hover {
         transform: scale (1.02);
         transition: all 0.2s ease-in-out;
         cursor: pointer;
         
-    }
-
-   
+    }   
 `;
 
 export const BlogIcon = styled.img `
@@ -77,25 +72,19 @@ export const BlogH1 = styled.h1 `
     color: rgb(1,191,113);
     margin-bottom: 20px;
     margin-top: 150px;
-    
-    
-    
-
 `;
 
 export const BlogH2 = styled.h2`
-
     font-size: 1 rem;
     margin-bottom: 10px;
-
 `;
+
 export const BlogP = styled.p`
     font-size: 1rem;
     text-align: center
 `;
 
 export const BtnWrap = styled.div`
-
     margin-top: 20px;
     margin-left: 25px;
     margin-bottom: 80px;
@@ -103,18 +92,15 @@ export const BtnWrap = styled.div`
     grid-template-columns: 0fr;
     align-items: center;
     position: relative;
-   
     color: #8861a7;
+`;
 
-`
 export const ArrowForward = styled(MdArrowForward)`
     margin-left: 8px;
     font-size: 20px;
-  
+`;
 
-`
 export const ArrowRight = styled(MdKeyboardArrowRight)`
     margin-left: 8px;
     font-size: 20px;
-     
-`
+`;

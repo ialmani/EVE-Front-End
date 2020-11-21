@@ -8,17 +8,16 @@ import {AboutContainer,
         AboutH2,
         AboutP2,
         AboutUl,
-        AboutLi_a, 
-        AboutLi_b,
+        AboutLiA, 
+        AboutLiB,
         BtnWrap, 
         ArrowForward,
         ArrowRight,
         } from './AboutElements';
-
 import {Button} from '../ButtonElements';
 
 
-const About = ({id, subtitle, heading1, para1, heading2, para2, ul, li_a, li_b}) => {
+const About = ({id, subtitle, heading1, para1, heading2, para2, ul, LiA, LiB}) => {
     const [hover, setHover] = useState (false)
 
     const onHover = ()=> {
@@ -26,7 +25,6 @@ const About = ({id, subtitle, heading1, para1, heading2, para2, ul, li_a, li_b})
     }
 
     return (
-        <>
         <AboutContainer id = {id}>
                 <AboutWrap>
                     <Icon to= '/' >logo</Icon>
@@ -38,9 +36,8 @@ const About = ({id, subtitle, heading1, para1, heading2, para2, ul, li_a, li_b})
                 <AboutH2>{heading2}</AboutH2>
                 <AboutP2>{para2}</AboutP2>
                 <AboutUl>{ul}</AboutUl>
-                    <AboutLi_a> {li_a}
-                    </AboutLi_a>
-                    <AboutLi_b> {li_b}</AboutLi_b>
+                    <AboutLiA> {LiA}</AboutLiA>
+                    <AboutLiB> {LiB}</AboutLiB>
                 
                     <BtnWrap>                                    
                             <Button to = 'discover'
@@ -49,13 +46,9 @@ const About = ({id, subtitle, heading1, para1, heading2, para2, ul, li_a, li_b})
                             primary ='true'
                             dark = 'true'>
                             Discover more {hover ? <ArrowForward/> : <ArrowRight/>}
-                            </Button>
-                            
-                                    
-                                    
+                            </Button>       
                     </BtnWrap>
         </AboutContainer>
-        </>
     )
 }
 

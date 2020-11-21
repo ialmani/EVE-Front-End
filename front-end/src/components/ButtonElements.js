@@ -1,5 +1,3 @@
-import React from 'react'
-
 import styled from 'styled-components'
 import {Link as LinkRouter} from 'react-router-dom'
 
@@ -22,6 +20,4 @@ export const Button = styled (LinkRouter)`
         transtion: all 0.2s ease-in-out;
         background: ${({primary}) => (primary ? '#fff' : '#01bf71'  )};
     }
-
-
-`
+`;

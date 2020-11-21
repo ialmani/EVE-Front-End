@@ -1,9 +1,15 @@
 import React, {useState, useEffect} from 'react';
 import {FaBars} from 'react-icons/fa'
-import {Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, NavBtn, NavBtnLink} from './NavbarElements';
+import {Nav, 
+    NavbarContainer, 
+    NavLogo, 
+    MobileIcon, 
+    NavMenu, 
+    NavItem, 
+    NavLinks, 
+    NavBtn, 
+    NavBtnLink} from './NavbarElements';
 import {animateScroll as scroll} from 'react-scroll'; 
-
-
 
 const Navbar = ({toggle}) => {
     const [scrollNav, setScrollNav] = useState(false)
@@ -25,15 +31,10 @@ const Navbar = ({toggle}) => {
         
     }
     return (
-        <>
             <Nav scrollNav = {scrollNav}>
                 <NavbarContainer>
-                    <NavLogo to = '/' onClick = {toggleHome}>EVE</NavLogo>
-                    
-                    <MobileIcon onClick = {toggle}> 
-                       <FaBars/>
-                    </MobileIcon>
-
+                    <NavLogo to = '/' onClick = {toggleHome}>logo</NavLogo>
+                    <MobileIcon onClick = {toggle}> <FaBars/> </MobileIcon>
                     <NavMenu>
                         <NavItem>
                             <NavLinks to ='about' 
@@ -68,17 +69,13 @@ const Navbar = ({toggle}) => {
                             offset= {-80}
                             >Sign Up</NavLinks>
                         </NavItem>
-                        
                     </NavMenu>
-
                     <NavBtn>
                         <NavBtnLink to = '/signin'>Sign In</NavBtnLink>
                     </NavBtn>
- 
                 </NavbarContainer>
             </Nav>
-        </>
-    );
-};
+    )
+}
 
 export default Navbar;

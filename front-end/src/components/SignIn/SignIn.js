@@ -3,7 +3,6 @@ import { FormButton, FormContent, FormH1, FormLabel, FormWrap, Icon, Container, 
 
 const SignIn = () => {
     return (
-        <>
             <Container>
                 <FormWrap>
                     <Icon to= '/'>logo</Icon>
@@ -23,8 +22,6 @@ const SignIn = () => {
                     </FormContent>
                 </FormWrap>
             </Container>
-            
-        </>
     )
 }
 

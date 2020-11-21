@@ -1,12 +1,20 @@
 import React from 'react'
-import { FormButton, FormContent, FormH1, FormLabel, FormWrap, Text, Icon, Container, Form, FormInput } from './AdminSignInElements'
+import { FormButton, 
+    FormContent, 
+    FormH1, 
+    FormLabel, 
+    FormWrap, 
+    Text, 
+    Icon, 
+    Container, 
+    Form, 
+    FormInput } from './AdminSignInElements'
 
 const AdminSignIn = () => {
     return (
-        <>
             <Container>
                 <FormWrap>
-                    <Icon to= '/'>EVE</Icon>
+                    <Icon to= '/'>logo</Icon>
                     <FormContent>
                         <Form action = '#'>
                             <FormH1> Sign in to your Admin account</FormH1>
@@ -21,9 +29,7 @@ const AdminSignIn = () => {
                     </FormContent>
                 </FormWrap>
             </Container>
-            
-        </>
     )
 }
 
-export default AdminSignIn;
+export default AdminSignIn

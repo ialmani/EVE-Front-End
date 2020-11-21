@@ -17,10 +17,7 @@ import {InfoContainer,
        
 } from './InfoElements';
 
-
 // import img from '../../images/about.svg'
-
-
 
 const InfoSection = ({lightBg, id, imgStart, pageId, topline, headline, darkText, lightText, buttonLabel, img, alt, description, primary, dark, dark2}) => {
 
@@ -30,47 +27,39 @@ const onHover = ()=> {
     setHover(!hover)
 }
     return (
-        <>
-            <InfoContainer lightBg = {lightBg} id = {id}>
-                <InfoWrapper>
-                    <InfoRow imgStart = {imgStart}>
-                        <Column1> 
-                            <TextWrapper>
-                                <TopLine> {topline}</TopLine>
-                                <Heading lightText = {lightText}> {headline}</Heading>
-                                <Subtitle darkText = {darkText}>{description}</Subtitle>
-                                <BtnWrap>
-                                    
-                                    <Button to = {pageId}
-                                    smooth = {true}
-                                    duration = {500}
-                                    spy= {true}
-                                    exact = 'true'
-                                    offset = {-80}
-                                    onMouseEnter={onHover} 
-                                    onMouseLeave = {onHover}
-                                    primary = {primary ? 1 : 0}
-                                    dark = {dark ? 1 : 0}
-                                    dark2 = {dark2 ? 1 : 0}
-                                    >{buttonLabel}{hover ? <ArrowForward/> : <ArrowRight/>}  
-                                    </Button >
-                                    
-                                </BtnWrap>
-                               
-                              
-                            </TextWrapper>
-                        </Column1>
-                        <Column2>
-                            <ImgWrap>
+        <InfoContainer lightBg = {lightBg} id = {id}>
+            <InfoWrapper>
+                <InfoRow imgStart = {imgStart}>
+                     <Column1> 
+                     <TextWrapper>
+                     <TopLine> {topline}</TopLine>
+                        <Heading lightText = {lightText}> {headline}</Heading>
+                        <Subtitle darkText = {darkText}>{description}</Subtitle>
+                        <BtnWrap>            
+                            <Button to = {pageId}
+                            smooth = {true}
+                            duration = {500}
+                            spy= {true}
+                            exact = 'true'
+                            offset = {-80}
+                            onMouseEnter={onHover} 
+                            onMouseLeave = {onHover}
+                            primary = {primary ? 1 : 0}
+                            dark = {dark ? 1 : 0}
+                            dark2 = {dark2 ? 1 : 0}
+                            >{buttonLabel}{hover ? <ArrowForward/> : <ArrowRight/>}  
+                            </Button >
+                        </BtnWrap>      
+                    </TextWrapper>
+                    </Column1>
+                    <Column2>
+                        <ImgWrap>
                                 <Img src = {img} alt = {alt}/>
-                                
-                            </ImgWrap>
-                        </Column2>
-                    </InfoRow>
-                </InfoWrapper>
-            </InfoContainer>
-            
-        </>
+                        </ImgWrap>
+                    </Column2>
+                </InfoRow>
+            </InfoWrapper>
+        </InfoContainer>    
     )
 }
 

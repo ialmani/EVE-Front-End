@@ -13,10 +13,7 @@ import {
 const Sidebar = ({isOpen, toggle}) => {
     return (
         <SidebarContainer isOpen = {isOpen} onClick ={toggle} >
-            <Icon onClick ={toggle}>
-                <CloseIcon/>
-                
-            </Icon>
+            <Icon onClick ={toggle}> <CloseIcon/> </Icon>
             <SidebarWrapper>
                 <SidebarMenu>
                     <SidebarLink to = 'about' onClick ={toggle}>
@@ -37,9 +34,8 @@ const Sidebar = ({isOpen, toggle}) => {
                     <SidebarRoute to = '/signin'>Sign In</SidebarRoute>
                 </SideBtnWrap>
             </SidebarWrapper>
-            
         </SidebarContainer>
     )
 }
 
-export default Sidebar;
+export default Sidebar
