@@ -21,7 +21,7 @@ const Footer = () => {
                     <FooterLinkItems>
                         
                         <FooterLinkTitle> Quick Links </FooterLinkTitle>                                
-                        <FooterLink to = '/sponsor-packages'>Sponsor Packages</FooterLink>
+                        <FooterLink to = '/sponsorpackages'>Sponsor Packages</FooterLink>
                         <FooterLink to = '/contact'>Contact</FooterLink>
                         <FooterLink to = '/resources'>Videos</FooterLink>
                         <FooterLink to = '/faq'>FAQ</FooterLink>                            
