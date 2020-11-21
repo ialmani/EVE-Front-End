@@ -39,12 +39,8 @@ export const DiscoverWrap = styled.div`
     display: flex;
     align-items: center;
     margin-left: 24px;
-
     font-weight: bold;
     text-decoration: none;
-   
-    
-    
 
     @media screen and (max-width: 400px){
         height: 80%;
@@ -57,25 +53,20 @@ export const InfoRow = styled.div`
     align-items: center;
     grid-template-areas: 'col1 col2';
     
-    
     @media screen and (max-width: 768px){
         grid-template-areas: 
         'col1' 'col2' ;
-        
     }
 `;
 
 export const Column1 = styled.div`
- 
     margin-left: 30px;
     margin-top: 20px;
     margin-right: 20px;
     padding: 0 40px;    
     grid-area: col1;
-   
-    
-
 `;
+
 export const Column2 = styled.div`
     margin-bottom: 25px;
     margin-top: 80px;
@@ -83,14 +74,12 @@ export const Column2 = styled.div`
     padding: 0 40px;
     margin-left: 30px;  
     grid-area: col2;
-    
-
 `;
+
 export const TextWrapper = styled.div`
     max-width: 540px;
     padding-top: 0;
     padding-bottom: 60px;
-
 `;
 
 export const Subtitle = styled.h1`
@@ -101,8 +90,6 @@ export const Subtitle = styled.h1`
     letter-spacing: 1.4px;
     text-transform: uppercase;
     margin-bottom: 16px;
-    
-
 
 `;
 
@@ -117,18 +104,13 @@ export const Heading = styled.h1`
     @media screen and (max-width: 480px){
         font-size: 32px;
     }
-
 `;
-
 
 export const Ul = styled.ul`
     font-size: 15px;
 `
 
 export const BtnWrap = styled.div`
-
-  
-  
     align-content: center;
     margin-bottom: 20px;
     align-content: center;
@@ -139,30 +121,23 @@ export const BtnWrap = styled.div`
         top: 85%;
         left: 15%;
     }
-
-
 `;
 
 export const ArrowForward = styled(MdArrowForward)`
     margin-left: 8px;
     font-size: 20px;
-  
-
 `
 export const ArrowRight = styled(MdKeyboardArrowRight)`
     margin-left: 8px;
     font-size: 20px;
-     
 `
 export const Span = styled(Link)`
     text-decoration: none;
     
-
-     &:hover {
+    &:hover {
         color: #01bf71;
         transition: 0.3s ease-out;
         cursor: pointer;
 
     }
-
 `
