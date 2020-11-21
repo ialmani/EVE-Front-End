@@ -17,7 +17,6 @@ export const Container = styled.div`
         rgba(1, 147, 86, 1) 0%,
         rgba(10, 201, 122, 1) 100%
     );*/
-
 `;
 
 export const FormWrap = styled.div`
@@ -25,7 +24,6 @@ export const FormWrap = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-
 
     @media screen and (max-width: 400px){
         height: 80%;
@@ -44,7 +42,6 @@ export const Icon = styled(Link)`
         margin-left: 16px;
         margin-top: 8px;
     }
-
 `;
 
 export const FormContent = styled.div`
@@ -87,7 +84,6 @@ export const FormLabel = styled.label`
     margin-bottom: 8px;
     font-size: 14px;
     color: #fff;
-
 `;
 
 export const FormInput = styled.input`
@@ -110,7 +106,6 @@ export const FormButton = styled.button`
 export const Text = styled(Link)`
     text-align: center;
     margin-top: 8px;
-  
     color: #fff;
     font-size: 14px;
 

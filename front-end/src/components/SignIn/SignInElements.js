@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import {Link} from 'react-router-dom'
 
-
 export const Container = styled.div`
     min-height: 692px;
     position: fixed;
@@ -17,7 +16,6 @@ export const Container = styled.div`
         rgba(1, 147, 86, 1) 0%,
         rgba(10, 201, 122, 1) 100%
     );*/
-
 `;
 
 export const FormWrap = styled.div`
@@ -26,8 +24,6 @@ export const FormWrap = styled.div`
     flex-direction: column;
     justify-content: center;
    
-    
-
     @media screen and (max-width: 400px){
         height: 80%;
         
@@ -46,7 +42,6 @@ export const Icon = styled(Link)`
         margin-left: 16px;
         margin-top: 8px;
     }
-
 `;
 
 export const FormContent = styled.div`
@@ -89,7 +84,6 @@ export const FormLabel = styled.label`
     margin-bottom: 8px;
     font-size: 14px;
     color: #fff;
-
 `;
 
 export const FormInput = styled.input`
@@ -129,16 +123,13 @@ export const Text = styled.div`
     color: #fff;
     font-size: 14px;
     
-`  
+`;
 
 export const SignUpLink = styled(Link)`
     text-align: right;
     margin-top: 10px;
     color: #fff;
     font-size: 16px;
-   
-
-
     text-decoration: none;
 
     &:hover {
@@ -146,4 +137,4 @@ export const SignUpLink = styled(Link)`
         transition: 0.3s ease-out;
         text-decoration: none;
     }
-`
+`;

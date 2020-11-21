@@ -1,9 +1,16 @@
 import React from 'react'
-import { Button, FormContent, FormH1, FormLabel, FormWrap, Icon, Container, Form, FormInput} from './MemberSignUpElements'
+import { Button, 
+    FormContent, 
+    FormH1, 
+    FormLabel, 
+    FormWrap, 
+    Icon, 
+    Container, 
+    Form, 
+    FormInput} from './MemberSignUpElements'
 
 const MemberSignUp = () => {
     return (
-        <>
             <Container>
                 <FormWrap>
                     <Icon to= '/'>EVE</Icon>
@@ -25,8 +32,6 @@ const MemberSignUp = () => {
                     </FormContent>
                 </FormWrap>
             </Container>
-
-        </>
     )
 }
 

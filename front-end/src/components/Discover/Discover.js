@@ -1,14 +1,27 @@
 import React, {useState} from 'react'
-
-import {DiscoverContainer, DiscoverWrap, Icon, Column2, InfoRow, Subtitle, TextWrapper, Column1, Heading,  Ul, BtnWrap, ArrowForward, ArrowRight, Span} from './DiscoverElements'
+import {DiscoverContainer, 
+    DiscoverWrap, 
+    Icon, 
+    Column2, 
+    InfoRow, 
+    Subtitle, 
+    TextWrapper, 
+    Column1, 
+    Heading,  
+    Ul, 
+    BtnWrap, 
+    ArrowForward, 
+    ArrowRight, 
+    Span} from './DiscoverElements'
 import {Button} from '../ButtonElements'
-const Discover = () => {
 
+const Discover = () => {
     const [hover, setHover] = useState (false)
 
     const onHover = ()=> {
     setHover(!hover)
-}
+    }
+
     return (  
         <DiscoverContainer >
             <DiscoverWrap>

@@ -22,6 +22,7 @@ const HotTopic = () => {
     const onHover = ()=> {
         setHover(!hover)
     }
+    
     return (
         <BlogContainer id = 'resources'>
             <BlogH1>HOT TOPIC OF THE QUARTER</BlogH1>
@@ -49,12 +50,8 @@ const HotTopic = () => {
                 primary ='true'
                 dark = 'true'>
                 Watch more videos {hover ? <ArrowForward/> : <ArrowRight/>}
-                </Button>
-                            
-                                    
-                                    
-        </BtnWrap>
-            
+                </Button>                  
+            </BtnWrap>
         </BlogContainer>
     )
 }

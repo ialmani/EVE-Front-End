@@ -1,9 +1,16 @@
 import React from 'react'
-import { Button, FormContent, FormH1, FormLabel, FormWrap, Icon, Container, Form, FormInput} from './SponsorSignUpElements'
+import { Button, 
+    FormContent, 
+    FormH1, 
+    FormLabel, 
+    FormWrap, 
+    Icon, 
+    Container, 
+    Form, 
+    FormInput} from './SponsorSignUpElements'
 
 const SponsorSignUp = () => {
     return (
-        <>
             <Container>
                 <FormWrap>
                     <Icon to= '/'>EVE</Icon>
@@ -25,9 +32,7 @@ const SponsorSignUp = () => {
                     </FormContent>
                 </FormWrap>
             </Container>
-
-        </>
     )
 }
 
-export default SponsorSignUp;
+export default SponsorSignUp

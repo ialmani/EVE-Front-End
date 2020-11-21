@@ -1,9 +1,17 @@
 import React from 'react'
-import {FormContent, FormH1, FormLabel, FormWrap, Icon, Container, Form, FormInput, Button, TextLink} from './ForgotPasswordElements'
+import {FormContent, 
+    FormH1, 
+    FormLabel, 
+    FormWrap, 
+    Icon, 
+    Container, 
+    Form, 
+    FormInput, 
+    Button, 
+    TextLink} from './ForgotPasswordElements'
 
 const ForgotPassword = () => {
     return (
-        <>
             <Container>
                 <FormWrap>
                     <Icon to= '/'>logo</Icon>
@@ -18,8 +26,6 @@ const ForgotPassword = () => {
                     </FormContent>
                 </FormWrap>
             </Container>
-
-        </>
     )
 }
 

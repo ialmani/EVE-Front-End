@@ -14,7 +14,6 @@ import {AboutContainer,
         ArrowForward,
         ArrowRight,
         } from './AboutElements';
-
 import {Button} from '../ButtonElements';
 
 

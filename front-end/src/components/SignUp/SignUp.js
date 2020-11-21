@@ -1,5 +1,14 @@
 import React, {useState} from 'react'
-import {SignUpContainer, SignUpWrap, Icon, Column1, Column2, Subtitle, InfoRow, BtnWrap, ArrowForward, ArrowRight} from './SignUpElements'
+import {SignUpContainer, 
+    SignUpWrap, 
+    Icon, 
+    Column1, 
+    Column2, 
+    Subtitle, 
+    InfoRow, 
+    BtnWrap, 
+    ArrowForward, 
+    ArrowRight} from './SignUpElements'
 import {Button} from '../../components/ButtonElements'
 
 const ulStyle = {
@@ -11,9 +20,9 @@ const SignUp = () => {
 
     const onHover = ()=> {
     setHover(!hover)
-}
+    }
+
     return (
-        <>
         <SignUpContainer >
             <SignUpWrap>
                 <Icon to= '/' >logo</Icon>
@@ -27,7 +36,7 @@ const SignUp = () => {
                     <li> Share and comment on blog posts.</li>
                 </ul> 
                 <BtnWrap>                
-                <Button to = './signup' onMouseEnter={onHover} onMouseLeave = {onHover}>
+                <Button to = '/membersignup' onMouseEnter={onHover} onMouseLeave = {onHover}>
                 Sign up as a Member {hover ? <ArrowForward/> : <ArrowRight/>}  
                 </Button >                   
                 </BtnWrap>
@@ -40,14 +49,13 @@ const SignUp = () => {
                     <li> Able to upload advertisements of your business.</li>
                 </ul>
                 <BtnWrap>                
-                <Button to = './signup' onMouseEnter={onHover} onMouseLeave = {onHover}>
+                <Button to = './sponsorsignup' onMouseEnter={onHover} onMouseLeave = {onHover}>
                 Sign up as a Sponsor{hover ? <ArrowForward/> : <ArrowRight/>}  
                 </Button >                   
                 </BtnWrap>
             </Column2>
             </InfoRow>
          </SignUpContainer>
-        </>
     )
 }
 

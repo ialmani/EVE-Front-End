@@ -12,9 +12,8 @@ export const DiscoverContainer = styled.div`
     z-index: 0;
     overflow: hidden;
     background: #E6FFE5;
-    position: relative;
-    
-`
+    position: relative;  
+`;
 
 export const Icon = styled(Link)`
     margin-left: 32px;
@@ -28,7 +27,6 @@ export const Icon = styled(Link)`
         margin-left: 16px;
         margin-top: 8px;
     }
-
 `;
 
 export const DiscoverWrap = styled.div`
@@ -108,7 +106,7 @@ export const Heading = styled.h1`
 
 export const Ul = styled.ul`
     font-size: 15px;
-`
+`;
 
 export const BtnWrap = styled.div`
     align-content: center;
@@ -126,11 +124,13 @@ export const BtnWrap = styled.div`
 export const ArrowForward = styled(MdArrowForward)`
     margin-left: 8px;
     font-size: 20px;
-`
+`;
+
 export const ArrowRight = styled(MdKeyboardArrowRight)`
     margin-left: 8px;
     font-size: 20px;
-`
+`;
+
 export const Span = styled(Link)`
     text-decoration: none;
     
@@ -140,4 +140,4 @@ export const Span = styled(Link)`
         cursor: pointer;
 
     }
-`
+`;

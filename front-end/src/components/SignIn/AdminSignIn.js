@@ -1,9 +1,17 @@
 import React from 'react'
-import { FormButton, FormContent, FormH1, FormLabel, FormWrap, Text, Icon, Container, Form, FormInput } from './AdminSignInElements'
+import { FormButton, 
+    FormContent, 
+    FormH1, 
+    FormLabel, 
+    FormWrap, 
+    Text, 
+    Icon, 
+    Container, 
+    Form, 
+    FormInput } from './AdminSignInElements'
 
 const AdminSignIn = () => {
     return (
-        <>
             <Container>
                 <FormWrap>
                     <Icon to= '/'>EVE</Icon>
@@ -21,9 +29,7 @@ const AdminSignIn = () => {
                     </FormContent>
                 </FormWrap>
             </Container>
-            
-        </>
     )
 }
 
-export default AdminSignIn;
+export default AdminSignIn

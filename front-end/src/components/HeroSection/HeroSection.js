@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import Video from '../../videos/video.mp4';
-
 import {HeroContainer,
     HeroBg,
     VideoBg,
@@ -11,7 +10,6 @@ import {HeroContainer,
     ArrowForward,
     ArrowRight
  } from './HeroElements';
-
  import {Button} from '../ButtonElements';
 
 const HeroSection = () => {
@@ -20,7 +18,6 @@ const HeroSection = () => {
     const onHover = ()=> {
         setHover(!hover)
     }
-
 
     return (
         <HeroContainer id = 'home'>
@@ -41,7 +38,6 @@ const HeroSection = () => {
                         Get Started {hover ? <ArrowForward/> : <ArrowRight/>}
                     </Button>
                 </HeroBtnWrapper>
-
             </HeroContent>
         </HeroContainer>
     )
