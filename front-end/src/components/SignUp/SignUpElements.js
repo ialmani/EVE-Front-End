@@ -66,11 +66,10 @@ export const Column1 = styled.div`
 `;
 
 export const Column2 = styled.div`
-    margin-bottom: 25px;
-    margin-top: 80px;
+    margin-left: 30px;
+    margin-top: 20px;
     margin-right: 20px;
-    padding: 0 40px;
-    margin-left: 30px;  
+    padding: 0 40px;    
     grid-area: col2;
 `;
 
