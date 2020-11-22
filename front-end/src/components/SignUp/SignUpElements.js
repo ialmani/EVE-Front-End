@@ -45,14 +45,28 @@ export const SignUpWrap = styled.div`
     }
 `;
 
+export const Span = styled(Link)`
+    text-decoration: none;
+
+
+     &:hover {
+        color: #01bf71;
+        transition: 0.3s ease-out;
+        cursor: pointer;
+
+    }
+`;
+
 export const InfoRow = styled.div`
     display: grid;
-    align-items: top;
+    grid-auto-columns: minmax(auto, 1fr);
+    align-items: center;
     grid-template-areas: 'col1 col2';
-    
+
     @media screen and (max-width: 768px){
-        grid-template-areas: 
+        grid-template-areas:
         'col1' 'col2' ;
+
     }
 `;
 
