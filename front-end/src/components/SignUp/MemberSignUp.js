@@ -19,14 +19,14 @@ const MemberSignUp = () => {
                             <FormH1> Member Sign Up </FormH1>
                                 <FormLabel htmlFor = 'for'>Name</FormLabel>
                                 <FormInput type= 'text' required/>
-                                <FormLabel htmlFor = 'for'>Phone Number</FormLabel>
-                                <FormInput type= 'number' required/>
-                                <FormLabel htmlFor = 'for'>Address</FormLabel>
-                                <FormInput type= 'text' required/>
                                 <FormLabel htmlFor = 'for'>Email</FormLabel>
                                 <FormInput type= 'email' required/>
                                 <FormLabel htmlFor = 'for'>Password</FormLabel>
                                 <FormInput type = 'password' required/>
+                                <FormLabel htmlFor = 'for'>Confirm Password</FormLabel>
+                                <FormInput type = 'password' required/>
+                                <FormLabel htmlFor = 'for'>Phone Number</FormLabel>
+                                <FormInput type= 'number' required/>
                                 <Button type = 'submit'>Continue</Button>
                         </Form>
                     </FormContent>
