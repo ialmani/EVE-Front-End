@@ -1,6 +1,7 @@
 import styled from 'styled-components'
-import {Link} from 'react-router-dom'
+import {Link, Router} from 'react-router-dom'
 import {MdKeyboardArrowRight, MdArrowForward} from 'react-icons/md'
+
 
 export const AboutContainer = styled.div`
     min-height: 692px;
@@ -12,44 +13,30 @@ export const AboutContainer = styled.div`
     z-index: 0;
     overflow: hidden;
     background: #E6FFE5;
-    position: relative;
+    
 `;
 
-export const Icon = styled(Link)`
-    margin-left: 32px;
-    margin-top: 32px;
-    text-decoration: none;
-    color: #0c0c0c;
-    font-weight: 700;
-    font-size: 32px;
-
-    @media screen and (max-width: 480px) {
-        margin-left: 16px;
-        margin-top: 8px;
-    }
-`;
-
-export const AboutWrap = styled.div`
+export const NavLogo = styled.img`
+    
     justify-self: flex-start;
     cursor: pointer;
-    font-size: 1.5rem;
+    margin-top: 20px;
     display: flex;
     align-items: center;
     margin-left: 24px;
     font-weight: bold;
     text-decoration: none;
-    color: 'black';
-
-    @media screen and (max-width: 400px){
-        height: 80%;
-    }
 `;
+
+
+
 
 export const AboutSubtitle = styled.h1`
     color: #8861a7;
     margin-left: 80px;
-    margin-top: 60px;
+    margin-top: 50px;
     font-size: 20px;
+    top: 10;
 `;
 
 export const AboutH1 = styled.h1`

@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import {AboutContainer, 
-        Icon, 
-        AboutWrap, 
+        NavLogo,
         AboutH1,
         AboutP1, 
         AboutSubtitle, 
@@ -13,23 +12,29 @@ import {AboutContainer,
         BtnWrap, 
         ArrowForward,
         ArrowRight,
+        
         } from './AboutElements';
 import {Button} from '../ButtonElements';
 
+import Logo from '../../images/logo.svg'
 
-const About = ({id, subtitle, heading1, para1, heading2, para2, ul, LiA, LiB}) => {
+
+
+
+const About = () => {
     const [hover, setHover] = useState (false)
-
     const onHover = ()=> {
         setHover(!hover)
     }
 
+    
+    
     return (
-        <AboutContainer id = {id}>
-                <AboutWrap>
-                    <Icon to= '/' >logo</Icon>
-                </AboutWrap>
-                
+        <AboutContainer >
+            
+            <NavLogo  src = {Logo} alt = 'logo' />
+       
+                            
                 <AboutSubtitle>WELCOME  TO EVE</AboutSubtitle>
                 <AboutH1>We bring key resources to entrepreneurs enabling them to realize their visions and build social capital.</AboutH1>
                 <AboutP1> Enterprise Virtual Exchange (EVE) is a state of the art user friendly platform that delivers illuminating connections between entrepreneurs, business owners,and specialized resource providers. EVE brings virtual training, networking, and special events to the entrepreneurs. Many small business owners spend the bulk of their time working their business and find it difficult to leave the shop and participate in activities that provide information and opportunities for business ideation, growth, and operational management.Therefore, we partner with small business advocates, certified Community Development Financial Instituitions, and other small business resource providers to customize knowledge fot business acumen and bring to enduser on as easily accessible platform.</AboutP1>

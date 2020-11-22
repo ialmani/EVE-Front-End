@@ -1,11 +1,11 @@
 import React, {useState} from 'react'
-import HeroSection from '../components/HeroSection/HeroSection'
-import { homeObjOne, homeObjTwo, homeObjFour} from '../components/InfoSection/Data'
-import InfoSection from '../components/InfoSection/InfoSection'
-import Navbar from '../components/Navbar/Navbar'
-import Sidebar from '../components/Sidebar/Sidebar'
-import Footer from '../components/Footer/Footer'
-import HotTopic from '../components/HotTopic/HotTopic'
+import HeroSection from '../HeroSection/HeroSection'
+import { homeObjOne, homeObjTwo, homeObjFour} from '../InfoSection/Data'
+import InfoSection from '../InfoSection/InfoSection'
+import Navbar from '../Navbar/Navbar'
+import Sidebar from '../Sidebar/Sidebar'
+import Footer from '../Footer/Footer'
+import HotTopic from '../HotTopic/HotTopic'
 
 const Home = () => {
     const[isOpen, setIsOpen] = useState(false)
