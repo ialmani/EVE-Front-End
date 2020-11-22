@@ -29,11 +29,11 @@ export const NavbarContainer = styled.div `
     max-width: 1100px;
 `;
 
-export const NavLogo = styled(LinkRouter)`
-    color: white;
+export const NavLogo = styled.img`
+    
     justify-self: flex-start;
     cursor: pointer;
-    font-size: 1.5rem;
+    
     display: flex;
     align-items: center;
     margin-left: 24px;
