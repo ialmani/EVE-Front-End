@@ -10,6 +10,7 @@ import {Nav,
     NavBtn, 
     NavBtnLink} from './NavbarElements';
 import {animateScroll as scroll} from 'react-scroll'; 
+import Logo from '../../images/logo.svg';
 
 const Navbar = ({toggle}) => {
     const [scrollNav, setScrollNav] = useState(false)
@@ -33,7 +34,8 @@ const Navbar = ({toggle}) => {
     return (
             <Nav scrollNav = {scrollNav}>
                 <NavbarContainer>
-                    <NavLogo to = '/' onClick = {toggleHome}>logo</NavLogo>
+                    <NavLogo src = {Logo} alt = 'logo' to = '/' onClick = {toggleHome}/>
+         
                     <MobileIcon onClick = {toggle}> <FaBars/> </MobileIcon>
                     <NavMenu>
                         <NavItem>
