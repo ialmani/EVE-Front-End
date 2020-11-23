@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react'
-import aboutImg from '../../images/about.svg'
+
 import './card-style.css'
-import Navbar from "../Navbar/Navbar";
+
 import * as Requests from '../../Requests'
-import Footer from "../Footer/Footer";
+
 
 
 const MonthlyBlog =  ()  => {
@@ -32,7 +32,7 @@ const MonthlyBlog =  ()  => {
 
             )
         }
-        <Footer/>
+        
         </div>
 
     )

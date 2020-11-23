@@ -14,7 +14,7 @@ import ForgotPassword from './components/ForgotPassword/ForgotPassword'
 import SponsorPackages from './components/SponsorPackages/SponsorPackages'
 import SponsorSignUp from './components/SignUp/SponsorSignUp'
 import MemberSignUp from './components/SignUp/MemberSignUp'
-import Cards from './components/Resources/Cards'
+
 function App() {
   return (
     <Router>
