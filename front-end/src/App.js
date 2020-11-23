@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
-
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
 import Home from './components/Home/Home'
 import SignIn from './components/SignIn/SignIn'
@@ -14,7 +14,7 @@ import ForgotPassword from './components/ForgotPassword/ForgotPassword'
 import SponsorPackages from './components/SponsorPackages/SponsorPackages'
 import SponsorSignUp from './components/SignUp/SponsorSignUp'
 import MemberSignUp from './components/SignUp/MemberSignUp'
-
+import Cards from './components/Resources/Cards'
 function App() {
   return (
     <Router>
@@ -27,7 +27,7 @@ function App() {
          <Route path = '/discover' component = {Discover} exact/>
          <Route path = '/monthlyblog' component = {MonthlyBlog} exact/>
          <Route path = '/adminsignin' component = {AdminSignIn} exact/>
-         <Route path = '/resources' component = {MonthlyBlog} exact/>
+         <Route path = '/resources' component = {Cards} exact/>
          <Route path = '/forgotpassword' component = {ForgotPassword} exact/>
          <Route path = '/sponsorpackages' component = {SponsorPackages} exact/>
          <Route path = '/sponsorsignup' component = {SponsorSignUp} exact/>
