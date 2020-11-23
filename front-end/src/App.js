@@ -27,7 +27,7 @@ function App() {
          <Route path = '/discover' component = {Discover} exact/>
          <Route path = '/monthlyblog' component = {MonthlyBlog} exact/>
          <Route path = '/adminsignin' component = {AdminSignIn} exact/>
-         <Route path = '/resources' component = {Cards} exact/>
+         <Route path = '/resources' component = {MonthlyBlog} exact/>
          <Route path = '/forgotpassword' component = {ForgotPassword} exact/>
          <Route path = '/sponsorpackages' component = {SponsorPackages} exact/>
          <Route path = '/sponsorsignup' component = {SponsorSignUp} exact/>

@@ -5,6 +5,8 @@ body {
 
 .card {
     width: 20rem;
+    display: inline-block;
+
        
 }
 
@@ -16,6 +18,7 @@ body {
 
 .card-body {
     padding: 3rem 0!important;
+
     
 
 }
