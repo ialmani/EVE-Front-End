@@ -49,7 +49,7 @@ const HotTopic = () => {
                 onMouseLeave = {onHover}
                 primary ='true'
                 dark = 'true'>
-                Watch more videos {hover ? <ArrowForward/> : <ArrowRight/>}
+                View more articles{hover ? <ArrowForward/> : <ArrowRight/>}
                 </Button>                  
             </BtnWrap>
         </BlogContainer>
