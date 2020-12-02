@@ -1,0 +1,22 @@
+.modal_content {
+  background-color: transparent;
+  position: absolute;
+  left: 150px;
+  top: 100px;
+  padding: 150px;
+  border-radius: 5px;
+}
+
+
+
+.close {
+  font-size: 25px;
+  margin-left: 526px;
+  padding:2px 50px;
+  background:red;
+}
+
+.close:hover {
+  color: white;
+  cursor: pointer;
+}
