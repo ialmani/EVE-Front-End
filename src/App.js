@@ -8,6 +8,8 @@ import GetStarted from "./components/GetStarted/GetStarted";
 import MonthlyBlogs from "./components/MonthlyBlogs/MonthlyBlogs";
 import Resources from "./components/Resources/Resources";
 import SignUpPage from "./components/SignUp/SignUpPage";
+import MemberSignUp from "./components/SignUp/MemberSignUp"
+import SponsorSignUp from "./components/SignUp/SponsorSignUp"
 import Login from "./components/Login/Login";
 import LandingPage from "./components/LandingPage/LandingPage";
 
@@ -22,6 +24,8 @@ function App() {
              <Route path = '/monthlyBlogs' component= {MonthlyBlogs} exact/>
              <Route path = '/resources' component= {Resources} exact/>
              <Route path = '/signUpPage' component= {SignUpPage} exact/>
+             <Route path = '/memberSignUp' component= {MemberSignUp} exact/>
+             <Route path = '/sponsorSignUp' component= {SponsorSignUp} exact/>
              <Route path = '/login' component= {Login} exact/>
              <Route path = '/' component= {LandingPage} exact/>
           </Switch>

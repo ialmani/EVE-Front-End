@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Button } from '../Button';
+import { Link } from 'react-router-dom';
 
 class SignUp extends Component {
   render() {
@@ -12,7 +13,9 @@ class SignUp extends Component {
                 <li> Access information from other businesses.</li>
                 <li> Share and comment on blog posts.</li>
             </ul>           
-            <Button to = '/membersignup'> Sign up as a Member </Button >
+            <Link to='memberSignUp'> 
+            <Button> Sign up as a Member</Button>
+            </Link>
           </div>
 
           <div className='column2'>
@@ -20,8 +23,10 @@ class SignUp extends Component {
             <ul>
               <li> Able to subscribe and upload videos and blog posts .</li>
               <li> Able to upload advertisements of your business.</li>
-            </ul>            
-            <Button to = './sponsorsignup'> Sign up as a Sponsor </Button>
+            </ul>
+            <Link to='sponsorSignUp'> 
+            <Button> Sign up as a Sponsor</Button>
+            </Link>
           </div>
         </div>
       </div>
