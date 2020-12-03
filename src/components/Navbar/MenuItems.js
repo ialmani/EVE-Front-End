@@ -30,6 +30,12 @@ export const MenuItems = [
     },
 
     {
+        title: 'Sponsorship Packages',
+        url: '/sponsorPackage',
+        cName: 'nav-links'
+    },
+
+    {
         title: 'Sign Up',
         url: '/signUp',
         cName: 'nav-links-mobile'

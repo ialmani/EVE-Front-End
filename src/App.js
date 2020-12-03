@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import AboutUs from "./components/AboutUs/AboutUs";
+import SponsorPackage from "./components/SponsorPackage/SponsorPackage";
 import ContactUs from "./components/ContactUs/ContactUs";
 import GetStarted from "./components/GetStarted/GetStarted";
 import MonthlyBlogs from "./components/MonthlyBlogs/MonthlyBlogs";
@@ -23,6 +24,7 @@ function App() {
              <Route path = '/contactUs' component= {ContactUs} exact/>
              <Route path = '/monthlyBlogs' component= {MonthlyBlogs} exact/>
              <Route path = '/resources' component= {Resources} exact/>
+             <Route path = '/sponsorPackage' component= {SponsorPackage} exact/>
              <Route path = '/signUpPage' component= {SignUpPage} exact/>
              <Route path = '/memberSignUp' component= {MemberSignUp} exact/>
              <Route path = '/sponsorSignUp' component= {SponsorSignUp} exact/>
