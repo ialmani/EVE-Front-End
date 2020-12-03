@@ -14,8 +14,9 @@ function handleSubmit(event) {
 }
 return (
     <div className="Login">
+    <h1>Welcome Valued Member</h1>
     <form onSubmit={handleSubmit}>
-    <FormGroup controlId="username" bsSize="large">
+        <FormGroup controlId="username" bsSize="large">
         <ControlLabel>Username</ControlLabel>
         <FormControl
             autoFocus
@@ -23,8 +24,8 @@ return (
             value={username}
             onChange={e => setUsername(e.target.value)}
         />
-    </FormGroup>
-    <FormGroup controlId="password" bsSize="large">
+        </FormGroup>
+        <FormGroup controlId="password" bsSize="large">
         <ControlLabel>Password</ControlLabel>
         <FormControl
             value={password}
@@ -32,23 +33,12 @@ return (
             type="password"
         />
     </FormGroup>
-    <Button block bsSize="large" disabled={!performValidation()} type="submit">
-        Login
-    </Button>
+        <Button block bsSize="large" disabled={!performValidation()} type="submit">
+            Login
+        </Button>
     </form>
     </div>
     );
 }
 
-//class Login extends Component {
-//  render() {
-//    return (
-//      <div>
-//        <h2>THE LOGIN STUFF</h2>
-//
-//      </div>
-//    );
-//  }
-//}
-//
 export default Login;
