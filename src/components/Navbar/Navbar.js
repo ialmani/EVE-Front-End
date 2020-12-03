@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { MenuItems } from "./MenuItems";
 import "./Navbar.css";
-import { Button } from "../Button";
+//import { Button } from "../Button";
 import { Link } from 'react-router-dom';
 
 class Navbar extends Component{
@@ -31,7 +31,7 @@ class Navbar extends Component{
                         )
                     })}
                 </ul>
-                <Link to='signUp'>
+                <Link to='signUpPage'>
                     <button className='btn'><span class="fas fa-user"></span>Sign Up</button>
                 </Link>
                 <Link to='login'>

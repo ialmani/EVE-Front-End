@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, {useState } from "react";
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 
 function Login(props) {

@@ -1,13 +1,13 @@
-import React, { Component } from "react";
+//import React, { Component } from "react";
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
-import About from "./components/About/About";
+import AboutUs from "./components/AboutUs/AboutUs";
 import ContactUs from "./components/ContactUs/ContactUs";
 import GetStarted from "./components/GetStarted/GetStarted";
 import MonthlyBlogs from "./components/MonthlyBlogs/MonthlyBlogs";
 import Resources from "./components/Resources/Resources";
-import SignUp from "./components/SignUp/SignUp";
+import SignUpPage from "./components/SignUp/SignUpPage";
 import Login from "./components/Login/Login";
 import LandingPage from "./components/LandingPage/LandingPage";
 
@@ -16,12 +16,12 @@ function App() {
     <Router>
           <Navbar />
           <Switch>
-             <Route path = '/about' component= {About} exact/>
+             <Route path = '/about' component= {AboutUs} exact/>
              <Route path = '/getStarted' component= {GetStarted} exact/>
              <Route path = '/contactUs' component= {ContactUs} exact/>
              <Route path = '/monthlyBlogs' component= {MonthlyBlogs} exact/>
              <Route path = '/resources' component= {Resources} exact/>
-             <Route path = '/signUp' component= {SignUp} exact/>
+             <Route path = '/signUpPage' component= {SignUpPage} exact/>
              <Route path = '/login' component= {Login} exact/>
              <Route path = '/' component= {LandingPage} exact/>
           </Switch>

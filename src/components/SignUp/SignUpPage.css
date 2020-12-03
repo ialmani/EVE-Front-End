@@ -1,0 +1,49 @@
+.container > h1 {
+    color : rgb(1,191,113);
+    font-size: 18px;
+    line-height: 16px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+}
+
+.infoRow {
+    display: grid;
+    padding: 40px;
+    grid-auto-columns: minmax(auto, 1fr);
+    align-items: center;
+    grid-template-areas: 'col1 col2';
+}
+
+.btnWrap {
+    align-content: left;
+    margin-bottom: 5px;
+}
+
+.column1 {
+    margin-left: 30px;
+    margin-top: 20px;
+    margin-right: 20px;
+    padding: 40px;    
+    grid-area: col1;
+}
+
+.column2 {
+    margin-left: 30px;
+    margin-top: 20px;
+    margin-right: 20px;
+    padding: 40px;    
+    grid-area: col2;
+}
+ 
+
+@media screen and (max-width: 768px){
+    .infoRow > {
+        grid-template-areas:
+        'col1' 'col2' ;
+    }
+    .btnWrap > {
+        top: 85%;
+        left: 15%;
+    }
+}
