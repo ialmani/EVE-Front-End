@@ -5,6 +5,7 @@ class SponsorPackage extends Component {
         return (
             <div>
             <h2>The benefits of being a Sponsor!!!</h2>
+
             </div>
         );
     }
