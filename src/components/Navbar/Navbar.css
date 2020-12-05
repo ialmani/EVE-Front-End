@@ -24,13 +24,14 @@
 
 .nav-menu {
     display: grid;
-    grid-template-columns: repeat(7, auto);
+    grid-template-columns: repeat(6, auto);
     grid-gap: 5px;
     list-style: none;
     text-align: center;
-    width: 60vw;
+    width: 70vw;
     justify-content: end;
-    margin-right: 2rem;
+    margin-right: 1rem;
+    margin-top: 20px;
 }
 
 .nav-links {
@@ -58,7 +59,26 @@
     display: none;
 }
 
-@media screen and (max-width: 750px) {
+.nav-btn {
+        display: inline-block;
+        text-align: center;
+        border-radius: 8px;
+        text-decoration: none;
+        color: #fff;
+        padding: 4px;
+        outline: none;
+        border: none;
+        cursor: pointer;     
+        background-color: #9cde99; /*use this for button color*/
+
+}
+
+.nav-btn:hover {
+    text-decoration: none;
+    background-color:#b4deb7;
+}
+
+@media screen and (max-width: 900px) {
     .NavbarItems {
         position: relative;
     }
@@ -76,23 +96,26 @@
     }
 
     .nav-menu.active {
-        background: #6668f4;
+        background:  #b19cd9;
+        height: 100vh;
         left: 0;
-        opacity: 1;
+        opacity: 2;
         transition: all 0.5s ease;
         z-index: 1;
     }
 
     .nav-links {
         text-align: center;
-        padding: 2rem;
+        padding: 1rem;
         width: 100%;
         display: table;
+        
     }
 
     .nav-links:hover {
-        background-color: #7577fa;
+        background-color: #b4a4e0;
         border-radius: 0;
+        text-decoration: none;
     }
 
     .navbar-logo {
@@ -118,25 +141,41 @@
     }
 
     .nav-links-mobile {
-        display: block;
+        display: table;
         text-align: center;
         padding: 1.5rem;
-        margin: 2rem auto;
-        border-radius: 4px;
-        width: 80%;
-        background: #4ad9e4;
+    
+        border-radius: 20px;
+        width: 40%;
+       
         text-decoration: none;
         color: #fff;
         font-size: 1.5rem;
+        margin-top: 20px;
+        margin-left: 250px;
+        margin-right: 250px;
+      
+        background-color: #9cde99; /*use this for button color*/
     }
 
     .nav-links-mobile:hover {
         background: #fff;
         color: #6568;
         transition: 250ms;
+        text-decoration: none;
     }
 
-    Button {
+    .nav-btn{
         display: none;
     }
-} 
+    
+    @media screen and (max-width: 480px){
+        .nav-links-mobile{
+            margin-right: 200px;
+        }
+    }
+        
+    
+
+
+}
