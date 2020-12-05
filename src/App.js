@@ -13,6 +13,7 @@ import MemberSignUp from "./components/SignUp/MemberSignUp"
 import SponsorSignUp from "./components/SignUp/SponsorSignUp"
 import Login from "./components/Login/Login";
 import LandingPage from "./components/LandingPage/LandingPage";
+import UploadedBlogs from './components/MonthlyBlogs/UploadedBlogs';
 
 function App() {
     return (
@@ -30,6 +31,7 @@ function App() {
              <Route path = '/sponsorSignUp' component= {SponsorSignUp} exact/>
              <Route path = '/login' component= {Login} exact/>
              <Route path = '/' component= {LandingPage} exact/>
+             <Route path = '/uploadedblogs' component= {UploadedBlogs} exact />
           </Switch>
     </Router>
     );

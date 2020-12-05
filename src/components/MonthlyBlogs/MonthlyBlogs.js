@@ -1,36 +1,27 @@
-import React, {useEffect, useState} from 'react'
-import * as Requests from '../../Requests'
+import React from 'react'
+import './MonthlyBlogs.css'
 
 
-
-const MonthlyBlogs =  ()  => {
-    const [blogs, setBlogs] = useState([]);
-
-    useEffect(()=>{
-        Requests.getBlogs().then(data=>{
-            if(data.statusCode !== 404) {
-                setBlogs(data)
-            }
-        }).catch(() => null);
-    },[]);
-
-
+const MonthlyBlogs = () => {
     return (
-        <div>
-        {blogs.map(blog=>
+    <>
+    <body>
+    <form className = 'create-post'>
+      <h1>Create New Post</h1>
+      <input type ="text" placeHolder="Author Name" size="39" required></input> <br/><br/>
+      
+      <input type ="text" placeHolder="title" size="39" required></input>
+      <br />
+      <br />
+      <textarea placeHolder="content" rows="20" cols="60"required></textarea>
+      <br />
+      <br />
+      <input type ="date"  size="39" required></input> <br/> <br/>
+      <button className="btn">Upload post <span class="fas fa-upload"></span></button>
+    </form>
+    </body>
 
-                <div className = 'card text-center'>
-                    <div className = 'card-body text-dark'>
-                        <h4 className = 'card-title'>{blog.title}</h4>
-                        <p className = 'card-text text-secondary'>{(blog.content).substring(0,100)}...</p>
-                    </div>
-                </div>
-
-            )
-        }
-        </div>
-
-    )
-}
-
-export default MonthlyBlogs
+    </>
+  )
+};
+export default MonthlyBlogs;

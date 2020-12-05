@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { MenuItems } from "./MenuItems";
 import "./Navbar.css";
-//import { Button } from "../Button";
+
 import { Link } from 'react-router-dom';
 
 class Navbar extends Component{
@@ -15,9 +15,11 @@ class Navbar extends Component{
     render(){
         return(
             <nav className="NavbarItems">
+                
                 <Link to = '/'>
-                    <h1 className="navbar-logo" >Navbar<i className="fab fa-react"></i></h1>
+                    <h1  className="navbar-logo" >Logo<i className="fab fa-react"></i></h1>
                 </Link>
+
                 <div className="menu-icon" onClick={this.handleClick}>
                     <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
                 </div>
@@ -32,10 +34,10 @@ class Navbar extends Component{
                     })}
                 </ul>
                 <Link to='signUpPage'>
-                    <button className='btn'><span class="fas fa-user"></span>Sign Up</button>
+                    <button className="nav-btn"><span class="fas fa-user"></span>Sign Up</button>
                 </Link>
                 <Link to='login'>
-                    <button className="btn"><span class="fas fa-sign-in-alt"></span>Login</button>
+                    <button className="nav-btn"><span class="fas fa-sign-in-alt"></span>Login</button>
                 </Link>
             </nav>
         )
