@@ -1,6 +1,6 @@
 .NavbarItems {
     background: #b19cd9;/*linear-gradient(90deg, rgb(110, 94, 254) 0%, rgba(73, 63, 252, 1) 100%);*/
-    height: 80px;
+    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,14 +8,12 @@
     position: sticky;
     top: 0;
     margin: auto;
-    
-
 }
 
 .navbar-logo {
     color: #fff;
     justify-self: start;
-    margin-left: 5px;
+    margin-left: 20px;
     cursor: pointer;
 }
 
@@ -30,23 +28,20 @@
     grid-gap: 5px;
     list-style: none;
     text-align: center;
-    width: 70vw;
-    justify-content: flex-end;
+    width: 60vw;
+    justify-content: end;
     margin-right: 2rem;
-    margin-top: 30px;
-
 }
 
 .nav-links {
     color: #fff;
     text-decoration: none;
     padding: 0.5rem 1rem;
-    
 }
 
 .nav-links:hover {
     color: lightgreen;
-    
+    background-color: ;
     border-radius: 4px;
     transition: all 0.2s ease-out;
 }
@@ -62,24 +57,9 @@
 .menu-icon {
     display: none;
 }
-.nav-btn {
-    
 
-    background: #01bf71;
-    padding: 10px;
-    
-    border-radius: 50px;
-    color: #010606;
-    font-size: 18px;
-  
-    border:none;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-   
-}
-
-@media screen and (max-width: 780px) {
-    .NavbarItems{
+@media screen and (max-width: 750px) {
+    .NavbarItems {
         position: relative;
     }
 
@@ -120,7 +100,6 @@
         top: 0;
         left: 0;
         transform: translate(25%, 50%);
-      
     }
 
     .menu-icon {
@@ -157,13 +136,7 @@
         transition: 250ms;
     }
 
-    
-    .nav-btn {
+    Button {
         display: none;
-    
-      
     }
-    
-        
-
-}
+} 
