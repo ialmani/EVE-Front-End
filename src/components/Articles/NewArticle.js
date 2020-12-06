@@ -1,8 +1,8 @@
 import React from 'react'
-import './MonthlyBlogs.css'
+import './NewArticle.css'
 
 
-const MonthlyBlogs = () => {
+const NewArticle = () => {
     return (
     <>
     <body>
@@ -24,4 +24,4 @@ const MonthlyBlogs = () => {
     </>
   )
 };
-export default MonthlyBlogs;
+export default NewArticle;

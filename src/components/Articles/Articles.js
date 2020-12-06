@@ -1,12 +1,12 @@
 import React, {useEffect, useState} from 'react'
 
-import './UploadedBlogs.css'
+import './Articles.css'
 
 import * as Requests from '../../Requests'
 
 
 
-const UploadedBlogs =  ()  => {
+const Articles =  ()  => {
     const [blogs, setBlogs] = useState([]);
 
     useEffect(()=>{
@@ -42,4 +42,4 @@ const UploadedBlogs =  ()  => {
     )
 }
 
-export default UploadedBlogs
+export default Articles

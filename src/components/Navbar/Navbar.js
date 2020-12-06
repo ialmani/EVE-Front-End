@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { MenuItems } from "./MenuItems";
+import logo from "../../assets/eve_logo.svg" ;
 import "./Navbar.css";
 
 import { Link } from 'react-router-dom';
@@ -17,7 +18,7 @@ class Navbar extends Component{
             <nav className="NavbarItems">
                 
                 <Link to = '/'>
-                    <h1  className="navbar-logo" >Logo<i className="fab fa-react"></i></h1>
+                    <img className="navbar-logo" src={logo} alt="logo"/>
                 </Link>
 
                 <div className="menu-icon" onClick={this.handleClick}>
