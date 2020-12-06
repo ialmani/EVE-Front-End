@@ -20,27 +20,20 @@ class Navbar extends Component{
                 <Link to = '/'>
                     <img className="navbar-logo" src={logo} alt="logo"/>
                 </Link>
-
-                <div className="menu-icon" onClick={this.handleClick}>
-                    <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
+                <Link className="nav-links" to='/about' >About</Link>
+                <div className="dropdown">
+                    <Link className="nav-links">Resources</Link>
+                    <div className="dropdown-content">
+                        <a href="/articles">Articles</a>
+                        <a href="/videos">Videos</a>
+                        <a href="/events">Events</a>
+                    </div>
                 </div>
+                <Link className="nav-links" to='/contact-us'>Contact Us</Link>
+                <Link className="nav-links" to='/signup'>Sign Up</Link>
+                <Link className="nav-links" to='/login'>Login</Link>
 
-                <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
-                    {MenuItems.map((item, index) => {
-                        return(
-                            <li key={index}><a className={item.cName} href={item.url}>
-                                                {item.title}
-                                            </a>
-                            </li>
-                        )
-                    })}
-                </ul>
-                <Link to='signUpPage'>
-                    <button className="nav-btn"><span class="fas fa-user"></span>Sign Up</button>
-                </Link>
-                <Link to='login'>
-                    <button className="nav-btn"><span class="fas fa-sign-in-alt"></span>Login</button>
-                </Link>
+
             </nav>
         )
     }

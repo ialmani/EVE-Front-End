@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Button } from '../Button';
 import './LandingPage.css';
 import PopUpVideo from "./PopUpVideo";
+import {Link} from "react-router-dom";
 
 class LandingPage extends Component {
 state = {
@@ -21,11 +22,12 @@ render() {
       <p>Bringing Key Resources to Small Businesses and Entrepreneurs</p>
       <div className='landingPagebtns'>
         <Button
-          className='btns'
-          buttonStyle='btn--outline'
-          buttonSize='btn--large'
-        >
+            className='btns'
+            buttonStyle='btn--outline'
+            buttonSize='btn--large'>
+          <Link to='get-started'>
           GET STARTED
+        </Link>
         </Button>
 
         <div>

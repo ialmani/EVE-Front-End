@@ -7,13 +7,13 @@ export const MenuItems = [
 
     {
         title: 'Get Started',
-        url: '/getStarted',
+        url: '/get-started',
         cName: 'nav-links'
     },
 
     {
-        title: 'Monthly Blogs',
-        url: '/monthlyBlogs',
+        title: 'Articles',
+        url: '/articles',
         cName: 'nav-links'
     },
 
@@ -25,19 +25,19 @@ export const MenuItems = [
 
     {
         title: 'Contact Us',
-        url: '/contactUs',
+        url: '/contact-us',
         cName: 'nav-links'
     },
 
     {
         title: 'Sponsorship Packages',
-        url: '/sponsorPackage',
+        url: '/sponsor-packages',
         cName: 'nav-links'
     },
 
     {
         title: 'Sign Up',
-        url: '/signUp',
+        url: '/signup',
         cName: 'nav-links-mobile'
     },
 

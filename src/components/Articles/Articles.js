@@ -7,12 +7,12 @@ import * as Requests from '../../Requests'
 
 
 const Articles =  ()  => {
-    const [blogs, setBlogs] = useState([]);
+    const [articles, setArticles] = useState([]);
 
     useEffect(()=>{
-        Requests.getBlogs().then(data=>{
+        Requests.getAllArticles().then(data=>{
             if(data.statusCode !== 404) {
-                setBlogs(data)
+                setArticles(data)
             }
         }).catch(() => null);
     },[]);
@@ -21,16 +21,16 @@ const Articles =  ()  => {
     return (
         <div>
             
-        {blogs.map(blog=>
+        {articles.map(article=>
              
                 
                 
                 <div className = 'card text-center'>
                     <div className = 'card-body text-dark'>
                         
-                        <h4 className = 'card-title'>{blog.title}</h4>
-                        <p className = 'card-text text-secondary'>{(blog.content).substring(0,100)}...</p>
-                        <a href = '#' className = 'btn btn-outline-success' >Read More</a>
+                        <h4 className = 'card-title'>{article.title}</h4>
+                        <p className = 'card-text text-secondary'>{(article.content).substring(0,100)}...</p>
+                        <a href = {'/article/'+article.id} className = 'btn btn-outline-success' >Read More</a>
                     </div>
                 </div>
         

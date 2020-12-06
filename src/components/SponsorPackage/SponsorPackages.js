@@ -79,7 +79,7 @@ function SponsorPackages() {
             </PricingCard>
           </PricingContainer>
 
-            <Link to= '/sponsorSignUp' onMouseEnter={onHover} onMouseLeave = {onHover}>
+            <Link to= '/signup/sponsor' onMouseEnter={onHover} onMouseLeave = {onHover}>
             Sign up as a Sponsor{hover ? <ArrowForward/> : <ArrowRight/>}  
             </Link>
 
