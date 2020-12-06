@@ -20,6 +20,7 @@ const Articles =  ()  => {
 
     return (
         <div>
+        <h1>Welcome to our monthly articles</h1>
             
         {articles.map(article=>
              
