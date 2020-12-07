@@ -13,7 +13,7 @@ class SignUp extends Component {
                 <li> Access information from other businesses.</li>
                 <li> Share and comment on blog posts.</li>
             </ul>           
-            <Link to='memberSignUp'> 
+            <Link to='signup/member'>
             <Button> Sign up as a Member</Button>
             </Link>
           </div>
@@ -24,7 +24,7 @@ class SignUp extends Component {
               <li> Able to subscribe and upload videos and blog posts .</li>
               <li> Able to upload advertisements of your business.</li>
             </ul>
-            <Link to='sponsorSignUp'> 
+            <Link to='signup/sponsor'>
             <Button> Sign up as a Sponsor</Button>
             </Link>
           </div>
