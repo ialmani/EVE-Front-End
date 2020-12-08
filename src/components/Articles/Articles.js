@@ -1,13 +1,11 @@
 import React, {useEffect, useState} from 'react'
-
+import aboutImg from '../../assets/about.svg'
 import './Articles.css'
-
 import * as Requests from '../../Requests'
 
 
-
-const Articles =  ()  => {
-    const [articles, setArticles] = useState([]);
+const Articles = () => {
+     const [articles, setArticles] = useState([]);
 
     useEffect(()=>{
         Requests.getAllArticles().then(data=>{
@@ -16,30 +14,38 @@ const Articles =  ()  => {
             }
         }).catch(() => null);
     },[]);
-
-
     return (
         <div>
-        {/*<h1>Welcome to our monthly articles</h1>*/}
-            
+        
         {articles.map(article=>
-             
-                
-                
-                <div className = 'card text-center'>
-                    <div className = 'card-body text-dark'>
-                        
-                        <h4 className = 'card-title'>{article.title}</h4>
-                        <p className = 'card-text text-secondary'>{(article.content).substring(0,100)}...</p>
-                        <a href = {'/article/'+article.id} className = 'btn btn-outline-success' >Read More</a>
-                    </div>
+        <div className = "wrapper">
+            <div className = "card">
+                <div className = "card-banner">
+                    <p className = "category-tag"> Genre </p>
+                    <img className = "banner-img" src = {aboutImg}/>
                 </div>
-        
-            )
-        }
-        
-        </div>
+                <div className = "card-body">
+                    
+                    <h2 className = "blog-title"> {article.title}</h2>
+                    <p className = "blog-description">{(article.content).substring(0,100)}... </p>
+                    <a href = {'/article/'+article.id} className = 'btn btn-outline-success' >Read More</a>
+                <div className = "card-profile">
+                    <img className = "profile-img" src = {aboutImg} />
 
+                    <div className = "card-profile-info"> </div>
+                        <h3 className = "profile-name"> {article.author}</h3>
+                        
+                  
+                </div>       
+                </div>
+                
+                
+            </div>
+            
+        </div>
+        )
+    }
+    </div>
     )
 }
 

@@ -8,6 +8,7 @@
     position: sticky;
     top: 0;
     margin: auto;
+    z-index: 1;
 }
 
 .navbar-logo {
