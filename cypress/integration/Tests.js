@@ -19,13 +19,21 @@ describe('Navbar Test', () => {
   it('Visits Eve Resources Page', () => {
     cy.visit('http://localhost:3000/')
 
+    cy.get('.dropdown-content').invoke('attr', 'style', 'visibility: visible')
+    cy.contains('Articles').click()
+    cy.url().should('include', '/articles')
+
     cy.pause()
 
-    cy.contains('Resources').click()
+    cy.get('.dropdown-content').invoke('attr', 'style', 'visibility: visible')
+    cy.contains('Videos').click()
+    cy.url().should('include', '/videos')
 
-    cy.contains('Articles').click({force: true})
+    cy.get('.dropdown-content').invoke('attr', 'style', 'visibility: visible')
+    cy.contains('Events').click()
+    cy.url().should('include', '/events')
 
-    cy.url().should('include', '/articles')
+    cy.pause()
   })
 })
 
