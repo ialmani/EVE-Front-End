@@ -12,14 +12,16 @@
 }
 
 .navbar-logo {
-    height: 90px;
+    height: 70px;
+   
     justify-self: start;
     margin-left: 20px;
     cursor: pointer;
     justify-self: flex-start;
     position: fixed;
-    
     display: flex;
+    
+    
 }
 
 .fa-react {
@@ -45,6 +47,7 @@
     padding: 0.5rem 1.5rem;
     align-items: center;
     text-align: center;
+   
   
     
   

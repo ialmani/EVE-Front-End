@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import aboutImg from '../../assets/about.svg'
+import profileImg from '../../assets/profilepic.png'
 import './Articles.css'
 import * as Requests from '../../Requests'
 
@@ -30,11 +31,11 @@ const Articles = () => {
                     <p className = "blog-description">{(article.content).substring(0,100)}... </p>
                     <a href = {'/article/'+article.id} className = 'btn btn-outline-success' >Read More</a>
                 <div className = "card-profile">
-                    <img className = "profile-img" src = {aboutImg} />
+                    <img className = "profile-img" src = {profileImg} />
 
                     <div className = "card-profile-info"> </div>
                         <h3 className = "profile-name"> {article.author}</h3>
-                        
+                        <p className = "blog-date">date</p>
                   
                 </div>       
                 </div>

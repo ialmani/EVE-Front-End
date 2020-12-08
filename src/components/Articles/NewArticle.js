@@ -1,27 +1,42 @@
 import React from 'react'
 import './NewArticle.css'
 
-
 const NewArticle = () => {
-    return (
-    <>
-    <body>
-    <form className = 'create-post'>
-      <h1>Create New Post</h1>
-      <input type ="text" placeHolder="Author Name" size="39" required></input> <br/><br/>
-      
-      <input type ="text" placeHolder="title" size="39" required></input>
-      <br />
-      <br />
-      <textarea placeHolder="content" rows="20" cols="60"required></textarea>
-      <br />
-      <br />
-      <input type ="date"  size="39" required></input> <br/> <br/>
-      <button className="btn">Upload post <span class="fas fa-upload"></span></button>
-    </form>
-    </body>
+  return (
+  
+    <div className = "article-wrapper">
+        <div className = "title"> 
+          Post a new article
 
-    </>
+        </div>
+        <div className = "form">
+            <div className = "input-field">
+              <label>Genre</label>
+              <input type = "text" className = "input"/>
+            </div>
+            <div className = "input-field">
+              <label>Title</label>
+              <input type = "text" className = "input"/>
+            </div>
+            <div className = "input-field">
+              <label>Description</label>
+              <textarea className = "text-area" placeHolder="content" rows="10" cols="30"required/>
+            </div>
+            <div className = "input-field">
+              <label>Author</label>
+              <input type = "text" className = "input"/>
+            </div>
+            <div className = "upload-img">
+            <input type = 'file' name = 'file' onChange = {(e) => this.onChange(e)}/>
+            </div>
+            <div className = "datee">
+            <input type ="date"  size="39" required></input> <br/> <br/>
+            <button className="btn">Upload post <span class="fas fa-upload"></span></button>
+            </div>
+        </div>
+      
+    </div>
   )
-};
-export default NewArticle;
+}
+
+export default NewArticle

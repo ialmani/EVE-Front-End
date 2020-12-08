@@ -68,6 +68,12 @@ body{
 
 }
 
+/*.blog-hashtag {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--clr-link);
+
+}*/
 
 .blog-title{
     line-height: 1.5rem;
@@ -101,12 +107,4 @@ body{
 }
 .profile-name {
     font-size: 1rem;
-}
-
-.blog-date {
-    color: var(--clr-gray-dark);
-    font-size: 0.9rem;
-    margin-top: 3rem;
-    
-    
 }
