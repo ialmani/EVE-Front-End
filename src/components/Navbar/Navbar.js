@@ -33,6 +33,7 @@ class Navbar extends Component{
                 <Link className="nav-links" to='/contact-us'>Contact Us</Link>
                 <Link className="nav-links" to='/signup'>Sign Up</Link>
                 <Link className="nav-links" to='/login'>Login</Link>
+                <Link className="nav-links" to='/sponsor-packages'>SponsorShip Packages</Link>
 
 
             </nav>
