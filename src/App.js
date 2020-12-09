@@ -16,7 +16,7 @@ import LandingPage from "./components/LandingPage/LandingPage";
 import Articles from './components/Articles/Articles';
 import FullArticle from './components/Articles/FullArticle';
 import UploadVideo from './components/Resources/UploadVideos'
-
+import SponsorProfile from './components/SponsorProfile/SponsorProfile'
 function App() {
     return (
     <Router>
@@ -36,7 +36,7 @@ function App() {
              <Route path = '/' component= {LandingPage} exact/>
              <Route path = '/article-new' component= {NewArticle} exact/>
              <Route path = '/videos/upload' component= {UploadVideo} exact />
-
+            <Route path = '/sponsor-profile' component = {SponsorProfile} exact />
           </Switch>
     </Router>
     );
