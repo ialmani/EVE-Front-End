@@ -98,3 +98,14 @@ describe('Sign Up Test', () => {
     cy.url().should('include', '/signup/sponsor')
   })
 })
+
+describe('Sign Up Test', () => {
+  it('Visits Sponsor Sign Up Page Through Packages Page', () => {
+    cy.visit('http://localhost:3000/')
+
+    cy.contains('SponsorShip Packages').click()
+    cy.contains('Sign up as a Sponsor').click()
+
+    cy.url().should('include', '/signup/sponsor')
+  })
+})
