@@ -16,25 +16,26 @@ class Navbar extends Component{
 
     render(){
         return(
-            <nav className="NavbarItems">
+            <nav className="navbar">
                 
                 <Link to = '/'>
                     <img className="navbar-logo" src={logo} alt="logo"/>
                 </Link>
-                <Link className="nav-links" to='/about' >About</Link>
+                <div className='nav-links'>
+                <Link className="link" to='/about' >About</Link>
                 <div className="dropdown">
-                    <Link className="nav-links">Resources</Link>
+                    <Link className="link">Resources</Link>
                     <div className="dropdown-content">
                         <a href="/articles">Articles</a>
                         <a href="/videos">Videos</a>
                         <a href="/events">Events</a>
                     </div>
                 </div>
-                <Link className="nav-links" to='/contact-us'>Contact Us</Link>
-                <Link className="nav-links" to='/signup'>Sign Up</Link>
-                <Link className="nav-links" to='/login'>Login</Link>
-                <Link className="nav-links" to='/sponsor-packages'>SponsorShip Packages</Link>
-
+                <Link className="link" to='/contact-us'>Contact Us</Link>
+                <Link className="link" to='/signup'>Sign Up</Link>
+                <Link className="link" to='/login'>Login</Link>
+                <Link className="link" to='/sponsor-packages'>SponsorShip Packages</Link>
+                </div>
 
             </nav>
         )

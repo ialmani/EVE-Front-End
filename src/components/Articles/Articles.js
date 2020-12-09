@@ -31,7 +31,7 @@ const Articles = () => {
                     <p className = "blog-description">{(article.content).substring(0,100)}... </p>
                     <a href = {'/article/'+article.id} className = 'btn btn-outline-success' >Read More</a>
                 <div className = "card-profile">
-                    <img className = "profile-img" src = {profileImg} />
+                    <img className = "profile-image" src = {profileImg} />
 
                     <div className = "card-profile-info"> </div>
                         <h3 className = "profile-name"> {article.author}</h3>
