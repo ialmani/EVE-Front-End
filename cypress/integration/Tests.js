@@ -66,3 +66,13 @@ describe('Navbar Test', () => {
     cy.url().should('include', '/login')
   })
 })
+
+describe('Navbar Test', () => {
+  it('Visits Eve Sponsorship Packages Page', () => {
+    cy.visit('http://localhost:3000/')
+
+    cy.contains('SponsorShip Packages').click()
+
+    cy.url().should('include', '/sponsor-packages')
+  })
+})
