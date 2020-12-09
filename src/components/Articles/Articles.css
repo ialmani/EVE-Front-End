@@ -4,7 +4,7 @@
     --clr-gray-dark: #414b56;
     --clr-link: #4d97b2;
     --clr-popular: #ef257a;
-   
+
 }
 
 
@@ -18,7 +18,7 @@
 
 body{
     margin: 0rem;
-    
+
     color : var(--clr-gray-dark);
 
 }
@@ -27,7 +27,7 @@ body{
     flex-wrap: wrap;
     align-content: center;
 
-   
+
 }
 .card{
     overflow: hidden;
@@ -38,7 +38,7 @@ body{
     width: 350px;
     margin: 1rem;
     transition: 250ms all ease-in-out;
-    
+
     display: inline-block;
 }
 
@@ -67,6 +67,8 @@ body{
     margin: 15rem 1rem 1rem 1rem;
 
 }
+
+
 
 
 .blog-title{
@@ -107,6 +109,6 @@ body{
     color: var(--clr-gray-dark);
     font-size: 0.9rem;
     margin-top: 3rem;
-    
-    
+
+
 }

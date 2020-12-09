@@ -66,3 +66,35 @@ describe('Navbar Test', () => {
     cy.url().should('include', '/login')
   })
 })
+
+describe('Navbar Test', () => {
+  it('Visits Eve Sponsorship Packages Page', () => {
+    cy.visit('http://localhost:3000/')
+
+    cy.contains('SponsorShip Packages').click()
+
+    cy.url().should('include', '/sponsor-packages')
+  })
+})
+
+describe('Sign Up Test', () => {
+  it('Visits Member Sign Up Page', () => {
+    cy.visit('http://localhost:3000/')
+
+    cy.contains('Sign Up').click()
+    cy.contains('Sign up as a Member').click()
+
+    cy.url().should('include', '/signup/member')
+  })
+})
+
+describe('Sign Up Test', () => {
+  it('Visits Sponsor Sign Up Page', () => {
+    cy.visit('http://localhost:3000/')
+
+    cy.contains('Sign Up').click()
+    cy.contains('Sign up as a Sponsor').click()
+
+    cy.url().should('include', '/signup/sponsor')
+  })
+})
