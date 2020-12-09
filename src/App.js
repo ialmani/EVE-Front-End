@@ -34,7 +34,7 @@ function App() {
              <Route path = '/signup/sponsor' component= {SponsorSignUp} exact/>
              <Route path = '/login' component= {Login} exact/>
              <Route path = '/' component= {LandingPage} exact/>
-             <Route path = '/article-new' component= {NewArticle} exact/>
+             <Route path = '/article/new' component= {NewArticle} exact/>
              <Route path = '/videos/upload' component= {UploadVideo} exact />
 
           </Switch>
