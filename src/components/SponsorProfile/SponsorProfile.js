@@ -2,6 +2,7 @@ import React from 'react'
 import './SponsorProfile.css'
 import aboutImg from '../../assets/profilepic.png'
 import { GiCrystalBars } from 'react-icons/gi';
+import { Link } from 'react-router-dom';
 const SponsorProfile = () => {
     //$('.right-nav ul li').click(function () { $(this).addClass("active").siblings().removeClass("active")})
     return (
@@ -16,11 +17,15 @@ const SponsorProfile = () => {
                         <p className = "state">Indiana,</p>
                         <span className = "country">USA</span>
                     </div>
+                    <Link to = 'sponsor-packages'>
                     <div className ="profile-option">
+                        
                         <div className = "notification"/>
                         
                         <span className = "alert-message" ><GiCrystalBars /></span>
+                      
                     </div>
+                    </Link>
 
                 </div>
             </div>
@@ -33,12 +38,16 @@ const SponsorProfile = () => {
                                 <p className = "bio">A computer science major with an interest in web development. Favourite color is green</p>
                             </div>
                             <div className = "profile-btn">
+                            <Link to='article-new'>
                                 <button className = "article-btn">
                                 <i className = "fa fa-plus">Article</i>
                                 </button>
+                            </Link>
+                            <Link to = 'videos/upload'>
                                 <button className = "video-btn">
                                 <i className = "fa fa-plus">Video</i>
                                 </button>
+                            </Link>
                             </div>
                         </div>
                     </div>
