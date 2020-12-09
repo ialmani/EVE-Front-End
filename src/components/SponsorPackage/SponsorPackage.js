@@ -40,7 +40,7 @@ function SponsorPackage() {
                 <div className='pricing-card-icon'>
                   <GiCrystalBars />
                 </div>
-                <h3 className='pricing-card-plan'>Gold RUsh</h3>
+                <h3 className='pricing-card-plan'>Gold Rush</h3>
                 <h4 className='pricing-card-cost'>$40.99</h4>
                 <p className='pricing-card-length'>per month</p>
                 <ul className='pricing-card-features'>
