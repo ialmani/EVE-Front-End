@@ -1,3 +1,9 @@
+# EVE-Front-End
+
+## Links to other repositories
+[Main Repo](https://github.com/ialmani/EVE)
+[Back-End](https://github.com/ialmani/EVE-Back-End)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
