@@ -11,7 +11,7 @@ const NewArticle = () => {
         </div>
         <div className = "form">
             <div className = "input-field">
-              <label>Genre</label>
+              <label>Topic</label>
               <input type = "text" className = "input"/>
             </div>
             <div className = "input-field">
