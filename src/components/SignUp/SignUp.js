@@ -8,13 +8,15 @@ import {
   Segment,
 } from "semantic-ui-react";
 import { connect } from "react-redux";
-import { authLogin } from "../../store/actions/auth";
+import { authSignup } from "../../store/actions/auth";
 import { Link } from "react-router-dom";
 
-class Login extends Component {
+class SignUp extends Component {
   state = {
     username: "",
-    password: "",
+    email: "",
+    password1: "",
+    password2: "",
   };
 
   handleChange = (e) => {
@@ -22,16 +24,15 @@ class Login extends Component {
       [e.target.name]: e.target.value,
     });
   };
-  handleSubmit = (e) => {
-    e.preventDefault();
-    const { username, password } = this.state;
-    this.props.login(username, password);
-    this.setState({ username: "", password: "" });
+  handleSubmit = () => {
+    const { username, email, password1, password2 } = this.state;
+    this.props.signup(username, email, password1, password2);
+    this.setState({ username: "", email: "", password1: "", password2: "" });
   };
 
   render() {
     const { loading, error } = this.props;
-    const { username, password } = this.state;
+    const { username, email, password1, password2 } = this.state;
     return (
       <Grid
         textAlign="center"
@@ -40,7 +41,7 @@ class Login extends Component {
       >
         <Grid.Column style={{ maxWidth: 450 }}>
           <Header as="h2" color="purple" textAlign="center">
-            Login to your account
+            Create an account
           </Header>
           <Form size="large" onSubmit={this.handleSubmit} error={error}>
             <Segment stacked>
@@ -55,19 +56,38 @@ class Login extends Component {
               />
               <Form.Input
                 fluid
-                name="password"
-                value={password}
+                name="email"
+                value={email}
+                onChange={this.handleChange}
+                icon="mail"
+                iconPosition="left"
+                placeholder="Email address"
+              />
+              <Form.Input
+                fluid
+                name="password1"
+                value={password1}
                 onChange={this.handleChange}
                 icon="lock"
                 iconPosition="left"
                 placeholder="Password"
                 type="password"
               />
+              <Form.Input
+                fluid
+                name="password2"
+                value={password2}
+                onChange={this.handleChange}
+                icon="lock"
+                iconPosition="left"
+                placeholder="Confirm password"
+                type="password"
+              />
               {error && (
                 <Message
                   error
-                  header="Unable to Login"
-                  content="Please check your username and password"
+                  header="There was an error"
+                  content="Please check your credentials"
                 />
               )}
               <Button
@@ -77,12 +97,12 @@ class Login extends Component {
                 fluid
                 size="large"
               >
-                Login
+                SignUp
               </Button>
             </Segment>
           </Form>
           <Message>
-            New to us? <Link to="/signup"> Sign Up</Link>
+            Already have an account? <Link to="/login"> Login</Link>
           </Message>
         </Grid.Column>
       </Grid>
@@ -91,7 +111,6 @@ class Login extends Component {
 }
 const mapStateToProps = (state) => {
   return {
-    authenticated: state.token !== null,
     loading: state.loading,
     error: state.error,
   };
@@ -99,8 +118,9 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    login: (username, password) => dispatch(authLogin(username, password)),
+    signup: (username, email, password1, password2) =>
+      dispatch(authSignup(username, email, password1, password2)),
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Login);
+export default connect(mapStateToProps, mapDispatchToProps)(SignUp);
