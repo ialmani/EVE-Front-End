@@ -11,13 +11,15 @@ import Videos from "./components/Resources/Videos";
 import SignUp from "./components/SignUp/SignUp";
 import SponsorPackage from "./components/SponsorPackage/SponsorPackage";
 import SponsorProfile from './components/SponsorProfile/SponsorProfile';
+import Articles from "./components/Articles/Articles";
 
 export const BaseRouter = () => {
   return (
     <div>
       <Switch>
-        <Route exact path="/" component={LandingPage} />
+        <Route path="/" component={LandingPage} />
         <Route path="/about" component={About} />
+        <Route path="/articles" component={Articles} />
         <Route path="/login" component={Login} />
         <Route path="/signup" component={SignUp} />
         <Route path = "/get-started" component= {GetStarted} />
