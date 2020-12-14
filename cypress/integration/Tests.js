@@ -90,7 +90,7 @@ describe('Login Test', () => {
 describe('Sponsor Resource Test', () => {
   it('Visits New Article Page', () => {
     cy.visit('http://localhost:3000/sponsor-profile')
-    cy.contains("Article").click()
+    cy.get('.article-btn').click()
     cy.url().should('include', '/article/create')
   })
 })
@@ -98,7 +98,7 @@ describe('Sponsor Resource Test', () => {
 describe('Sponsor Resource Test', () => {
   it('Visits New Video Page', () => {
     cy.visit('http://localhost:3000/sponsor-profile')
-    cy.contains('Video').click()
+    cy.get('.video-btn').click()
     cy.url().should('include', '/videos/upload')
   })
 })
