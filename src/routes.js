@@ -17,17 +17,17 @@ export const BaseRouter = () => {
   return (
     <div>
       <Switch>
-        <Route path="/" component={LandingPage} />
-        <Route path="/about" component={About} />
-        <Route path="/articles" component={Articles} />
-        <Route path="/login" component={Login} />
-        <Route path="/signup" component={SignUp} />
-        <Route path = "/get-started" component= {GetStarted} />
-        <Route path = "/contact-us" component= {ContactUs} />
+        <Route path="/" component={LandingPage} exact/>
+        <Route path="/about" component={About} exact/>
+        <Route path="/articles" component={Articles} exact/>
+        <Route path="/login" component={Login} exact/>
+        <Route path="/signup" component={SignUp} exact/>
+        <Route path = "/get-started" component= {GetStarted} exact/>
+        <Route path = "/contact-us" component= {ContactUs} exact/>
         <Route path = '/videos' component= {Videos} exact/>
-        <Route path = '/sponsor-packages' component= {SponsorPackage} />
-        <Route path = '/videos/upload' component= {UploadVideo} />
-        <Route path = '/sponsor-profile' component = {SponsorProfile} />
+        <Route path = '/sponsor-packages' component= {SponsorPackage} exact/>
+        <Route path = '/videos/upload' component= {UploadVideo} exact/>
+        <Route path = '/sponsor-profile' component = {SponsorProfile} exact/>
       </Switch>
     </div>
   );
