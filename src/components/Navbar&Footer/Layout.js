@@ -22,8 +22,8 @@ class Layout extends Component {
   render() {
     return (
       <div>
-        <Menu color='purple' inverted>
-            <Link to = '/'>
+        <Menu color="purple" inverted>
+            <Link to = "/">
                 <img className="navbar-logo" src={logo} alt="logo"/>
             </Link>
           <Container>
@@ -68,7 +68,7 @@ class Layout extends Component {
         {this.props.children}
 
         <Segment
-          color='purple'
+          color="purple"
           inverted
           vertical
           style={{ margin: "5em 0em 0em", padding: "5em 0em" }}

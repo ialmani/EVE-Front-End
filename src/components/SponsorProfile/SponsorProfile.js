@@ -17,7 +17,7 @@ const SponsorProfile = () => {
                         <p className = "state">Indiana,</p>
                         <span className = "country">USA</span>
                     </div>
-                    <Link to = 'sponsor-packages'>
+                    <Link to = "sponsor-packages">
                     <div className ="profile-option">
                         
                         <div className = "notification"/>
@@ -38,12 +38,12 @@ const SponsorProfile = () => {
                                 <p className = "bio">A computer science major with an interest in web development. Favourite color is green</p>
                             </div>
                             <div className = "profile-btn">
-                            <Link to='article/new'>
+                            <Link to= "article/create">
                                 <button className = "article-btn">
                                 <i className = "fa fa-plus">Article</i>
                                 </button>
                             </Link>
-                            <Link to = 'videos/upload'>
+                            <Link to = "videos/upload">
                                 <button className = "video-btn">
                                 <i className = "fa fa-plus">Video</i>
                                 </button>

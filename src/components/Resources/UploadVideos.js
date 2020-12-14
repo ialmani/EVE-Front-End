@@ -10,9 +10,7 @@ class UploadVideos extends Component {
         reader.readAsDataURL(files[0]);
         
         reader.onload = (e) => {
-
         }
-
     }
 
     render (){
@@ -20,13 +18,9 @@ class UploadVideos extends Component {
             <div onSubmit = {this.onFormSubmit}>
             <h1>Upload your content</h1>
             <input type = 'file' name = 'file' onChange = {(e) => this.onChange(e)}/>
-
             </div>
-
-
         )
     }
-
 }
 
 export default UploadVideos

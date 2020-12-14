@@ -7,7 +7,6 @@
 
 }
 
-
 * {
     box-sizing: border-box;
     font-family: "Inter" , sans-serif;
@@ -15,20 +14,17 @@
     padding: 0;
 }
 
-
 body{
     margin: 0rem;
-
     color : var(--clr-gray-dark);
-
 }
+
 .wrapper {
     display: inline-block;
     flex-wrap: wrap;
     align-content: center;
-
-
 }
+
 .card{
     overflow: hidden;
     box-shadow: 0px 2px 20px var(--clr-gray-light);
@@ -65,11 +61,7 @@ body{
 
 .card-body{
     margin: 15rem 1rem 1rem 1rem;
-
 }
-
-
-
 
 .blog-title{
     line-height: 1.5rem;
@@ -86,8 +78,6 @@ body{
     display: flex;
     margin-top: 2rem;
     align-items: center;
-
-
 }
 
 .profile-image{
@@ -99,8 +89,8 @@ body{
 
 .card-profile-info {
     margin-left: 1rem;
-
 }
+
 .profile-name {
     font-size: 1rem;
 }
@@ -109,6 +99,4 @@ body{
     color: var(--clr-gray-dark);
     font-size: 0.9rem;
     margin-top: 3rem;
-
-
 }
