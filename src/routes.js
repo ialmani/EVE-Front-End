@@ -8,7 +8,7 @@ import GetStarted from './components/GetStarted/GetStarted';
 import ContactUs from './components/ContactUs/ContactUs';
 import Articles from './components/Articles/Articles';
 import NewArticle from './components/Articles/NewArticle';
-//import FullArticle from './components/Articles/FullArticle';
+import FullArticle from './components/Articles/FullArticle';
 import SponsorPackage from './components/SponsorPackage/SponsorPackage';
 import SponsorProfile from './components/SponsorProfile/SponsorProfile';
 import Videos from './components/Resources/Videos';
@@ -29,6 +29,7 @@ export const BaseRouter = () => {
         <Route path = '/sponsor-profile' component={SponsorProfile} exact/>
         <Route path = '/articles' component={Articles} exact/>
         <Route path = '/article/create' component={NewArticle} exact />
+        <Route path = '/article/view' component={FullArticle} exact />
         <Route path = '/videos' component={Videos} exact/>
         <Route path = '/videos/upload' component={UploadVideo} exact/>
       </Switch>
