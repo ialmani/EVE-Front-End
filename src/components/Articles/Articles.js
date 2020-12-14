@@ -29,7 +29,7 @@ const Articles = () => {
 
                     <h2 className = "blog-title"> {article.title}</h2>
                     <p className = "blog-description">{(article.content).substring(0,100)}... </p>
-                    <a href = {'/article/'+article.id} className = 'btn btn-outline-success' >Read More</a>
+                    <a href = {'/article/view/'+article.id} className = 'btn btn-outline-success' >Read More</a>
                 <div className = "card-profile">
                     <img className = "profile-image" src = {profileImg} />
 
