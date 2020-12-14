@@ -1,15 +1,8 @@
-import React, { Component } from "react";
-import {
-  Button,
-  Form,
-  Grid,
-  Header,
-  Message,
-  Segment,
-} from "semantic-ui-react";
-import { connect } from "react-redux";
-import { authSignup } from "../../store/actions/auth";
-import { Link } from "react-router-dom";
+import React, { Component } from 'react';
+import { Button, Form, Grid, Header, Message, Segment } from 'semantic-ui-react';
+import { connect } from 'react-redux';
+import { authSignup } from '../../store/actions/auth';
+import { Link } from 'react-router-dom';
 
 class SignUp extends Component {
   state = {

@@ -1,4 +1,4 @@
-import {API_BASE} from "./Config";
+import {API_BASE} from './Config';
 
 export const getAllArticles = () => {
     return fetch(API_BASE+'articles').then(response => response.json());

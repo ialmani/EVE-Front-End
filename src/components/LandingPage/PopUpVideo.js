@@ -1,11 +1,12 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import './PopUpVideo.css';
-import ReactPlayer from "react-player"
+import ReactPlayer from 'react-player';
 
 export default class PopUpVideo extends Component {
   handleClick = () => {
    this.props.toggle();
   };
+
 render() {
   return (
    <div className="modal">

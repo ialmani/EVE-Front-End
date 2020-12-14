@@ -3,8 +3,8 @@ import { GiCrystalBars } from 'react-icons/gi';
 import { GiCutDiamond, GiRock } from 'react-icons/gi';
 import { IconContext } from 'react-icons/lib';
 import {MdKeyboardArrowRight, MdArrowForward} from 'react-icons/md'
-import {Link} from "react-router-dom";
-import "./SponsorPackage.css";
+import {Link} from 'react-router-dom';
+import './SponsorPackage.css';
 
 function SponsorPackage() {
   const [hover, setHover] = useState (false)
