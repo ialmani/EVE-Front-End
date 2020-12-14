@@ -16,9 +16,15 @@ state = {
 
 render() {
   return (
+<<<<<<< HEAD
     <div className='landing-container'>
       <video src='/Videos/video-1.mp4' autoPlay loop muted />
        <h1>Welcome to EVE</h1>
+=======
+    <div className='container'>
+      <video src='/Videos/video-1.mp44' autoPlay loop muted />
+        <h1>Welcome to EVE</h1>
+>>>>>>> 97068b347da779fd11b8458afa29962c8b1714a4
         <p>Bringing Key Resources to Small Businesses and Entrepreneurs</p>
       <div className='landingPagebtns'>
         <Button
