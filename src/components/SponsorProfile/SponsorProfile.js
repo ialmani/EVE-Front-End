@@ -38,7 +38,7 @@ const SponsorProfile = () => {
                                 <p className = "bio">A computer science major with an interest in web development. Favourite color is green</p>
                             </div>
                             <div className = "profile-btn">
-                            <Link to='article-new'>
+                            <Link to='article/new'>
                                 <button className = "article-btn">
                                 <i className = "fa fa-plus">Article</i>
                                 </button>

@@ -12,6 +12,7 @@ import SignUp from "./components/SignUp/SignUp";
 import SponsorPackage from "./components/SponsorPackage/SponsorPackage";
 import SponsorProfile from './components/SponsorProfile/SponsorProfile';
 import Articles from "./components/Articles/Articles";
+import NewArticle from "./components/Articles/NewArticle";
 
 export const BaseRouter = () => {
   return (
@@ -28,6 +29,7 @@ export const BaseRouter = () => {
         <Route path = '/sponsor-packages' component= {SponsorPackage} exact/>
         <Route path = '/videos/upload' component= {UploadVideo} exact/>
         <Route path = '/sponsor-profile' component = {SponsorProfile} exact/>
+        <Route path = '/article/new' component = {NewArticle} exact />
       </Switch>
     </div>
   );
