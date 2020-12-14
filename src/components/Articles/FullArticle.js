@@ -12,21 +12,22 @@ const FullArticle =  ()  => {
     const [article, setArticle] = useState([]);
     let {id} = useParams();
 
+
     useEffect(()=>{
+
         Requests.getArticle(id).then(data=>{
             if(data.statusCode !== 404) {
                 setArticle(data)
+
             }
-        }).catch(() => null);
-    },[]);
+        }).catch((err) => console.log(err));
+    });
 
 
     return (
         <div>
-
+        <h3>HELLO</h3>
                 <div className = 'article-box'>
-
-
                     <h3 className = 'title'>{article.title}</h3>
                     <h4 className='author'>{article.author}</h4>
                     <p className = 'text'>{article.content}</p>

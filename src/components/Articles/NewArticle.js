@@ -3,6 +3,7 @@ import './NewArticle.css'
 
 const NewArticle = () => {
   return (
+
   
     <div className = "article-wrapper">
         <div className = "title"> 

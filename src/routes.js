@@ -28,8 +28,8 @@ export const BaseRouter = () => {
         <Route path = '/sponsor-packages' component={SponsorPackage} exact/>
         <Route path = '/sponsor-profile' component={SponsorProfile} exact/>
         <Route path = '/articles' component={Articles} exact/>
-        <Route path = '/article/create' component={NewArticle} exact />
-        <Route path = '/article/view' component={FullArticle} exact />
+        <Route path = '/articles/create' component={NewArticle} exact />
+        <Route path = '/articles/:id' component={FullArticle} exact />
         <Route path = '/videos' component={Videos} exact/>
         <Route path = '/videos/upload' component={UploadVideo} exact/>
       </Switch>
