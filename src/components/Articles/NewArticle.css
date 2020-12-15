@@ -1,13 +1,13 @@
 
-body{
-    text-align: center;
-}
+/*body{*/
+/*    text-align: center;*/
+/*}*/
 
 
 .article-wrapper {
-    max-width: 500px;
+    max-width: 2000px;
     width: 100%;
-    background: #D2D9D5;
+    /*background: #D2D9D5;*/
     margin: 20px auto;
     padding: 30px;
     box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
@@ -15,27 +15,28 @@ body{
 
 }
 
-.article-wrapper .title {
+.title {
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 25px;
     color: #b19cd9;
     text-transform: uppercase;
     text-align: center;
+
 }
 
-.article-wrapper .form .input-field{
+.input-field{
     margin-bottom: 15px;
-    display: flex;
+    /*display: flex;*/
     align-items: center;
 }
-.article-wrapper .form .input-field label{
+label{
     width: 200px;
     color: black;
     margin-right: 10px;
     font-size: 16px;
 }
-.article-wrapper .form .input-field .input, .article-wrapper .form .input-field .text-area {
+.input, .text-area {
     width: 100%;
     outline: none;
     border: 1px solid #d5dbd9;
@@ -43,12 +44,17 @@ body{
     padding: 8px;
     border-radius: 4px;
 }
-.article-wrapper .form .input-field .text-area{
+.text-area{
     resize: none;
     height: 300px;
 
 }
-.article-wrapper .form .input-field .input:focus, .article-wrapper .form .input-field .text-area:focus {
+
+textarea{
+    height: 300px;
+}
+
+.input:focus, .text-area:focus {
     border : 1px solid  #9cde99;
 }
 
@@ -62,4 +68,20 @@ body{
 .date {
 
     margin-left: 30%;
+}
+
+.wrapper-class {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    height:300px;
+}
+.editor-class {
+    background-color:lightgray;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    max-height:250px;
+
+}
+.toolbar-class {
+    border: 1px solid #ccc;
 }

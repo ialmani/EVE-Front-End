@@ -91,7 +91,7 @@ describe('Sponsor Resource Test', () => {
   it('Visits New Article Page', () => {
     cy.visit('http://localhost:3000/sponsor-profile')
     cy.get('.article-btn').click()
-    cy.url().should('include', '/article/create')
+    cy.url().should('include', '/articles/create')
   })
 })
 

@@ -1,7 +1,31 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './NewArticle.css'
+import * as Requests from "../../Requests";
+
+import { useHistory } from "react-router-dom";
 
 const NewArticle = () => {
+    const [newArticle, setNewArticle] = useState({
+        title: null,
+        author: null,
+        content:null
+    });
+
+    let history = useHistory();
+
+    const createArticle = e => {
+        e.preventDefault();
+        Requests.createArticle(newArticle).then((response) => {
+            console.log(response.id)
+            history.push('/articles/'+response.id);
+
+
+        }).catch(status=>
+            alert(status));
+    }
+
+
+
   return (
 
   
@@ -10,31 +34,28 @@ const NewArticle = () => {
           Post a new article
 
         </div>
-        <div className = "form">
-            <div className = "input-field">
-              <label>Topic</label>
-              <input type = "text" className = "input"/>
-            </div>
+        <form className = "form" onSubmit={createArticle}>
+
             <div className = "input-field">
               <label>Title</label>
-              <input type = "text" className = "input"/>
+              <input type = "text" className = "input" onChange={e=>setNewArticle({...newArticle, title:e.target.value})}/>
             </div>
             <div className = "input-field">
-              <label>Description</label>
-              <textarea className = "text-area" placeHolder="content" rows="10" cols="30"required/>
+                <label>Author</label>
+                <input type = "text" className = "input" onChange={e=>setNewArticle({...newArticle, author:e.target.value})}/>
             </div>
             <div className = "input-field">
-              <label>Author</label>
-              <input type = "text" className = "input"/>
+              <label>Content</label>
+                <textarea
+                       className="input"
+                       onChange={e=>setNewArticle({...newArticle, content:e.target.value})}
+                />
+
             </div>
-            <div className = "upload-img">
-            <input type = 'file' name = 'file' onChange = {(e) => this.onChange(e)}/>
-            </div>
-            <div className = "datee">
-            <input type ="date"  size="39" required></input> <br/> <br/>
-            <button className="btn">Upload post <span class="fas fa-upload"></span></button>
-            </div>
-        </div>
+
+            <input type='submit' className="btn" />
+
+        </form>
       
     </div>
   )
