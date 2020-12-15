@@ -66,12 +66,10 @@ export const authSignup = (username, email, password1, password2) => {
     dispatch(authStart());
     axios
       .post("http://127.0.0.1:8000/rest-auth/registration/", {
-      auth:{
         username: username,
         email: email,
         password1: password1,
         password2: password2,
-        }
       })
       .then((res) => {
         const token = res.data.key;
@@ -85,7 +83,7 @@ export const authSignup = (username, email, password1, password2) => {
       .catch((err) => {
         console.log(err);
         dispatch(authFail(err));
-       // window.location.replace("/signup");
+       window.location.replace("/signup");
       });
   };
 };
