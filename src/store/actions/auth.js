@@ -51,7 +51,7 @@ export const authLogin = (username, password) => {
         localStorage.setItem("token", token);
         localStorage.setItem("expirationDate", expirationDate);
         dispatch(authSuccess(token));
-        window.location.replace("/");
+        window.location.replace("/sponsor-profile");
         dispatch(checkAuthTimeout(3600));
       })
       .catch((err) => {
@@ -77,7 +77,7 @@ export const authSignup = (username, email, password1, password2) => {
         localStorage.setItem("token", token);
         localStorage.setItem("expirationDate", expirationDate);
         dispatch(authSuccess(token));
-        window.location.replace("/");
+        window.location.replace("/sponsor-profile");
         dispatch(checkAuthTimeout(3600));
       })
       .catch((err) => {
