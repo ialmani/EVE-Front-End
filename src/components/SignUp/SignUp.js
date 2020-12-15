@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import { Button, Form, Grid, Header, Message, Segment } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import { authSignup } from '../../store/actions/auth';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
+import * as Requests from "../../Requests";
+
 
 class SignUp extends Component {
   state = {
@@ -113,6 +115,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     signup: (username, email, password1, password2) =>
       dispatch(authSignup(username, email, password1, password2)),
+
   };
 };
 
