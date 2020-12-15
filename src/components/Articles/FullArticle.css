@@ -1,0 +1,31 @@
+
+
+.article-wrapper {
+    display: inline-block;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+
+.article-content {
+    margin: 3rem 1rem 1rem 1rem;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.article-title{
+    line-height: 1.5rem;
+    margin: 1rem 0 0.5rem;
+    text-align: center;
+    font-size: 2.5rem;
+
+}
+
+.article-author{
+    line-height: 2.5rem;
+    margin: 1rem 0 0.5rem;
+    text-align: center;
+}
+

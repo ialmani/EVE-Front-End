@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import {useParams} from 'react-router-dom';
 
-// import './Article.css'
+ import './FullArticle.css'
 
 import * as Requests from '../../Requests'
 
@@ -26,11 +26,17 @@ const FullArticle =  ()  => {
 
     return (
         <div>
-        <h3>HELLO</h3>
-                <div className = 'article-box'>
-                    <h3 className = 'title'>{article.title}</h3>
-                    <h4 className='author'>{article.author}</h4>
-                    <p className = 'text'>{article.content}</p>
+       
+                <div className = 'article-wrapper' >
+                    
+                        <div className = 'article-content'>
+                            <h3 className = 'article-title'>{article.title}</h3>
+                            <h4 className='article-author'>{article.author}</h4>
+                            <p className = 'article-content'>{article.content}</p>
+                       
+                    
+                    </div>
+                  
                 </div>
 
 
