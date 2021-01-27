@@ -31,7 +31,7 @@ class Layout extends Component {
               <Menu.Item>About</Menu.Item>
             </Link>
             <div className="dropdown">
-                <Link className="nav-link">
+                <Link className="nav-link" to="/resources">
                     <Menu.Item>Resources</Menu.Item>
                 </Link>
                 <div className="dropdown-content">
