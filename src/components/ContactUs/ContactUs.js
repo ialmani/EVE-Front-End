@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import "./ContactUs.css";
 
 class ContactUs extends Component {
   render() {
     return (
       <div>
-        <h2>THE CONTACT US STUFF</h2>
+        <h1>THE CONTACT US STUFF</h1>
 
       </div>
     );
