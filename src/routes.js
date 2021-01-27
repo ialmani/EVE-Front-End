@@ -13,6 +13,7 @@ import SponsorPackage from './components/SponsorPackage/SponsorPackage';
 import SponsorProfile from './components/SponsorProfile/SponsorProfile';
 import Videos from './components/Resources/Videos';
 import UploadVideo from './components/Resources/UploadVideos';
+import AllResources from './components/Resources/AllResources';
 //import Layout from './components/Navbar&Footer/Layout';
 
 export const BaseRouter = () => {
@@ -24,6 +25,7 @@ export const BaseRouter = () => {
         <Route path = '/signup' component={SignUp} exact/>
         <Route path = '/about' component={About} exact/>
         <Route path = '/get-started' component={GetStarted} exact/>
+        <Route path = '/resources' component={AllResources} exact/>
         <Route path = '/contact-us' component={ContactUs} exact/>
         <Route path = '/sponsor-packages' component={SponsorPackage} exact/>
         <Route path = '/sponsor-profile' component={SponsorProfile} exact/>
