@@ -4,6 +4,11 @@
     cursor: pointer;
 }
 
+.background{
+    background-color: #292B6E !important;
+    margin: 0 !important;
+}
+
 .nav-link {
     font-size: 16px;
     height: 80px;
