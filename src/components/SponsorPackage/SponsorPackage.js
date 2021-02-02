@@ -3,6 +3,7 @@ import { GiCrystalBars } from 'react-icons/gi';
 import { GiCutDiamond, GiRock } from 'react-icons/gi';
 import { IconContext } from 'react-icons/lib';
 import {MdKeyboardArrowRight, MdArrowForward} from 'react-icons/md'
+import { Button} from 'semantic-ui-react';
 import {Link} from 'react-router-dom';
 import './SponsorPackage.css';
 
@@ -17,7 +18,6 @@ function SponsorPackage() {
     <IconContext.Provider value={{ color: '#a9b3c1', size: 64 }}>
       <div className='pricing-section'>
         <div className='pricing-wrapper'>
-          <h1 className='price-heading'>Sponsor Packageas Available for Purchase</h1>
           <div className='pricing-container'>
             <div className='pricing-card'>
               <div className='pricing-card-info'>
@@ -69,9 +69,9 @@ function SponsorPackage() {
 
           </div>
 
-            <Link to= '/signup/sponsor' onMouseEnter={onHover} onMouseLeave = {onHover}>
+            <Button to= '/signup/sponsor' onMouseEnter={onHover} onMouseLeave = {onHover} color="twitter">
             Sign up as a Sponsor{hover ? <MdArrowForward className='forward' /> : <MdKeyboardArrowRight className='right' />}
-            </Link>
+            </Button>
 
         </div>
       </div>
