@@ -16,7 +16,7 @@
 }
 
 .nav-link:hover {
-    background-color: lightgreen;
+    background-color: #c2cffc;
     height: 80px;
 }
 
@@ -42,7 +42,7 @@
 }
 
 .dropdown-content a:hover {
-    color: lightgreen;
+    color: #c2cffc;
 }
 
 .dropdown:hover .dropdown-content {
