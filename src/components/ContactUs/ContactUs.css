@@ -1,8 +1,65 @@
-.Contact {
-    text-align: center;
+.Contact-body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f1f1;
+    font-family: "Open Sans", sans-serif;
 }
 
-.Contact h1 {
-    font-size: 50px;
-    font-family: Arial, Helvetica, sans-serif;
+.Contact-section {
+    background-image: url(../../assets/ContactUs.png);
+    background-position: left; 
+    background-size: 55%;
+    background-color: #fdfdfd;
+    overflow: hidden;
+    padding: 100px 0;  
+} 
+
+.Contact-container {
+    width: 55%;
+    float: right;
+    background-color: #fdfdfd;
+    padding: 150px;
+}
+.Contact-container h1 {
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.text {
+    font-size: 13px;
+    color: #545454;
+    line-height: 20px;
+    text-align: justify;
+    margin-bottom: 40px;
+}
+
+.text2 {
+    font-size: 16px;
+}
+
+@media screen and (max-width: 1200px){
+    .Contact-container{
+        padding: 80px;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .Contact-section{
+        background-size: 100%;
+        padding: 100px 40px;
+    }
+    .Contact-container{
+        width: 100%;
+    }
+    @media screen and (max-width: 600px){
+        .Contact-section{
+            padding: 0;
+        }
+        .Contact-container{
+            padding: 60px;
+        }
+    }
 }
