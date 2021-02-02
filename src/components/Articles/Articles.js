@@ -1,6 +1,6 @@
 import React, {Component, useEffect, useState} from 'react'
-import aboutImg from '../../assets/about.svg'
 import profileImg from '../../assets/profilepic.png'
+import articleImg from '../../assets/articles.jpg'
 import './Articles.css'
 import * as Requests from '../../Requests'
 
@@ -23,7 +23,7 @@ const Articles = () => {
             <div className = "card">
                 <div className = "card-banner">
                     <p className = "category-tag"> Genre </p>
-                    <img className = "banner-img" src = {aboutImg}/>
+                    <img className = "banner-img" src = {articleImg}/>
                 </div>
                 <div className = "card-body">
 
