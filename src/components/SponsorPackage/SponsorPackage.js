@@ -2,8 +2,6 @@ import React, {useState} from 'react'
 import { GiCrystalBars } from 'react-icons/gi';
 import { GiCutDiamond, GiRock } from 'react-icons/gi';
 import { IconContext } from 'react-icons/lib';
-import {MdKeyboardArrowRight, MdArrowForward} from 'react-icons/md'
-import { Button} from '../Button';
 import {Link} from 'react-router-dom';
 import './SponsorPackage.css';
 
@@ -69,11 +67,9 @@ function SponsorPackage() {
             </div>
 
           </div>
-          <Button onMouseEnter={onHover} onMouseLeave ={onHover}>
-            <Link to= '/signup'>
-            Sign up as a Sponsor {hover ? <MdArrowForward className='forward' /> : <MdKeyboardArrowRight className='right' />}
+            <Link to= '/signup' className= 'pricing-heading-top'>
+            Sign up as a Sponsor<span>&rarr;</span>
             </Link>
-          </Button>
         </div>
       </div>
     </IconContext.Provider>
