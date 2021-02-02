@@ -17,7 +17,7 @@ function SponsorPackage() {
     <IconContext.Provider value={{ color: '#a9b3c1', size: 64 }}>
       <div className='pricing-section'>
         <div className='pricing-wrapper'>
-          <h1 className='price-heading'>Our Packages</h1>
+          <h1 className='price-heading'>Sponsor Packageas Available for Purchase</h1>
           <div className='pricing-container'>
             <div className='pricing-card'>
               <div className='pricing-card-info'>
