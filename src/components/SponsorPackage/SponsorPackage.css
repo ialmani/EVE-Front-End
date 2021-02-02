@@ -1,8 +1,17 @@
+.pricing-heading-top {
+    display: table; /* keep the background color wrapped tight */
+    margin: 0px auto 0px auto; /* keep the table centered */
+    padding:25px;
+    font-size:48px;
+    background-color: #292B6E;
+    color:#ffffff;
+}
+
 .pricing-section{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 5%;
+    padding: 1%;
     background-image: url(../../assets/SP.jpg);
     background-blend-mode:soft-light;
     background-size: 20%;
