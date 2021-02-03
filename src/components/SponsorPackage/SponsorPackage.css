@@ -1,10 +1,18 @@
 .pricing-heading-top {
     display: table; /* keep the background color wrapped tight */
-    margin: 0px auto 0px auto; /* keep the table centered */
-    padding:25px;
+    margin: 20px auto 20px auto; /* keep the table centered */
+    padding: 20px;
     font-size:48px;
     background-color: #292B6E;
     color:#ffffff;
+}
+
+.pricing-heading-bottom {
+    padding: 20px;
+    font-size:24px;
+    background-color: #292B6E;
+    color:#ffffff;
+    margin-top: 20px;
 }
 
 .pricing-section{
