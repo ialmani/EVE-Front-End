@@ -67,7 +67,7 @@ function SponsorPackage() {
             </div>
 
           </div>
-            <Link to= '/signup' className= 'pricing-heading-top'>
+            <Link to= '/signup' className= 'pricing-heading-bottom'>
             Sign up as a Sponsor<span>&rarr;</span>
             </Link>
         </div>
