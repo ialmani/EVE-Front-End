@@ -1,9 +1,21 @@
+.pricing-heading-top {
+    display: table; /* keep the background color wrapped tight */
+    margin: 0px auto 0px auto; /* keep the table centered */
+    padding:25px;
+    font-size:48px;
+    background-color: #292B6E;
+    color:#ffffff;
+}
+
 .pricing-section{
-    padding: 100px 0 160px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: #E6FFE5;
+    padding: 1%;
+    background-image: url(../../assets/SP.jpg);
+    background-blend-mode:soft-light;
+    background-size: 20%;
+    
 }
 
 .pricing-wrapper{
@@ -28,7 +40,7 @@
         width: 100%;
     }
     .pricing-card{
-        width: 70%;
+        width: 80%;
     }
 }
 
@@ -42,15 +54,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    color: blue;
 }
 
 .pricing-card{
     background: #242424;
-    box-shadow: 0 6px 20px rgba(56, 125, 255, 0.2);
+    box-shadow: 0 6px 40px rgba(56, 125, 255, 0.2);
     width: 280px;
     height: 500px;
     text-decoration: none;
-    border-radius: 4px;
 }
 
 .pricing-card-info{

@@ -1,5 +1,3 @@
-
-
 .about-body{
     min-height: 100vh;
     display: flex;
@@ -12,12 +10,10 @@
 .about-section{
     background-image: url(../../assets/about.png);
     background-position: left; 
-    
     background-size: 55%;
     background-color: #fdfdfd;
     overflow: hidden;
     padding: 100px 0;
-    
 }
 
 .inner-container {
@@ -25,7 +21,6 @@
     float: right;
     background-color: #fdfdfd;
     padding: 150px;
-
 }
 
 .inner-container h1 {
@@ -41,6 +36,7 @@
     text-align: justify;
     margin-bottom: 40px;
 }
+
 .text2 {
     font-size: 16px;
 }
@@ -50,10 +46,11 @@
         padding: 80px;
     }
 }
+
 @media screen and (max-width: 1000px){
     .about-section{
         background-size: 100%;
-        padding: 100px 40px
+        padding: 100px 40px;
     }
     .inner-container{
         width: 100%;

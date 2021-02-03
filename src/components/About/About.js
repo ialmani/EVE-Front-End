@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
+import { Button } from '../Button';
 import './About.css';
 
-class AboutUs extends Component {
-  render() {
+const AboutUs = () => {
     return (
       <div className = "about-body">
         <div className = "about-section">
@@ -10,8 +10,6 @@ class AboutUs extends Component {
             <h1>About Us</h1>
             <h3 className = "text2">
             We bring key resources to entrepreneurs enabling them to realize their visions and build social capital.</h3>
-            
-            
             <h3 className = "text2"> EVE provides a driect connection through candid, shared communication.</h3>
             <h3 className= "text2">The mission of EVE is to bring wisdom, key resources, and purposeful content to its users.</h3>
             <h4 className = "text">Enterprise Virtual Exchange (EVE) is a state of the art, user friendly platform that delivers illuminating 
@@ -22,13 +20,10 @@ class AboutUs extends Component {
             we partner with small business advocates, certified Community Development Financial Institutions, and other
             small business resource providers to customize knowledge for business acumen and bring to the end-user an
             online and easily accessible platform.</h4>
-            
+            </div>
           </div>
-
         </div>
-      </div>
     );
-  }
 }
 
 export default AboutUs;
