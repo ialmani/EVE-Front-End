@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { Button } from '../Button';
 import './About.css';
 
-class AboutUs extends Component {
-  render() {
+const AboutUs = () => {
     return (
       <div className = "about-body">
         <div className = "about-section">
@@ -25,7 +24,6 @@ class AboutUs extends Component {
           </div>
         </div>
     );
-  }
 }
 
 export default AboutUs;

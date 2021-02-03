@@ -5,8 +5,7 @@ import articleImg from '../../assets/articles.jpg'
 import liveImg from '../../assets/liveEvents.jpg'
 import videoImg from '../../assets/video.jpg'
 
-class AllResources extends Component {
-    render() {
+const AllResources = () => {
       return (
         <div className = "resources-body">
           <div className = "heading"><h1>Welcome to our collection of resources to help you learn!</h1></div>
@@ -45,7 +44,6 @@ class AllResources extends Component {
           </div>
         </div>
       );
-    }
   }
   
   export default AllResources;
