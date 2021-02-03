@@ -13,6 +13,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-image: url(../../assets/ContactUsBackground.png);
     background-color: #ffffff;
     font-family: "Open Sans", sans-serif;
 }
@@ -27,7 +28,7 @@
 .Contact-container {
     width: 50%;
     float: right;
-    background-color: #ffffff;
+    background-color: #eeeeee;
     padding: 150px;
 }
 .Contact-container h1 {
