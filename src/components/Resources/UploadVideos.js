@@ -2,7 +2,8 @@ import React, {useState} from 'react'
 import uploadImg from "../../assets/about.png"
 import './UploadVideos.css'
 import ReactPlayer from 'react-player'
-
+import { useHistory } from "react-router-dom";
+import * as Requests from '../../Requests'
 //<img src = {}/> in line 37
 
 
@@ -17,17 +18,17 @@ const UploadVideos = () => {
             </div>             
             <div className = "f-container">
                    
-                <form action = "#">
-                    <div className = "data">
-                    <input type = "text" placeholder = "title"/>
+                <form onSubmit={uploadVideo}>
+                    <div className = "input-field">
+                    <input type = "text" placeholder = "title" className = "input" onChange={e=>setNewVideo({...newVideo, title:e.target.value})}/>
                     </div>
 
-                    <div className = "data1">
-                        <textarea placeholder = "description"/>
+                    <div className = "input-field">
+                        <textarea placeholder = "description" className="input" onChange={e=>setNewVideo({...newVideo, description:e.target.value})}/>
                     </div>
 
-                    <div className = "data">
-                        <input type = "url" placeholder = "https://example.com" pattern="https://.*" size="30" required/>
+                    <div className = "input-field">
+                        <input type = "url" placeholder = "https://example.com" pattern="https://.*" size="30" required onChange={e=>setNewVideo({...newVideo, URL:e.target.value})}/>
                     </div>
 
                     <div className = "button">
