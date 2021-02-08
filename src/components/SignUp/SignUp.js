@@ -20,7 +20,7 @@ const SignUp = () =>{
     const signUpUser = (e) => {
       e.preventDefault();
       Requests.createUser(newUser).then((response) => {
-        history.push('/sponsor-profile');
+        history.push('/login');
       }).catch(status=>
           alert(status));
     }
