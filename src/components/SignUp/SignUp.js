@@ -1,33 +1,30 @@
-import React, { Component } from 'react';
+import React, {Component, useState} from 'react';
 import { Button, Form, Grid, Header, Message, Segment } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import { authSignup } from '../../store/actions/auth';
-import {Link} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
 import * as Requests from "../../Requests";
 
 
-class SignUp extends Component {
-  state = {
-    username: "",
-    email: "",
-    password1: "",
-    password2: "",
-  };
-
-  handleChange = (e) => {
-    this.setState({
-      [e.target.name]: e.target.value,
+const SignUp = () =>{
+    const [newUser, setNewUser] = useState({
+      username: "",
+      email:"",
+      password: "",
+      first_name:"",
+      last_name:""
     });
-  };
-  handleSubmit = () => {
-    const { username, email, password1, password2 } = this.state;
-    this.props.signup(username, email, password1, password2);
-    this.setState({ username: "", email: "", password1: "", password2: "" });
-  };
 
-  render() {
-    const { loading, error } = this.props;
-    const { username, email, password1, password2 } = this.state;
+    let history = useHistory();
+
+    const signUpUser = (e) => {
+      e.preventDefault();
+      Requests.createUser(newUser).then((response) => {
+        history.push('/sponsor-profile');
+      }).catch(status=>
+          alert(status));
+    }
+
     return (
       <Grid
         textAlign="center"
@@ -38,13 +35,12 @@ class SignUp extends Component {
           <Header as="h2" textAlign="center">
             Create an account
           </Header>
-          <Form size="large" onSubmit={this.handleSubmit} error={error}>
+          <Form size="large" onSubmit={signUpUser}>
             <Segment stacked>
               <Form.Input
                 fluid
                 name="username"
-                value={username}
-                onChange={this.handleChange}
+                onChange={e=>setNewUser({...newUser, username:e.target.value})}
                 icon="user"
                 iconPosition="left"
                 placeholder="Username"
@@ -52,43 +48,36 @@ class SignUp extends Component {
               <Form.Input
                 fluid
                 name="email"
-                value={email}
-                onChange={this.handleChange}
+                onChange={e=>setNewUser({...newUser, email:e.target.value})}
                 icon="mail"
                 iconPosition="left"
                 placeholder="Email address"
               />
               <Form.Input
+                  fluid
+                  name="firstName"
+                  onChange={e=>setNewUser({...newUser, first_name:e.target.value})}
+                  iconPosition="left"
+                  placeholder="First Name"
+              />
+              <Form.Input
+                  fluid
+                  name="lastName"
+                  onChange={e=>setNewUser({...newUser, last_name:e.target.value})}
+                  iconPosition="left"
+                  placeholder="Last Name"
+              />
+              <Form.Input
                 fluid
-                name="password1"
-                value={password1}
-                onChange={this.handleChange}
+                name="password"
+                onChange={e=>setNewUser({...newUser, password:e.target.value})}
                 icon="lock"
                 iconPosition="left"
                 placeholder="Password"
                 type="password"
               />
-              <Form.Input
-                fluid
-                name="password2"
-                value={password2}
-                onChange={this.handleChange}
-                icon="lock"
-                iconPosition="left"
-                placeholder="Confirm password"
-                type="password"
-              />
-              {error && (
-                <Message
-                  error
-                  header="There was an error"
-                  content="Please check your credentials"
-                />
-              )}
               <Button
                 color="twitter"
-                loading={loading}
-                disabled={loading}
                 fluid
                 size="large"
               >
@@ -103,20 +92,6 @@ class SignUp extends Component {
       </Grid>
     );
   }
-}
-const mapStateToProps = (state) => {
-  return {
-    loading: state.loading,
-    error: state.error,
-  };
-};
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    signup: (username, email, password1, password2) =>
-      dispatch(authSignup(username, email, password1, password2)),
 
-  };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(SignUp);
+export default SignUp;

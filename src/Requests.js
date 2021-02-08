@@ -11,6 +11,16 @@ export const loginUser =(user)=>{
     }).then(response => response.json());
 }
 
+export const createUser =(newUser)=>{
+    return fetch(API_BASE+'auth/api/register', {
+        method: 'post',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(newUser)
+    }).then(response => response.json());
+}
+
 export const getAllArticles = () => {
     return fetch(API_BASE+'articles').then(response => response.json());
 };

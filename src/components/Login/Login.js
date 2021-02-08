@@ -16,7 +16,6 @@ const Login = () =>{
   const loginUser = (e) => {
     e.preventDefault();
     Requests.loginUser(user).then((response) => {
-      console.log(response)
       history.push('/sponsor-profile');
 
 
