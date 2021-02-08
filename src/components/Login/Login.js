@@ -1,72 +1,60 @@
-import React, { Component } from 'react';
-import { Button, Form, Grid, Header, Message, Segment } from 'semantic-ui-react';
+import React, {Component, useState} from 'react';
+import { Input, Button, Form, Grid, Header, Message, Segment } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import { authLogin } from '../../store/actions/auth';
-import { Link } from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
+import * as Requests from "../../Requests";
 
-class Login extends Component {
-  state = {
+const Login = () =>{
+  const [user, setUser] = useState({
     username: "",
     password: "",
-  };
+  });
 
-  handleChange = (e) => {
-    this.setState({
-      [e.target.name]: e.target.value,
-    });
-  };
-  handleSubmit = (e) => {
+  let history = useHistory();
+
+  const loginUser = (e) => {
     e.preventDefault();
-    const { username, password } = this.state;
-    this.props.login(username, password);
-    this.setState({ username: "", password: "" });
-  };
+    Requests.loginUser(user).then((response) => {
+      localStorage.setItem("token", response.access)
+      history.push('/sponsor-profile');
 
-  render() {
-    const { loading, error } = this.props;
-    const { username, password } = this.state;
-    return (
+
+    }).catch(status=>
+        alert(status));
+  }
+
+
+  return(
       <Grid
-        textAlign="center"
-        style={{ height: "100vh" }}
-        verticalAlign="middle"
+          textAlign="center"
+          style={{ height: "100vh" }}
+          verticalAlign="middle"
       >
-        <Grid.Column style={{ maxWidth: 550 }}>
-          <Header as="h2" textAlign="center">
+        <Grid.Column style={{ maxWidth: 450 }}>
+          <Header as="h2" color="purple" textAlign="center">
             Login to your account
           </Header>
-          <Form size="large" onSubmit={this.handleSubmit} error={error}>
+          <Form size="large" onSubmit={loginUser} >
             <Segment stacked>
               <Form.Input
                 fluid
-                name="username"
-                value={username}
-                onChange={this.handleChange}
+                onChange={e=>setUser({...user, username:e.target.value})}
                 icon="user"
                 iconPosition="left"
                 placeholder="Username"
               />
-              <Form.Input
+              <Form.Input type="password"
                 fluid
-                name="password"
-                value={password}
-                onChange={this.handleChange}
+                onChange={e=>setUser({...user, password:e.target.value})}
                 icon="lock"
                 iconPosition="left"
                 placeholder="Password"
-                type="password"
+
               />
-              {error && (
-                <Message
-                  error
-                  header="Unable to Login"
-                  content="Please check your username and password"
-                />
-              )}
               <Button
                 color="twitter"
-                loading={loading}
-                disabled={loading}
+
                 fluid
                 size="large"
               >
@@ -80,20 +68,8 @@ class Login extends Component {
         </Grid.Column>
       </Grid>
     );
-  }
+
 }
-const mapStateToProps = (state) => {
-  return {
-    authenticated: state.token !== null,
-    loading: state.loading,
-    error: state.error,
-  };
-};
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    login: (username, password) => dispatch(authLogin(username, password)),
-  };
-};
 
-export default connect(mapStateToProps, mapDispatchToProps)(Login);
+export default Login;

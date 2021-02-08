@@ -14,6 +14,7 @@ import SponsorProfile from './components/SponsorProfile/SponsorProfile';
 import Videos from './components/Resources/Videos';
 import UploadVideo from './components/Resources/UploadVideos';
 import AllResources from './components/Resources/AllResources';
+import FullVideo from './components/Resources/FullVideo';
 //import Layout from './components/Navbar&Footer/Layout';
 
 export const BaseRouter = () => {
@@ -34,6 +35,7 @@ export const BaseRouter = () => {
         <Route path = '/articles/:id' component={FullArticle} exact />
         <Route path = '/videos' component={Videos} exact/>
         <Route path = '/videos/upload' component={UploadVideo} exact/>
+        <Route path = '/videos/:id' component={FullVideo} exact/>
       </Switch>
     </div>
   );
