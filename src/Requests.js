@@ -20,6 +20,14 @@ export const createArticle = (newArticle) => {
     }).then(response => response.json());
 };
 
+export const getAllVideos = () => {
+    return fetch(API_BASE+'videos').then(response => response.json());
+};
+
+export const getVideo = (id) => {
+    return fetch(API_BASE+'videos/'+id).then(response => response.json());
+};
+
 export const createVideo = (newVideo) => {
     return fetch(API_BASE + 'videos/create', {
         method: 'post',
