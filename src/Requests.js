@@ -1,6 +1,16 @@
 import {API_BASE} from './Config';
 import {authFail, authSuccess, checkAuthTimeout} from "./store/actions/auth";
 
+export const loginUser =(user)=>{
+    return fetch(API_BASE+'api/token', {
+        method: 'post',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(user)
+    }).then(response => response.json());
+}
+
 export const getAllArticles = () => {
     return fetch(API_BASE+'articles').then(response => response.json());
 };
