@@ -1,5 +1,5 @@
 import React, {Component, useState} from 'react';
-import { Button, Form, Grid, Header, Message, Segment } from 'semantic-ui-react';
+import { Input, Button, Form, Grid, Header, Message, Segment } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import { authLogin } from '../../store/actions/auth';
 import {Link, useHistory} from 'react-router-dom';
@@ -34,30 +34,21 @@ const Login = () =>{
           </Header>
           <Form size="large" onSubmit={loginUser} >
             <Segment stacked>
-              <input
+              <Input
                 fluid
-
                 onChange={e=>setUser({...user, username:e.target.value})}
                 icon="user"
                 iconPosition="left"
                 placeholder="Username"
               />
-              <input type="password"
+              <Input type="password"
                 fluid
-
                 onChange={e=>setUser({...user, password:e.target.value})}
                 icon="lock"
                 iconPosition="left"
                 placeholder="Password"
 
               />
-              {/*{error && (*/}
-              {/*  <Message*/}
-              {/*    error*/}
-              {/*    header="Unable to Login"*/}
-              {/*    content="Please check your username and password"*/}
-              {/*  />*/}
-              {/*)}*/}
               <Button
                 color="twitter"
 
