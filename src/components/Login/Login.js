@@ -65,6 +65,7 @@ class Login extends Component {
               )}
               <Button
                 color="purple"
+                name="login"
                 loading={loading}
                 disabled={loading}
                 fluid

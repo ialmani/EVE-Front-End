@@ -87,6 +87,7 @@ class SignUp extends Component {
               )}
               <Button
                 color="purple"
+                name="signup"
                 loading={loading}
                 disabled={loading}
                 fluid
