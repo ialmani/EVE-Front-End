@@ -35,7 +35,7 @@ export const BaseRouter = () => {
         <Route path = '/articles/:id' component={FullArticle} exact />
         <Route path = '/videos' component={Videos} exact/>
         <Route path = '/videos/upload' component={UploadVideo} exact/>
-        <Route path = '/videos/full' component={FullVideo} exact/>
+        <Route path = '/videos/:id' component={FullVideo} exact/>
       </Switch>
     </div>
   );
