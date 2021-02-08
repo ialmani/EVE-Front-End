@@ -41,14 +41,16 @@ export const authLogin = (username, password) => {
   return (dispatch) => {
     dispatch(authStart());
     axios
-      .post("http://127.0.0.1:8000/rest-auth/login/", {
-        username: username,
-        password: password,
+      .post("http://127.0.0.1:8000/api/token/", {
+        "username": username,
+        "password": password
       })
       .then((res) => {
-        const token = res.data.key;
+        console.log(res.data.access);
+        const token = res.data.access;
         const expirationDate = new Date(new Date().getTime() + 3600 * 1000);
         localStorage.setItem("token", token);
+        console.log(localStorage.getItem("token"));
         localStorage.setItem("expirationDate", expirationDate);
         dispatch(authSuccess(token));
         window.location.replace("/sponsor-profile");

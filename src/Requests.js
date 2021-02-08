@@ -14,18 +14,18 @@ export const createArticle = (newArticle) => {
         method: 'post',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': 'Token '+localStorage.getItem("token"),
+            'Authorization': 'Bearer '+localStorage.getItem("token"),
         },
         body: JSON.stringify(newArticle)
     }).then(response => response.json());
 };
 
-export const uploadVideo = (newVideo) => {
-    return fetch(API_BASE + 'videos/upload', {
+export const createVideo = (newVideo) => {
+    return fetch(API_BASE + 'videos/create', {
         method: 'post',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': 'Token '+localStorage.getItem("token"),
+            'Authorization': 'Bearer '+localStorage.getItem("token"),
         },
         body: JSON.stringify(newVideo)
     }).then(response => response.json());
