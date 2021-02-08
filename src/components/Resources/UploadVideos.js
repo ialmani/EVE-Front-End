@@ -1,26 +1,45 @@
-import React, {Component} from 'react'
-//add fetch api
+import React, {useState} from 'react'
+import uploadImg from "../../assets/about.png"
+import './UploadVideos.css'
+import ReactPlayer from 'react-player'
 
-class UploadVideos extends Component {
-    
-    onChange(e){
-        let files = e.target.files;
+//<img src = {}/> in line 37
 
-        let reader = new FileReader();
-        reader.readAsDataURL(files[0]);
-        
-        reader.onload = (e) => {
-        }
-    }
 
-    render (){
-        return (
-            <div onSubmit = {this.onFormSubmit}>
-            <h1>Upload your content</h1>
-            <input type = 'file' name = 'file' onChange = {(e) => this.onChange(e)}/>
+const UploadVideos = () => {
+    return(
+        <div className = "upload-video-body">
+      
+            <div  className = "upload-video-container" >
+                <div className = "upload-video-wrapper">                    
+                    <div className = "icon"><i class = "fas fa-cloud-upload-alt"></i> </div>
+                </div>
+            </div>             
+            <div className = "f-container">
+                   
+                <form action = "#">
+                    <div className = "data">
+                    <input type = "text" placeholder = "title"/>
+                    </div>
+
+                    <div className = "data1">
+                        <textarea placeholder = "description"/>
+                    </div>
+
+                    <div className = "data">
+                        <input type = "url" placeholder = "https://example.com" pattern="https://.*" size="30" required/>
+                    </div>
+
+                    <div className = "button">
+                    <div className = "inner"></div>
+                        <button type = "submit" >UPLOAD</button>
+                    </div>
+
+                </form>
             </div>
-        )
-    }
+                      
+        </div>
+    );
 }
 
 export default UploadVideos

@@ -31,8 +31,8 @@ class Login extends Component {
         style={{ height: "100vh" }}
         verticalAlign="middle"
       >
-        <Grid.Column style={{ maxWidth: 450 }}>
-          <Header as="h2" color="purple" textAlign="center">
+        <Grid.Column style={{ maxWidth: 550 }}>
+          <Header as="h2" textAlign="center">
             Login to your account
           </Header>
           <Form size="large" onSubmit={this.handleSubmit} error={error}>
@@ -64,7 +64,7 @@ class Login extends Component {
                 />
               )}
               <Button
-                color="purple"
+                color="twitter"
                 loading={loading}
                 disabled={loading}
                 fluid
@@ -75,7 +75,7 @@ class Login extends Component {
             </Segment>
           </Form>
           <Message>
-            New to us? <Link to="/signup"> Sign Up</Link>
+            New to us? <Button to="/signup" color="grey"> Sign Up</Button>
           </Message>
         </Grid.Column>
       </Grid>

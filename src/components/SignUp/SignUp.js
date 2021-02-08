@@ -35,7 +35,7 @@ class SignUp extends Component {
         verticalAlign="middle"
       >
         <Grid.Column style={{ maxWidth: 450 }}>
-          <Header as="h2" color="purple" textAlign="center">
+          <Header as="h2" textAlign="center">
             Create an account
           </Header>
           <Form size="large" onSubmit={this.handleSubmit} error={error}>
@@ -86,7 +86,7 @@ class SignUp extends Component {
                 />
               )}
               <Button
-                color="purple"
+                color="twitter"
                 loading={loading}
                 disabled={loading}
                 fluid
@@ -97,7 +97,7 @@ class SignUp extends Component {
             </Segment>
           </Form>
           <Message>
-            Already have an account? <Link to="/login"> Login</Link>
+            Already have an account? <Button to="/login" color="grey"> Login</Button>
           </Message>
         </Grid.Column>
       </Grid>

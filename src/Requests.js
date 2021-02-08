@@ -19,3 +19,14 @@ export const createArticle = (newArticle) => {
         body: JSON.stringify(newArticle)
     }).then(response => response.json());
 };
+
+export const uploadVideo = (newVideo) => {
+    return fetch(API_BASE + 'videos/upload', {
+        method: 'post',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Token '+localStorage.getItem("token"),
+        },
+        body: JSON.stringify(newVideo)
+    }).then(response => response.json());
+}

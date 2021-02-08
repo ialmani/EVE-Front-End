@@ -1,0 +1,84 @@
+.resources-body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f1f1;
+    font-family: "Open Sans", sans-serif; 
+}
+
+.heading{
+   position: absolute;
+   top: 100px;
+   bottom: 80px;
+}
+
+.grid {
+    display: grid;
+    width: 114em;
+    grid-gap: 2em;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    align-items: start; 
+}
+
+.grid-item{
+    padding-top: 40px;
+}
+
+.card-img{
+    display: block;
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+}
+
+.card-content{
+    padding: 3rem;
+}
+
+.card-text {
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
+    line-height: 1.5;
+    color: #3d3d3d;
+}
+
+.card-btn {
+    display: block;
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 2rem;
+    text-align: center;
+    border: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    transition: 0.2s;
+    letter-spacing: 0.1rem;
+}
+
+.card-btn:hover, .card-btn:active {
+    background-color: #c2cffc;
+}
+
+@media screen and (max-width: 600px){
+    .grid-item{
+        padding-top: 8rem;
+    }
+}
+@media screen and (max-width: 800px){
+    .grid-item{
+        padding-top: 6rem;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .grid-item{
+        padding-top: 6rem;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .grid-item{
+        padding-top: 6rem;
+    }
+}

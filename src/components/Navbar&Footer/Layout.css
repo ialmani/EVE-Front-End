@@ -15,10 +15,6 @@
     display: flex;
 }
 
-.nav-link:hover {
-    background-color: lightgreen;
-    height: 80px;
-}
 
 .dropdown {
     position: relative;
@@ -41,8 +37,13 @@
     display: block;
 }
 
+.nav-link:hover {
+    background-color: #c2cffc;
+    height: 80px;
+}
 .dropdown-content a:hover {
-    color: lightgreen;
+    /* color: #c2cffc; */
+    background-color: #c2cffc; 
 }
 
 .dropdown:hover .dropdown-content {
