@@ -41,19 +41,19 @@ const UploadVideos = () => {
             <div className = "f-container">
                    
                 <form onSubmit={createVideo}>
-                    <div className = "input-field">
-                    <input type = "text" placeholder = "title" className = "input" onChange={e=>setNewVideo({...newVideo, title:e.target.value})}/>
+                    <div className = "inputfield">
+                    <input type = "text" className = "txt" placeholder = "title"  onChange={e=>setNewVideo({...newVideo, title:e.target.value})}/>
                     </div>
 
-                    <div className = "input-field">
-                        <textarea placeholder = "description" className="input" onChange={e=>setNewVideo({...newVideo, description:e.target.value})}/>
+                    <div className = "inputfield1">
+                        <textarea className = "txt" placeholder = "description"  onChange={e=>setNewVideo({...newVideo, description:e.target.value})}/>
                     </div>
 
-                    <div className = "input-field">
-                        <input type = "url" placeholder = "https://example.com" pattern="https://.*" size="120" required onChange={e=>setNewVideo({...newVideo, video_url:e.target.value})}/>
+                    <div className = "inputfield">
+                        <input className = "txt" type = "url" placeholder = "https://example.com" pattern="https://.*" size="120" required onChange={e=>setNewVideo({...newVideo, video_url:e.target.value})}/>
                     </div>
 
-                    <div className = "button">
+                    <div className = "bttn">
                     <div className = "inner"></div>
                         <button type = "submit" >UPLOAD</button>
                     </div>
