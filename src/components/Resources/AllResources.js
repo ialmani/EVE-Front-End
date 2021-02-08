@@ -26,7 +26,7 @@ const AllResources = () => {
                 <img className = "card-img" src = {videoImg}></img>            
                 <div className = "card-content">                 
                   <p className = "card-text"> Tons of categories for you to pick videos from</p>
-                  <button className = "card-btn"><Link> View Videos</Link></button>
+                  <button className = "card-btn"><Link to = '/videos'> View Videos</Link></button>
                 </div>
               </div>
             </div>
