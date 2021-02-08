@@ -9,12 +9,13 @@ export const FullVideo = () => (
             <div className = "full-vid-container">
                 <ReactPlayer url = "https://www.youtube.com/watch?v=zTitoHKsyJg" fluid = {false}controls = {false} />
             </div>
-        </div>
+        
         <div className = "box">
             <div className = "text">
             <h1> Title</h1>
             <h3> Description</h3>
             </div>
+        </div>
         </div>
     </div>
 )
