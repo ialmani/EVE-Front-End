@@ -3,7 +3,6 @@ import { Input, Button, Form, Grid, Header, Message, Segment } from 'semantic-ui
 import { connect } from 'react-redux';
 import { authLogin } from '../../store/actions/auth';
 import {Link, useHistory} from 'react-router-dom';
-import "./Login.css";
 import * as Requests from "../../Requests";
 
 const Login = () =>{
@@ -27,21 +26,25 @@ const Login = () =>{
 
 
   return(
-      <Grid>
-        <Grid.Column>
-          <Header as="h2" textAlign="center">
+      <Grid
+          textAlign="center"
+          style={{ height: "100vh" }}
+          verticalAlign="middle"
+      >
+        <Grid.Column style={{ maxWidth: 450 }}>
+          <Header as="h2" color="purple" textAlign="center">
             Login to your account
           </Header>
           <Form size="large" onSubmit={loginUser} >
             <Segment stacked>
-              <Input
+              <Form.Input
                 fluid
                 onChange={e=>setUser({...user, username:e.target.value})}
                 icon="user"
                 iconPosition="left"
                 placeholder="Username"
               />
-              <Input type="password"
+              <Form.Input type="password"
                 fluid
                 onChange={e=>setUser({...user, password:e.target.value})}
                 icon="lock"
@@ -67,18 +70,6 @@ const Login = () =>{
     );
 
 }
-// const mapStateToProps = (state) => {
-//   return {
-//     authenticated: state.token !== null,
-//     loading: state.loading,
-//     error: state.error,
-//   };
-// };
-//
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     login: (username, password) => dispatch(authLogin(username, password)),
-//   };
-// };
+
 
 export default Login;
