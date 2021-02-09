@@ -79,11 +79,35 @@ describe('Sign Up Test', () => {
   })
 })
 
+describe('Sign Up Test', () => {
+  it('Visits the sign up page and creates an account', () => {
+    cy.visit('http://localhost:3000/')
+    cy.contains('SignUp').click()
+    cy.url().should('include', '/signup')
+    cy.get('input[name="username"]').type('FakeName')
+    cy.get('input[name="email"]').type('fake@email.com')
+    cy.get('input[name="password1"]').type('FakePassword')
+    cy.get('input[name="password2"]').type('FakePassword')
+    cy.get('button[name="signup"]').click()
+  })
+})
+
 describe('Login Test', () => {
   it('Visits Login Page', () => {
     cy.visit('http://localhost:3000/')
     cy.contains('Login').click()
     cy.url().should('include', '/login')
+  })
+})
+
+describe('Login Test', () => {
+  it('Visits the login page and logs into an account', () => {
+    cy.visit('http://localhost:3000/')
+    cy.contains('Login').click()
+    cy.url().should('include', '/login')
+    cy.get('input[name="username"]').type('jarvis')
+    cy.get('input[name="password"]').type('happy456')
+    cy.get('button[name="login"]').click()
   })
 })
 
