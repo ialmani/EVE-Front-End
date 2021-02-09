@@ -1,4 +1,4 @@
-import React, {Component, useEffect, useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import profileImg from '../../assets/profilepic.png'
 import articleImg from '../../assets/articles.jpg'
 import './Articles.css'
