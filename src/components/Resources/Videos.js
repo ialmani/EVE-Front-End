@@ -16,22 +16,19 @@ const Videos = () => {
   }, []);
   return (
     <div className = "videos-body">
+      <h1> Welcome to our videos page!</h1>
 
       {videos.map(video => 
         <div className = "content">
-          <h1> Welcome to our videos page!</h1>
           <div className = "vid">
-          
-          <ReactPlayer url= {video.url} light = {true} playing control width = "400px" height = "200px"/>
-          <div className = "textBox">
-          <h4>{video.title}</h4>
-          <h5>{video.description}</h5>
+            <ReactPlayer url= {video.video_url} light = {true} playing control width = "400px" height = "200px"/>
+            <div className = "textBox">
+              <a href = {'/videos/'+video.id}>
+                <h4>{video.title}</h4>
+              </a>
+              <h5>{video.description}</h5>
+            </div>
           </div>
-          <br/>
-          <br/>
-          
-        </div>
-
         </div>
         )}
     </div>

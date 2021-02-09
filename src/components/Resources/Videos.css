@@ -33,7 +33,7 @@ h1 {
     text-align: center;
 }
 .textBox {
-  
+    text-align: center;
     width: 350px;
     height: 100px;
     border: 2px solid black;
