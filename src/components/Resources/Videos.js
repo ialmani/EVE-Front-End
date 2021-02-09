@@ -1,14 +1,10 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState}from 'react';
 import './Videos.css'
-import videoImg from '../../assets/pic3.png'
-import playImg from '../../assets/play.png'
-import ReactPlayer from  'react-player'
-import * as Requests from "../../Requests";
-// import closeImg from '../../assets/close.png'
-// import video from '../../assets/video.mp4'
+import * as Requests from '../../Requests'
 
+import ReactPlayer from 'react-player'
 
-const Videos = () => {
+const Videos = () => { 
   const [videos, setVideos] = useState([]);
 
   useEffect(() => {
@@ -18,42 +14,25 @@ const Videos = () => {
       }
     }).catch(() => null);
   }, []);
-
   return (
-      <div>
-      <div className = "videos-body">
-        <div className = "videos-container">
-          <h1>Welcome to our videos page!</h1>
-      <div className = "videos-col">
+    <div className = "videos-body">
+      <h1> Welcome to our videos page!</h1>
 
-        {videos.map(video =>
-            <div>
-            <div>
-            <p>{video.title} <br/>{video.description}</p>
+      {videos.map(video => 
+        <div className = "content">
+          <div className = "vid">
+            <ReactPlayer url= {video.video_url} light = {true} playing control width = "400px" height = "200px"/>
+            <div className = "textBox">
+              <a href = {'/videos/'+video.id}>
+                <h4>{video.title}</h4>
+              </a>
+              <h5>{video.description}</h5>
             </div>
-          <div className = "small-img-row">
-          <div className = "small-img">
-            <ReactPlayer
-                url={video.video_url}
-                light = {true}
-                playing
-                controls/>
           </div>
-          </div>
-          </div>
-
-
-
-
-
-        )}
-      </div>
         </div>
-      </div>
-      </div>
-      
-  )
+        )}
+    </div>
+  );
 }
-
 
 export default Videos;

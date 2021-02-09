@@ -1,109 +1,45 @@
 .videos-body {
-    margin: -80px;
-    padding: -25px;
+    margin: 0;
+    padding: 0;
     min-height: 120vh;
-    background-color: #f1f1f1;
+    background-color: #f1f1f1; 
+}
+.content {
+    position: relative;
+     height: 550px;
+     flex-wrap: wrap;
+     align-content: center;
+     
+     display: inline-block;
+ }   
+.vid {
+
+    overflow: hidden;
+    box-shadow: 0px 2px 20px var(--clr-gray-light);
+    background: white;
+    border-radius: 0.5rem;
+    position: relative;
+    width: 350px;
+    margin: 1rem;
+    transition: 250ms all ease-in-out;
+    height: 300px;
+    display: inline-block;
+  
  
 }
 
-.videos-container {
-    width: 100%;
-    margin: 80px auto;
-}
-
-.videos-container h1 {
-    padding: 60px 0;
-    color: rgb(49, 44, 44);
-    font-size: 44px;
+h1 {
+    margin-top: 20px;
     text-align: center;
 }
-
-.videos-row {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 30px; 
-
-}
-
-.videos-col {
-    flex-basis: 50%;
-    min-width: 250px;
-}
-
-.feature-img {
-    width: 83%;
-    margin: auto;
-    position: relative;
-    overflow: hidden;
-    border-radius: 6px;
-
-}
-.small-img-row{
-    display: flex;
-    background: #b8b8ee;
-    margin: 20px 0;
-    align-items: center;
-    border-radius: 6px;
-    overflow: hidden;
-    width: 85%;
-}
-.small-img{
-    position: relative;
-}
-.small-img img {
-    width: 150px;
-
-}
-
-.small-img-row p {
-    margin-left: 20px;
-    color: #707070;
-    line-height: 20px;
+.textBox {
     text-align: center;
-    font-size: 15px;
-}
+    width: 350px;
+    height: 100px;
+    border: 2px solid black;
 
-.play-btn1{
-    position: absolute;
-    left: 50%;
-    right: 50%;
-    transform: translate(-50%, 120%);
-    cursor: pointer;
-    width: 20%;
-}
-
-.play-btn{
-    width: 80%;
-    position: absolute;
-    left: 50%;
-    right: 50%;
-    transform: translate(-50%, 80%);
-    cursor: pointer;    
-}
-
-.small-img .play-btn  {
-    max-width: 10px;
+    
+  
+  
     
 }
-
-/* .video-player {
-    width: 80%;
-    position: absolute;
-    left: 50%;
-    right: 50%;
-    transform: translate(-50%, -50%);
-}
-
-video:focus{
-    outline: none;
-}
-
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 30px;
-
-
-} */
