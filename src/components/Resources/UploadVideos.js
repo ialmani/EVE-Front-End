@@ -18,11 +18,8 @@ const UploadVideos = () => {
     let history = useHistory();
 
     const createVideo = e => {
-
         e.preventDefault();
-        console.log(localStorage.getItem("token"));
         Requests.createVideo(newVideo).then((response) => {
-            console.log(response.id)
             history.push('/videos/'+response.id);
 
 

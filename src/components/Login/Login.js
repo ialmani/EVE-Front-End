@@ -1,7 +1,5 @@
 import React, {Component, useState} from 'react';
 import { Input, Button, Form, Grid, Header, Message, Segment } from 'semantic-ui-react';
-import { connect } from 'react-redux';
-import { authLogin } from '../../store/actions/auth';
 import {Link, useHistory} from 'react-router-dom';
 import * as Requests from "../../Requests";
 
