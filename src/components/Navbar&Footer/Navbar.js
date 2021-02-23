@@ -46,15 +46,11 @@ const Navbar = ({ toggle }) => {
                     <div className="nav-item">
                         <Link to="/contact-us">
 
-                            <div className="nav-link">Contact Us</div>
+                            <div className="nav-link">Ask EVE</div>
                         </Link>
                     </div>
 
-                    <div className="nav-item">
-                        <Link to="/ask-eve">
-                            <div className="nav-link">Ask EVE </div>
-                        </Link>
-                    </div>
+
 
                 </div>
                 <div className="nav-btn">

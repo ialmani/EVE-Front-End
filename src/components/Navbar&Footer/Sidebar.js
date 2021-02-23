@@ -25,14 +25,10 @@ const Sidebar = ({sidebar, toggle}) => {
                 </Link>
                 <Link to = "/contact-us">
                     <div className = "sidebar-links"  onClick ={toggle}>
-                    Contact Us
-                    </div>
-                </Link>
-                <Link to = "/ask-eve">
-                    <div className = "sidebar-links"  onClick ={toggle}>
                     Ask EVE
                     </div>
                 </Link>
+
                 </div>
                 
                 <div className = "sidebar-btn">
