@@ -1,63 +1,103 @@
 .landing-container {
-    align-content: center;
-    text-align: center;
-    
-}
- 
-.landing-h1 {
-    position: absolute;
-    top: 30%;
- 
-    max-width: 100%;
-    
-    z-index: 1;
-    color: beige;
-    
-    font-size: 5rem;
-    margin-left: auto; 
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    text-align: center;
-}
-.landing-p {
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    
-    z-index: 1;
-    color: beige;
-    margin-left: auto; 
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    text-align: center;
-    line-height: 1rem;
-    font-size: 2rem;
-}
-    
-   
-
-.landingPagebtns {
-    position: absolute;
-    
-    top: 55%;
-    left: 50%;
-    z-index: 1;
-    color: beige;
-   
-    margin-left: auto; 
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    text-align: center;
-    font-size: 1rem;
-   
-
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .landing-video {
-    position: relative;
-    z-index: 0;
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    width: 100vw;  height: 100vh;  top: 0;  left: 0;
+}
+
+.landing-container .landing-h1{
+    color: white;
+    font-size: 180px;
+    margin-top: -100px;
+    margin-bottom: 0;
+}
+
+
+.landing-container .landing-p {
+    margin-top: 0;
+    color: white;
+    font-size: 32px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.landingPagebtns {
+    margin-top: 20px;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.landingPagebtns .btns {
+    margin: 6px;
+    color: white;
+}
+
+.fa-play-circle {
+    margin-left: 2px;
+}
+.fa-arrow-right{
+    margin-left: 8px;
+    padding-left: 2px;
+}
+
+@media screen and (max-width: 965px){
+    .landing-container .landing-h1  {
+        font-size: 70px;
+        margin-top: -150px;
+    }
+}
+
+@media screen and (max-width: 668px){
+    .landing-container .landing-h1 {
+        font-size: 50px;
+        margin-top: -100px;
+    }
+    .landing-container .landing-p {
+        font-size: 25px;
+    }
+    .btns {
+        text-decoration: none;
+    }
+}
+
+@media screen and (max-width: 460px){
+    .landing-container .landing-h1 {
+        font-size: 50px;
+        margin-top: -100px;
+    }
+    .landing-container .landing-p {
+        font-size: 30px;
+        text-align: center;
+    }
+    .landingPagebtns{
+        text-decoration: none;
+        display: block;
+    }
+}
+@media screen and (max-width: 376px){
+    .landing-container .landing-h1 {
+        font-size: 50px;
+        margin-top: -100px;
+    }
+    .landing-container .landing-p {
+        font-size: 30px;
+        text-align: center;
+    }
+    .landingPagebtns{
+        display: block;
+        margin-left: 18%;
+        margin-top: 20px; 
+    }
+    .btns{
+        margin-top: 80px;
+    }
 }
