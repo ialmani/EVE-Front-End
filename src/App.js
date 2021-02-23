@@ -1,21 +1,29 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import { BaseRouter } from './routes';
-import Layout from './components/Navbar&Footer/Layout';
+import Navbar from './components/Navbar&Footer/Navbar';
 import { BrowserRouter as Router } from 'react-router-dom';
+import Sidebar from './components/Navbar&Footer/Sidebar';
 
-class App extends Component {
-  render() {
+const App = () => {
+
+  const[sidebar, showSidebar] = useState(false)
+
+  const toggle = ()=> {
+      showSidebar(!sidebar)
+  }
     return (
       <div>
         <Router>
-          <Layout>
-            <BaseRouter />
-          </Layout>
+
+          <Sidebar sidebar = {sidebar} toggle = {toggle}/>
+          <Navbar  toggle = {toggle}/> 
+          <BaseRouter />
+
         </Router>
       </div>
     );
-  }
+
 }
 
 export default App;

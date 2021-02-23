@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import LandingPage from './components/LandingPage/LandingPage';
+import LandingPage from './components/Home/LandingPage';
 import Login from './components/Login/Login';
 import SignUp from './components/SignUp/SignUp';
 import About from './components/About/About';
@@ -15,13 +15,14 @@ import Videos from './components/Resources/Videos';
 import UploadVideo from './components/Resources/UploadVideos';
 import AllResources from './components/Resources/AllResources';
 import FullVideo from './components/Resources/FullVideo';
-//import Layout from './components/Navbar&Footer/Layout';
+import Home from './components/Home/Home';
+
 
 export const BaseRouter = () => {
   return (
     <div>
       <Switch>
-        <Route path = '/' component={LandingPage} exact/>
+        <Route path = '/' component={Home} exact/>
         <Route path = '/login' component={Login} exact/>
         <Route path = '/signup' component={SignUp} exact/>
         <Route path = '/about' component={About} exact/>
