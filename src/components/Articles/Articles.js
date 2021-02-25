@@ -1,11 +1,12 @@
 import React, {useEffect, useState} from 'react'
+import {Link} from 'react-router-dom';
 import profileImg from '../../assets/profilepic.png'
 import articleImg from '../../assets/articles.jpg'
 import './Articles.css'
 import * as Requests from '../../Requests'
 
 const Articles = () => {
-     const [articles, setArticles] = useState([]);
+    const [articles, setArticles] = useState([]);
 
     useEffect(()=>{
         Requests.getAllArticles().then(data=>{
@@ -14,40 +15,37 @@ const Articles = () => {
             }
         }).catch(() => null);
     },[]);
-
     return (
-        <div>
-
+        <div className = "full-page">
+            <div className = "articles-container">
         {articles.map(article=>
-        <div className = "wrapper">
-            <div className = "card">
-                <div className = "card-banner">
-                    <p className = "category-tag"> Genre </p>
-                    <img className = "banner-img" src = {articleImg}/>
-                </div>
-                <div className = "card-body">
+        
+    
+    <div className="card mb-4" >
+      <div className="card-body">
+ 
+    
+        <h5 className="card-title">{article.title}</h5>
+        <p className="card-text">
+          {(article.content).substring(0,100)}...
+        </p>
+        <Link to = {'articles/'+article.id}>
+        <button type="button" class="btn btn-success">Read More</button>
+        </Link>
+        <p className="card-text">
+          <small className="text-muted">{article.author}</small>
+        </p>
+   
+  
+      </div>
 
-                    <h2 className = "blog-title"> {article.title}</h2>
-                    <p className = "blog-description">{(article.content).substring(0,100)}... </p>
-                    <a href = {'/articles/'+article.id} className = 'btn btn-outline-success' >Read More</a>
-                <div className = "card-profile">
-                    <img className = "profile-image" src = {profileImg} />
-
-                    <div className = "card-profile-info"> </div>
-                        <h3 className = "profile-name"> {article.author}</h3>
-                        <p className = "blog-date">date</p>
-
-                </div>
-                </div>
-
-
-            </div>
-
-        </div>
-        )
-    }
     </div>
-    )
+
+       
+        )}
+         </div>
+</div>
+)
 }
 
 export default Articles

@@ -7,13 +7,13 @@
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.2.2",
     "axios": "^0.21.1",
-  
+    "bootstrap": "^4.6.0",
     "draft-js": "^0.11.7",
-
+    "mdb-ui-kit": "^3.3.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-axios": "^2.0.3",
-    "react-bootstrap": "^0.32.4",
+    "react-bootstrap": "^1.5.0",
     "react-bootstrap-validation": "^0.1.11",
     "react-dom": "^17.0.1",
     "react-draft-wysiwyg": "^1.14.5",
