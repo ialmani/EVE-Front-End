@@ -13,54 +13,48 @@ import Button from 'react-bootstrap/Button'
 const AllResources = () => {
       return (
         <div className = "resources-body">
-          <div className = "page-container"> 
-          <div className = "heading-r">
-            <h1>Welcome to our Resources Page!</h1>
-          
+          <div className = "resources">
+          <div className = "resources-img">
+              <img src = {articleImg}/> 
           </div>
+        <div className = "resources-info">
+          <h1 className = "resources-title"> ARTICLES</h1>
+          <p className = "resources-text">Welcome to our collection of Articles.</p>
+          <Link to = "/articles">
+          <a className = "resources-cta">View Articles</a>
+          </Link>
+        </div>
+        </div>
+
+        <div className = "resources">
+          <div className = "resources-img">
+            <img src = {videoImg}/> 
+          </div>
+        <div className = "resources-info">
+          <h1 className = "resources-title"> VIDEOS</h1>
+          <p className = "resources-text">Welcome to our collection of Videos.</p>
+          <Link to = "/videos">
+            <a className = "resources-cta">View Videos</a>
+          </Link>
+        </div>
+        </div>
 
           
-        <div className = "card-container">
-          <Card style={{ width: '25rem'}}>
-          <Card.Img src= {articleImg}/>
-          <Card.Body>
-          <Card.Title>Articles</Card.Title>
-          <Card.Text>
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
-    </Card.Text>
-    <Button variant="primary">View Articles</Button>
-  </Card.Body>
-    </Card>
-   
+        <div className = "resources">
+          <div className = "resources-img">
+              <img src = {liveImg}/> 
+          </div>
+        <div className = "resources-info">
+          <h1 className = "resources-title"> Live Events</h1>
+          <p className = "resources-text">Join our live events!</p>
+          <Link to = "/events">
+          <a  className = "resources-cta">Attend Live</a>
+          </Link>
+        </div>
+        </div>
 
-         <Card style={{ width: '25rem'}}>
-        <Card.Img src= {videoImg}/>
-        <Card.Body>
-    <Card.Title>Videos</Card.Title>
-    <Card.Text>
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
-    </Card.Text>
-    <Button variant="primary">Watch Videos</Button>
-  </Card.Body>
-    </Card>
-  
-         <Card style={{ width: '25rem'}}>
-        <Card.Img src= {liveImg}/>
-        <Card.Body>
-    <Card.Title>Live Events</Card.Title>
-    <Card.Text>
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
-    </Card.Text>
-    <Button variant="primary">Attend Live</Button>
-  </Card.Body>
-    </Card>
-    </div>
+
       </div>
-
-    </div>
    
   );
 }

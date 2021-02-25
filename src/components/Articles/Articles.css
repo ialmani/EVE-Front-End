@@ -1,102 +1,36 @@
-:root {
-    --clr-gray-light: #d7dfe2;
-    --clr-gray-med: #616b74;
-    --clr-gray-dark: #414b56;
-    --clr-link: #4d97b2;
-    --clr-popular: #ef257a;
-
-}
-
-* {
-    box-sizing: border-box;
-    font-family: "Inter" , sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-body{
-    margin: 0rem;
-    color : var(--clr-gray-dark);
-}
-
-.wrapper {
+.articles-container {
+    margin-top: 50px;
     display: inline-block;
     flex-wrap: wrap;
-    align-content: center;
-}
-
-.card{
-    overflow: hidden;
-    box-shadow: 0px 2px 20px var(--clr-gray-light);
-    background: white;
-    border-radius: 0.5rem;
-    position: relative;
-    width: 350px;
-    margin: 1rem;
-    transition: 250ms all ease-in-out;
-
-    display: inline-block;
-}
-
-
-.banner-img {
-    position: absolute;
-    object-fit: cover;
-    height: 14rem;
-    width: 100%;
-}
-
-.category-tag {
-    font-size: 0.8rem;
-    font-weight: bold;
-    color: white;
-    background-color: #b4a4e0;
-    padding: 0.5rem 1.3rem 0.5rem 1rem;
-    text-transform: uppercase;
-    position: absolute;
-    z-index: 1;
-    top: 1rem;
-    border-radius: 0 2rem 2rem 0;
-}
-
-.card-body{
-    margin: 15rem 1rem 1rem 1rem;
-}
-
-.blog-title{
-    line-height: 1.5rem;
-    margin: 1rem 0 0.5rem;
-
-}
-
-.blog-description {
-    color: var(--clr-gray-med);
-    font-size: 0.9rem ;
-}
-
-.card-profile {
     display: flex;
-    margin-top: 2rem;
-    align-items: center;
+    margin: auto;
+    background-image: linear-gradient(to right, rgba(52, 20, 20, 0), #7b87b3);
+    margin-bottom: 30px;
+    min-height: 100vh;
 }
 
-.profile-image{
-    height: 60px;
-    width: 60px;
-    object-fit: cover;
-    border-radius: 50%;
+.card {
+    max-width: 640px;
+    margin: auto;
+    margin-top: 120px;
+    margin-bottom: 120px;
+    max-height: 300px;
 }
 
-.card-profile-info {
-    margin-left: 1rem;
+.col-mb-4  {
+    margin-top: 150px;   
 }
 
-.profile-name {
-    font-size: 1rem;
+.btn-success {
+    float: right;
+    margin-top: 50px;
 }
 
-.blog-date {
-    color: var(--clr-gray-dark);
-    font-size: 0.9rem;
-    margin-top: 3rem;
+.text-muted {
+    font-size: 18px;
+}
+
+.card-text {
+    margin-top: 40px;
+    font-size: 20px;
 }
