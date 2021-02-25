@@ -27,8 +27,7 @@ const Articles = () => {
     
         <h5 className="card-title">{article.title}</h5>
         <p className="card-text">
-          This is a wider card with supporting text below as a natural lead-in to
-          additional content. This content is a little bit longer...
+          {(article.content).substring(0,100)}...
         </p>
         <Link to = {'articles/'+article.id}>
         <button type="button" class="btn btn-success">Read More</button>
