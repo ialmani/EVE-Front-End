@@ -1,9 +1,10 @@
 .pricing-heading-top {
-    display: table; /* keep the background color wrapped tight */
-    margin: 20px auto 20px auto; /* keep the table centered */
+    display: table;
+    margin: 20px auto 20px auto;
     font-size:48px;
     background-color: #292B6E;
-    border-radius: 20px;
+    border-radius: 15px;
+    padding: 20px;
     color:#ffffff;
 }
 
@@ -22,7 +23,7 @@
     flex-direction: column;
     justify-content: center;
     padding: 3%;
-    background-color: #292B6E;
+    background-color: #7d89b4;
 }
 
 .pricing-wrapper{

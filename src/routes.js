@@ -6,6 +6,7 @@ import SignUp from './components/SignUp/SignUp';
 import About from './components/About/About';
 import GetStarted from './components/GetStarted/GetStarted';
 import ContactUs from './components/ContactUs/ContactUs';
+import Askeve from './components/Askeve/Askeve';
 import Articles from './components/Articles/Articles';
 import NewArticle from './components/Articles/NewArticle';
 import FullArticle from './components/Articles/FullArticle';
@@ -29,6 +30,7 @@ export const BaseRouter = () => {
         <Route path = '/get-started' component={GetStarted} exact/>
         <Route path = '/resources' component={AllResources} exact/>
         <Route path = '/contact-us' component={ContactUs} exact/>
+        <Route path = '/ask-eve' component={Askeve} exact/>
         <Route path = '/sponsor-packages' component={SponsorPackage} exact/>
         <Route path = '/sponsor-profile' component={SponsorProfile} exact/>
         <Route path = '/articles' component={Articles} exact/>
