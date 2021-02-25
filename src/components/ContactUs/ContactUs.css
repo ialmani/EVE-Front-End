@@ -4,6 +4,7 @@
     padding:25px;
     font-size:24px;
     background-color: #292B6E;
+    border-radius: 20px;
     color:#ffffff;
 }
 
@@ -13,23 +14,24 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background-image: url(../../assets/ContactUsBackground.png); */
-    background-color: #ffffff;
+    background-color: #7d89b4;
     font-family: "Open Sans", sans-serif;
 }
 
 .Contact-section {
     background-image: url(../../assets/ContactUs.png);
-    background-position: left; 
+    background-position: right; 
     background-size: 50%;
+    border-radius: 20px;
     background-color: #ffffff; 
 } 
 
 .Contact-container {
     width: 50%;
-    float: right;
-    background-color: #ffffff;
-    padding: 150px;
+    float: left;
+    background-color: #e0e0e0;
+    border-radius: 15px;
+    padding: 80px;
 }
 .Contact-container h1 {
     margin-bottom: 30px;
@@ -49,26 +51,17 @@
     font-size: 16px;
 }
 
-@media screen and (max-width: 1200px){
-    .Contact-container{
-        padding: 80px;
-    }
-}
 
 @media screen and (max-width: 1000px){
     .Contact-section{
-        background-size: 100%;
-        padding: 100px 40px;
+        background-size: 0%;
+        padding: 0;
     }
     .Contact-container{
+        margin-top: 80px;
         width: 100%;
-    }
-    @media screen and (max-width: 600px){
-        .Contact-section{
-            padding: 0;
-        }
-        .Contact-container{
-            padding: 60px;
-        }
+        border-radius: 100px;
+        height: 90%;
+        padding: 60px;
     }
 }
