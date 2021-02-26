@@ -29,3 +29,44 @@
     text-align: center;
 }
 
+.comments-container {
+    /* margin-top: 30px; */
+    margin-left: 150px;
+   
+}
+
+.comment-wrapper .panel-body {
+    max-height:650px;
+    /* overflow:auto; */
+}
+
+.comment-wrapper .media-list .media img {
+    width:64px;
+    height:64px;
+    border:2px solid #e5e7e8;
+}
+
+.comment-wrapper .media-list .media {
+    border-bottom:1px dashed #efefef;
+    margin-bottom:25px;
+}
+.btn{ 
+    float: right;
+}
+.text-success {
+    margin-left: 20px;
+}
+.media-body p {
+    margin-left: 20px;
+}
+.form-control {
+    max-width: 830px;
+   
+}
+
+@media screen and (max-width: 500px) {
+    .comments-container {
+        margin-left: 20px;
+    }
+   
+}
