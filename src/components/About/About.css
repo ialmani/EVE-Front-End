@@ -13,14 +13,14 @@
     background-size: 55%;
     background-color: #fdfdfd;
     overflow: hidden;
-    padding: 100px 0;
+    padding: 130px 0;
 }
 
 .inner-container {
     width: 55%;
     float: right;
     background-color: #fdfdfd;
-    padding: 150px;
+    padding: 100px;
 }
 
 .inner-container h1 {
@@ -35,10 +35,12 @@
     line-height: 20px;
     text-align: justify;
     margin-bottom: 40px;
+   
 }
 
 .text2 {
     font-size: 16px;
+    
 }
 
 @media screen and (max-width: 1200px){
@@ -57,7 +59,7 @@
     }
     @media screen and (max-width: 600px){
         .about-section{
-            padding: 0;
+            padding: 10;
         }
         .inner-container{
             padding: 60px;
