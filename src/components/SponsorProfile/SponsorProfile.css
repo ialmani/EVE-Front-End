@@ -122,10 +122,13 @@
     z-index: 99;
 }
 
+.left-side {
+    margin-top: 50px
+}
 .profile-side p {
     margin-bottom: 7px;
     color: #333;
-    font-size: 14px;
+    font-size: 18px;
 }
 
 .profile-side p i{
@@ -138,7 +141,11 @@
 }
 
 .profile-btn {
-   display: inline-block;    
+   margin-top: 80px;
+   display: inline;    
+}
+.profile-btn .article-btn{
+    margin-top: 120px;
 }
 
 button.article-btn, button.video-btn {
