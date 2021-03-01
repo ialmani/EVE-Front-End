@@ -1,18 +1,34 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import './SponsorProfile.css'
 import aboutImg from '../../assets/profilepic.png'
 import { GiCrystalBars } from 'react-icons/gi';
 import { Link } from 'react-router-dom';
+import * as Requests from '../../Requests'
+
+
 const SponsorProfile = () => {
     //$('.right-nav ul li').click(function () { $(this).addClass("active").siblings().removeClass("active")})
+    const [user, setUser] = useState({
+        username: "",
+        password: "",
+      });
+
+      useEffect(()=>{
+        Requests.getUserDetails().then(data=>{
+            setUser(data);
+            console.log(data);
+        }).catch(() => null);
+    },[]);
+    
     return (
         <div className = "sponsor-container">
             <div className = "profile-header">
                 <div className = "profile-img">
                     <img src = {aboutImg} width = "200" alt = ""/>
                 </div>
+               
                 <div className = "profile-nav-info">
-                    <h3 className = "user-name">Iqra Almani</h3>
+                    <h3 className = "user-name">{user.first_name + " " + user.last_name}</h3>
                     <div className = "address">
                         <p className = "state">Indiana,</p>
                         <span className = "country">USA</span>
@@ -28,12 +44,13 @@ const SponsorProfile = () => {
                     </Link>
 
                 </div>
+        
             </div>
                 <div className = "main-body">
                     <div className = "left-side">
                         <div className = "profile-side">
                             <p className = "mobile-no"> <i className = "fa fa-phone"></i>908553773</p>
-                            <p className = "user-email"><i className = "fa fa-envelope"></i>ialmani@bsu.edu</p>
+                            <p className = "user-email"><i className = "fa fa-envelope"></i>{user.email}</p>
                             <div className = "user-bio">
                                 <p className = "bio">A computer science major with an interest in web development. Favourite color is green</p>
                             </div>

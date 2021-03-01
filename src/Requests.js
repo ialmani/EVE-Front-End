@@ -9,6 +9,14 @@ export const loginUser =(user)=>{
         body: JSON.stringify(user)
     }).then(response => response.json());
 }
+//get user details
+export const getUserDetails = (user)=>{
+    return fetch(API_BASE+'auth/api/getUserDetails', {
+        headers: {
+            'Authorization': 'Bearer '+ localStorage.getItem("token"),
+        },
+    }).then(response => response.json());
+}
 
 export const createUser =(newUser)=>{
     return fetch(API_BASE+'auth/api/register', {
