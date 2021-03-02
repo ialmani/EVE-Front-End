@@ -1,7 +1,7 @@
-import React, {Component, useState} from 'react';
-import { Input, Button, Form, Grid, Header, Message, Segment } from 'semantic-ui-react';
-import {Link, useHistory} from 'react-router-dom';
+import React, {SyntheticEvent, useState} from 'react';
+import { useHistory } from "react-router-dom";
 import * as Requests from "../../Requests";
+import "./Login.css";
 
 const Login = () =>{
   const [user, setUser] = useState({
@@ -22,49 +22,36 @@ const Login = () =>{
         alert(status));
   }
 
-
   return(
-      <Grid
-          textAlign="center"
-          style={{ height: "100vh" }}
-          verticalAlign="middle"
-      >
-        <Grid.Column style={{ maxWidth: 450 }}>
-          <Header as="h2" color="purple" textAlign="center">
-            Login to your account
-          </Header>
-          <Form size="large" onSubmit={loginUser} >
-            <Segment stacked>
-              <Form.Input
-                fluid
-                onChange={e=>setUser({...user, username:e.target.value})}
-                icon="user"
-                iconPosition="left"
-                placeholder="Username"
-              />
-              <Form.Input type="password"
-                fluid
-                onChange={e=>setUser({...user, password:e.target.value})}
-                icon="lock"
-                iconPosition="left"
-                placeholder="Password"
+      <main className="form-login">
+        <ul>
+            <li>
+                <form onSubmit={loginUser}>
+                    <h1 className="h3 mb-3 fw-normal">LOGIN</h1>
 
-              />
-              <Button
-                color="twitter"
+                    <input type="username" className="form-control" placeholder="Username" required
+                        onChange={e=>setUser({...user, username:e.target.value})}/>
 
-                fluid
-                size="large"
-              >
-                Login
-              </Button>
-            </Segment>
-          </Form>
-          <Message>
-            New to us? <Button to="/signup" color="grey"> Sign Up</Button>
-          </Message>
-        </Grid.Column>
-      </Grid>
+                    <input type="password" className="form-control" placeholder="Password" required
+                        onChange={e=>setUser({...user, password:e.target.value})}/>
+
+                    <button className="w-100 btns btn-lg btn-primary" type="submit">LOGIN</button>
+                </form>
+            </li>
+
+            <li>
+                <div className="card-footer">
+                    <div>
+        	            Don't have an account?
+        	            <a href="/signup">Sign Up</a>
+        	        </div>
+        	        <div>
+        	            <a href="#">Forgot your password?</a>
+        	        </div>
+                </div>
+            </li>
+        </ul>
+      </main>
     );
 
 }
