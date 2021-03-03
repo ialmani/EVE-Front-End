@@ -34,12 +34,13 @@
     flex-direction: column;
     justify-content: center;
     padding-top: 60px;
+    margin-top: 30px;
 
 }
 
 .profile-nav-info h3{
     font-variant: small-caps;
-    font-size: 2rem;
+    font-size: 3rem;
     font-family: sans-serif;
     font-weight: bold;
 }
@@ -69,6 +70,7 @@
     cursor: pointer;
     transition: all .5s ease-in-out;
     outline: none;
+    margin-top: 30px;
 }
 
 .profile-option .notification i {
@@ -113,7 +115,7 @@
 
 .profile-side {
     width: 300px;
-    min-height: 100vh;
+    height: 800px;
     background: white;
     box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
     padding: 90px 30px 20px;
@@ -122,9 +124,7 @@
     z-index: 99;
 }
 
-.left-side {
-    margin-top: 50px
-}
+
 .profile-side p {
     margin-bottom: 7px;
     color: #333;
@@ -144,15 +144,16 @@
    margin-top: 80px;
    display: inline;    
 }
-.profile-btn .article-btn{
-    margin-top: 120px;
+.profile-btn .article-button{
+    margin-top: 230px;
 }
 
-button.article-btn, button.video-btn {
+button.article-button, button.video-button {
     border: 0;
     width: 100%;
     border-radius: 3px;
     background: #b19cd9;
+    
     font-family: "Bree Serif", sans-serif;
     font-size: 1rem;
     margin: 5px 2px;
@@ -164,13 +165,13 @@ button.article-btn, button.video-btn {
     color: white;
 }
 
-button.article-btn:hover, button.video-btn:hover {
+button.article-button:hover, button.video-button:hover {
     background: rgba(288, 0, 70, 0.9);
     background: white;
     border: 1px solid #b19cd9;
 } 
 
-button.article-btn i, button.video-btn i {
+button.article-button i, button.video-button i {
     margin-right: 5px;
     color: black;
 }
@@ -261,15 +262,31 @@ button.article-btn i, button.video-btn i {
         transform: translateY(50px);
     }
     .main-body {
-        flex-direction: column;
+        /* flex-direction: column; */
         padding-right: 0px;
     }
     .profile-side {
         width: 100%;
         text-align: center;
-        padding: 20px;
+        padding: 10px;
         margin: 5px 0px;
+    
     }
+    p.user-email{
+       
+        font-size: 14px;
+        font-weight: bold;
+    }
+    
+    .fa-user, .fa-envelope{
+        display: none;
+
+    }
+    .profile-btn .article-button{
+        margin-top: 120px;
+    }
+  
+    
     @media (max-width: 480px){
         .profile-header h3{
             font-size: 1.7rem;
@@ -292,5 +309,17 @@ button.article-btn i, button.video-btn i {
             width: 15px;
             font-size: 0.7rem;
         }
+        .user-articles, .user-videos, .user-settings {
+            font-size: 10px;
+            font-weight: bold;
+
+        }
+        .profile-option {
+            top: 59%;
+        }
+        .profile-btn .article-button{
+            margin-top: 130px;
+        }
+        
     }
 }

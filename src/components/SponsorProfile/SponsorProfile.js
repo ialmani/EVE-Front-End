@@ -29,10 +29,10 @@ const SponsorProfile = () => {
                
                 <div className = "profile-nav-info">
                     <h3 className = "user-name">{user.first_name + " " + user.last_name}</h3>
-                    <div className = "address">
+                    {/* <div className = "address">
                         <p className = "state">Indiana,</p>
                         <span className = "country">USA</span>
-                    </div>
+                    </div> */}
                     <Link to = "sponsor-packages">
                     <div className ="profile-option">
                         
@@ -49,19 +49,20 @@ const SponsorProfile = () => {
                 <div className = "main-body">
                     <div className = "left-side">
                         <div className = "profile-side">
-                            <p className = "mobile-no"> <i className = "fa fa-phone"></i>908553773</p>
+                            {/* <p className = "mobile-no"> <i className = "fa fa-phone"></i>908553773</p> */}
+                            <p className = "user-email"><i className = "fas fa-user"></i>{user.username}</p>
                             <p className = "user-email"><i className = "fa fa-envelope"></i>{user.email}</p>
-                            <div className = "user-bio">
+                            {/* <div className = "user-bio">
                                 <p className = "bio">A computer science major with an interest in web development. Favourite color is green</p>
-                            </div>
+                            </div> */}
                             <div className = "profile-btn">
                             <Link to= "articles/create">
-                                <button className = "article-btn">
+                                <button className = "article-button">
                                 <i className = "fa fa-plus">Article</i>
                                 </button>
                             </Link>
                             <Link to = "videos/upload">
-                                <button className = "video-btn">
+                                <button className = "video-button">
                                 <i className = "fa fa-plus">Video</i>
                                 </button>
                             </Link>
