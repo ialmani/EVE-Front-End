@@ -50,7 +50,29 @@
     min-width: 800px;
    
 }
+@media screen and (max-width: 1664px) {
+    .v-comments-container {
+        margin-left: 350px;
+        margin-bottom: 40px;
+    }
+    .full-vid-container{
+        margin-left: 450px;
+        margin-top: 150px;
 
+    }
+    .panel-body {
+        margin-bottom: 30px;
+    }
+    .full-v-textbox {
+        margin-left: 430px;
+        margin-top: 30px;
+        text-align: center;
+        
+        min-width: 630px;
+        max-width: 630px;
+    }
+   
+}
 @media screen and (max-width: 1164px) {
     .v-comments-container {
         margin-left: 150px;
