@@ -1,44 +1,248 @@
 .full-vid-body {
     min-height: 100vh;
     background-color: #fff;
-   padding: -25px;
-   margin: -25px;
+   /* padding: -25px;
+   margin: -25px; */
 }
 
-.backg{
-    background-color: rgb(127, 97, 175);
-    height: 650px;
-    position: relative;
-
- 
+.full-v-textbox {
+    margin-left: 50px;
+    margin-top: 30px;
+    text-align: center;
+}
+.full-v-h{
+    color: rgb(59, 59, 216);
+}
+.full-v-desc{
+    color: black;
 }
  
 .full-vid-container{
     height: 100%;
     width: 100%;
-    padding: 100px;
+    margin: 160px 16px 0px 570px;
+    align-content: center;
+    position: relative;
+    justify-content: center;
   
-    margin: 100px;
-    align-items: left;
-    justify-content: left;
-    display: flex;
+
     
 }
+.full-v-textbox {
+    margin-left: 550px;
+    margin-top: 30px;
+    text-align: center;
+    
+    min-width: 630px;
+    max-width: 630px;
+}
 
-.box{
+.v-comments-container {
+    margin-left: 460px;
+    margin-top: 50px;
+}
+.panel-body {
+    margin-bottom: 30px;
+    min-width: 800px;
+    max-width: 800px;
+}
+.form-control {
+    min-width: 800px;
    
-    position: absolute;
-    top: 43%;
-    left: 80%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    width: 410px;
-    height: 350px;
-    padding: 30px;
-    display: flex;
-    align-items: right;
-    justify-content: right;
-    box-shadow: 0 0 8px rgba(0,0,0,1);
+}
+
+@media screen and (max-width: 1164px) {
+    .v-comments-container {
+        margin-left: 150px;
+        margin-bottom: 40px;
+    }
+    .full-vid-container{
+        margin-left: 250px;
+        margin-top: 150px;
+
+    }
+    .panel-body {
+        margin-bottom: 30px;
+    }
+    .full-v-textbox {
+        margin-left: 250px;
+        margin-top: 30px;
+        text-align: center;
+        
+        min-width: 630px;
+        max-width: 630px;
+    }
+   
+}
+@media screen and (max-width: 1024px) {
+    .full-vid-container{
+        margin-left: 150px;
+        margin-top: 150px;
+        max-width: 500px;
+
+    }
+    .full-v-textbox {
+        margin-left: 150px;
+        margin-top: 30px;
+        text-align: center;
+        
+        min-width: 630px;
+        max-width: 630px;
+    }
+    
+    .v-comments-container {
+        margin-left:  150px;
+        margin-bottom: 40px;
+    }
+    
+    .panel-body {
+        margin-bottom: 30px;
+        min-width: 630px;
+    }
+    .form-control {
+        min-width: 630px;
+       
+    }
   
-} 
+   
+}
+@media screen and (max-width: 840px) {
+    .v-comments-container {
+        margin-left: 100px;
+       
+    }
+    .full-vid-container{
+        margin-left: 100px;
+        margin-top: 150px;
+   
+    }
+    .full-v-textbox {
+        margin-left: 50px;
+        margin-top: 30px;
+        text-align: center;
+        padding: 0 9px;
+        min-width: 630px;
+    }
+       
+    .panel-body {
+        margin-bottom: 30px;
+        min-width: 630px;
+    }
+    .form-control {
+        min-width: 630px;
+       
+    }
+  
+}
+@media screen and (max-width: 785px) {
+    
+    .full-vid-container{
+        margin-left: 30px;
+        margin-top: 150px;
+        
+        
+   
+    }
+    .v-comments-container {
+        margin-left: 30px;
+       
+    }
+    .full-v-textbox {
+        margin-left: 50px;
+        text-align: center;
+        
+        min-width: 600px;
+        max-width: 350px;
+    }
+       
+    .panel-body {
+        margin-bottom: 30px;
+        max-width: 600px;
+    }
+    .form-control {
+        max-width: 350px;
+       
+    }
+   
+   
+    .react-player{
+        min-width: 300px;
+        max-width: 650px;
+        
+    }
+  
+}
+@media screen and (max-width: 685px) {
+    .v-comments-container {
+        margin-left: 30px;
+       
+    }
+    .full-vid-container{
+        margin-left: 30px;
+        margin-top: 150px;
+        
+        
+   
+    }
+    .panel-body {
+        margin-bottom: 30px;
+        min-width: 50px;
+        max-width: 300px;
+    }
+    .form-control {
+        min-width: 50px;
+        max-width: 300px;
+       
+    }
+   
+   
+    .react-player{
+        min-width: 300px;
+        max-width: 350px;
+        
+    }
+    .full-v-textbox {
+        margin-left: 50px;
+        margin-top: 30px;
+        text-align: center;
+        
+        min-width: 300px;
+        max-width: 300px;
+    }
+  
+}
+@media screen and (max-width: 375px) {
+    .v-comments-container {
+        margin-left: 10px;
+       
+    }
+   
+    .panel-body {
+        margin-bottom: 30px;
+        min-width: 20px;
+    }
+    .form-control {
+        min-width: 10px;
+       
+    }
+    .full-v-textbox {
+        margin-left: 10px;
+       
+        text-align: center;
+        
+        min-width: 330px;
+        max-width: 330px;
+    }
+    .full-vid-container{
+        margin-left: 30px;
+        margin-top: 100px;
+    }
+   
+    .react-player{
+        min-width: 300px;
+        max-width: 300px;
+    }
+  
+}
+
 

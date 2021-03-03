@@ -1,26 +1,27 @@
 .videos-body {
     margin: 0;
     padding: 0;
-    min-height: 120vh;
-    background-color: #f1f1f1; 
+    min-height: 100vh;
+    background-image: linear-gradient(to right, rgba(52, 20, 20, 0), #7b87b3);
 }
 .content {
     position: relative;
-     height: 550px;
+     height: 250px;
      flex-wrap: wrap;
      align-content: center;
-     
+     margin: 30px;
      display: inline-block;
+     
  }   
 .vid {
 
     overflow: hidden;
-    box-shadow: 0px 2px 20px var(--clr-gray-light);
+    box-shadow: 0px 2px 20px rgba(0,0,0,1.4);
     background: white;
     border-radius: 0.5rem;
     position: relative;
     width: 350px;
-    margin: 1rem;
+    margin-top: 20px;
     transition: 250ms all ease-in-out;
     height: 300px;
     display: inline-block;
@@ -28,18 +29,41 @@
  
 }
 
-h1 {
-    margin-top: 20px;
-    text-align: center;
-}
 .textBox {
     text-align: center;
     width: 350px;
-    height: 100px;
-    border: 2px solid black;
-
-    
-  
-  
-    
+    height: 350px;
+    border: 2px solid rgb(0, 0, 0);
 }
+
+.video-h {
+    font-size: 24px;
+    color: rgb(59, 59, 216);
+    margin-bottom: 0;
+
+}
+
+.video-desc{
+    
+    overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+button.video-btn {
+
+    max-width: 100px;
+    box-shadow: none;
+    padding: 6px 5px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: #292B6E;
+    margin: 1px;
+}
+button.video-btn:hover {
+    background-color: white ;
+    color: black;
+}
+

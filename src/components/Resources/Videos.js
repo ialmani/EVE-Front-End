@@ -1,7 +1,7 @@
 import React, {useEffect, useState}from 'react';
 import './Videos.css'
 import * as Requests from '../../Requests'
-
+import {Link} from 'react-router-dom'
 import ReactPlayer from 'react-player'
 
 const Videos = () => { 
@@ -16,17 +16,20 @@ const Videos = () => {
   }, []);
   return (
     <div className = "videos-body">
-      <h1> Welcome to our videos page!</h1>
+      <h1 className = "video-h1"> Welcome to our videos page!</h1>
 
       {videos.map(video => 
         <div className = "content">
           <div className = "vid">
             <ReactPlayer url= {video.video_url} light = {true} playing control width = "400px" height = "200px"/>
             <div className = "textBox">
-              <a href = {'/videos/'+video.id}>
-                <h4>{video.title}</h4>
-              </a>
-              <h5>{video.description}</h5>
+             
+                <h1 className = "video-h">{video.title}</h1>
+          
+              <p className = "video-desc">{video.description}</p>
+              <Link to = {'/videos/'+video.id} >
+                <button className ="video-btn">view more</button>
+              </Link>
             </div>
           </div>
         </div>
