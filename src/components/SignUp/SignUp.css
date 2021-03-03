@@ -1,0 +1,25 @@
+.form-signup {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #7d89b4;
+    font-family: "Open Sans", sans-serif;
+}
+
+.form-control {
+    margin: 8px;
+}
+
+.card-footer {
+    margin: 20px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a{
+ color: #ffffff;
+}
