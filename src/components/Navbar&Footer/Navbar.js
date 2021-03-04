@@ -1,76 +1,124 @@
 import React, { useState, useEffect } from 'react';
 import { FaBars } from 'react-icons/fa'
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useHistory} from "react-router-dom";
 import Logo from '../../assets/eve_logo.svg';
 import './Navbar.css'
+import * as Requests from '../../Requests'
 
-const Navbar = ({ toggle }) => {
-    return (
-        <nav className="Nav" style={{ background: useLocation().pathname === '/' ? 'transparent' : 'rgb(30,29,91)' }}>
+const Navbar = () => {
+    const [user, setUser] = useState({
+        username: "",
+        password: "",
+      });
 
-            <div className="NavbarContainer">
-                <div className="nav-logo">
-                    <Link to="/">
-                        <img className="nav-logo" src={Logo} alt='logo' />
-                    </Link>
-                </div>
+let history = useHistory();
 
-                <div className="mobile-icon" onClick={toggle}> <FaBars /> </div>
+const logoutUser =(user)=>{
+    localStorage.removeItem("token");
+    history.push('/login');
+    window.location.reload(false);
 
-                <div className="nav-menu">
-                    <div className="nav-item" >
-                        <Link to="/about">
-                            <div className="nav-link">About EVE </div>
-                        </Link>
-                    </div >
+}
+    let menu;
 
-                    <div className="nav-item">
-                        <div className="dropdown">
-                            <Link to="/resources">
-                                <div className="nav-link">Resources </div>
-                            </Link>
-                            <div className="dropdown-content">
-                                <a href="/articles">Articles</a>
-                                <a href="/videos">Videos</a>
-                                <a href="/events">Events</a>
-                            </div>
+    if (!localStorage.getItem('token')) {
+        menu = (
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav mx-auto">
+
+                <li className="nav-item" >
+                    <Link className="nav-link" to="/about">About EVE</Link>
+                </li>
+
+                <li className="nav-item">
+                    <div className="dropdown">
+                        <Link className="nav-link" to="/resources">Resources</Link>
+                        <div className="dropdown-content">
+                            <a href="/articles">Articles</a>
+                            <a href="/videos">Videos</a>
+                            <a href="/events">Events</a>
                         </div>
                     </div>
+                </li>
 
-                    <div className="nav-item">
-                        <Link to="/sponsor-packages">
-                            <div className="nav-link">Sponsor Packages </div>
-                        </Link>
+                <li className="nav-item">
+                    <Link className="nav-link" to="/sponsor-packages">Sponsor Packages</Link>
+                </li>
+
+                <li className="nav-item">
+                    <Link className="nav-link" to="/contact-us">Ask EVE</Link>
+                </li>
+
+                <li className="nav-item">
+                    <div className="login-signup-btns">
+                        <Link className="nav-link" to="/signup">Sign Up</Link>
                     </div>
-
-                    <div className="nav-item">
-                        <Link to="/contact-us">
-
-                            <div className="nav-link">Ask EVE</div>
-                        </Link>
+                </li>
+                <li className="nav-item">
+                    <div className="login-signup-btns">
+                        <Link className="nav-link" to="/login">Login</Link>
                     </div>
+                </li>
+            </ul>
+        </div>
+        )
+    } else {
+        menu = (
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav mx-auto">
+
+                <li className="nav-item" >
+                    <Link className="nav-link" to="/about">About EVE</Link>
+                </li>
+
+                <li className="nav-item">
+                    <div className="dropdown">
+                        <Link className="nav-link" to="/resources">Resources</Link>
+                        <div className="dropdown-content">
+                            <a href="/articles">Articles</a>
+                            <a href="/videos">Videos</a>
+                            <a href="/events">Events</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li className="nav-item">
+                    <Link className="nav-link" to="/sponsor-packages">Sponsor Packages</Link>
+                </li>
+
+                <li className="nav-item">
+                    <Link className="nav-link" to="/contact-us">Ask EVE</Link>
+                </li>
+
+                <li className="nav-item">
+                    <Link className="nav-link" to="/sponsor-profile">Profile</Link>
+                </li>
+
+                <li className="nav-item">
+                    <div className="login-signup-btns">
+                        <Link className="nav-link" to="/login" onClick={logoutUser}>Logout</Link>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        )
+    }
 
 
+    return (
+        <nav className="navbar sticky-top navbar-expand-lg navbar-dark">
+            <Link to="/" className="navbar-brand">
+                <img className="nav-logo" src={Logo} alt='logo' />
+            </Link>
 
-                </div>
-                <div className="nav-btn">
-                    <Link to="/signup">
-                        <button className="btn-link ">Sign Up</button>
-                        <Link />
+            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
+            </button>
 
-                        <Link to="/login">
-                            <button className="btn-link ">Log In</button>
-                        </Link>
+                {menu}
 
-                    </Link>
-
-
-                </div>
-
-
-            </div>
         </nav>
-    )
-}
+    );
+};
 
 export default Navbar;
