@@ -21,7 +21,7 @@ const logoutUser =(user)=>{
 }
     let menu;
 
-    if (!localStorage.getItem('token')) {
+    if (localStorage.getItem('token') === 'undefined' || localStorage.getItem('token') === null) {
         menu = (
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mx-auto">
