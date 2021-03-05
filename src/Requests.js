@@ -9,6 +9,11 @@ export const loginUser =(user)=>{
         body: JSON.stringify(user)
     }).then(response => response.json());
 }
+
+export const logoutUser =(user)=>{
+    localStorage.removeItem("token");
+
+}
 //get user details
 export const getUserDetails = (user)=>{
     return fetch(API_BASE+'auth/api/getUserDetails', {

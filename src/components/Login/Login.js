@@ -16,7 +16,7 @@ const Login = () =>{
     Requests.loginUser(user).then((response) => {
       localStorage.setItem("token", response.access)
       history.push('/sponsor-profile');
-
+      window.location.reload(false);
 
     }).catch(status=>
         alert(status));
