@@ -23,48 +23,56 @@ const logoutUser =(user)=>{
 
     if (localStorage.getItem('token') === 'undefined' || localStorage.getItem('token') === null) {
         menu = (
-            <>
-                <li className="nav-btns">
-                    <div className="login-signup-btns">
-                        <Link className="nav-link" to="/signup">Sign Up</Link>
-                    </div>
-                </li>
+           
+            <div className="nav-btn">
+            <Link to="/signup">
+                <button className="btn-link ">Sign Up</button>
+                </Link >
 
-                <li className="nav-btns">
-                    <div className="login-signup-btns">
-                        <Link className="nav-link" to="/login">Login</Link>
-                    </div>
-                </li>
-            </>
+                <Link to="/login">
+                    <button className="btn-link ">Log In</button>
+                </Link>
+
+          
+           
+
+            </div>
+        
         )
     } else {
         menu = (
-            <>
-                <li className="nav-item">
-                    <Link className="nav-link" to="/sponsor-profile">Profile</Link>
-                </li>
+            <div className="nav-btn">
+            <Link to="/signup">
+                <button className="btn-link ">Profile</button>
+                </Link >
 
-                <li className="nav-btns">
-                    <div className="login-signup-btns">
-                        <Link className="nav-link" to="/login" onClick={logoutUser}>Logout</Link>
-                    </div>
-                </li>
-            </>
+                <Link to="/login">
+                    <button className="btn-link ">Log Out</button>
+                </Link>
+
+          
+           
+
+            </div>
         )
     }
 
 
     return (
         <nav className="navbar sticky-top navbar-expand-lg navbar-dark" style={{ background: useLocation().pathname === '/' ? 'transparent' : 'rgb(30,29,91)', marginTop: useLocation().pathname === '/' ? '-113px' : '0px'}}>
-            <Link to="/" className="navbar-brand">
-                <img className="nav-logo" src={Logo} alt='logo' />
-            </Link>
+           
+            <div className="nav-logo">
+                    <Link to="/">
+                        <img className="nav-logo" src={Logo} alt='logo' />
+                    </Link>
+            </div>
 
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
             </button>
 
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                
                 <ul className="navbar-nav mx-auto">
 
                     <li className="nav-item">
@@ -90,9 +98,11 @@ const logoutUser =(user)=>{
                         <Link className="nav-link" to="/contact-us">Ask EVE</Link>
                     </li>
 
-                    {menu}
+                   
                 </ul>
+                {menu}
             </div>
+    
         </nav>
     );
 };
