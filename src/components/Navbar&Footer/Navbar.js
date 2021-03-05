@@ -23,64 +23,55 @@ const logoutUser =(user)=>{
 
     if (localStorage.getItem('token') === 'undefined' || localStorage.getItem('token') === null) {
         menu = (
-           
-            <div className="nav-btn">
-            <Link to="/signup">
-                <button className="btn-link ">Sign Up</button>
-                </Link >
+            <ul class="navbar-nav ml-auto justify-content-end">
+                <li className="nav-btns">
+                        <Link className="nav-link" to="/signup">Sign up</Link>
+                </li>
 
-                <Link to="/login">
-                    <button className="btn-link ">Log In</button>
-                </Link>
-
-          
-           
-
-            </div>
-        
+                <li className="nav-btns">
+                        <Link className="nav-link" to="/login">Login</Link>
+                </li>
+            </ul>
         )
     } else {
         menu = (
-            <div className="nav-btn">
-            <Link to="/signup">
-                <button className="btn-link ">Profile</button>
-                </Link >
+            <ul class="navbar-nav ml-auto justify-content-end">
+                <li className="nav-btns">
+                    <Link className="nav-link" to="/sponsor-profile">Profile</Link>
+                </li>
 
-                <Link to="/login">
-                    <button className="btn-link ">Log Out</button>
-                </Link>
-
-          
-           
-
-            </div>
+                <li className="nav-btns">
+                        <Link className="nav-link" to="/login" onClick={logoutUser}>Logout</Link>
+                </li>
+            </ul>
         )
     }
 
 
     return (
         <nav className="navbar sticky-top navbar-expand-lg navbar-dark" style={{ background: useLocation().pathname === '/' ? 'transparent' : 'rgb(30,29,91)', marginTop: useLocation().pathname === '/' ? '-113px' : '0px'}}>
-           
-            <div className="nav-logo">
-                    <Link to="/">
-                        <img className="nav-logo" src={Logo} alt='logo' />
-                    </Link>
+            <div className="d-flex flex-grow-1">
+                <span className="w-100 d-lg-none d-block"></span>
+
+                <Link to="/" className="navbar-brand">
+                    <img className="nav-logo" src={Logo} alt='logo' />
+                </Link>
+
+                <div className="w-100 text-right">
+                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar7">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+                </div>
             </div>
 
-            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
-            </button>
-
-            <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                
-                <ul className="navbar-nav mx-auto">
-
+            <div className="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar7">
+                <ul className="navbar-nav justify-content-center mx-auto flex-nowrap">
                     <li className="nav-item">
                         <Link className="nav-link" to="/about">About EVE</Link>
                     </li>
 
                     <li className="nav-item dropdown">
-                        <div className="dropdown">
+                        <div className="dropdown ml-auto">
                             <Link className="nav-link" to="/resources">Resources</Link>
                             <div className="dropdown-content">
                                 <a href="/articles">Articles</a>
@@ -98,11 +89,9 @@ const logoutUser =(user)=>{
                         <Link className="nav-link" to="/contact-us">Ask EVE</Link>
                     </li>
 
-                   
                 </ul>
                 {menu}
             </div>
-    
         </nav>
     );
 };
