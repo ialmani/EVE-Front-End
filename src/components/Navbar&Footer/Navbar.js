@@ -25,11 +25,11 @@ const logoutUser =(user)=>{
         menu = (
             <ul class="navbar-nav ml-auto justify-content-end">
                 <li className="nav-btns">
-                        <Link className="nav-link" to="/signup">Sign up</Link>
+                    <Link className="nav-link" to="/signup">Sign up</Link>
                 </li>
 
                 <li className="nav-btns">
-                        <Link className="nav-link" to="/login">Login</Link>
+                    <Link className="nav-link" to="/login">Login</Link>
                 </li>
             </ul>
         )
@@ -41,7 +41,7 @@ const logoutUser =(user)=>{
                 </li>
 
                 <li className="nav-btns">
-                        <Link className="nav-link" to="/login" onClick={logoutUser}>Logout</Link>
+                    <Link className="nav-link" to="/login" onClick={logoutUser}>Logout</Link>
                 </li>
             </ul>
         )
@@ -49,7 +49,7 @@ const logoutUser =(user)=>{
 
 
     return (
-        <nav className="navbar sticky-top navbar-expand-lg navbar-dark" style={{ background: useLocation().pathname === '/' ? 'transparent' : 'rgb(30,29,91)', marginTop: useLocation().pathname === '/' ? '-113px' : '0px'}}>
+        <nav className="navbar sticky-top navbar-expand-xl navbar-dark" style={{ background: useLocation().pathname === '/' ? 'transparent' : 'rgb(30,29,91)', marginTop: useLocation().pathname === '/' ? '-113px' : '0px'}}>
             <div className="d-flex flex-grow-1">
                 <span className="w-100 d-lg-none d-block"></span>
 
@@ -88,7 +88,6 @@ const logoutUser =(user)=>{
                     <li className="nav-item">
                         <Link className="nav-link" to="/contact-us">Ask EVE</Link>
                     </li>
-
                 </ul>
                 {menu}
             </div>

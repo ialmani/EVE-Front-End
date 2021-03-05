@@ -30,7 +30,7 @@
     text-decoration: none;
 }
 
-@media screen and (max-width: 985px){
+@media screen and (max-width: 1225px){
     .navbar-dark .navbar-nav .nav-btns .nav-link {
         background: none;
     }
