@@ -17,7 +17,6 @@ import Videos from './components/Resources/Videos';
 import UploadVideo from './components/Resources/UploadVideos';
 import AllResources from './components/Resources/AllResources';
 import FullVideo from './components/Resources/FullVideo';
-import Events from './components/Resources/Events';
 import Home from './components/Home/Home';
 
 
@@ -33,7 +32,6 @@ export const BaseRouter = () => {
         <Route path = '/resources' component={AllResources} exact/>
         <Route path = '/contact-us' component={ContactUs} exact/>
         <Route path = '/ask-eve' component={Askeve} exact/>
-        <Route path = '/events' component={Events} exact/>
         <Route path = '/sponsor-packages' component={SponsorPackage} exact/>
         <Route path = '/sponsor-profile' component={SponsorProfile} exact/>
         <Route path = '/articles' component={Articles} exact/>
