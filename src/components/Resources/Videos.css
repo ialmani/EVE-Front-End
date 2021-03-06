@@ -61,6 +61,7 @@ button.video-btn {
     cursor: pointer;
     background-color: #292B6E;
     margin: 1px;
+    color: white;
 }
 button.video-btn:hover {
     background-color: white ;
