@@ -1,0 +1,11 @@
+.welVideo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+iframe {
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+}

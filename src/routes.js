@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
+import Welcome from './components/WelcomeVideo/Welcome';
 import LandingPage from './components/Home/LandingPage';
 import Login from './components/Login/Login';
 import SignUp from './components/SignUp/SignUp';
@@ -16,6 +17,7 @@ import Videos from './components/Resources/Videos';
 import UploadVideo from './components/Resources/UploadVideos';
 import AllResources from './components/Resources/AllResources';
 import FullVideo from './components/Resources/FullVideo';
+import Events from './components/Resources/Events';
 import Home from './components/Home/Home';
 
 
@@ -31,6 +33,7 @@ export const BaseRouter = () => {
         <Route path = '/resources' component={AllResources} exact/>
         <Route path = '/contact-us' component={ContactUs} exact/>
         <Route path = '/ask-eve' component={Askeve} exact/>
+        <Route path = '/events' component={Events} exact/>
         <Route path = '/sponsor-packages' component={SponsorPackage} exact/>
         <Route path = '/sponsor-profile' component={SponsorProfile} exact/>
         <Route path = '/articles' component={Articles} exact/>
@@ -38,7 +41,8 @@ export const BaseRouter = () => {
         <Route path = '/articles/:id' component={FullArticle} exact />
         <Route path = '/videos' component={Videos} exact/>
         <Route path = '/videos/upload' component={UploadVideo} exact/>
-        <Route path = '/videos/:id' component={FullVideo} exact/>
+        <Route path = '/videos/:id' component={FullVideo} exact/> 
+        <Route path = '/welcome' component={Welcome} exact/>
       </Switch>
     </div>
   );
