@@ -51,6 +51,20 @@
     font-size: 16px;
 }
 
+.contact-button {
+    padding: 8px 20px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    background-color: #292B6E;
+    margin: 8px;
+}
+.contact-button:hover {
+    background-color:  #c2cffc ;
+    color: black;
+}
 
 @media screen and (max-width: 1000px){
     .Contact-section{
