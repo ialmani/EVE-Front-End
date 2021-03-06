@@ -14,11 +14,12 @@
     margin-right:20px;
 }
 
-@media screen and (max-width:1010px){
+@media screen and (max-width:1020px){
     .navbar-dark .navbar-nav .nav-link {
         margin-left:0px;
         margin-right:0px;
         text-align:center;
+       
     }
 }
 
@@ -39,15 +40,17 @@
     text-decoration: none;
     text-align:center;
 }
-
-@media screen and (max-width: 1010px){
+.navbar-toggler-icon {
+    margin-top: 30px;
+}
+@media screen and (max-width: 1020px){
     .navbar-dark .navbar-nav .nav-btns .nav-link {
         background: none;
     }
 }
 
 .navbar-dark .navbar-nav .nav-btns .nav-link:hover {
-    background: #fff;
+    background: #c2cffc;
     color: #292B6E;
     border-radius: 4px;
     outline: none;
