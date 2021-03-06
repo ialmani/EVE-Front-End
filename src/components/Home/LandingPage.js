@@ -17,17 +17,18 @@ const LandingPage = () => {
 
       <div className='landingPagebtns'>
      
-        <Button
+        {/* <Button
           className="btns"
           buttonStyle='btn--outline'
           buttonSize='btn--large'>GET STARTED <i className="fas fa-arrow-right" />
-        </Button>
+        </Button> */}
         &nbsp;
         &nbsp;
-        <Button
+        <Button 
           className="btns"
           buttonStyle='btn--outline'
-          buttonSize='btn--large'>WATCH TRAILER <i className='far fa-play-circle' />
+          buttonSize='btn--large'> <i className='far fa-play-circle' />
+          <a href= '/welcome'>WATCH TRAILER</a> 
         </Button>
 
       </div>

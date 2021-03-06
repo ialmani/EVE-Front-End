@@ -1,76 +1,98 @@
 import React, { useState, useEffect } from 'react';
 import { FaBars } from 'react-icons/fa'
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useHistory} from "react-router-dom";
 import Logo from '../../assets/eve_logo.svg';
 import './Navbar.css'
+import * as Requests from '../../Requests'
 
-const Navbar = ({ toggle }) => {
+const Navbar = () => {
+    const [user, setUser] = useState({
+        username: "",
+        password: "",
+      });
+
+let history = useHistory();
+
+const logoutUser =(user)=>{
+    localStorage.removeItem("token");
+    history.push('/login');
+    window.location.reload(false);
+
+}
+    let menu;
+
+    if (localStorage.getItem('token') === 'undefined' || localStorage.getItem('token') === null) {
+        menu = (
+            <ul class="navbar-nav ml-auto justify-content-end">
+                <li className="nav-btns">
+                    <Link className="nav-link" to="/signup">Sign up</Link>
+                </li>
+
+                <li className="nav-btns">
+                    <Link className="nav-link" to="/login">Login</Link>
+                </li>
+            </ul>
+        )
+    } else {
+        menu = (
+            <ul class="navbar-nav ml-auto justify-content-end">
+                <li className="nav-btns">
+                    <Link className="nav-link" to="/sponsor-profile">Profile</Link>
+                </li>
+
+                <li className="nav-btns">
+                    <Link className="nav-link" to="/login" onClick={logoutUser}>Logout</Link>
+                </li>
+            </ul>
+        )
+    }
+
+
     return (
-        <nav className="Nav" style={{ background: useLocation().pathname === '/' ? 'transparent' : 'rgb(30,29,91)' }}>
+        <nav className="navbar sticky-top navbar-expand-lg navbar-dark" style={{ background: useLocation().pathname === '/' ? 'transparent' : 'rgb(30,29,91)', marginTop: useLocation().pathname === '/' ? '-113px' : '0px'}}>
+            <div className="d-flex flex-grow-1">
+                <span className="w-100 d-lg-none d-block"></span>
 
-            <div className="NavbarContainer">
-                <div className="nav-logo">
-                    <Link to="/">
-                        <img className="nav-logo" src={Logo} alt='logo' />
-                    </Link>
+                <Link to="/" className="navbar-brand">
+                    <img className="nav-logo" src={Logo} alt='logo' />
+                </Link>
+
+                <div className="w-100 text-right">
+                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar7">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
                 </div>
+            </div>
 
-                <div className="mobile-icon" onClick={toggle}> <FaBars /> </div>
+            <div className="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar7">
+                <ul className="navbar-nav justify-content-center mx-auto flex-nowrap">
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/about">About EVE</Link>
+                    </li>
 
-                <div className="nav-menu">
-                    <div className="nav-item" >
-                        <Link to="/about">
-                            <div className="nav-link">About EVE </div>
-                        </Link>
-                    </div >
-
-                    <div className="nav-item">
+                    <li className="nav-item dropdown">
                         <div className="dropdown">
-                            <Link to="/resources">
-                                <div className="nav-link">Resources </div>
-                            </Link>
+                            <Link className="nav-link" to="/resources">Resources</Link>
                             <div className="dropdown-content">
                                 <a href="/articles">Articles</a>
                                 <a href="/videos">Videos</a>
                                 <a href="/events">Events</a>
                             </div>
                         </div>
-                    </div>
+                    </li>
 
-                    <div className="nav-item">
-                        <Link to="/sponsor-packages">
-                            <div className="nav-link">Sponsor Packages </div>
-                        </Link>
-                    </div>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/sponsor-packages">Sponsor Packages</Link>
+                    </li>
 
-                    <div className="nav-item">
-                        <Link to="/contact-us">
-
-                            <div className="nav-link">Ask EVE</div>
-                        </Link>
-                    </div>
-
-
-
-                </div>
-                <div className="nav-btn">
-                    <Link to="/signup">
-                        <button className="btn-link ">Sign Up</button>
-                        <Link />
-
-                        <Link to="/login">
-                            <button className="btn-link ">Log In</button>
-                        </Link>
-
-                    </Link>
-
-
-                </div>
-
-
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/contact-us">Ask EVE</Link>
+                    </li>
+                </ul>
+                {menu}
             </div>
         </nav>
-    )
-}
+    );
+};
 
 export default Navbar;

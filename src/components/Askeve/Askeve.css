@@ -46,3 +46,19 @@
     text-align: left;
     padding: 30px;
 }
+
+.ask-btn{
+    padding: 8px 20px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    background-color: #292B6E;
+    margin: 8px;
+}
+
+.ask-btn:hover {
+    background-color:  #c2cffc ;
+    color: black;
+}
