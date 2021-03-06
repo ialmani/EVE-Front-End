@@ -31,3 +31,19 @@ describe('Resource Test', () => {
       cy.url().should('include', '/events')
     })
   })
+
+describe('Resource Test', () => {
+  it('View Article Resource', () => {
+    cy.visit('http://localhost:3000/articles')
+    cy.contains('Read More').click()
+    cy.url().should('include', '/articles/1')
+  })
+})
+
+describe('Resource Test', () => {
+  it('View Video Resource', () => {
+    cy.visit('http://localhost:3000/videos')
+    cy.contains('View More').click()
+    cy.url().should('include', '/videos/1')
+  })
+})
