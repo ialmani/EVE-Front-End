@@ -17,11 +17,11 @@ const LandingPage = () => {
 
       <div className='landingPagebtns'>
      
-        <Button
+        {/* <Button
           className="btns"
           buttonStyle='btn--outline'
           buttonSize='btn--large'>GET STARTED <i className="fas fa-arrow-right" />
-        </Button>
+        </Button> */}
         &nbsp;
         &nbsp;
         <Button 
