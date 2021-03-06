@@ -24,12 +24,15 @@ const Askeve = () => {
           <div className='Askeve-container'>
             <div className='Askeve-heading1'>Ask EVE</div>
             <div className='Askeve-heading2'>How can Ask EVE help you today?</div>
-              <form onSubmit = "sendEmail"className="text"> 
+              <form onSubmit = {sendEmail} className = "text" > 
                 First let's start by telling me who you are.
-                <input type = 'text' name = "name "></input>
+                <Input type = 'text' name = "from_name"></Input>
+                Where should we contant you?
+                <Input type = 'text' name = "email"></Input>
+                
                 <div></div>
                 Here, you can ask us anything you would like help with.
-                <textarea message = "message"></textarea>
+                <textarea name = "message"></textarea>
                 <div></div>
                 An admin from our site will read your question(s) and will provide a response within 24 - 72 business hours.
              
