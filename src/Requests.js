@@ -10,7 +10,7 @@ export const loginUser =(user)=>{
     }).then(response => response.json());
 }
 //get user details
-export const getUserDetails = (user)=>{
+export const getUserDetails = ()=>{
     return fetch(API_BASE+'auth/api/getUserDetails', {
         headers: {
             'Authorization': 'Bearer '+ localStorage.getItem("token"),
@@ -64,4 +64,24 @@ export const createVideo = (newVideo) => {
         },
         body: JSON.stringify(newVideo)
     }).then(response => response.json());
+}
+
+export const createComment = (resourceID, resource, comment)=>{
+    return fetch(API_BASE + resource+'/'+resourceID+'/comments/create', {
+        method: 'post',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer '+localStorage.getItem("token"),
+        },
+        body: JSON.stringify(comment)
+    }).then(response => response.json());
+
+}
+
+export const getArticleComments= (articleID)=>{
+    return fetch(API_BASE+'articles/'+articleID+'/comments').then(response => response.json());
+}
+
+export const getUser=(userID)=>{
+    return fetch(API_BASE+'auth/users/'+userID).then(response=>response.json());
 }
