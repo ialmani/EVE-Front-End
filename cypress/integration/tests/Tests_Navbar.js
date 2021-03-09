@@ -54,7 +54,7 @@ describe('Navbar Test', () => {
 describe('Navbar Test', () => {
   it('Visits Eve Sign Up Page', () => {
     cy.visit('http://localhost:3000/')
-    cy.contains('Sign Up').click()
+    cy.contains('Sign up').click()
     cy.url().should('include', '/signup')
   })
 })
@@ -62,7 +62,7 @@ describe('Navbar Test', () => {
 describe('Navbar Test', () => {
   it('Visits Eve Login Page', () => {
     cy.visit('http://localhost:3000/')
-    cy.contains('Log In').click()
+    cy.contains('Login').click()
     cy.url().should('include', '/login')
   })
 })

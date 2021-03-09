@@ -17,8 +17,8 @@ describe('Resource Test', () => {
 describe('Resource Test', () => {
     it('Visits Eve Videos Page From Resources', () => {
       cy.visit('http://localhost:3000/resources')
-      cy.contains('Videos').scrollIntoView()
-      cy.contains('View Videos').click()
+      cy.get('.resources-info').contains('View Videos').scrollIntoView({duration:20000})
+      cy.contains('View Videos').click({force: true})
       cy.url().should('include', '/videos')
     })
   })
@@ -26,8 +26,8 @@ describe('Resource Test', () => {
 describe('Resource Test', () => {
     it('Visits Eve Events Page From Resources', () => {
       cy.visit('http://localhost:3000/resources')
-      cy.contains('Live Events').scrollIntoView()
-      cy.contains('Attend Live').click()
+      cy.contains('Attend Live').scrollIntoView({duration:20000})
+      cy.contains('Attend Live').click({force: true})
       cy.url().should('include', '/events')
     })
   })
@@ -43,7 +43,7 @@ describe('Resource Test', () => {
 describe('Resource Test', () => {
   it('View Video Resource', () => {
     cy.visit('http://localhost:3000/videos')
-    cy.contains('View More').click()
+    cy.contains('view more').click()
     cy.url().should('include', '/videos/1')
   })
 })
