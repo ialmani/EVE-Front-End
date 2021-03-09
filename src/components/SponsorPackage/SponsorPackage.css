@@ -1,89 +1,90 @@
 .pricing-heading-top {
+    height: 210px;
     display: table;
+    text-align: center;
     margin: 20px auto 20px auto;
-    font-size:48px;
-    background-color: #292B6E;
-    border-radius: 15px;
-    padding: 20px;
+    font-size:70px;
+    background-image: linear-gradient(180deg, rgba(238,174,202,255), #566ec5);
+    border-radius: 40px;
+    border-style:solid;
+    border-spacing: 20px;
+    border-width: 20px;
+    border-color: black;
     color:#ffffff;
+    padding: 20px;
+}
+
+.pricing-section{
+    padding-top: 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 30%;
+    background-image: url(../../assets/cityscape.png);
+    background-size: cover;
 }
 
 .pricing-heading-bottom {
     padding: 20px;
     font-size:24px;
-    background-color: #292B6E;
-    color:#ffffff;
+    background-image: linear-gradient(180deg, rgba(238,174,202,255), #566ec5);
     margin: 40px auto 20px auto;
-    border-radius: 20px;
-}
-
-.pricing-section{
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-    justify-content: center;
-    padding: 3%;
-    background-color: #7d89b4;
+    border-radius: 40px;
+    border-style:solid;
+    border-spacing: 20px;
+    border-width: 20px;
+    border-color: black;
+    color:#ffffff;
 }
 
 .pricing-wrapper{
+    width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
 }
 
-@media screen and (max-width: 960px) {
-    .pricing-wrapper{
-        margin: 0 30px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .pricing-container{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
-    .pricing-card{
-        width: 80%;
-    }
-}
-
 .pricing-heading{
     color: black;
     font-size: 48px;
-    margin-bottom: 24px;
 }
 
 .pricing-container{
+    width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: blue;
+    border-radius: 40px;
 }
 
 .pricing-card{
+    margin-left: 30px;
+    margin-right: 30px;
     background: #242424;
-    box-shadow: 0 6px 40px rgba(125, 125, 255, 0.2);
-    width: 280px;
-    height: 500px;
+    padding: 20px;
+    width: 300px;
+    height: 418px;
     text-decoration: none;
+    border-radius: 40px;
+    border-style:soild;
+    border-width: 40px;
+    color:#000000;
 }
 
 .pricing-card-info{
+    background-image: linear-gradient(360deg, rgba(238,174,202,255), #566ec5);
+    border-radius: 20px;
+    height: 378px;
     display: flex;
     flex-direction: column;
-    height: 500px;
-    padding: 24px;
     align-items: center;
     color: #fff;
 }
 
 .pricing-card-icon{
-    margin: 24px 0;
+    margin: 12px 0;
 }
 
 .pricing-card-plan{
@@ -101,24 +102,35 @@
 }
 
 .pricing-card-features{
-    margin: 16px 0 32px;
     list-style: none;
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #a9b3c1;
+    color: #ffffff;
 }
 
 .pricing-card-feature{
     margin-bottom: 10px;
 }
 
-.forward{
-    margin-left: 8px;
-    font-size: 20px;
-}
-
-.right{
-    margin-left: 8px;
-    font-size: 20px;
+@media screen and (max-width: 960px) {
+    .pricing-section {
+        padding-top: 40px;
+    }
+    .pricing-wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .pricing-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding-top: 150px;
+    }
+    .pricing-card{
+        width: 80%;
+    }
 }
