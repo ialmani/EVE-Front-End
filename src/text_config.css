@@ -1,0 +1,21 @@
+.banner {
+    font-size: 90px;
+    line-height: normal;
+}
+
+.header {
+    font-size: 60px;
+    font-weight: 900;
+    line-height: normal;
+}
+
+.subheader{
+    font-size: 40px;
+    line-height: normal;
+}
+
+.paragraph {
+    font-size: 30px;
+    line-height: normal;
+}
+
