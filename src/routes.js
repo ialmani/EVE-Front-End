@@ -26,22 +26,28 @@ export const BaseRouter = () => {
         <Navbar />
       <Switch>
         <Route path = '/' component={LandingPage} exact/>
+        <Route path = '/welcome' component={Welcome} exact/>
+
         <Route path = '/login' component={Login} exact/>
         <Route path = '/signup' component={SignUp} exact/>
+
         <Route path = '/about' component={About} exact/>
+        <Route path = '/resources' component={AllResources} exact/>
+        <Route path = '/sponsor-packages' component={SponsorPackage} exact/>
+        <Route path = '/ask-eve' component={Askeve} exact/>
+
         <Route path = '/get-started' component={GetStarted} exact/>
         <Route path = '/resources' component={AllResources} exact/>
         <Route path = '/contact-us' component={ContactUs} exact/>
-        <Route path = '/ask-eve' component={Askeve} exact/>
-        <Route path = '/sponsor-packages' component={SponsorPackage} exact/>
+
         <Route path = '/sponsor-profile' component={SponsorProfile} exact/>
         <Route path = '/articles' component={Articles} exact/>
         <Route path = '/articles/create' component={NewArticle} exact />
         <Route path = '/articles/:id' component={FullArticle} exact />
+        
         <Route path = '/videos' component={Videos} exact/>
         <Route path = '/videos/upload' component={UploadVideo} exact/>
         <Route path = '/videos/:id' component={FullVideo} exact/> 
-        <Route path = '/welcome' component={Welcome} exact/>
       </Switch>
     </div>
   );

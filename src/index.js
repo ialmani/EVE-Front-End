@@ -1,12 +1,12 @@
+import { createStore, applyMiddleware, compose } from 'redux';
+import { Provider } from 'react-redux';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'semantic-ui-css/semantic.min.css';
 import App from './App';
 import reducer from './store/reducers/auth';
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'semantic-ui-css/semantic.min.css';
 
 const composeEnhances = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
@@ -14,7 +14,7 @@ const store = createStore(reducer, composeEnhances(applyMiddleware(thunk)));
 
 const app = (
   <Provider store={store}>
-    <App />
+    <App/>
   </Provider>
 );
 
