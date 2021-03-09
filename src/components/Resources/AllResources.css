@@ -1,42 +1,89 @@
-.resources-container {
-    box-sizing: border-box;
+.resources-body {
+    margin-top: 20px;
+    padding: 2%;
     width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #eee;
-    padding: 0 1.5rem;
+    border-radius: 40px;
+    background: #6dc0af;
 }
 
-img {
+.resources-banner-container {
+    padding-top: 40px;
+    text-transform: uppercase;
     width: 100%;
-  
+    text-align: center;
+    justify-items: center;
+    background: #6dc0af;
+}
 
+.resources-banner-text {
+    background-image:linear-gradient(90deg, rgba(238,174,202,0.8), rgba(148,187,233,0.8));;
+    border-style:solid;
+    border-radius: 40px;
+    border-spacing: 20px;
+    border-width: 20px;
+    border-color: black;
+    width: 50%;
+    margin-left: 25%;
+    padding: 20px;
 }
 
 .resources {
     margin: auto;
-    margin-top: 100px;
-    /* width: 100%; */
-    max-width: 90rem;
-    padding: 5rem;
-    background-color: #fff ;
-    box-shadow: 0 1.4rem 8rem rgba(0,0,0,0.2);
+    margin-bottom: 40px;
+    width: 85%;
+    padding-left: 5%;
+    padding-right: 5%;
     display: flex;
     align-items: center;
-    border-radius: 0.8rem;
-  
-  
+    border-radius: 4rem;
+    box-shadow: 0.5rem 0.5rem 3rem 1px rgba(0,0,0, 0.5);
+    background-color: white;
+    border-style:solid;
+    border-radius: 40px;
+    border-spacing: 20px;
+    border-width: 20px;
+    border-color: black;
 }
+
+.resources-info {
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+.resources-text {
+    margin-bottom: 3rem;
+    color: #000000;
+}
+
+.resources-cta {
+    display: inline-block;
+    padding: 1.5rem 3rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, rgba(238,174,202,0.8), rgba(148,187,233,0.8));
+    border-radius: 0.8rem;
+    color: white;
+    text-decoration: none;
+}
+
+.resources-cta:hover {
+    color: white;
+    background: linear-gradient(90deg, rgba(148,187,233,0.8),rgba(238,174,202,0.8));
+}
+
+
+img {
+    width: 100%;
+}
+
 .resources-img {
     min-width: 25rem;
     max-width: 25rem;
     height: 20rem;
-    transform: translate(-8rem);
+    transform: translate(-2rem);
     position: relative;
-    
 }
+
 .resources-img img {
     width: 100%;
     height: 100%;
@@ -51,68 +98,23 @@ img {
     position: absolute;
     top: 0;
     left: 0;
-    background: linear-gradient(to right, rgba(32, 44, 155, 0.8), rgba(181,195,251, 0.8));
+    background: rgb(238,174,202);
+    background: linear-gradient(180deg, rgba(238,174,202,0.8), rgba(148,187,233,0.8));
     box-shadow: 0.5rem 0.5rem 3rem 1px rgba(0,0,0, 0.5);
     border-radius: 0.8rem;
 }
-.resources-title {
-    font-size: 2.5rem;
-    margin: 2.5rem 0 2rem;
-    text-transform: uppercase;
-    color: rgb(139, 98, 168);
-    display: inline;
-}
-.resources-text {
-    margin-bottom: 3rem;
-    font-size: 1.4rem;
-    color: rgba(0,0,0,.7);
-}
-.resources-cta {
-    display: inline-block;
-    padding: 1.5rem 3rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    background-image: linear-gradient(to right, rgba(32, 44, 155) 0%, rgb(181,195,251) 100%);
-    border-radius: 0.8rem;
-    color: white;
-    text-decoration: none;
-}
-.resources-cta:hover {
-    color: white;
-    background-image: linear-gradient(to right,rgb(181,195,251) 0%,rgba(32, 44, 155, 0.8) 100%);
-}
 
-@media screen and (max-width: 1068px){
+@media screen and (max-width: 800px){
     .resources {
-        max-width: 80rem;
-        margin-top: 240px;
-    }
-    .resources-img{
-        max-width: 100%;
-       
-    }
-}
-@media screen and (max-width: 868px){
-    .resources {
-        max-width: 40rem;
-        min-width: 100%;
-        margin-top: 240px;
-       
-    }
-   
-}
-@media screen and (max-width: 768px){
-    .resources {
-        padding: 2.5rem;
+        padding: 25%;
         flex-direction: column;
         min-width: 100%;
-        margin-top: 240px;
+        border-radius: 4rem;
        
     }
     .resources-img{
         max-width: 30rem;
         min-width: 30rem;
         transform: translate(0, -8rem);
-     
     }
 }
