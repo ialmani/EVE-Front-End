@@ -23,7 +23,9 @@ export const BaseRouter = () => {
 
   return (
     <div>
+   
         <Navbar />
+ 
       <Switch>
         <Route path = '/' component={LandingPage} exact/>
         <Route path = '/login' component={Login} exact/>

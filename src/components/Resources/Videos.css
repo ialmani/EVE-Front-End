@@ -39,7 +39,13 @@
 .video-h {
     font-size: 24px;
     color: rgb(59, 59, 216);
-    margin-bottom: 0;
+    margin-bottom: 0;  
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+
+  
 
 }
 
@@ -59,13 +65,13 @@ button.video-btn {
     outline: none;
     border: none;
     cursor: pointer;
-    background-color: #292B6E;
+    background-image: linear-gradient(to right, rgba(32, 44, 155) 0%, rgb(181,195,251) 100%);
     margin: 1px;
     color: white;
 }
 button.video-btn:hover {
-    background-color: white ;
-    color: black;
+    color: white;
+    background-image: linear-gradient(to right,rgb(181,195,251) 0%,rgba(32, 44, 155, 0.8) 100%);
 }
 
 .video-h1 {
