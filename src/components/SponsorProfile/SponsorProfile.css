@@ -1,5 +1,5 @@
 .sponsor-container {
-    background-image: linear-gradient(to right, rgba(52, 20, 20, 0), #7b87b3);
+    background-color: #f1f1f1;
 }
 
 .prof-img img {
@@ -26,7 +26,7 @@ display: flex;
 }
 
 .prof-img img {
-    height: 200px;
+    height: 220px;
     width:  220px;
     align-items: center;
     justify-content: center;
@@ -35,7 +35,7 @@ display: flex;
     margin-top: 10px;
 }
 .prof-img {
-    border-radius: 30px;
+    border-radius: 50%;
 }
 .emp-content {
     text-align: center;
@@ -72,66 +72,79 @@ display: flex;
 .right-nav ul li.active, .right-nav ul li:hover {
     box-shadow: 0px -3px 0px rgba(111, 136, 227,6.5) inset;
 }
-.user-articles, .user-videos, .user-settings{
+.user-articles, .user-videos{
     font-size: 18px;
     font-weight: bold;
 }
 .tab {
-    padding : 20px;
-    width: 100%;
+ 
     text-align: center;
- 
-}
-.pro-inner-item:hover , .pro-item-content:hover{
- 
+
 }
 
-.sp-container {
-
-    display: inline-block;
-    flex-wrap: wrap;
-    display: flex;
-     
- 
+.table-video-container {
+    width: 100%;
 }
 
-.sp-card{
-    max-width: 640px;
-    min-width: 640px;
+table{
+    font-family:'Calibri';
+    font-size:15px;
+    background-color:#fff;
+    color:#333;
+ 
+}
+.modal-header{
+    background-color:#333;
+    color:#fff;
+}
+
+
+table{
+    width: 560px;
+}
+
+th, td, tr{
+    width: 560px;
+}
+
+.btnstyle{
     margin-left: 20px;
-    margin-top: 30px;
-    max-height: 200px;
-    min-height: 200px;
-    background-color: rgba(255, 240, 80, 0.947);
-    box-shadow: 0px 2px 20px rgba(0,0,0,1.4);
-    cursor: pointer;
-    transition: transform .2s;
-}
-.sp-card:hover {
-
-  transform: scale(1.1); 
+    margin-bottom: 4px;
 }
 
-.prof-card-body{
+.table-text {
+    font-family: Roboto;
 
+    /* color: rgb(41, 164, 168); */
+    color: rgb(247, 0, 255);
 }
 
-@media screen and (max-width: 1030px){
-    .sp-card {
-        margin: auto;
-        align-content: center;
-        justify-content: center;
-        display: flex;
-        max-width: 340px;
-        min-width: 340px;
+tr{
+    font-size: 18px;
+    font-family: Roboto;   
+    text-align: center; 
+}
+.table-video-text{
+    color: rgb(247, 0, 255);
+
+    height: 70px;
+}
+.table td {
+   vertical-align: center;
+}
+
+@media screen and (max-width: 1024px){
+    .table-container {
+        width: 98%;
     }
+    .table-video-container {
+        width: 98%;
+    }
+    
 }
 
 @media screen and (max-width: 670px){
-    .sp-card {
-        min-width: 240px;
-        min-height: 150px;
-    }
+
     .pro-sidebar{
         width: 170px!important;
         min-width: 170px!important;
@@ -144,25 +157,16 @@ display: flex;
         width: 120px;
     
     }
+    
 }
 
 @media screen and (max-width: 570px){
   
     .right-side{
-        max-width: 80%;
+        max-width: 68%;
     }
    
    
-    .sp-card {
-        min-width: 240px;
-        min-height: 150px;
-        margin-left: 50px;
-    }
-    .sp-container {
-
-       width: 50%;         
-     
-    }
     .emp-content {
         font-size: 16px;
     }
@@ -170,25 +174,17 @@ display: flex;
         font-size: 13px!important;
 
     }
-   .user-articles, .user-videos, .user-settings{
+   .user-articles, .user-videos{
        font-size: 12px;
    }
+ 
 
 }
 @media screen and (max-width: 530px){
-    .sp-card {
-        min-width: 240px;
-        min-height: 150px;
-        margin-left: -10px;
-    }
-    
-    .sp-h1 {
-        font-size: 28px;
-        text-align: left;
-    }
+
     .right-nav ul {
         text-align: center;
-        height: 50px;
+        height: 40px;
       
     }
     .pro-sidebar{
@@ -209,32 +205,34 @@ display: flex;
         padding-left: 12px;
 
     }
-    @media screen and (max-width: 435px){
-        .right-nav ul {
-            text-align: left;
-         
-          
-        }
+ 
+    @media screen and (max-width: 456px){
+       
 
         .right-side{
-            width: 75%;
+            width: 67%;
    
         }
-        .right-nav{
-            width: 100%;
+
+        .table-text {
+            font-size: 12px;
         }
-        .sp-card {
-            min-width: 250px;
-            min-height: 200px;
-            margin-left: -10px;
+        tr {
+            font-size: 12px;
+        }
+        .table-container {
+            width: 95%;
         }
     }
-    @media screen and (max-width: 375px) {
-        .sp-card {
-            min-width: 180px;
-            min-height: 200px;
-            margin-left: -10px;
-        }
-        
+}
+
+@media screen and (max-width: 350px){
+    .table-container{
+        max-width: 100%;
+   
+    }
+    .right-side{
+        width: 62%;
+
     }
 }
