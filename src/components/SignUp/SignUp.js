@@ -34,7 +34,7 @@ const SignUp = () =>{
                     <input type="firstname" className="form-control" placeholder="Firstname" required
                         onChange={e=>setNewUser({...newUser, first_name:e.target.value})}/>
 
-                    <input type="Lastname" className="form-control" placeholder="Lastname" required
+                    <input type="lastname" className="form-control" placeholder="Lastname" required
                         onChange={e=>setNewUser({...newUser, last_name:e.target.value})}/>
 
                     <input type="username" className="form-control" placeholder="Username" required

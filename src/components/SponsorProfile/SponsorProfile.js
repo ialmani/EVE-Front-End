@@ -1,13 +1,27 @@
 import React, {useState, useEffect} from 'react'
 import './SponsorProfile.css'
 import aboutImg from '../../assets/profilepic.png'
-import { GiCrystalBars } from 'react-icons/gi';
 import { Link } from 'react-router-dom';
 import * as Requests from '../../Requests'
-
+import { ProSidebar, SidebarHeader, SidebarContent, Menu, MenuItem} from 'react-pro-sidebar';
+import 'react-pro-sidebar/dist/css/styles.css';
+import {FaPlus} from "react-icons/fa";
+import { FiSettings} from "react-icons/fi"
+import 'semantic-ui-css/semantic.min.css';
+import UserArticles from './UserArticles'
+import UserVideos from './UserVideos'
 
 const SponsorProfile = () => {
-    //$('.right-nav ul li').click(function () { $(this).addClass("active").siblings().removeClass("active")})
+    const [articles, setArticles] = useState([]);
+
+    useEffect(()=>{
+        Requests.getAllArticles().then(data=>{
+            if(data.statusCode !== 404) {
+                setArticles(data)
+            }
+        }).catch(() => null);
+    },[]);
+   
     const [user, setUser] = useState({
         username: "",
         password: "",
@@ -19,88 +33,51 @@ const SponsorProfile = () => {
             console.log(data);
         }).catch(() => null);
     },[]);
+
+    const[tab, setTab] = useState(0);
     
+    
+
     return (
         <div className = "sponsor-container">
-            <div className = "profile-header">
-                <div className = "profile-img">
-                    <img src = {aboutImg} width = "200" alt = ""/>
-                </div>
-               
-                <div className = "profile-nav-info">
-                    <h3 className = "user-name">{user.first_name + " " + user.last_name}</h3>
-                    {/* <div className = "address">
-                        <p className = "state">Indiana,</p>
-                        <span className = "country">USA</span>
-                    </div> */}
-                    <Link to = "sponsor-packages">
-                    <div className ="profile-option">
-                        
-                        <div className = "notification"/>
-                        
-                        <span className = "alert-message" ><GiCrystalBars /></span>
-                      
-                    </div>
-                    </Link>
+            <div className = "main-body">
+            <div className = "prof-sidebar">
+            <ProSidebar >
+            <SidebarHeader className = "sidebar-header">
+            <div className = "prof-img"><img src = {aboutImg}></img></div>
+            </SidebarHeader>
+            <SidebarContent>
+            <div className = "emp-content">  {user.first_name + " " + user.last_name}</div>
+            
+            <Menu className = "prof-menu" iconShape="square">
 
-                </div>
-        
+                <MenuItem icon={<FaPlus/>}>Add Article</MenuItem>
+                <MenuItem icon={<FaPlus />} >Add Video</MenuItem> 
+                <MenuItem icon={<FiSettings />} >Settings</MenuItem> 
+            </Menu>
+            </SidebarContent>
+            </ProSidebar>
+                
             </div>
-                <div className = "main-body">
-                    <div className = "left-side">
-                        <div className = "profile-side">
-                            {/* <p className = "mobile-no"> <i className = "fa fa-phone"></i>908553773</p> */}
-                            <p className = "user-email"><i className = "fas fa-user"></i>{user.username}</p>
-                            <p className = "user-email"><i className = "fa fa-envelope"></i>{user.email}</p>
-                            {/* <div className = "user-bio">
-                                <p className = "bio">A computer science major with an interest in web development. Favourite color is green</p>
-                            </div> */}
-                            <div className = "profile-btn">
-                            <Link to= "articles/create">
-                                <button className = "article-button">
-                                <i className = "fa fa-plus">Article</i>
-                                </button>
-                            </Link>
-                            <Link to = "videos/upload">
-                                <button className = "video-button">
-                                <i className = "fa fa-plus">Video</i>
-                                </button>
-                            </Link>
-                            </div>
-                        </div>
-                    </div>
-                    <div className = "right-side">
-                        <div className = "right-nav">
-                            <ul>
-                                <li onClick = "tabs(0)" className = "user-articles active">User Articles</li>
-                                <li onClick = "tabs(1)"className = "user-videos">User Videos</li>
-                                <li onClick = "tabs(2)"className = "user-settings">User Settings</li>
-                            </ul>
-                        </div>
-                        <div className = "profile-body">
-                            <div className = "profile-articles tab">
-                                <h1>Your Articles</h1>
-                                <p>First Article</p>
-                            </div>
-                        
-                        </div>
-                        <div className = "profile-videos">
-                            <div className = "profile-articles tab">
-                                <h1>Your Videos</h1>
-                                <p>videos uploaded</p>
-                            </div>
-                        
-                        </div>
-                        <div className = "profile-settings">
-                            <div className = "profile-articles tab">
-                                <h1>Account Settings</h1>
-                                <p>settings for your account</p>
-                            </div>
-                        
-                        </div>
-                    </div>
+            <div className = "right-side">
+                <div className = "right-nav">
+                <ul>
+                    <li onClick = {() => setTab(0)}  className={`user-articles ${tab == 0 ? "active" : ""}` }>My Articles</li>
+                    <li onClick = {() => setTab(1)}  className={`user-videos ${tab == 1 ? "active" : ""}` }>My Videos</li>
+                      
+                </ul>
                 </div>
+
+            <div className = "profile-body">
+
+            {tab == 0 && <UserArticles/>}
+            {tab ==1 && <UserVideos/>}
+            
         </div>
+        </div>
+        </div>
+        </div>
+
     )
 }
 

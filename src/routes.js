@@ -18,14 +18,18 @@ import UploadVideo from './components/Resources/UploadVideos';
 import AllResources from './components/Resources/AllResources';
 import FullVideo from './components/Resources/FullVideo';
 import Events from './components/Resources/Events';
-
+import Navbar from './components/Navbar&Footer/Navbar';
 
 
 export const BaseRouter = () => {
+
   return (
     <div>
+   
+        <Navbar />
+ 
       <Switch>
-        <Route path = '/' component={Home} exact/>
+        <Route path = '/' component={LandingPage} exact/>
         <Route path = '/login' component={Login} exact/>
         <Route path = '/signup' component={SignUp} exact/>
         <Route path = '/about' component={About} exact/>

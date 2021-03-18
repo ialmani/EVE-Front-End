@@ -18,6 +18,7 @@ const Articles = () => {
     return (
         <div className = "full-page">
             <div className = "articles-container">
+          
         {articles.map(article=>
         
     
