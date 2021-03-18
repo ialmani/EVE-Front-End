@@ -18,7 +18,7 @@ import UploadVideo from './components/Resources/UploadVideos';
 import AllResources from './components/Resources/AllResources';
 import FullVideo from './components/Resources/FullVideo';
 import Events from './components/Resources/Events';
-import Home from './components/Home/Home';
+
 
 
 export const BaseRouter = () => {
