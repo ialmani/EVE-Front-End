@@ -17,7 +17,9 @@ import Videos from './components/Resources/Videos';
 import UploadVideo from './components/Resources/UploadVideos';
 import AllResources from './components/Resources/AllResources';
 import FullVideo from './components/Resources/FullVideo';
+import Events from './components/Resources/Events';
 import Navbar from './components/Navbar&Footer/Navbar';
+
 
 export const BaseRouter = () => {
 
@@ -42,7 +44,8 @@ export const BaseRouter = () => {
         <Route path = '/articles/:id' component={FullArticle} exact />
         <Route path = '/videos' component={Videos} exact/>
         <Route path = '/videos/upload' component={UploadVideo} exact/>
-        <Route path = '/videos/:id' component={FullVideo} exact/> 
+        <Route path = '/videos/:id' component={FullVideo} exact/>
+        <Route path =  '/events' component={Events} exact/>
         <Route path = '/welcome' component={Welcome} exact/>
       </Switch>
     </div>
