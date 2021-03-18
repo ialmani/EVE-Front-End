@@ -1,0 +1,11 @@
+.nav-link:hover {
+    background: #c2cffc;
+    color: #292B6E;
+    border-radius: 4px;
+}
+
+a:hover {
+    background: #c2cffc;
+    color: #292B6E;
+    border-radius: 4px;
+}
