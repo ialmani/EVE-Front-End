@@ -19,14 +19,14 @@ import AllResources from './components/Resources/AllResources';
 import FullVideo from './components/Resources/FullVideo';
 import Events from './components/Resources/Events';
 import Navbar from './components/Navbar&Footer/Navbar';
+import Footer from './components/Navbar&Footer/Footer';
 
 
 export const BaseRouter = () => {
 
   return (
     <div>
-   
-        <Navbar />
+      <Navbar />
  
       <Switch>
         <Route path = '/' component={LandingPage} exact/>
@@ -48,6 +48,8 @@ export const BaseRouter = () => {
         <Route path =  '/events' component={Events} exact/>
         <Route path = '/welcome' component={Welcome} exact/>
       </Switch>
+
+      <Footer />
     </div>
   );
 };

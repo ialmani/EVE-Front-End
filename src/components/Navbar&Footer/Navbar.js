@@ -70,15 +70,8 @@ const logoutUser =(user)=>{
                         <Link className="nav-link" to="/about">About EVE</Link>
                     </li>
 
-                    <li className="nav-item dropdown">
-                        <div className="dropdown">
-                            <Link className="nav-link" to="/resources">Resources</Link>
-                            <div className="dropdown-content">
-                                <a href="/articles">Articles</a>
-                                <a href="/videos">Videos</a>
-                                <a href="/events">Events</a>
-                            </div>
-                        </div>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/resources">Resources</Link>
                     </li>
 
                     <li className="nav-item">
