@@ -17,35 +17,31 @@ const Articles = () => {
     },[]);
     return (
         <div className = "full-page">
-            <div className = "articles-container">
-          
-        {articles.map(article=>
-        
-    
-    <div className="card mb-4" >
-      <div className="card-body">
- 
-    
-        <h5 className="card-title">{article.title}</h5>
-        <p className="card-text">
-          {(article.content).substring(0,100)}...
-        </p>
-        <Link to = {'articles/'+article.id}>
-        <button type="button" class="btn btn-success">Read More</button>
-        </Link>
-        <p className="card-text">
-          <small className="text-muted">{article.author}</small>
-        </p>
-   
-  
+          <div className="search-bar-section">
+            <div className="search-bar-container">
+              <input className='search-bar'></input>
+              <button className="search-btn"> Search</button>
+            </div>
+          </div>
+          <div className = "articles-container">
+            {articles.map(article=>
+              <div className="card mb-4" >
+                <div className="card-body">
+                  <h5 className="card-title">{article.title}</h5>
+                  <p className="card-text">
+                    {(article.content).substring(0,100)}...
+                  </p>
+                  <Link to = {'articles/'+article.id}>
+                  <button type="button" class="btn btn-success">Read More</button>
+                  </Link>
+                  <p className="card-text">
+                    <small className="text-muted">{article.author}</small>
+                  </p>
+                </div>
+              </div>
+            )}
+        </div>
       </div>
-
-    </div>
-
-       
-        )}
-         </div>
-</div>
 )
 }
 
