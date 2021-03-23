@@ -48,7 +48,7 @@ const SponsorProfile = () => {
                             <img src = {aboutImg}></img>
                         </div>
                         <div className = "sponsorprofile-sidebar-name">
-                            {user.first_name + " " + user.last_name}
+                            {user.username}
                         </div>
                         <div className = "sponsorprofile-sidebar-content">
                             <div className = "sponsorprofile-sidebar-menu">
