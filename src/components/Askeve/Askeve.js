@@ -20,29 +20,25 @@ const Askeve = () => {
       }
 
       return (
-        <div className='Askeve-body'>
-          <div className='Askeve-container'>
-            <div className='Askeve-heading1'>Ask EVE</div>
-            <div className='Askeve-heading2'>How can Ask EVE help you today?</div>
+        <div className='askeve-body'>
+          <div className='askeve-container'>
+          <div className='Askeve-heading1'>Ask EVE</div>
+          <div className='Askeve-heading2'>How can Ask EVE help you today?</div>
               <form onSubmit = {sendEmail} className = "text" > 
                 First let's start by telling me who you are.
                 <Input type = 'text' name = "from_name"></Input>
                 Where should we contant you?
                 <Input type = 'text' name = "email"></Input>
-                
-                <div></div>
+                <br></br>
                 Here, you can ask us anything you would like help with.
                 <textarea name = "message"></textarea>
-                <div></div>
+                <br></br>
                 An admin from our site will read your question(s) and will provide a response within 24 - 72 business hours.
-             
-               <button className = "ask-btn" > Send </button>
-             
-              </form>    
-            </div>
+                <button className = "ask-btn" > Send </button>
+              </form> 
           </div>
+        </div>
       );
     }
-
   
 export default Askeve;
