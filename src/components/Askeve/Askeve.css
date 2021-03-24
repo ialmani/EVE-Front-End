@@ -9,7 +9,7 @@
     color:#ffffff;
 }
 
-.Askeve-body {
+.askeve-body {
     min-height: 100vh;
     width: 100%;
     height: 90%;
@@ -20,13 +20,15 @@
     font-family: "Open Sans", sans-serif;
 }
 
-.Askeve-container {
+.askeve-container {
     width: 90%;
     height: 80%;
-    margin-top: 90px;
+    margin-top: -150px;
     background-color: #ffffff;
     border-radius: 40px;
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.5);
 }
+
 .Askeve-heading1 {
     font-size: 40px;
     font-weight: 900;
