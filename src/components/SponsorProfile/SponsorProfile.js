@@ -1,15 +1,12 @@
-import React, {useState, useEffect} from 'react'
-import './SponsorProfile.css'
-import aboutImg from '../../assets/profilepic.png'
+import React, {useState, useEffect} from 'react';
+import aboutImg from '../../assets/profilepic.png';
 import { Link } from 'react-router-dom';
-import * as Requests from '../../Requests'
-import {Menu, MenuItem} from 'react-pro-sidebar';
+import * as Requests from '../../Requests';
+import UserArticles from './UserArticles';
+import UserVideos from './UserVideos';
 import 'react-pro-sidebar/dist/css/styles.css';
-import {FaPlus} from "react-icons/fa";
-import { FiSettings} from "react-icons/fi"
 import 'semantic-ui-css/semantic.min.css';
-import UserArticles from './UserArticles'
-import UserVideos from './UserVideos'
+import './SponsorProfile.css';
 import '../styles.css';
 
 const SponsorProfile = () => {
@@ -37,8 +34,6 @@ const SponsorProfile = () => {
 
     const[tab, setTab] = useState(0);
     
-    
-
     return (
         <div className = "sponsorprofile-body font-roboto">
             <div className = "sponsorprofile-container">
@@ -62,12 +57,12 @@ const SponsorProfile = () => {
 
                 <div className="right-side-container">
                     <div className = "right-tabs">
-                        <div onClick = {() => setTab(0)} className={`user-articles ${tab == 0 ? "active" : ""}`}>My Articles</div>
-                        <div onClick = {() => setTab(1)} className={`user-videos ${tab == 1 ? "active" : ""}`}>My Videos</div>    
+                        <Link onClick = {() => setTab(0)} className={`user-articles ${tab == 0 ? "active" : ""}`}>My Articles</Link>
+                        <Link onClick = {() => setTab(1)} className={`user-videos ${tab == 1 ? "active" : ""}`}>My Videos</Link>
                     </div>
                     <div className = "right-side">
                         <div className = "right-tab-cont">
-                            {tab ==0 && <UserArticles />}
+                            {tab ==0 && <UserArticles/>}
                             {tab ==1 && <UserVideos/>}
                         </div>
                     </div>
