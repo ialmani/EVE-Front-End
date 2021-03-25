@@ -53,7 +53,7 @@ const logoutUser =(user)=>{
             <div className="d-flex flex-grow-1">
                 <span className="w-100 d-lg-none d-block"></span>
 
-                <Link to="/" className="navbar-brand">
+                <Link to="/" className="navbar-brand" style={{ background:'transparent'}}>
                     <img className="nav-logo" src={Logo} alt='logo' />
                 </Link>
 
