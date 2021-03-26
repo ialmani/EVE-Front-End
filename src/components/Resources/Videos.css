@@ -56,23 +56,6 @@
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
 }
-button.video-btn {
-
-    max-width: 100px;
-    box-shadow: none;
-    padding: 6px 5px;
-    border-radius: 4px;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    background-image: linear-gradient(to right, rgba(32, 44, 155) 0%, rgb(181,195,251) 100%);
-    margin: 1px;
-    color: white;
-}
-button.video-btn:hover {
-    color: white;
-    background-image: linear-gradient(to right,rgb(181,195,251) 0%,rgba(32, 44, 155, 0.8) 100%);
-}
 
 .video-h1 {
     text-align: center;

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import "./ContactUs.css";
+import "../Button.css";
 
 class ContactUs extends Component {
   render() {
@@ -19,7 +20,7 @@ class ContactUs extends Component {
             </p>     
           </div>
         </div>
-        <Link to= '/ask-eve' className= 'contact-button'>
+        <Link to= '/ask-eve' className= 'contactus-button'>
                 ASK EVE<span>&rarr;</span>
         </Link>
       </div>

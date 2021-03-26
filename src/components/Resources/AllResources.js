@@ -6,6 +6,7 @@ import liveImg from '../../assets/liveEvents.jpg'
 import videoImg from '../../assets/video.jpg'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
+import '../Button.css'
 
 
 
