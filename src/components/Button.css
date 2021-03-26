@@ -62,25 +62,21 @@
 }
 
 
-.sp-signupbtn {
-    padding: 20px;
-    margin: 20px auto 20px auto;
-    margin-top: 50px;
-    font-size: 20px;
-    color:#eeeeee;
-    background-image: linear-gradient(180deg, rgba(104, 12, 141), #516ac7);
-    border-radius: 20px;
-    border-style:solid;
-    border-spacing: 20px;
-    border-width: 2px;
-    transition: ease-in-out 150ms;
+.askeve-btn{
+    padding: 8px 20px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    background-color: #292B6E;
+    margin: 8px;
 }
-.sp-signupbtn:hover {
-    color: #eeeeee;
-    background-image: linear-gradient(rgba(104, 12, 141, 0.5), #516ac7);
-    padding: 30px;
-    box-shadow: 0 30px 30px rgba(0, 0, 0, 1);
+.askeve-btn:hover {
+    background-color:  #c2cffc ;
+    color: black;
 }
+
 
 
 .btn-success {
@@ -94,14 +90,23 @@
 }
 
 
-.landingPagebtns {
-    margin-top: 20px;
-    align-items: center;
-    justify-content: space-around;
+.landingpage-btn {
+    padding: 20px;
+    margin: 20px auto 20px auto;
+    margin-top: 50px;
+    font-size: 20px;
+    color:#ffffff;
+    background-color: #292b6e;
+    border-radius: 20px;
+    border-style:solid;
+    border-spacing: 20px;
+    border-width: 2px;
+    transition: ease-in-out 175ms;
 }
-.landingPagebtns .btns {
-    margin: 6px;
-    color: white;
+.landingpage-btn:hover {
+    color: #ffffff;
+    background-image: linear-gradient(rgba(104, 12, 141, 0.5), #516ac7);
+    padding: 30px;
 }
 
 
@@ -122,8 +127,21 @@
 }
 
 
-.video-btn {
+.newarticle-btn{
+    padding: 8px 20px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: #292B6E;
+    margin: 1px;
+}
+.newarticle-btn:hover{
+    color: #ffffff;
+}
 
+
+.video-btn {
     max-width: 100px;
     box-shadow: none;
     padding: 6px 5px;
@@ -138,6 +156,21 @@
 .video-btn:hover {
     color: white;
     background-image: linear-gradient(to right,rgb(181,195,251) 0%,rgba(32, 44, 155, 0.8) 100%);
+}
+
+
+.uploadvideo-btn{
+    border-style: none;
+    margin-left: 10px;
+    border-radius: 20px;
+    padding: 10px;
+    width: 100%;
+    color: #ffffff;
+    background-color: #9658fe;
+}
+.uploadvideo-btn:hover{
+    background-color: #a978ff;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -161,30 +194,22 @@
 }
 
 
-.newarticle-btn{
-    padding: 8px 20px;
-    border-radius: 10px;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    background-color: #292B6E;
-    margin: 1px;
-}
-.newarticle-btn:hover{
-    color: #ffffff;
-}
-
-
-.uploadvideo-btn{
-    border-style: none;
-    margin-left: 10px;
+.sponsorpackage-signupbtn {
+    padding: 20px;
+    margin: 20px auto 20px auto;
+    margin-top: 50px;
+    font-size: 20px;
+    color:#eeeeee;
+    background-image: linear-gradient(180deg, rgba(104, 12, 141), #516ac7);
     border-radius: 20px;
-    padding: 10px;
-    width: 100%;
-    color: #ffffff;
-    background-color: #9658fe;
+    border-style:solid;
+    border-spacing: 20px;
+    border-width: 2px;
+    transition: ease-in-out 150ms;
 }
-.uploadvideo-btn:hover{
-    background-color: #a978ff;
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
+.sponsorpackage-signupbtn:hover {
+    color: #eeeeee;
+    background-image: linear-gradient(rgba(104, 12, 141, 0.5), #516ac7);
+    padding: 30px;
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 1);
 }

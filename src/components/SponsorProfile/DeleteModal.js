@@ -3,23 +3,22 @@ import './DeleteModal.css'
 
 const DeleteModal = () => {
     return (
-        <div id="delete" class="modal fade" role="dialog">
-        <div className="modal-dialog">
-        <div className="modal-content">
-            <div className="modal-header">
-               
-                <h4 className="modal-title">Delete Data</h4>
+        <div id='delete' class='modal fade' role='dialog'>
+            <div className='modal-dialog'>
+                <div className='modal-content'>
+                    <div className='modal-header'>
+                        <h4 className='modal-title'>Delete Data</h4>
+                    </div>
+                    <div class='modal-body'>
+                        <strong>Are you sure you want to delete this data?</strong>
+                    </div>
+                    <div className='modal-footer'>
+                        <button type='button' id='del' class='btn-danger' data-dismiss='modal'>Delete</button>
+                        <button type='button' class='btn-default' data-dismiss='modal'>Close</button>
+                    </div>
+                </div>
             </div>
-        <div class="modal-body">
-            <strong>Are you sure you want to delete this data?</strong>
-        </div>
-        <div className="modal-footer">
-            <button type="button" id="del" class=" btn-danger" data-dismiss="modal">Delete</button>
-            <button type="button" class="btn-default" data-dismiss="modal">Close</button>
-        </div>
-        </div>
-        </div>
-                {/* <div id="edit" class="modal fade" role="dialog">
+            {/* <div id="edit" class="modal fade" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content edit-content">
             <div class="modal-header">
@@ -39,7 +38,6 @@ const DeleteModal = () => {
         </div>
         </div> */}
         </div>
-        
     )
 }
 

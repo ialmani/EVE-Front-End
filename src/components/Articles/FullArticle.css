@@ -1,11 +1,8 @@
-
-
 .article-wrapper {
     display: inline-block;
     flex-wrap: wrap;
     align-content: center;
 }
-
 
 .article-content {
     margin: 3rem 1rem 1rem 1rem;
@@ -15,6 +12,7 @@
     margin-left: auto;
     margin-right: auto;
 }
+
 .article-title{
     line-height: 1.5rem;
     margin: 1rem 0 0.5rem;
@@ -32,7 +30,6 @@
 .comments-container {
     /* margin-top: 30px; */
     margin-left: 150px;
-   
 }
 
 .comment-wrapper .panel-body {
@@ -50,20 +47,18 @@
     border-bottom:1px dashed #efefef;
     margin-bottom:25px;
 }
-.btn{ 
-    float: right;
-}
+
 .text-success {
     margin-left: 20px;
 }
+
 .media-body p {
     margin-left: 20px;
 }
+
 .form-control {
     max-width: 830px;
-   
 }
-
 
 @media screen and (max-width: 500px) {
     .comments-container {

@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { FaBars } from 'react-icons/fa'
-import { Link, useLocation, useHistory} from "react-router-dom";
-import Logo from '../../assets/eve_logo.svg';
+import React, { useState, useEffect } from 'react'
+import { Link, useLocation, useHistory } from 'react-router-dom'
+import Logo from '../../assets/eve_logo.svg'
 import './Navbar.css'
 import * as Requests from '../../Requests'
 
@@ -9,16 +8,16 @@ const Navbar = () => {
     const [user, setUser] = useState({
         username: "",
         password: "",
-      });
+    });
 
-let history = useHistory();
+    let history = useHistory();
 
-const logoutUser =(user)=>{
-    localStorage.removeItem("token");
-    history.push('/login');
-    window.location.reload(false);
+    const logoutUser = (user) => {
+        localStorage.removeItem("token");
+        history.push('/login');
+        window.location.reload(false);
 
-}
+    }
     let menu;
 
     if (localStorage.getItem('token') === 'undefined' || localStorage.getItem('token') === null) {
@@ -27,7 +26,6 @@ const logoutUser =(user)=>{
                 <li className="nav-btns">
                     <Link className="nav-link" to="/signup">Sign up</Link>
                 </li>
-
                 <li className="nav-btns">
                     <Link className="nav-link" to="/login">Login</Link>
                 </li>
@@ -39,7 +37,6 @@ const logoutUser =(user)=>{
                 <li className="nav-btns">
                     <Link className="nav-link" to="/sponsor-profile">Profile</Link>
                 </li>
-
                 <li className="nav-btns">
                     <Link className="nav-link" to="/login" onClick={logoutUser}>Logout</Link>
                 </li>
@@ -47,39 +44,32 @@ const logoutUser =(user)=>{
         )
     }
 
-
     return (
-        <nav className="navbar sticky-top navbar-expand-lg navbar-dark" style={{ background: useLocation().pathname === '/' ? 'transparent' : 'rgb(30,29,91)', marginTop: useLocation().pathname === '/' ? '-113px' : '0px'}}>
-            <div className="d-flex flex-grow-1">
-                <span className="w-100 d-lg-none d-block"></span>
-
-                <Link to="/" className="navbar-brand" style={{ background:'transparent'}}>
-                    <img className="nav-logo" src={Logo} alt='logo' />
+        <nav className='navbar sticky-top navbar-expand-lg navbar-dark' style={{ background: useLocation().pathname === '/' ? 'transparent' : 'rgb(30,29,91)', marginTop: useLocation().pathname === '/' ? '-113px' : '0px' }}>
+            <div className='d-flex flex-grow-1'>
+                <span className='w-100 d-lg-none d-block'></span>
+                <Link to='/' className='navbar-brand' style={{ background: 'transparent' }}>
+                    <img className='nav-logo' src={Logo} alt='logo' />
                 </Link>
-
-                <div className="w-100 text-right">
-                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar7">
-                        <span className="navbar-toggler-icon"></span>
+                <div className='w-100 text-right'>
+                    <button className='navbar-toggler' type='button' data-toggle='collapse' data-target='#myNavbar7'>
+                        <span className='navbar-toggler-icon'></span>
                     </button>
                 </div>
             </div>
-
-            <div className="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar7">
-                <ul className="navbar-nav justify-content-center mx-auto flex-nowrap">
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/about">About EVE</Link>
+            <div className='collapse navbar-collapse flex-grow-1 text-right' id='myNavbar7'>
+                <ul className='navbar-nav justify-content-center mx-auto flex-nowrap'>
+                    <li className='nav-item'>
+                        <Link className='nav-link' to='/about'>About EVE</Link>
                     </li>
-
                     <li className="nav-item">
-                        <Link className="nav-link" to="/resources">Resources</Link>
+                        <Link className='nav-link' to='/resources'>Resources</Link>
                     </li>
-
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/sponsor-packages">Sponsor Packages</Link>
+                    <li className='nav-item'>
+                        <Link className='nav-link' to='/sponsor-packages'>Sponsor Packages</Link>
                     </li>
-
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/contact-us">Ask EVE</Link>
+                    <li className='nav-item'>
+                        <Link className='nav-link' to='/contact-us'>Ask EVE</Link>
                     </li>
                 </ul>
                 {menu}
@@ -88,4 +78,4 @@ const logoutUser =(user)=>{
     );
 };
 
-export default Navbar;
+export default Navbar

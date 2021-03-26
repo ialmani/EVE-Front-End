@@ -5,7 +5,6 @@ import LandingPage from './components/Home/LandingPage';
 import Login from './components/Login/Login';
 import SignUp from './components/SignUp/SignUp';
 import About from './components/About/About';
-import GetStarted from './components/GetStarted/GetStarted';
 import ContactUs from './components/ContactUs/ContactUs';
 import Askeve from './components/Askeve/Askeve';
 import Articles from './components/Articles/Articles';
@@ -33,7 +32,6 @@ export const BaseRouter = () => {
         <Route path = '/login' component={Login} exact/>
         <Route path = '/signup' component={SignUp} exact/>
         <Route path = '/about' component={About} exact/>
-        <Route path = '/get-started' component={GetStarted} exact/>
         <Route path = '/resources' component={AllResources} exact/>
         <Route path = '/contact-us' component={ContactUs} exact/>
         <Route path = '/ask-eve' component={Askeve} exact/>
