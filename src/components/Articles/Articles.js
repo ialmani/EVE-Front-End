@@ -35,7 +35,7 @@ const Articles = () => {
                   <button type="button" class="btn btn-success">Read More</button>
                   </Link>
                   <p className="card-text">
-                    <div className="text-muted">{article.author}</div>
+                    {article.author}
                   </p>
                 </div>
               </div>
