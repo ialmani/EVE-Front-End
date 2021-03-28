@@ -92,7 +92,7 @@
 }
 
 .card:hover .card-title {
-    top: 0px;
+    top: 20px;
 }
 
 .card-text {
@@ -133,6 +133,7 @@
     padding-top: 20px;
     padding-bottom: 20px;
 }
+
 .search-bar-container{
     width: 450px;
     padding: 30px;
@@ -150,6 +151,7 @@
     border-color: white;
     background-image: linear-gradient(to right, rgba(32, 44, 155) 0%, rgb(181,195,251) 100%);
 }
+
 .search-button:hover {
     background-image: linear-gradient(to right,rgb(181,195,251) 0%,rgba(32, 44, 155, 0.8) 100%);
 }

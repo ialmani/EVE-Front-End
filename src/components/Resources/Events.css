@@ -53,7 +53,6 @@
     pointer-events: none;
 }
 
-
 .events-content {
     position: relative;
     padding: 20px;
@@ -116,6 +115,10 @@
 }
 
 @media screen and (max-width: 1020px) {
+    .events-container {
+        width: 55%;
+    }
+
     .events-box {
         margin-bottom: 20px;
         width: 320px;
