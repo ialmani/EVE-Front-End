@@ -13,7 +13,39 @@
 }
 
 .card-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     margin: 20px;
+}
+
+.login-link{
+    width: fit-content;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #292B6E;
+}
+
+.signup-link{
+    width: fit-content;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #292B6E;
+}
+
+.forgotpassword-link{
+    width: fit-content;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #292B6E;
+}
+
+.suggestions-text{
+    font-size: 20px;
+    color: black;
 }
 
 ul {
