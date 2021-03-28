@@ -1,9 +1,10 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useState} from 'react';
 import {Link} from 'react-router-dom';
-import profileImg from '../../assets/profilepic.png'
-import articleImg from '../../assets/articles.jpg'
-import './Articles.css'
-import * as Requests from '../../Requests'
+import profileImg from '../../assets/profilepic.png';
+import articleImg from '../../assets/articles.jpg';
+import * as Requests from '../../Requests';
+import './Articles.css';
+import '../Button.css';
 
 const Articles = () => {
     const [articles, setArticles] = useState([]);

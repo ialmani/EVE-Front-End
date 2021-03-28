@@ -52,7 +52,7 @@ const UploadVideos = () => {
 
                     <div className = "bttn">
                     <div className = "inner"></div>
-                        <button type = "submit" >UPLOAD</button>
+                        <button className = "uploadvideo-btn" type = "submit" >UPLOAD</button>
                     </div>
 
                 </form>

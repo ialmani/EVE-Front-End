@@ -3,6 +3,7 @@ import './Videos.css'
 import * as Requests from '../../Requests'
 import {Link} from 'react-router-dom'
 import ReactPlayer from 'react-player'
+import '../Button.css'
 
 const Videos = () => { 
   const [videos, setVideos] = useState([]);

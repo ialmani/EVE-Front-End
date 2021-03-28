@@ -5,6 +5,7 @@ import { IconContext } from 'react-icons/lib';
 import {Link} from 'react-router-dom';
 import './SponsorPackage.css';
 import '../styles.css';
+import '../Button.css';
 
 function SponsorPackage() {
   const [hover, setHover] = useState (false)

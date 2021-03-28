@@ -8,6 +8,7 @@ import 'react-pro-sidebar/dist/css/styles.css';
 import 'semantic-ui-css/semantic.min.css';
 import './SponsorProfile.css';
 import '../styles.css';
+import '../Button.css';
 
 const SponsorProfile = () => {
     const [articles, setArticles] = useState([]);

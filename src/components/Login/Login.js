@@ -2,6 +2,7 @@ import React, {SyntheticEvent, useState} from 'react';
 import { useHistory } from "react-router-dom";
 import * as Requests from "../../Requests";
 import "./Login.css";
+import "../Button.css";
 
 const Login = () =>{
   const [user, setUser] = useState({
@@ -35,7 +36,7 @@ const Login = () =>{
                     <input type="password" className="form-control" placeholder="Password" required
                         onChange={e=>setUser({...user, password:e.target.value})}/>
 
-                    <button className="w-100 btns btn-lg btn-primary" type="submit">LOGIN</button>
+                    <button className="login-btn" type="submit">LOGIN</button>
                 </form>
             </li>
 

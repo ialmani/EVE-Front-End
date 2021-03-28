@@ -1,8 +1,8 @@
 import React, {useState} from 'react'
 import './NewArticle.css'
 import * as Requests from "../../Requests";
-
 import { useHistory } from "react-router-dom";
+import '../Button.css';
 
 const NewArticle = () => {
     const [newArticle, setNewArticle] = useState({
@@ -53,7 +53,7 @@ const NewArticle = () => {
 
             </div>
 
-            <input type='submit' className="btn" />
+            <input type='submit' className="newarticle-btn" />
 
         </form>
       

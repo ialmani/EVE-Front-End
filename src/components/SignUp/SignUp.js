@@ -2,6 +2,8 @@ import React, {SyntheticEvent, Component, useState} from 'react';
 import { useHistory } from 'react-router-dom';
 import * as Requests from "../../Requests";
 import "./SignUp.css";
+import "../Button.css";
+
 
 const SignUp = () =>{
     const [newUser, setNewUser] = useState({
@@ -46,7 +48,7 @@ const SignUp = () =>{
                     <input type="password" className="form-control" placeholder="Password" required
                         onChange={e=>setNewUser({...newUser, password:e.target.value})}/>
 
-                    <button className="w-100 btns btn-lg btn-primary" type="submit">Sign in</button>
+                    <button className="signup-btn" type="submit">Sign in</button>
                 </form>
             </li>
 
