@@ -20,7 +20,6 @@
     transition: 250ms;
 }
 
-
 .signup-btn {
     color: white;
     width: 100%;
@@ -29,6 +28,7 @@
     background-color: #292B6E;
     margin: 8px;
 }
+
 .login-btn {
     color: white;
     width: 100%;
@@ -37,7 +37,6 @@
     background-color: #292B6E;
     margin: 8px;
 }
-
 
 .contactus-button {
     margin-top: 50px;
@@ -51,6 +50,7 @@
     border-spacing: 20px;
     transition: ease-in-out 150ms;
 }
+
 .contactus-button:hover {
     background-color:  #676ab3;
     padding: 40px;
@@ -77,18 +77,20 @@
     color: black;
 }
 
-
-
 .btn-success {
     float: right;
-    margin-top: 30px;
-    background-image: linear-gradient(to right, rgba(32, 44, 155) 0%, rgb(181,195,251) 100%);
+    position: relative;
+    margin: 20px 0 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: 1px solid #000;
+    display: inline-block;
+    color: #000;
+    transition: 0.5s;
+    transform: translateY(-40px);
+    opacity: 0;
+    visibility: hidden;
 }
-.btn-success:hover {
-    color: white;
-    background-image: linear-gradient(to right,rgb(181,195,251) 0%,rgba(32, 44, 155, 0.8) 100%);
-}
-
 
 .landingpage-btn {
     padding: 20px;
