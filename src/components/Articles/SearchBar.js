@@ -1,7 +1,6 @@
 import React, {useRef} from 'react'
 
 const SearchBar = (props) => {
-    console.log(props);
     const inputEl = useRef("");
    
     const getSearchTerm = () => {
@@ -19,7 +18,6 @@ const SearchBar = (props) => {
             ref = {inputEl}>
 
             </input>
-          {/* <button className="search-btn">Submit</button> */}
         </div>
         </div>
     )
