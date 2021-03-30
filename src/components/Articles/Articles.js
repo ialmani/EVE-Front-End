@@ -1,12 +1,33 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useState, useRef} from 'react'
 import {Link} from 'react-router-dom';
-import profileImg from '../../assets/profilepic.png'
-import articleImg from '../../assets/articles.jpg'
 import './Articles.css'
 import * as Requests from '../../Requests'
+import SearchBar from './SearchBar'
 
-const Articles = () => {
+
+const Articles = (props) => {
+
+    console.log(props);
+   
+  
     const [articles, setArticles] = useState([]);
+    const [searchTerm, setSearchTerm] = useState('');
+    const [searchResults, setSearchResults] = useState([]);
+
+   
+    const searchHandler = (searchTerm) => {
+      setSearchTerm(searchTerm);
+      if (searchTerm !== ""){
+        const newArticleList = articles.filter((article) => {
+          return Object.values(articles).join(" ").toLowerCase().includes(searchTerm.toLowerCase);
+        })
+        setSearchResults(newArticleList);
+        console.log(newArticleList)
+      }
+      else {
+        setSearchResults(articles);
+      }
+    };
 
     useEffect(()=>{
         Requests.getAllArticles().then(data=>{
@@ -15,14 +36,18 @@ const Articles = () => {
             }
         }).catch(() => null);
     },[]);
+
     return (
         <div className = "full-page font-roboto">
-            <div className="search-bar-section">
-              <div className="search-bar-container">
-                <input className='search-bar font-roboto' placeholder="Search..."></input>
-                <button className="search-btn">Submit</button>
-              </div>
-            </div>
+          
+        <SearchBar 
+          {...props}
+          term = {searchTerm}
+          searchKeyword = {searchHandler}
+
+        />
+
+
           <div className = "articles-container">
             {articles.map(article=>
               <div className="card mb-4">
