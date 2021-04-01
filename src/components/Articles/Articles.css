@@ -10,11 +10,11 @@
 }
 
 .card {
-    height: 400px;
-    width: 350px;
+    height: 350px;
+    width: 300px;
     border-radius: 20px;
     margin: auto;
-    margin-top: 40px;
+    margin-top: 10px;
     position: relative;
     background-color:  #9B78B6;
     display: flex;
@@ -50,9 +50,9 @@
 }
 
 .card:hover .btn-success {
-    background-color: rgb(30, 29, 91);
+    background-color: #77C266;
     color: #fff;
-    transform: translateY(0);
+    transform: translateY(-30px);
     opacity: 1;
     visibility: visible;
 }
@@ -64,16 +64,12 @@
 
 .card-title {
     position: absolute;
-    top: 50px;
-    right: 20px;
+    top: 30px;
+    left: 20px;
     margin: 0;
     padding: 0;
     font-size: 30px;
     transition: 0.5s;
-}
-
-.card:hover .card-title {
-    top: 20px;
 }
 
 .card-text {
@@ -81,7 +77,13 @@
     padding: 30px;
     font-size: 20px;
     max-height: 80px;
-    transform: translateY(20px);
+}
+
+.card-text2 {
+    margin-top: 50px;
+    padding: 40px;
+    font-size: 20px;
+    max-height: 50px;
 }
 
 @media screen and (max-width: 1020px) {
@@ -89,19 +91,25 @@
         min-width: 440px;
         max-width: 440px;
     }
+    .card-title {
+        top: 30px;
+    }
+    .btn-success {
+        visibility: visible;
+        opacity: 1;
+        transform: 0;
+    }
 }
 
 @media screen and (max-width: 660px){
     .card {
         min-width: 440px;
-        max-width: 440px;
-        
+        max-width: 440px;   
     }
 }
 @media screen and (max-width: 450px){
     .card {
         min-width: 300px;
-        max-width: 300px;
-        
+        max-width: 300px;  
     }
 }

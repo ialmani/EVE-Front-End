@@ -81,14 +81,15 @@
     position: relative;
     margin: 20px 0 0;
     padding: 10px 20px;
+    float: right;
     text-decoration: none;
     border: 1px solid #000;
     display: inline-block;
-    color: #000;
+    color: #fff;
     transition: 0.5s;
     transform: translateY(-60px);
     opacity: 0;
-    visibility: hidden;
+    visibility: visible;
 }
 
 .landingpage-btn {
