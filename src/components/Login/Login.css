@@ -3,9 +3,16 @@
     width: 100%;
     display: flex;
     align-items: center;
+    text-align: center;
     justify-content: center;
-    background-color: #7d89b4;
+    background-image: linear-gradient(to right, rgba(52, 20, 20, 0), #9B78B6);
     font-family: "Open Sans", sans-serif;
+}
+
+.loginBox{
+    background: #9B78B6;
+    padding: 80px 80px;
+    border-radius: 10px;
 }
 
 .form-control {
@@ -17,30 +24,6 @@
     flex-direction: row;
     align-items: center;
     margin: 20px;
-}
-
-.login-link{
-    width: fit-content;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: #292B6E;
-}
-
-.signup-link{
-    width: fit-content;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: #292B6E;
-}
-
-.forgotpassword-link{
-    width: fit-content;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: #292B6E;
 }
 
 .suggestions-text{

@@ -45,10 +45,7 @@
     max-width: 800px;
 }
 
-.form-control {
-    min-width: 800px;
-   
-}
+
 
 @media screen and (max-width: 1664px) {
     .v-comments-container {
@@ -112,9 +109,7 @@
         margin-bottom: 30px;
         min-width: 630px;
     }
-    .form-control {
-        min-width: 630px;
-    }
+
 }
 
 @media screen and (max-width: 840px) {
@@ -134,9 +129,6 @@
     }
     .panel-body {
         margin-bottom: 30px;
-        min-width: 630px;
-    }
-    .form-control {
         min-width: 630px;
     }
 }
@@ -160,9 +152,6 @@
         margin-bottom: 30px;
         max-width: 600px;
     }
-    .form-control {
-        max-width: 350px;
-    }
     .react-player{
         min-width: 300px;
         max-width: 650px;
@@ -182,10 +171,7 @@
         min-width: 50px;
         max-width: 300px;
     }
-    .form-control {
-        min-width: 50px;
-        max-width: 300px;
-    }
+
     .react-player{
         min-width: 300px;
         max-width: 350px;
@@ -207,9 +193,7 @@
         margin-bottom: 30px;
         min-width: 20px;
     }
-    .form-control {
-        min-width: 10px;
-    }
+
     .full-v-textbox {
         margin-left: 10px;
         text-align: center;

@@ -3,13 +3,16 @@
     width: 100%;
     display: flex;
     align-items: center;
+    text-align: center;
     justify-content: center;
-    background-color: #7d89b4;
+    background-image: linear-gradient(to right, rgba(52, 20, 20, 0), #9B78B6);
     font-family: "Open Sans", sans-serif;
 }
 
-.form-control {
-    margin: 8px;
+.signUpBox {
+    background: #9B78B6;
+    padding: 80px 80px;
+    border-radius: 10px;
 }
 
 .card-footer {
@@ -23,3 +26,4 @@ ul {
 a{
  color: #ffffff;
 }
+

@@ -25,10 +25,10 @@ const SignUp = () =>{
 
     return (
         <main className="form-signup">
-            <ul>
+            <ul className='signUpBox'>
                 <li>
                     <form onSubmit={signUpUser}>
-                        <h1 className='h3 mb-3 fw-normal'>Sign Up in</h1>
+                        <h1 className='h3 mb-3 fw-normal'>Sign Up</h1>
 
                         <input type='firstname' className='form-control' placeholder='Firstname' required
                             onChange={e=>setNewUser({...newUser, first_name:e.target.value})}/>
@@ -45,7 +45,7 @@ const SignUp = () =>{
                         <input type='password' className='form-control' placeholder='Password' required
                             onChange={e=>setNewUser({...newUser, password:e.target.value})}/>
 
-                        <button className='signup-btn' type='submit'>Sign in</button>
+                        <a className='signup-btn' type='submit'>Sign In</a>
                     </form>
                 </li>
                 <li>

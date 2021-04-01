@@ -24,7 +24,7 @@ const Login = () => {
 
     return (
         <main className='form-login'>
-            <ul>
+            <ul className='loginBox'>
                 <li>
                     <form onSubmit={loginUser}>
                         <h1 className="h3 mb-3 fw-normal">LOGIN</h1>
@@ -35,7 +35,7 @@ const Login = () => {
                         <input type="password" className="form-control" placeholder="Password" required
                             onChange={e => setUser({ ...user, password: e.target.value })} />
 
-                        <button className="login-btn" type="submit">LOGIN</button>
+                        <a className="login-btn" type="submit">LOGIN</a>
                     </form>
                 </li>
                 <li>
