@@ -82,6 +82,7 @@
 
 .card-text {
     margin-top: 40px;
+    padding: 10px;
     font-size: 20px;
     max-height: 80px;
     transform: translateY(20px);

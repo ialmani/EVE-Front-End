@@ -23,8 +23,8 @@ const Articles = () => {
           <div className='card mb-4'>
             <div className='card-body'>
               <h5 className='card-title'>{article.title}</h5>
-              <p className='card-text'>{article.author}</p>
               <p className='card-text'>{(article.content).substring(0,100)}...</p>
+              <p className='card-text'>{article.author}</p>
               <Link to = {'articles/'+article.id}><button type='button' class='btn btn-success'>Read More</button></Link>
             </div>
           </div>
