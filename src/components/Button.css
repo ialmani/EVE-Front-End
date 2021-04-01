@@ -78,7 +78,6 @@
 }
 
 .btn-success {
-    float: right;
     position: relative;
     margin: 20px 0 0;
     padding: 10px 20px;
@@ -87,7 +86,7 @@
     display: inline-block;
     color: #000;
     transition: 0.5s;
-    transform: translateY(-40px);
+    transform: translateY(-60px);
     opacity: 0;
     visibility: hidden;
 }
