@@ -12,7 +12,7 @@ const SignUp = () =>{
     return (
         <main className="form-signup">
             <div className = "top-tabs">
-                <Link onClick={() => setTab(0)} className = "tab-tab">Members</Link>
+                <Link onClick={() => setTab(0)} className = "tab-tab active">Members</Link>
                 <Link onClick={() => setTab(1)} className = "tab-tab" >Sponsors</Link>
             </div>    
 
