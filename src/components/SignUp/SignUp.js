@@ -12,8 +12,8 @@ const SignUp = () =>{
     return (
         <main className="form-signup">
             <div className = "top-tabs">
-                <Link onClick={() => setTab(0)} className={`member-signup ${tab == 0 ? "active" : ""}`}>Members</Link>
-                <Link onClick={() => setTab(1)} className={`sponsor-signup ${tab == 1 ? "active" : ""}`}>Sponsors</Link>
+                <Link onClick={() => setTab(0)} className = "tab-tab">Members</Link>
+                <Link onClick={() => setTab(1)} className = "tab-tab" >Sponsors</Link>
             </div>    
 
             <div className = "boxx">

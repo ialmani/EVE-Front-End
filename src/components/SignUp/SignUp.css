@@ -38,6 +38,7 @@ a{
 
 }
 
+
 .top-tabs {
     margin-top: 40px;
    
@@ -48,6 +49,10 @@ a{
     padding: 10px 30px 10px 30px;
 
 }
-.member-signup:hover, .sponsor-signup:hover {
-    background: #5c3bff71;
+.top-tabs a:hover {
+    background: none;
+}
+.tab-tab:hover{
+    text-decoration: underline;
+    color: none;
 }
