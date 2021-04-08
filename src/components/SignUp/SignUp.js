@@ -1,60 +1,25 @@
-import React, {SyntheticEvent, Component, useState} from 'react'
-import { useHistory } from 'react-router-dom'
-import * as Requests from '../../Requests'
+import React, { useState} from 'react'
+import {Link } from 'react-router-dom'
 import './SignUp.css'
 import '../Button.css'
+import MemberSignUp from './MemberSignUp'
+import SponsorSignUp from './SponsorSignUp'
 
 const SignUp = () =>{
-    const [newUser, setNewUser] = useState({
-      username: "",
-      email:"",
-      password: "",
-      first_name:"",
-      last_name:""
-    });
-
-    let history = useHistory();
-
-    const signUpUser = (e) => {
-      e.preventDefault();
-      Requests.createUser(newUser).then((response) => {
-        history.push('/login');
-      }).catch(status=>
-          alert(status));
-    }
+  
+    const[tab, setTab] = useState(0);
 
     return (
         <main className="form-signup">
-            <ul className='signUpBox'>
-                <li>
-                    <form onSubmit={signUpUser}>
-                        <h1 className='h3 mb-3 fw-normal'>Sign Up</h1>
+            <div className = "top-tabs">
+                <Link onClick={() => setTab(0)} className={`member-signup ${tab == 0 ? "active" : ""}`}>Members</Link>
+                <Link onClick={() => setTab(1)} className={`sponsor-signup ${tab == 1 ? "active" : ""}`}>Sponsors</Link>
+            </div>    
 
-                        <input type='firstname' className='form-control' placeholder='Firstname' required
-                            onChange={e=>setNewUser({...newUser, first_name:e.target.value})}/>
-
-                        <input type='lastname' className='form-control' placeholder='Lastname' required
-                            onChange={e=>setNewUser({...newUser, last_name:e.target.value})}/>
-
-                        <input type='username' className='form-control' placeholder='Username' required
-                            onChange={e=>setNewUser({...newUser, username:e.target.value})}/>
-
-                        <input type='email' className='form-control' placeholder='Email' required
-                            onChange={e=>setNewUser({...newUser, email:e.target.value})}/>
-
-                        <input type='password' className='form-control' placeholder='Password' required
-                            onChange={e=>setNewUser({...newUser, password:e.target.value})}/>
-
-                        <a className='signup-btn' type='submit'>Sign In</a>
-                    </form>
-                </li>
-                <li>
-                    <div className='card-footer'>
-                        <text className='suggestions-text'>Already have an account?</text>
-                        <a href='/login' className='login-link'>Login</a>
-                    </div>
-                </li>
-            </ul>
+            <div className = "boxx">
+                {tab ==0 && <MemberSignUp/>}
+                {tab ==1 && <SponsorSignUp/>}
+            </div>
         </main>
     );
 }
