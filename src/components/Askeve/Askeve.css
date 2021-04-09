@@ -5,35 +5,109 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #7d89b4;
+    background: rgb(119,194,102);
+    background: linear-gradient(45deg, rgba(119,194,102,1) 33%, rgba(155,120,182,1) 67%);
     font-family: "Open Sans", sans-serif;
 }
 
 .askeve-container {
-    width: 90%;
-    height: 80%;
-    margin-top: -150px;
+    padding: 20px 40px 20px 40px;
+    width: 70%;
+    height: 90%;
+    margin-top: -175px;
     background-color: #ffffff;
     border-radius: 40px;
     box-shadow: 0 30px 30px rgba(0, 0, 0, 0.5);
+    font-size: 18px;
+    text-align: center;
+    font-weight: 400;
 }
 
-.Askeve-heading1 {
+.askeve-heading1 {
     font-size: 40px;
     font-weight: 900;
     text-align: center;
-    padding: 30px;
+    line-height: normal;
+    padding-bottom: 20px;
 }
 
-.Askeve-heading2 {
+.askeve-heading2 {
     font-size: 28px;
     font-weight: 700;
     text-align: center;
+    line-height: normal;
+    padding-bottom: 40px;
 }
 
-.text {
-    font-size: 20px;
-    color: #545454;
+.askeve-userinfocontatiner{
     text-align: left;
-    padding: 30px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.askeve-name-container{
+    text-align: left;
+    width: 50%;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.askeve-email-container{
+    text-align: left;
+    width: 50%;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.askeve-textarea-continer{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.askeve-input{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.askeve-textarea{
+    padding:10px !important;
+    height: 250px;
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: #000000;
+    border-style: solid;
+    margin: 0;
+    padding: 0;
+    resize: none;
+}
+
+.askeve-label{
+    margin-bottom: 5px;
+}
+
+@media screen and (max-width: 1020px) {
+    .askeve-container{
+        margin-top: 50px;
+    }
+    .askeve-userinfocontatiner{
+        padding-bottom: 20px;
+        flex-direction: column;
+    }
+    
+    .askeve-name-container{
+        width: 100%;
+        padding-right: 0px;
+        padding-bottom: 20px;
+    }
+    
+    .askeve-email-container{
+        width: 100%;
+        padding-left: 0px;
+    }
 }

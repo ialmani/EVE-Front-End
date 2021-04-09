@@ -5,17 +5,20 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #7d89b4;
+    background: rgb(119,194,102);
+    background: linear-gradient(45deg, rgba(119,194,102,1) 33%, rgba(155,120,182,1) 67%);
     font-family: "Open Sans", sans-serif;
 }
 
 .contactus-section {
-    margin-top: -100px;
+    min-width: 1000px;
+    margin-top: -350px;
     background-image: url(../../assets/ContactUs.png);
     background-position: left; 
     background-size: 50%;
     background-color: #ffffff; 
     border-radius: 25px;
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.4);
 } 
 
 .contactus-container {
@@ -43,19 +46,36 @@
     margin-bottom: 40px;
 }
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1180px){
     .contactus-section{
         background-image: none;
         width: fit-content;
-        max-width: 90%;
+        height: 100%;
+        min-width: 60%;
         box-shadow: 0 30px 30px rgba(0, 0, 0, 0.025);
     }
     .contactus-container{
-        margin-top: -125px;
+        margin-top: -50px;
         border-radius: 20px;
         width: 100%;
+        height: 100%;
         padding: 20px;
+        padding-bottom: 40px;
         text-align: center;
         box-shadow: 0 30px 30px rgba(0, 0, 0, 0.4);
+    }
+    .contactus-button{
+        margin-left: 0px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .contactus-container{
+        margin-top: -250px;
+    }
+    .contactus-section{
+        margin-top: 0px;
     }
 }
