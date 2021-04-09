@@ -1,38 +1,49 @@
 import React, {useState, useEffect} from 'react'
 import { useHistory, Link } from 'react-router-dom'
 import * as Requests from '../../Requests'
+import Button from "react-bootstrap/Button";
 
 const SponsorSignUp = (props) => {
     const [newUser, setNewUser] = useState({
-        username: "",
         email:"",
-        password: "",
+        username: "",
         first_name:"",
-        last_name:""
+        last_name:"",
+        is_sponsor:true,
+        password: ""
+
       });
   
       let history = useHistory();
-  
-      const signUpUser = (e) => {
+
+    const signUpSponsor = (e) => {
         e.preventDefault();
         Requests.createUser(newUser).then((response) => {
-          history.push('/login');
-        }).catch(status=>
-            alert(status));
-      }
+            if(response.email !== null){
+                history.push('/login');
+            }
+        }).catch(status=> {
+            if(status !== 201){
+                alert("Something went wrong. Please try again.");
+            }
+        })};
     
     return (
         <div>
             <ul className='signUpBox'>
 
 <li>
-    <form onSubmit={signUpUser}>
-        <h1 className='h3 mb-3 fw-normal'>Sponsor Sign Up</h1>
+    <form onSubmit={signUpSponsor}>
+        <h1 className='h3 mb-3 fw-normal'>Welcome new sponsor!</h1>
 
-        <input type='firstname' className='form-control' placeholder='Firstname' required
+        <h1 className="package-field h3 mb-3 fw-normal">Select a sponsor package</h1>
+        <Button variant="outline-primary">Starter Pack</Button>
+        <Button variant="outline-secondary">Gold Rush</Button>
+        <Button variant="outline-success">Diamond Kings</Button>
+        <input type='firstname' className='form-control' placeholder='First Name' required
             onChange={e=>setNewUser({...newUser, first_name:e.target.value})}/>
 
-        <input type='lastname' className='form-control' placeholder='Lastname' required
+        <input type='lastname' className='form-control' placeholder='Last Name' required
             onChange={e=>setNewUser({...newUser, last_name:e.target.value})}/>
 
         <input type='username' className='form-control' placeholder='Username' required
@@ -44,7 +55,7 @@ const SponsorSignUp = (props) => {
         <input type='password' className='form-control' placeholder='Password' required
             onChange={e=>setNewUser({...newUser, password:e.target.value})}/>
 
-        <a className='signup-btn' type='submit'>Sign In</a>
+        <input className='signup-btn' type='submit' value='Sign Up'/>
     </form>
 </li>
 
