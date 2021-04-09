@@ -7,11 +7,11 @@ import './FullArticle.css'
 const FullArticle = () => {
     const [article, setArticle] = useState([]);
     const [user, setUser] = useState([]);
-    const [username, setUsername] = useState([]);
     const [comments, setComments] = useState([]);
     const [newComment, setNewComment] = useState({
         article: null,
-        user: null,
+        user_id: null,
+        username: null,
         body: null
     });
     let { id } = useParams();
@@ -23,7 +23,7 @@ const FullArticle = () => {
 
             }
         }).catch((err) => console.log(err));
-    }, []);
+    }, [id]);
 
     useEffect(() => {
         Requests.getArticleComments(id).then(data => {
@@ -42,20 +42,14 @@ const FullArticle = () => {
     }, [])
 
     const createArticleComment = () => {
-        // console.log(newComment);
-        setNewComment({ ...newComment, article: id, user: user.id });
+        console.log(user.username);
+        setNewComment({ ...newComment, article: id, user: user.id, username: user.username });
         Requests.createComment(id, 'articles', newComment).then((response) => {
             console.log(response);
         }).catch(status =>
             alert(status));
     }
-
-    const getUsername = (userID) => {
-        Requests.getUser(userID).then(data => {
-            setUsername(data['username'])
-
-        })
-    }
+    
 
     return (
         <div>
@@ -76,7 +70,7 @@ const FullArticle = () => {
                                     {localStorage.getItem('token') &&
                                         <div>
                                             <form onSubmit={createArticleComment}>
-                                                <textarea className='form-control' placeholder='write a comment...' rows='3' onChange={e => setNewComment({ ...newComment, article: id, user: user.id, body: e.target.value })} />
+                                                <textarea className='form-control' placeholder='write a comment...' rows='3' onChange={e => setNewComment({ ...newComment, article: id, user_id: user.id, username: user.username, body: e.target.value })} />
                                                 <br />
                                                 <input type='submit' className='btn btn-info pull-right' />
                                                 <div className='clearfix' />
@@ -91,8 +85,7 @@ const FullArticle = () => {
                                                     <img src={profilePic} />
                                                 </a>
                                                 <div className='media-body'>
-                                                    {getUsername(comment.user)}
-                                                    <strong className='text-success'>{username}</strong>
+                                                    <strong className='text-success'>{comment.username}</strong>
                                                     <p>
                                                         {comment.body}
                                                     </p>
