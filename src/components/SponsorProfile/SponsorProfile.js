@@ -1,15 +1,14 @@
 import React, {useState, useEffect} from 'react'
-import './SponsorProfile.css'
 import aboutImg from '../../assets/profilepic.png'
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 import * as Requests from '../../Requests'
-import { ProSidebar, SidebarHeader, SidebarContent, Menu, MenuItem} from 'react-pro-sidebar';
-import 'react-pro-sidebar/dist/css/styles.css';
-import {FaPlus} from "react-icons/fa";
-import { FiSettings} from "react-icons/fi"
-import 'semantic-ui-css/semantic.min.css';
 import UserArticles from './UserArticles'
 import UserVideos from './UserVideos'
+import 'react-pro-sidebar/dist/css/styles.css'
+import 'semantic-ui-css/semantic.min.css'
+import './SponsorProfile.css'
+import '../styles.css'
+import '../Button.css'
 
 const SponsorProfile = () => {
     const [articles, setArticles] = useState([]);
@@ -36,50 +35,41 @@ const SponsorProfile = () => {
 
     const[tab, setTab] = useState(0);
     
-    
-
     return (
-        <div className = "sponsor-container">
-            <div className = "main-body">
-            <div className = "prof-sidebar">
-            <ProSidebar >
-            <SidebarHeader className = "sidebar-header">
-            <div className = "prof-img"><img src = {aboutImg}></img></div>
-            </SidebarHeader>
-            <SidebarContent>
-            <div className = "emp-content">  {user.first_name + " " + user.last_name}</div>
-            
-            <Menu className = "prof-menu" iconShape="square">
-
-                <MenuItem icon={<FaPlus/>}>Add Article</MenuItem>
-                <MenuItem icon={<FaPlus />} >Add Video</MenuItem> 
-                <MenuItem icon={<FiSettings />} >Settings</MenuItem> 
-            </Menu>
-            </SidebarContent>
-            </ProSidebar>
-                
-            </div>
-            <div className = "right-side">
-                <div className = "right-nav">
-                <ul>
-                    <li onClick = {() => setTab(0)}  className={`user-articles ${tab == 0 ? "active" : ""}` }>My Articles</li>
-                    <li onClick = {() => setTab(1)}  className={`user-videos ${tab == 1 ? "active" : ""}` }>My Videos</li>
-                      
-                </ul>
+        <div className='sponsorprofile-body font-roboto'>
+            <div className='sponsorprofile-container'>
+                <div className='sponsorprofile-sidebar-body'>
+                    <div className='sponsorprofile-sidebar-container'>
+                        <div className='sponsorprofile-sidebar-png'>
+                            <img src = {aboutImg}></img>
+                        </div>
+                        <div className='sponsorprofile-sidebar-name'>
+                            {user.username}
+                        </div>
+                        <div className='sponsorprofile-sidebar-content'>
+                            <div className='sponsorprofile-sidebar-menu'>
+                                <Link to='/articles/create' className='sponsorprofile-sidebar-btn'>Add Article</Link>
+                                <Link to='/videos/upload' className='sponsorprofile-sidebar-btn'>Add Video</Link> 
+                                <Link to='/settings' className='sponsorprofile-sidebar-btn'>Settings</Link> 
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-            <div className = "profile-body">
-
-            {tab == 0 && <UserArticles/>}
-            {tab ==1 && <UserVideos/>}
-            
+                <div className='right-side-container'>
+                    <div className='right-tabs'>
+                        <Link onClick={() => setTab(0)} className={`user-articles ${tab == 0 ? "active" : ""}`}>My Articles</Link>
+                        <Link onClick={() => setTab(1)} className={`user-videos ${tab == 1 ? "active" : ""}`}>My Videos</Link>
+                    </div>
+                    <div className='right-side'>
+                        <div className='right-tab-cont'>
+                            {tab ==0 && <UserArticles/>}
+                            {tab ==1 && <UserVideos/>}
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        </div>
-        </div>
-        </div>
-
     )
 }
 
 export default SponsorProfile
-

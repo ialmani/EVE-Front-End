@@ -1,81 +1,61 @@
-.Contact-askevebutton {
-    display: table; /* keep the background color wrapped tight */
-    margin: 0px auto 0px auto; /* keep the table centered */
-    padding:25px;
-    font-size:24px;
-    background-color: #292B6E;
-    border-radius: 20px;
-    color:#ffffff;
-}
-
-.Contact-body {
+.contactus-body {
     min-height: 100vh;
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: #7d89b4;
     font-family: "Open Sans", sans-serif;
 }
 
-.Contact-section {
+.contactus-section {
+    margin-top: -100px;
     background-image: url(../../assets/ContactUs.png);
-    background-position: right; 
+    background-position: left; 
     background-size: 50%;
-    border-radius: 20px;
     background-color: #ffffff; 
+    border-radius: 25px;
 } 
 
-.Contact-container {
+.contactus-container {
     width: 50%;
-    float: left;
-    background-color: #e0e0e0;
-    border-radius: 15px;
-    padding: 80px;
+    float: right;
+    background-color: #ffffff;
+    border-radius: 0px 20px 20px 0px;
+    padding: 60px;
 }
-.Contact-container h1 {
+
+.contactus-h1 {
     margin-bottom: 30px;
     font-size: 30px;
     font-weight: 900;
 }
 
-.text {
-    font-size: 13px;
-    color: #545454;
-    line-height: 20px;
-    text-align: justify;
-    margin-bottom: 40px;
-}
-
-.text2 {
+.contactus-h2 {
     font-size: 16px;
 }
 
-.contact-button {
-    padding: 8px 20px;
-    border-radius: 10px;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    color: white;
-    background-color: #292B6E;
-    margin: 8px;
-}
-.contact-button:hover {
-    background-color:  #c2cffc ;
-    color: black;
+.contactus-p {
+    font-size: 13px;
+    color: #545454;
+    line-height: 20px;
+    margin-bottom: 40px;
 }
 
 @media screen and (max-width: 1000px){
-    .Contact-section{
-        background-size: 0%;
-        padding: 0;
+    .contactus-section{
+        background-image: none;
+        width: fit-content;
+        max-width: 90%;
+        box-shadow: 0 30px 30px rgba(0, 0, 0, 0.025);
     }
-    .Contact-container{
-        margin-top: 80px;
+    .contactus-container{
+        margin-top: -125px;
+        border-radius: 20px;
         width: 100%;
-        border-radius: 100px;
-        height: 90%;
-        padding: 60px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 30px 30px rgba(0, 0, 0, 0.4);
     }
 }

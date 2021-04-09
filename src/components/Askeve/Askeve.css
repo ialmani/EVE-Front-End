@@ -1,15 +1,4 @@
-.Askeve-submission {
-    display: table;
-    margin: 0px auto 0px auto;
-    font-size:24px;
-    background-color: #292B6E;
-    border-radius: 20px;
-    margin-top: 40px;
-    padding: 30px;
-    color:#ffffff;
-}
-
-.Askeve-body {
+.askeve-body {
     min-height: 100vh;
     width: 100%;
     height: 90%;
@@ -20,13 +9,15 @@
     font-family: "Open Sans", sans-serif;
 }
 
-.Askeve-container {
+.askeve-container {
     width: 90%;
     height: 80%;
-    margin-top: 90px;
+    margin-top: -150px;
     background-color: #ffffff;
     border-radius: 40px;
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.5);
 }
+
 .Askeve-heading1 {
     font-size: 40px;
     font-weight: 900;
@@ -45,20 +36,4 @@
     color: #545454;
     text-align: left;
     padding: 30px;
-}
-
-.ask-btn{
-    padding: 8px 20px;
-    border-radius: 10px;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    color: white;
-    background-color: #292B6E;
-    margin: 8px;
-}
-
-.ask-btn:hover {
-    background-color:  #c2cffc ;
-    color: black;
 }

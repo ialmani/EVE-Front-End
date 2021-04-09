@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import './Videos.css'
 import * as Requests from '../../Requests'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import ReactPlayer from 'react-player'
+
 import SearchBar from '../Articles/SearchBar'
 
 const Videos = (props) => { 
@@ -34,7 +35,6 @@ const Videos = (props) => {
   }, []);
 
 
-
   const renderVideos = () => {
     if (searchTerm.length <= 0) {
 
@@ -55,6 +55,7 @@ const Videos = (props) => {
             </div>
           </div>
         </div>
+
         )}
       </div>
     )
@@ -97,4 +98,4 @@ const Videos = (props) => {
   );
 }
 
-export default Videos;
+export default Videos

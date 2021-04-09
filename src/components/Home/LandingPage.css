@@ -6,6 +6,7 @@
     align-items: center;
     justify-content: center;
 }
+
 .landing-video {
     position: fixed;
     z-index: -1;
@@ -28,24 +29,11 @@
     margin-bottom: 0;
 }
 
-
 .landing-container .landing-p {
     margin-top: 0;
     color: white;
     font-size: 32px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-.landingPagebtns {
-    margin-top: 20px;
-    align-items: center;
-    justify-content: space-around;
-
-}
-
-.landingPagebtns .btns {
-    margin: 6px;
-    color: white;
 }
 
 .fa-play-circle {
@@ -56,26 +44,6 @@
     padding-left: 2px;
 }
 
-@media screen and (max-width: 965px){
-    .landing-container .landing-h1  {
-        font-size: 70px;
-        margin-top: -150px;
-    }
-}
-
-@media screen and (max-width: 668px){
-    .landing-container .landing-h1 {
-        font-size: 50px;
-        margin-top: -100px;
-    }
-    .landing-container .landing-p {
-        font-size: 25px;
-    }
-    .btns {
-        text-decoration: none;
-    }
-}
-
 @media screen and (max-width: 460px){
     .landing-container .landing-h1 {
         font-size: 50px;
@@ -84,27 +52,5 @@
     .landing-container .landing-p {
         font-size: 30px;
         text-align: center;
-    }
-    .landingPagebtns{
-        text-decoration: none;
-        display: block;
-    }
-}
-@media screen and (max-width: 376px){
-    .landing-container .landing-h1 {
-        font-size: 50px;
-        margin-top: -100px;
-    }
-    .landing-container .landing-p {
-        font-size: 30px;
-        text-align: center;
-    }
-    .landingPagebtns{
-        display: block;
-        margin-left: 18%;
-        margin-top: 20px; 
-    }
-    .btns{
-        margin-top: 80px;
     }
 }
