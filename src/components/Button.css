@@ -20,6 +20,7 @@
     transition: 250ms;
 }
 
+
 .signup-btn {
     color: white;
     width: 100%;
@@ -27,27 +28,6 @@
     border-radius: 10px;
     background-color: #77C266;
     margin: 8px;
-}
-
-.login-btn {
-    color: white;
-    width: 100%;
-    padding: 8px 20px;
-    border-radius: 10px;
-    background-color: #77C266;
-    margin: 8px;
-}
-.login-btn:hover {
-
-}
-
-
-.login-link{
-    width: fit-content;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: #77C266;
 }
 .signup-link{
     width: fit-content;
@@ -64,6 +44,24 @@
     background-color: #77C266;
 }
 
+
+.login-btn {
+    color: white;
+    width: 100%;
+    padding: 8px 20px;
+    border-radius: 10px;
+    background-color: #77C266;
+    margin: 8px;
+}
+.login-link{
+    width: fit-content;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #77C266;
+}
+
+
 .contactus-button {
     margin-top: 50px;
     padding: 20px;
@@ -76,7 +74,6 @@
     border-spacing: 20px;
     transition: ease-in-out 150ms;
 }
-
 .contactus-button:hover {
     background-color:  #676ab3;
     padding: 40px;
@@ -102,6 +99,7 @@
     background-color:  #c2cffc ;
     color: black;
 }
+
 
 .btn-success {
     position: relative;
@@ -227,8 +225,8 @@
     margin: 20px auto 20px auto;
     margin-top: 50px;
     font-size: 20px;
-    color:#eeeeee;
-    background-image: linear-gradient(180deg, rgba(104, 12, 141), #516ac7);
+    color:#000000;
+    background-color: white;
     border-radius: 20px;
     border-style:solid;
     border-spacing: 20px;
@@ -236,8 +234,8 @@
     transition: ease-in-out 150ms;
 }
 .sponsorpackage-signupbtn:hover {
-    color: #eeeeee;
-    background-image: linear-gradient(rgba(104, 12, 141, 0.5), #516ac7);
+    background: rgb(116,212,91);
+    background: linear-gradient(90deg, rgba(116,212,91,0.2) 1%, rgba(255,255,255,1) 44%, rgba(255,255,255,1) 58%, rgba(155,120,182,0.2) 99%);
     padding: 30px;
-    box-shadow: 0 30px 30px rgba(0, 0, 0, 1);
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.15);
 }
