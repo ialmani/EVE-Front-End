@@ -5,8 +5,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgb(119,194,102);
-    background: linear-gradient(45deg, rgba(119,194,102,1) 33%, rgba(155,120,182,1) 67%);
+    background: rgb(116,212,91);
+    background: linear-gradient(90deg, rgba(116,212,91,0.9) 1%, rgba(238,238,238,1) 15%, rgba(238,238,238,1) 85%, rgba(155,120,182,0.9) 99%);
     font-family: "Open Sans", sans-serif;
 }
 
@@ -16,8 +16,10 @@
     height: 90%;
     margin-top: -175px;
     background-color: #ffffff;
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
     border-radius: 40px;
-    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.5);
     font-size: 18px;
     text-align: center;
     font-weight: 400;
@@ -92,6 +94,10 @@
 }
 
 @media screen and (max-width: 1020px) {
+    .askeve-body{
+        background: rgb(238,238,238,1);
+        background: linear-gradient(#ffffff);
+    }
     .askeve-container{
         margin-top: 50px;
     }
