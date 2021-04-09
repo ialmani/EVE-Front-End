@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import { useHistory, Link } from 'react-router-dom'
 import * as Requests from '../../Requests'
 
-const MemberSignUp = (props) => {
+const MemberSignUp = () => {
     const [newUser, setNewUser] = useState({
         email:"",
         username: "",

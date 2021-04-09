@@ -3,7 +3,7 @@ import { useHistory, Link } from 'react-router-dom'
 import * as Requests from '../../Requests'
 import Button from "react-bootstrap/Button";
 
-const SponsorSignUp = (props) => {
+const SponsorSignUp = () => {
     const [newUser, setNewUser] = useState({
         email:"",
         username: "",
