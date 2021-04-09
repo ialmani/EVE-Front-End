@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import React, {useEffect, useState} from 'react'
+import {useParams} from 'react-router-dom';
+import './FullArticle.css'
 import * as Requests from '../../Requests'
 import profilePic from '../../assets/profilepic.png'
 import './FullArticle.css'
 
-const FullArticle = () => {
+
+const FullArticle =  ()  => {
+
     const [article, setArticle] = useState([]);
     const [user, setUser] = useState([]);
     const [comments, setComments] = useState([]);
@@ -14,11 +17,13 @@ const FullArticle = () => {
         username: null,
         body: null
     });
-    let { id } = useParams();
 
-    useEffect(() => {
-        Requests.getArticle(id).then(data => {
-            if (data.statusCode !== 404) {
+    const [comments, setComments] = useState([])
+    let {id} = useParams();
+
+    useEffect(()=>{
+        Requests.getArticle(id).then(data=>{
+            if(data.statusCode !== 404) {
                 setArticle(data)
 
             }
