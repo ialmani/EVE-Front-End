@@ -11,23 +11,24 @@
 
 .events-container {  /* placement for the cards */
     position: relative;
-    width: 55%;
+    width: 40%;
     display: grid;
     grid-template-rows: auto;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 0 40px;
 }
 
 .events-container .events-box { /* sizing for the cards, and designs for the cards */ 
     position: relative;
+    margin: auto;
     height: 400px;
-    background: #74bcec;
+    background: #9B78B6;
     display: flex;
     justify-content: center;
     align-items: center;
     border: 1px solid #000;
     border-radius: 1rem;
-    box-shadow: 0 1.4rem 8rem rgba(0,0,0,0.5);
+    
 }
 
 .events-container .events-box:before {   /* setting the half border for the card */
@@ -71,7 +72,7 @@
 }
 
 .events-box:hover .events-content .events-headings {
-    top: -140px;
+    top: -120px;
 }
 
 .events-box .events-content .events-headings2 {
@@ -115,6 +116,9 @@
 }
 
 @media screen and (max-width: 1020px) {
+    .events-container {
+        width: 50%;
+    }
     .events-box {
         margin-bottom: 20px;
         width: 320px;
