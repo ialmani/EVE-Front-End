@@ -18,7 +18,6 @@ const FullArticle =  ()  => {
         body: null
     });
 
-    const [comments, setComments] = useState([])
     let {id} = useParams();
 
     useEffect(()=>{
