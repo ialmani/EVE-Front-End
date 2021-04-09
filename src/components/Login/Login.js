@@ -15,11 +15,15 @@ const Login = () => {
     const loginUser = (e) => {
         e.preventDefault();
         Requests.loginUser(user).then((response) => {
-            localStorage.setItem("token", response.access)
-            history.push('/sponsor-profile');
-            window.location.reload(false);
+            if(response.access !== null) {
+                console.log("does it anyway?");
+                localStorage.setItem("access_token", response.access);
+                localStorage.setItem("refresh_token", response.access);
+                history.push('/profile');
+                window.location.reload(false);
+            }
         }).catch(status =>
-            alert(status));
+            alert("Something went wrong. Please try again."));
     }
 
     return (
