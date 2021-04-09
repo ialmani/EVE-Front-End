@@ -24,7 +24,7 @@ export const getUserDetails = ()=>{
 }
 
 export const createUser =(newUser)=>{
-    return fetch(API_BASE+'auth/api/register', {
+    return fetch(API_BASE+'/api/user/create/', {
         method: 'post',
         headers: {
             'Content-Type': 'application/json',
