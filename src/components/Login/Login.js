@@ -6,7 +6,7 @@ import '../Button.css'
 
 const Login = () => {
     const [user, setUser] = useState({
-        username: "",
+        email: "",
         password: "",
     });
 
@@ -19,7 +19,7 @@ const Login = () => {
                 console.log("does it anyway?");
                 localStorage.setItem("access_token", response.access);
                 localStorage.setItem("refresh_token", response.access);
-                history.push('/profile');
+                history.push('/sponsor-profile');
                 window.location.reload(false);
             }
         }).catch(status =>
@@ -33,13 +33,13 @@ const Login = () => {
                     <form onSubmit={loginUser}>
                         <h1 className="h3 mb-3 fw-normal">LOGIN</h1>
 
-                        <input type="username" className="form-control" placeholder="Username" required
-                            onChange={e => setUser({ ...user, username: e.target.value })} />
+                        <input type="email" className="form-control" placeholder="Email" required
+                            onChange={e => setUser({ ...user, email: e.target.value })} />
 
                         <input type="password" className="form-control" placeholder="Password" required
                             onChange={e => setUser({ ...user, password: e.target.value })} />
 
-                        <a className="login-btn" type="submit">LOGIN</a>
+                        <input className='signup-btn' type='submit' value='Login'/>
                     </form>
                 </li>
                 <li>
