@@ -11,7 +11,6 @@ const SponsorSignUp = () => {
         last_name:"",
         is_sponsor:true,
         password: ""
-
       });
   
       let history = useHistory();

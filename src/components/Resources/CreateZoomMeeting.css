@@ -1,0 +1,31 @@
+.zoompage-body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #f1f1f1;
+}
+.zoom-heading{
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 32px;
+    padding-top: 40px;
+    margin-left: 60px;
+   
+}
+.zoom-btn {
+    margin-top: 20px;
+}
+
+@media screen and (max-width:445px){
+    .zoom-heading{
+        font-size: 24px;
+    }
+    .zoomImage {
+        display: none;
+    }
+}
+@media screen and (max-width:375px){
+    .zoom-heading{
+        font-size: 18px;
+    }
+}
