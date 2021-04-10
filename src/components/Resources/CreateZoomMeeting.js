@@ -1,11 +1,14 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './CreateZoomMeeting.css'
 import {Row, Col, Image} from 'react-bootstrap'
 import {Form, Button} from 'react-bootstrap'
 import zoompage from '../../assets/zoomLogo.png'
 import TimePicker from 'react-bootstrap-time-picker';
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 const CreateZoomMeeting = () => {
+    const [startDate, setStartDate] = useState(new Date());
     return (
         <div className = "zoompage-body">
             <div className = "zoom-heading">
@@ -17,7 +20,7 @@ const CreateZoomMeeting = () => {
                  <Form style = {{width: "80%", marginLeft: "10%", marginTop: "15%"}}>
                     <Form.Group>
                          <Form.Label> Zoom Title</Form.Label>
-                         <Form.Control placeholder = "Ex: Group meeting "/>
+                         <Form.Control placeholder = "Ex: Group Meeting "/>
                     </Form.Group>
                     <Form.Group>
                          <Form.Label> Inviation Link</Form.Label>
@@ -26,6 +29,11 @@ const CreateZoomMeeting = () => {
                     <Form.Group>
                          <Form.Label> Zoom ID</Form.Label>
                          <Form.Control  placeholder = "468 287 1612"/>
+                    </Form.Group>
+                    <Form.Group>
+                         <Form.Label> Choose a date</Form.Label>
+                         <DatePicker className = "datepicker"selected={startDate} onChange={date => setStartDate(date)} />
+                         
                     </Form.Group>
                     <Form.Group>
                          <Form.Label> Start Time</Form.Label>
