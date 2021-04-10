@@ -74,7 +74,8 @@ const FullArticle =  ()  => {
                                     {localStorage.getItem('token') &&
                                         <div>
                                             <form onSubmit={createArticleComment}>
-                                                <textarea className='form-control' placeholder='write a comment...' rows='3' onChange={e => setNewComment({ ...newComment, article: id, user_id: user.id, username: user.username, body: e.target.value })} />
+                                                <h2 class="commentHeader">Leave a Comment below !!</h2>
+                                                <textarea className='commentWrite' placeholder='write a comment...' rows='3' onChange={e => setNewComment({ ...newComment, article: id, user_id: user.id, username: user.username, body: e.target.value })} />
                                                 <br />
                                                 <input type='submit' className='btn btn-info pull-right' />
                                                 <div className='clearfix' />
@@ -82,6 +83,7 @@ const FullArticle =  ()  => {
                                             </form>
                                         </div>
                                     }
+                                    <h2 className="commentHeader">Comment Section</h2>
                                     {comments.map(comment =>
                                         <ul className='media-list'>
                                             <li className='media'>
@@ -90,11 +92,10 @@ const FullArticle =  ()  => {
                                                 </a>
                                                 <div className='media-body'>
                                                     <strong className='text-success'>{comment.username}</strong>
-                                                    <p>
-                                                        {comment.body}
-                                                    </p>
+                                                    <p>{comment.body}</p>
                                                 </div>
                                             </li>
+                                            <hr />
                                         </ul>)
                                     }
                                 </div>

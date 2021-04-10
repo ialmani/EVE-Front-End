@@ -1,0 +1,27 @@
+.zoom-heading {
+    margin-top: 40px;
+    margin-left: 30%;
+    color: cornflowerblue;
+}
+.zoom-body {
+    min-height: 100vh;
+}
+.zoomcard {
+    margin-top: 5%;
+}
+.zoom-title{
+    font-size: 24px;
+    color: #77C266;
+}
+.zoom-date, .zoom-time{
+    font-size: 18px;
+    
+    margin-top: 30px;
+}
+
+.zoom-btn{
+    margin-top: 50px;
+    color: cornflowerblue;
+     
+    
+}

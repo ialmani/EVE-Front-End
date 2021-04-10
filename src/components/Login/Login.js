@@ -35,6 +35,7 @@ const Login = () => {
     }
 
     return (
+        <div className = "login-page">
         <main className='form-login'>
             <ul className='loginBox'>
                 <li>
@@ -54,11 +55,12 @@ const Login = () => {
                     <div className='card-footer'>
                         <text className='suggestions-text'>Don't have an account?</text>
                         <a href='/signup' className='signup-link'>Sign Up</a>
-                        <a href='#' className='forgotpassword-link'>Forgot your password?</a>
+                        <a href='#' className='forgotpassword-link'>Forgot password?</a>
                     </div>
                 </li>
             </ul>
         </main>
+        </div>
     );
 }
 
