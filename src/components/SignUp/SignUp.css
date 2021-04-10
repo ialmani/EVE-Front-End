@@ -1,11 +1,19 @@
+.signup-body {
+    /* min-height: 100vh; */
+    background-color: #f1f1f1;
+    
+}
+
 .form-signup {
-    min-height: 100vh;
+   
     align-items: center;
     text-align: center;
     justify-content: center;
     max-width: 45%;
-    margin: 20px auto 0;
-    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;;
+    margin: 0 auto 0;
+    padding: 20px 0;
+    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+    
 }
 
 .signUpBox {
