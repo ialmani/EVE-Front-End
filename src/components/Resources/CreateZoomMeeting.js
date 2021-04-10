@@ -41,7 +41,7 @@ const CreateZoomMeeting = () => {
                 
                 </Col>
                 <Col> 
-                    <Image className = "zoomImage"src = {zoompage} style = {{width: "100%",  marginTop: "20px"}}/>
+                    <Image className = "zoomImage"src = {zoompage} style = {{width: "100%",  marginTop: "10px"}}/>
                 </Col>
             </Row>
             
