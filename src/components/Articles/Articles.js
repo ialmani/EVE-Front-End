@@ -39,7 +39,6 @@ const Articles = (props) => {
     const renderArticles = (searchTerm) => {
       if (searchTerm.length <= 0) {
         return ( 
-        <div className="full-page">
         <div className = "articles-container">
         {articles.map(article=>
           <div className="card mb-4">
@@ -51,15 +50,13 @@ const Articles = (props) => {
             </div>
           </div>
         )}
-      </div>
-    </div>)
+      </div>)
 
         
       }
       return (
-        <div className='full-page'>
           <div className='articles-container'>
-            {articles.map(article=>
+             {searchResults.map(article=>
               <div className='card mb-4'>
                 <div className='card-body'>
                   <h5 className='card-title font-roboto'>{article.title}</h5>
@@ -69,9 +66,8 @@ const Articles = (props) => {
                 </div>
               </div>
             )}
-          </div>
-        </div>
-      )}
+          </div>)
+    }
    
      
  
