@@ -6,9 +6,12 @@
 .zoom-body {
     min-height: 100vh;
 }
+.zoomcard {
+    margin-top: 5%;
+}
 .zoom-title{
     font-size: 24px;
-    color: blueviolet;
+    color: #77C266;
 }
 .zoom-date, .zoom-time{
     font-size: 18px;
@@ -19,4 +22,6 @@
 .zoom-btn{
     margin-top: 50px;
     color: cornflowerblue;
+     
+    
 }

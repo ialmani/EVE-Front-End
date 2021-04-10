@@ -7,8 +7,8 @@ const ZoomEvents = () => {
             <div className = "zoom-heading"> Welcome to our zoom live sessions!!</div>
           
         
-          <div className="card mb-4">
-            <div className="card-body zoomcard">
+          <div className="card mb-4 zoomcard">
+            <div className="card-body">
               <h5 className="zoom-title">Hello World</h5>
               <p className="zoom-date"> DATE</p>
               <p className="zoom-time"> TIME</p>
