@@ -10,7 +10,7 @@ const Events = () => {
                         <h2 class='events-headings'>Live</h2>
                         <h3 class='events-headings2'>Zoom Calls</h3>
                         <p class='events-para'>Come hear to watch live zoom events to learn from our gracious sponsors!!</p>
-                        <a href='/liveZoom' class='events-link'>Live Zoom</a>
+                        <a href= '/events/zoom' class='events-link'>Live Zoom</a>
                     </div>
                 </div>
                 <div class='events-box'>

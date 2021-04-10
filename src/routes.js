@@ -20,6 +20,8 @@ import Events from './components/Resources/Events';
 import Navbar from './components/Navbar&Footer/Navbar';
 import Footer from './components/Navbar&Footer/Footer';
 import CreateZoomMeeting from './components/Resources/CreateZoomMeeting';
+import ZoomEvents from './components/Resources/ZoomEvents';
+
 
 
 export const BaseRouter = () => {
@@ -46,6 +48,7 @@ export const BaseRouter = () => {
         <Route path = '/videos/:id' component={FullVideo} exact/>
         <Route path =  '/events' component={Events} exact/>
         <Route path =  '/zoom/meeting/create' component={CreateZoomMeeting} exact/>
+        <Route path =  '/events/zoom' component = {ZoomEvents} exact/>
         <Route path = '/welcome' component={Welcome} exact/>
       </Switch>
 
