@@ -20,49 +20,24 @@
     transition: 250ms;
 }
 
+
 .signup-btn {
     color: white;
     width: 100%;
     padding: 8px 20px;
     border-radius: 10px;
-    background-color: #77C266;
+    background-color: #292B6E;
     margin: 8px;
 }
-
 .login-btn {
     color: white;
     width: 100%;
     padding: 8px 20px;
     border-radius: 10px;
-    background-color: #77C266;
+    background-color: #292B6E;
     margin: 8px;
 }
-.login-btn:hover {
 
-}
-
-
-.login-link{
-    width: fit-content;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: #77C266;
-}
-.signup-link{
-    width: fit-content;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: #77C266;
-}
-.forgotpassword-link{
-    width: fit-content;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: #77C266;
-}
 
 .contactus-button {
     margin-top: 50px;
@@ -76,7 +51,6 @@
     border-spacing: 20px;
     transition: ease-in-out 150ms;
 }
-
 .contactus-button:hover {
     background-color:  #676ab3;
     padding: 40px;
@@ -103,20 +77,18 @@
     color: black;
 }
 
+
+
 .btn-success {
-    position: relative;
-    margin: 20px 0 0;
-    padding: 10px 20px;
     float: right;
-    text-decoration: none;
-    border: 1px solid #000;
-    display: inline-block;
-    color: #fff;
-    transition: 0.5s;
-    transform: translateY(-60px);
-    opacity: 0;
-    visibility: visible;
+    margin-top: 30px;
+    background-image: linear-gradient(to right, rgba(32, 44, 155) 0%, rgb(181,195,251) 100%);
 }
+.btn-success:hover {
+    color: white;
+    background-image: linear-gradient(to right,rgb(181,195,251) 0%,rgba(32, 44, 155, 0.8) 100%);
+}
+
 
 .landingpage-btn {
     padding: 20px;
@@ -205,6 +177,7 @@
 .sponsorprofile-sidebar-btn{
     background-color: #3e3245;
     color: #ffffff;
+    width: 100%;
     margin-bottom: 10px;
     padding: 10px;
     border-radius: 10px;
@@ -215,10 +188,7 @@
     background-color: #75a5ff80;
     color: #ffffff;
     border-radius: 40px;
-
-    transform: translateY(-4px);
-    transition-timing-function: linear;
-    transition-duration: 70ms;
+    transition-duration: 125ms;
 }
 
 

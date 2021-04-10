@@ -48,9 +48,9 @@ const SponsorProfile = () => {
                         </div>
                         <div className='sponsorprofile-sidebar-content'>
                             <div className='sponsorprofile-sidebar-menu'>
-                                <Link to='/articles/create' className='sponsorprofile-sidebar-btn'>Add Article</Link>
-                                <Link to='/videos/upload' className='sponsorprofile-sidebar-btn'>Add Video</Link> 
-                                <Link to='/settings' className='sponsorprofile-sidebar-btn'>Settings</Link> 
+                                <Link to='/articles/create' className='sponsorprofile-sidebar-btn'><i className = "fa fa-plus"/> Add Article</Link>
+                                <Link to='/videos/upload' className='sponsorprofile-sidebar-btn'><i className = "fa fa-plus"/> Add Video</Link> 
+                                <Link to='/settings' className='sponsorprofile-sidebar-btn'><i className = "fa fa-cog"/> Settings</Link> 
                             </div>
                         </div>
                     </div>
