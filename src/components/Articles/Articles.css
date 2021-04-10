@@ -71,7 +71,9 @@
     font-size: 30px;
     transition: 0.5s;
 }
-
+.article-title {
+    color: greenyellow;
+}
 .card-text {
     margin-top: 40px;
     padding: 30px;
@@ -80,12 +82,15 @@
 }
 
 .card-text2 {
-    margin-top: 50px;
     padding: 40px;
     font-size: 20px;
     max-height: 50px;
+    color: indigo;
+    margin-top: 100px;
 }
-
+.article-btn {
+    margin-top: -30px;
+}
 
 .search-bar-section{
     background-image: linear-gradient(to right, rgba(52, 20, 20, 0), #7b87b3);
@@ -109,18 +114,6 @@
     width: 300px;
 }
 
-.search-btn {
-    margin-left: 10px;
-    width: 60px;
-    height: 40px; 
-    border-radius: 20px;
-    color: white;
-    border-color: white;
-    background-image: linear-gradient(to left,rgb(125, 151, 255) 0%,rgba(20, 31, 136, 0.8) 100%);
-}
-.search-btn:hover {
-    background-image: linear-gradient(to left,rgb(20, 31, 136, 0.8) 0%,rgba(125, 151, 255) 100%);
-}
 
 @media screen and (max-width: 1020px) {
     .card {
