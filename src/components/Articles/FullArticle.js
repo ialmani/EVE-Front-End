@@ -74,7 +74,8 @@ const FullArticle =  ()  => {
                                     {localStorage.getItem('token') &&
                                         <div>
                                             <form onSubmit={createArticleComment}>
-                                                <textarea className='form-control' placeholder='write a comment...' rows='3' onChange={e => setNewComment({ ...newComment, article: id, user_id: user.id, username: user.username, body: e.target.value })} />
+                                                <h2 class="commentHeader">Leave a Comment below !!</h2>
+                                                <textarea className='commentWrite' placeholder='write a comment...' rows='3' onChange={e => setNewComment({ ...newComment, article: id, user_id: user.id, username: user.username, body: e.target.value })} />
                                                 <br />
                                                 <input type='submit' className='btn btn-info pull-right' />
                                                 <div className='clearfix' />

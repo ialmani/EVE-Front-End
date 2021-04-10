@@ -3,7 +3,7 @@ import './CreateZoomMeeting.css'
 import {Row, Col, Image} from 'react-bootstrap'
 import {Form, Button} from 'react-bootstrap'
 import zoompage from '../../assets/zoomLogo.png'
-import TimePicker from 'react-bootstrap-time-picker';
+import TimePicker from 'react-bootstrap-time-picker'
 
 const CreateZoomMeeting = () => {
     return (
