@@ -2,7 +2,7 @@
     display: inline-block;
     flex-wrap: wrap;
     align-content: center;
-    background-color: #9B78B6;
+    background-color: #f1f1f1;
     margin: 0;
 }
 
@@ -32,7 +32,7 @@
 .comments-container {
     /* margin-top: 30px; */
     padding: 5px;
-    background-color: #9B78B6; 
+    background-color: #f1f1f1; 
 }
 
 .comment-wrapper .panel-body {
