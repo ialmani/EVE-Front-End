@@ -1,8 +1,13 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import Row from './Row'
 import DeleteModal from './DeleteModal'
+import {useParams} from "react-router-dom";
+import * as Requests from "../../Requests";
 
-const UserArticles = () => {
+const UserArticles = (props) => {
+
+
+
     return (
         <div className='profile-articles tab'>
             <h1 className='sp-h1'>Your Articles</h1>
@@ -17,7 +22,9 @@ const UserArticles = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            <Row />
+                        {props.articles.map(article =>
+                            <Row/>
+                        )}
                         </tbody>
                     </table>
                 </div>

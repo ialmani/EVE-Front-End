@@ -38,7 +38,7 @@ const FullArticle =  ()  => {
     }, []);
 
     useEffect(() => {
-        Requests.getUserDetails().then(data => {
+        Requests.getUser(localStorage.getItem("current_id")).then(data => {
             if (data.statusCode !== 401) {
                 setUser(data)
             }

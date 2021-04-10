@@ -36,7 +36,7 @@ export const BaseRouter = () => {
         <Route path = '/contact-us' component={ContactUs} exact/>
         <Route path = '/ask-eve' component={Askeve} exact/>
         <Route path = '/sponsor-packages' component={SponsorPackage} exact/>
-        <Route path = '/sponsor-profile' component={SponsorProfile} exact/>
+        <Route path = '/sponsor-profile/:user_id' component={SponsorProfile} exact/>
         <Route path = '/articles' component={Articles} exact/>
         <Route path = '/articles/create' component={NewArticle} exact />
         <Route path = '/articles/:id' component={FullArticle} exact />

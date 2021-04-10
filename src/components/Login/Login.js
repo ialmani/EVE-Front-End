@@ -15,15 +15,23 @@ const Login = () => {
     const loginUser = (e) => {
         e.preventDefault();
         Requests.loginUser(user).then((response) => {
-            if(response.access !== null) {
-                console.log("does it anyway?");
+            if(response.access !== undefined) {
                 localStorage.setItem("access_token", response.access);
-                localStorage.setItem("refresh_token", response.access);
-                history.push('/sponsor-profile');
-                window.location.reload(false);
+                localStorage.setItem("refresh_token", response.refresh);
+                localStorage.setItem("current_username", response.username);
+                localStorage.setItem("current_id", response.id);
+                history.push('/sponsor-profile/'+localStorage.getItem("current_id"));
+                // window.location.reload(false);
+
             }
-        }).catch(status =>
-            alert("Something went wrong. Please try again."));
+            else{
+                alert(response.detail);
+            }
+        }).catch(status => {
+            if (status !== 201) {
+                alert("Something went wrong. Please try again.");
+            }
+        })
     }
 
     return (

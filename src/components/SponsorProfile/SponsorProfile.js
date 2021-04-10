@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import aboutImg from '../../assets/profilepic.png'
-import { Link } from 'react-router-dom'
+import {Link, useParams} from 'react-router-dom'
 import * as Requests from '../../Requests'
 import UserArticles from './UserArticles'
 import UserVideos from './UserVideos'
@@ -12,14 +12,7 @@ import '../Button.css'
 
 const SponsorProfile = () => {
     const [articles, setArticles] = useState([]);
-
-    useEffect(()=>{
-        Requests.getAllArticles().then(data=>{
-            if(data.statusCode !== 404) {
-                setArticles(data)
-            }
-        }).catch(() => null);
-    },[]);
+    let {user_id} = useParams();
    
     const [user, setUser] = useState({
         username: "",
@@ -27,9 +20,19 @@ const SponsorProfile = () => {
       });
 
       useEffect(()=>{
-        Requests.getUserDetails().then(data=>{
+          console.log(user_id)
+        Requests.getUser(user_id).then(data=>{
             setUser(data);
             console.log(data);
+        }).catch(() => null);
+    },[]);
+
+    useEffect(()=>{
+        Requests.getAllArticles().then(data=>{
+            if(data.statusCode !== 404) {
+                const newArticles = data.filter((article) => {article.user_id === user.id})
+                setArticles(newArticles)
+            }
         }).catch(() => null);
     },[]);
 
@@ -44,7 +47,7 @@ const SponsorProfile = () => {
                             <img src = {aboutImg}></img>
                         </div>
                         <div className='sponsorprofile-sidebar-name'>
-                            {user.username}
+                            {user.first_name +" "+ user.last_name}
                         </div>
                         <div className='sponsorprofile-sidebar-content'>
                             <div className='sponsorprofile-sidebar-menu'>
@@ -62,7 +65,7 @@ const SponsorProfile = () => {
                     </div>
                     <div className='right-side'>
                         <div className='right-tab-cont'>
-                            {tab ==0 && <UserArticles/>}
+                            {tab ==0 && <UserArticles articles={articles}/>}
                             {tab ==1 && <UserVideos/>}
                         </div>
                     </div>
