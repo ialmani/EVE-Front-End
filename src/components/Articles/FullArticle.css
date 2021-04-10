@@ -48,8 +48,8 @@
 }
 
 .comment-wrapper .media-list .media {
-    border-bottom:1px dashed #efefef;
-    margin-bottom:25px;
+    border-bottom:1px solid #efefef;
+    margin-bottom:10px;
 }
 
 .text-success {
@@ -62,21 +62,22 @@
 
 .commentHeader {
     font-weight: bold;
-    font-size: 30px;
+    font-size: 40px;
+    text-align: center;
 }
 
 .commentWrite {
     border: 1px solid;
     max-width: 830px;
-    background-image: linear-gradient(180deg, #FFCD1D, #292B6E);
+    background-color: #efefef;
     font-size: 18px;
 }
 
 .commentWrite:hover {
-    background-image: linear-gradient(to right,#FFCD1D ,#292B6E);
+    background-image: linear-gradient(to right,#efefef ,#77C266);
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1020px) {
     .comment-wrapper .panel-body { 
         margin-left: 20px;
     }

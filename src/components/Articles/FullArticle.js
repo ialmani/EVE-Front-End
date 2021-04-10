@@ -83,6 +83,7 @@ const FullArticle =  ()  => {
                                             </form>
                                         </div>
                                     }
+                                    <h2 className="commentHeader">Comment Section</h2>
                                     {comments.map(comment =>
                                         <ul className='media-list'>
                                             <li className='media'>
@@ -91,11 +92,10 @@ const FullArticle =  ()  => {
                                                 </a>
                                                 <div className='media-body'>
                                                     <strong className='text-success'>{comment.username}</strong>
-                                                    <p>
-                                                        {comment.body}
-                                                    </p>
+                                                    <p>{comment.body}</p>
                                                 </div>
                                             </li>
+                                            <hr />
                                         </ul>)
                                     }
                                 </div>
