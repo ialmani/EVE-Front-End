@@ -30,7 +30,7 @@ const SponsorProfile = () => {
     useEffect(()=>{
         Requests.getAllArticles().then(data=>{
             if(data.statusCode !== 404) {
-                const newArticles = data.filter((article) => {article.user_id === user.id})
+                const newArticles = data.filter(article => article.user_id === user.id)
                 setArticles(newArticles)
             }
         }).catch(() => null);
