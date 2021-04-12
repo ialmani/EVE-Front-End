@@ -66,6 +66,7 @@
 
 .contactus-button {
     margin-top: 50px;
+    margin-left: 35%;
     padding: 20px;
     font-size: 20px;
     color: white;
@@ -79,8 +80,6 @@
 
 .contactus-button:hover {
     background-color:  #676ab3;
-    padding: 40px;
-    font-size: 30px;
     border-radius: 10px;
     border-width: 2px;
     color: white;
@@ -89,18 +88,24 @@
 
 
 .askeve-btn{
-    padding: 8px 20px;
-    border-radius: 10px;
-    outline: none;
-    border: none;
-    cursor: pointer;
+    margin-top: 20px;
+    padding: 20px;
+    font-size: 20px;
     color: white;
-    background-color: #292B6E;
-    margin: 8px;
+    background-color: #292b6e;
+    border-radius: 20px;
+    border-style:solid;
+    border-width: 0px;
+    border-spacing: 20px;
+    transition: ease-in-out 150ms;
 }
 .askeve-btn:hover {
-    background-color:  #c2cffc ;
-    color: black;
+    background-color:  #676ab3;
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: white;
+    color: white;
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.5);
 }
 
 .btn-success {

@@ -15,10 +15,13 @@ const AboutUs = () => {
             connections between entrepreneurs, business owners, and specialized resources providers. EVE brings virtual
             training, networking and special events to the entrepreneurs. Many small business owners spend the bulk of
             their time working their business and find it difficult to leave the shop to participate in activities that
-            provide information and opportunities for business ideation, growth, and operational management. Therefore,
-            we partner with small business advocates, certified Community Development Financial Institutions, and other
+            provide information and opportunities for business ideation, growth, and operational management.
+            </p>
+            <p className='text'>
+            Therefore, we partner with small business advocates, certified Community Development Financial Institutions, and other
             small business resource providers to customize knowledge for business acumen and bring to the end-user an
-            online and easily accessible platform.</p>
+            online and easily accessible platform.
+            </p>
           </div>
         </div>
       </div>
