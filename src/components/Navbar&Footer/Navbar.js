@@ -12,15 +12,24 @@ const Navbar = () => {
 
     let history = useHistory();
 
-    const logoutUser = (user) => {
-        localStorage.removeItem("token");
-        history.push('/login');
-        window.location.reload(false);
-
+    const logoutUser = (e) => {
+        e.preventDefault();
+        Requests.loginUser(user).then((response) => {
+            localStorage.removeItem("access_token");
+            localStorage.removeItem("refresh_token");
+            localStorage.removeItem("current_username");
+            localStorage.removeItem("current_id")
+            history.push('/login');
+            window.location.reload(false);
+        }).catch(status => {
+                    if (status !== 201) {
+                        alert("Something went wrong. Please try again.");
+                    }
+            })
     }
     let menu;
 
-    if (localStorage.getItem('token') === 'undefined' || localStorage.getItem('token') === null) {
+    if (localStorage.getItem('access_token') === 'undefined' || localStorage.getItem('access_token') === null) {
         menu = (
             <ul class="navbar-nav ml-auto justify-content-end">
                 <li className="nav-btns">
@@ -35,7 +44,7 @@ const Navbar = () => {
         menu = (
             <ul class="navbar-nav ml-auto justify-content-end">
                 <li className="nav-btns">
-                    <Link className="nav-link" to="/sponsor-profile">Profile</Link>
+                    <Link className="nav-link" to={'/sponsor-profile/'+localStorage.getItem("current_id")}>Profile</Link>
                 </li>
                 <li className="nav-btns">
                     <Link className="nav-link" to="/login" onClick={logoutUser}>Logout</Link>

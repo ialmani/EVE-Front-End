@@ -11,9 +11,15 @@ export const loginUser =(user)=>{
 }
 
 export const logoutUser =(user)=>{
-    localStorage.removeItem("token");
-
+    return fetch(API_BASE+'api/user/logout/blacklist', {
+        method: 'post',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(user)
+    }).then(response => response.json());
 }
+
 //get user details
 export const getUserDetails = ()=>{
     return fetch(API_BASE+'auth/api/getUserDetails', {
@@ -88,7 +94,7 @@ export const getArticleComments= (articleID)=>{
 }
 
 export const getUser=(userID)=>{
-    return fetch(API_BASE+'auth/users/'+userID).then(response=>response.json());
+    return fetch(API_BASE+'api/user/'+userID).then(response=>response.json());
 }
 
 export const createZoom = (newZoom) => {
