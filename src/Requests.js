@@ -1,7 +1,7 @@
 import {API_BASE} from './Config';
 
 export const loginUser =(user)=>{
-    return fetch(API_BASE+'api/token/', {
+    return fetch(API_BASE+'api/token', {
         method: 'post',
         headers: {
             'Content-Type': 'application/json',
@@ -24,7 +24,7 @@ export const getUserDetails = ()=>{
 }
 
 export const createUser =(newUser)=>{
-    return fetch(API_BASE+'api/user/create/', {
+    return fetch(API_BASE+'api/user/create', {
         method: 'post',
         headers: {
             'Content-Type': 'application/json',
