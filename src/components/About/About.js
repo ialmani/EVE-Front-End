@@ -9,8 +9,7 @@ const AboutUs = () => {
             <h1>About Us</h1>
             <h3 className='text2'>
             We bring key resources to entrepreneurs enabling them to realize their visions and build social capital.</h3>
-            <h3 className='text2'> EVE provides a driect connection through candid, shared communication.</h3>
-            <h3 className='text2'>The mission of EVE is to bring wisdom, key resources, and purposeful content to its users.</h3>
+            <h3 className='text2'>The mission of EVE is to bring wisdom, key resources, and purposeful content to its users by providing a driect connection through candid, shared communication.</h3>
             <p className='text'>Enterprise Virtual Exchange (EVE) is a state of the art, user friendly platform that delivers illuminating 
             connections between entrepreneurs, business owners, and specialized resources providers. EVE brings virtual
             training, networking and special events to the entrepreneurs. Many small business owners spend the bulk of

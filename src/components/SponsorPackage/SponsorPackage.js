@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
-import { GiCrystalBars } from 'react-icons/gi'
-import { GiCutDiamond, GiRock } from 'react-icons/gi'
+import { GiCrystalBars, GiCutDiamond} from 'react-icons/gi'
+import { FaHandshake } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import './SponsorPackage.css'
 import '../styles.css'
 import '../Button.css'
-import { IconContext } from 'react-icons/lib'
 
 function SponsorPackage() {
   const [hover, setHover] = useState(false)
@@ -25,7 +24,7 @@ function SponsorPackage() {
       <div className='sp-card-section'>
         <div className='sp-packagecard'>
           <div className='sp-card-icon'>
-            <GiRock className='sp-icon-properties' />
+            <FaHandshake className='sp-icon-properties' />
           </div>
           <div className='sp-card-contents'>
             <p className='sp-card-packagename'>Starter Pack</p>
