@@ -83,7 +83,7 @@ const FullArticle =  ()  => {
                                             </form>
                                         </div>
                                     }
-                                    <h2 className="commentHeader">Comment Section</h2>
+                                    <h2 className="commentHeader font-roboto">Comment Section</h2>
                                     {comments.map(comment =>
                                         <ul className='media-list'>
                                             <li className='media'>
@@ -91,7 +91,7 @@ const FullArticle =  ()  => {
                                                     <img src={profilePic} />
                                                 </a>
                                                 <div className='media-body'>
-                                                    <strong className='text-success'>{comment.username}</strong>
+                                                    <strong className='text-success font-roboto'>{comment.username}</strong>
                                                     <p>{comment.body}</p>
                                                 </div>
                                             </li>
