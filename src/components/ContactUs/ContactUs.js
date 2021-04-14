@@ -25,7 +25,7 @@ class ContactUs extends Component {
             </Link>
             <p className='contactus-h2'> 
               <br></br><br></br>
-              For questions regarding website information or troubleshooting please call or email at: 
+              For questions regarding website information or troubleshooting please contact us at: 
               <br></br>Phone: +1-800-555-5555
               <br></br>Email: EVE@gmail.com
             </p>
