@@ -36,25 +36,29 @@
 
 .inner-container h1 {
     margin-bottom: 30px;
-    font-size: 30px;
+    font-size: 34px;
     font-weight: 900;
 }
 
 .text {
-    font-size: 13px;
+    font-size: 18px;
     color: #545454;
+    font-weight: 500;
     line-height: 20px;
     text-align: justify; 
 }
 
 .text2 {
-    font-size: 16px;
-    
+    font-size: 18px;
+    text-align: left;
 }
 
-@media screen and (max-width: 1366px) {
+@media screen and (max-width: 1365px) {
     .about-section{
+        margin-top: -100px;
         width: 100%;
+        background: rgb(116,212,91);
+        background: linear-gradient(90deg, rgba(116,212,91,0.9) 1%, rgba(238,238,238,1) 15%, rgba(238,238,238,1) 85%, rgba(155,120,182,0.9) 99%);
     }
     .about-container {
         border-radius: 0px;
