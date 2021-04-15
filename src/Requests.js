@@ -24,13 +24,13 @@ export const logoutUser =(user)=>{
 export const getUserDetails = ()=>{
     return fetch(API_BASE+'auth/api/getUserDetails', {
         headers: {
-            'Authorization': 'Bearer '+ localStorage.getItem("token"),
+            'Authorization': 'Bearer '+ localStorage.getItem("access_token"),
         },
     }).then(response => response.json());
 }
 
 export const createUser =(newUser)=>{
-    return fetch(API_BASE+'api/user/create', {
+    return fetch(API_BASE+'auth/api/register', {
         method: 'post',
         headers: {
             'Content-Type': 'application/json',
@@ -52,7 +52,7 @@ export const createArticle = (newArticle) => {
         method: 'post',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': 'Bearer '+localStorage.getItem("token"),
+            'Authorization': 'Bearer '+localStorage.getItem("access_token"),
         },
         body: JSON.stringify(newArticle)
     }).then(response => response.json());
@@ -71,7 +71,7 @@ export const createVideo = (newVideo) => {
         method: 'post',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': 'Bearer '+localStorage.getItem("token"),
+            'Authorization': 'Bearer '+localStorage.getItem("access_token"),
         },
         body: JSON.stringify(newVideo)
     }).then(response => response.json());
@@ -82,7 +82,7 @@ export const createComment = (resourceID, resource, comment)=>{
         method: 'post',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': 'Bearer '+localStorage.getItem("token"),
+            'Authorization': 'Bearer '+localStorage.getItem("access_token"),
         },
         body: JSON.stringify(comment)
     }).then(response => response.json());
@@ -94,7 +94,7 @@ export const getArticleComments= (articleID)=>{
 }
 
 export const getUser=(userID)=>{
-    return fetch(API_BASE+'api/user/'+userID).then(response=>response.json());
+    return fetch(API_BASE+'auth/users/'+userID).then(response=>response.json());
 }
 
 export const createZoom = (newZoom) => {
@@ -102,7 +102,7 @@ export const createZoom = (newZoom) => {
         method: 'post',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': 'Bearer '+localStorage.getItem("token"),
+            'Authorization': 'Bearer '+localStorage.getItem("access_token"),
         },
         body: JSON.stringify(newZoom)
     }).then(response => response.json());

@@ -9,7 +9,6 @@ const SponsorSignUp = () => {
         username: "",
         first_name:"",
         last_name:"",
-        is_sponsor:true,
         password: ""
       });
   

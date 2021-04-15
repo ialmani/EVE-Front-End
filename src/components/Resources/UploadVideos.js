@@ -11,6 +11,7 @@ const UploadVideos = () => {
 
     const [newVideo, setNewVideo] = useState({
         title: null,
+        user_id:localStorage.getItem("current_id"),
         description: null,
         video_url: null
     });
@@ -19,6 +20,7 @@ const UploadVideos = () => {
 
     const createVideo = e => {
         e.preventDefault();
+        // setNewVideo({ ...newVideo, user_id: localStorage.getItem("current_id") })
         Requests.createVideo(newVideo).then((response) => {
             history.push('/videos/' + response.id);
 

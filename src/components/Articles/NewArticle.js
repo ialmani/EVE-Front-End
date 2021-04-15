@@ -8,6 +8,7 @@ const NewArticle = () => {
 
   const [newArticle, setNewArticle] = useState({
     title: null,
+    user_id:localStorage.getItem("current_id"),
     author: null,
     content: null
   });
@@ -16,6 +17,8 @@ const NewArticle = () => {
 
   const createArticle = e => {
     e.preventDefault();
+    console.log(localStorage.getItem("current_id"));
+    // setNewArticle({ ...newArticle, user_id: localStorage.getItem("current_id") });
       Requests.createArticle(newArticle).then((response) => {
         console.log(response.id)
         history.push('/articles/' + response.id);

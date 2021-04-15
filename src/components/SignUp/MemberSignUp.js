@@ -8,7 +8,6 @@ const MemberSignUp = () => {
         username: "",
         first_name:"",
         last_name:"",
-        is_sponsor:false,
         password: ""
       });
   

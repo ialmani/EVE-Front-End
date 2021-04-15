@@ -6,7 +6,7 @@ import '../Button.css'
 
 const Login = () => {
     const [user, setUser] = useState({
-        email: "",
+        username: "",
         password: "",
     });
 
@@ -42,8 +42,8 @@ const Login = () => {
                     <form onSubmit={loginUser}>
                         <h1 className="h3 mb-3 fw-normal">LOGIN</h1>
 
-                        <input type="email" className="form-control" placeholder="Email" required
-                            onChange={e => setUser({ ...user, email: e.target.value })} />
+                        <input type="username" className="form-control" placeholder="Username" required
+                            onChange={e => setUser({ ...user, username: e.target.value })} />
 
                         <input type="password" className="form-control" placeholder="Password" required
                             onChange={e => setUser({ ...user, password: e.target.value })} />
