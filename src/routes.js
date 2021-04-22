@@ -23,6 +23,7 @@ import Navbar from './components/Navbar&Footer/Navbar';
 import Footer from './components/Navbar&Footer/Footer';
 import CreateZoomMeeting from './components/Resources/CreateZoomMeeting';
 import ZoomEvents from './components/Resources/ZoomEvents';
+import ScrollToTop from './scrollToTop';
 
 
 
@@ -31,7 +32,7 @@ export const BaseRouter = () => {
   return (
     <div>
       <Navbar />
- 
+      <ScrollToTop/>
       <Switch>
         <Route path = '/' component={LandingPage} exact/>
         <Route path = '/login' component={Login} exact/>
