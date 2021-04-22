@@ -15,7 +15,7 @@ const CreateZoomMeeting = () => {
     const [newZoom, setNewZoom] = useState({
         title: null,
         start_time: null,
-        date: null,
+        date: new Date(),
         description: null,
         zoom_url: null,
         zoom_id: null,
@@ -55,8 +55,12 @@ const CreateZoomMeeting = () => {
                          <Form.Control  onChange={e => setNewZoom({ ...newZoom, zoom_id: e.target.value })} placeholder = "468"/>
                     </Form.Group>
                     <Form.Group>
-                         <Form.Label> Start Time</Form.Label>
-                         <TimePicker start="00:00" end="23:30" onChange={e => setNewZoom({ ...newZoom, start_time: e.target.value })} step={30} />
+                         <Form.Label> Start Time </Form.Label> <br></br>
+                         <DatePicker showTimeSelect showTimeSelectOnly selected={newZoom.start_time} dateFormat="h:mm aa" onChange={value => setNewZoom({ ...newZoom, start_time: value })} />
+                    </Form.Group>
+                    <Form.Group>
+                         <Form.Label> Date </Form.Label>
+                         <DatePicker selected={newZoom.date} onChange={value => setNewZoom({ ...newZoom, date: value })} />
                     </Form.Group>
                     <Form.Group>
                          <Form.Label> Password</Form.Label>

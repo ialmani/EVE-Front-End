@@ -1,8 +1,7 @@
 .zoompage-body{
-    margin: -40px;
-    padding: 0;
-    min-height: 100vh;
-    background-color: #f1f1f1;
+    background-color: #9B78B6;
+    border-radius: 10px;
+    padding: 5px;
 }
 .zoom-heading{
     font-family: Roboto;
@@ -18,7 +17,7 @@
 
 @media screen and (max-width:445px){
     .zoom-heading{
-        font-size: 24px;
+        font-size: 12px;
     }
     .zoomImage {
         display: none;
@@ -26,6 +25,6 @@
 }
 @media screen and (max-width:375px){
     .zoom-heading{
-        font-size: 18px;
+        font-size: 12px;
     }
 }

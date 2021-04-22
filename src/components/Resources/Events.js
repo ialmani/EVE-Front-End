@@ -8,6 +8,14 @@ const Events = () => {
                 <div class='events-box'>
                     <div class='events-content'>
                         <h2 class='events-headings font-roboto'>Live</h2>
+                        <h3 class='events-headings2 font-roboto'>In-Person Events</h3>
+                        <p class='events-para font-roboto'>Come here to see what in-person events are available to gain that face to face experience!!</p>
+                        <a href='/events/inPersonEvents' class='events-link font-roboto'>In-Person Events</a>
+                    </div>
+                </div>
+                <div class='events-box'>
+                    <div class='events-content'>
+                        <h2 class='events-headings font-roboto'>Live</h2>
                         <h3 class='events-headings2 font-roboto'>Zoom Calls</h3>
                         <p class='events-para font-roboto'>Come hear to watch live zoom events to learn from our gracious sponsors!!</p>
                         <a href='/events/zoom' class='events-link font-roboto'>Live Zoom</a>

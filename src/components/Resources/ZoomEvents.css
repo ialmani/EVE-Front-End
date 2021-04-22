@@ -1,7 +1,7 @@
 .zoom-heading {
     top: 40px;
-    margin-left: 30%;
-    color: cornflowerblue;
+    text-align: center;
+    line-height: 25px;
 }
 .zoom-body {
     min-height: 100vh;

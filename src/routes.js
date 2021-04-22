@@ -17,6 +17,8 @@ import UploadVideo from './components/Resources/UploadVideos';
 import AllResources from './components/Resources/AllResources';
 import FullVideo from './components/Resources/FullVideo';
 import Events from './components/Resources/Events';
+import NewEvent from './components/Resources/NewEvent';
+import InPersonEvents from './components/Resources/InPersonEvents';
 import Navbar from './components/Navbar&Footer/Navbar';
 import Footer from './components/Navbar&Footer/Footer';
 import CreateZoomMeeting from './components/Resources/CreateZoomMeeting';
@@ -47,8 +49,10 @@ export const BaseRouter = () => {
         <Route path = '/videos/upload' component={UploadVideo} exact/>
         <Route path = '/videos/:id' component={FullVideo} exact/>
         <Route path =  '/events' component={Events} exact/>
+        <Route path =  '/events/create' component={NewEvent} exact/>
         <Route path =  '/zoom/meeting/create' component={CreateZoomMeeting} exact/>
         <Route path =  '/events/zoom' component = {ZoomEvents} exact/>
+        <Route path =  '/events/inPersonEvents' component = {InPersonEvents} exact/>
         <Route path = '/welcome' component={Welcome} exact/>
       </Switch>
 
