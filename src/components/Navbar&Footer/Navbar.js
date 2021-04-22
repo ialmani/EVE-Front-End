@@ -78,7 +78,10 @@ const Navbar = () => {
                         <Link className='nav-link' to='/sponsor-packages'>Sponsor Packages</Link>
                     </li>
                     <li className='nav-item'>
-                        <Link className='nav-link' to='/contact-us'>Ask EVE</Link>
+                        <Link className='nav-link' to='/contact-us'>Contact Us</Link>
+                    </li>
+                    <li className='nav-item'>
+                        <Link className='nav-link' to='/ask-eve'>Ask EVE</Link>
                     </li>
                 </ul>
                 {menu}
