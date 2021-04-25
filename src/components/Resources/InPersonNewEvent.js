@@ -21,11 +21,11 @@ const InPersonNewEvent = () => {
 
       let history = useHistory();
 
-      const createZoom = e => {
+      const createInPersonEvent = e => {
         e.preventDefault();
-          Requests.createZoom(newInPersonEvent).then((response) => {
+          Requests.createInPersonEvent(newInPersonEvent).then((response) => {
             console.log(response.id)
-            history.push('/zoom/' + response.id);
+            history.push('/inPersonEvent/' + response.id);
           }).catch(status =>
             alert(status));
       }
@@ -38,7 +38,7 @@ const InPersonNewEvent = () => {
 
             <Row>
                 <Col>
-                 <Form onSubmit={createZoom} style = {{width: "80%", marginLeft: "10%", marginTop: "15%"}}>
+                 <Form onSubmit={createInPersonEvent} style = {{width: "80%", marginLeft: "10%", marginTop: "15%"}}>
                     <Form.Group>
                          <Form.Label> Event Title </Form.Label>
                          <Form.Control onChange={e => setnewInPersonEvent({ ...newInPersonEvent, title: e.target.value })} placeholder = "Ex: Group meeting "/>
@@ -51,7 +51,7 @@ const InPersonNewEvent = () => {
 
                     <Form.Group>
                          <Form.Label> Date </Form.Label> <br></br>
-                         <DatePicker selected={newInPersonEvent.date} onChange={value => setnewInPersonEvent({ ...newInPersonEvent, date: value })} />
+                         <DatePicker dateFormat="yyyy-MM-dd" selected={newInPersonEvent.date} onChange={value => setnewInPersonEvent({ ...newInPersonEvent, date: value })} />
                     </Form.Group>
 
                     <Form.Group>

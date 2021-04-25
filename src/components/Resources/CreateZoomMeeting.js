@@ -6,6 +6,7 @@ import zoompage from '../../assets/zoomLogo.png'
 import TimePicker from 'react-bootstrap-time-picker';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import moment from 'moment'
 
 import * as Requests from '../../Requests'
 import { useHistory } from 'react-router-dom'
@@ -14,11 +15,12 @@ const CreateZoomMeeting = () => {
 
     const [newZoom, setNewZoom] = useState({
         title: null,
-        start_time: null,
+        start_time: new Date(),
         date: new Date(),
         description: null,
         zoom_url: null,
         zoom_id: null,
+        description: null,
         password: null
       });
 
@@ -28,7 +30,7 @@ const CreateZoomMeeting = () => {
         e.preventDefault();
           Requests.createZoom(newZoom).then((response) => {
             console.log(response.id)
-            history.push('/zoom/' + response.id);
+            history.push('/events/zoom');
           }).catch(status =>
             alert(status));
       }
@@ -56,11 +58,15 @@ const CreateZoomMeeting = () => {
                     </Form.Group>
                     <Form.Group>
                          <Form.Label> Start Time </Form.Label> <br></br>
-                         <DatePicker showTimeSelect showTimeSelectOnly selected={newZoom.start_time} dateFormat="h:mm aa" onChange={value => setNewZoom({ ...newZoom, start_time: value })} />
+                         <DatePicker dateFormat="h:mm aa" showTimeSelect showTimeSelectOnly selected={newZoom.start_time} onChange={value => setNewZoom({ ...newZoom, start_time: value })} />
                     </Form.Group>
                     <Form.Group>
                          <Form.Label> Date </Form.Label>
-                         <DatePicker selected={newZoom.date} onChange={value => setNewZoom({ ...newZoom, date: value })} />
+                         <DatePicker dateFormat="yyyy-MM-dd" selected={newZoom.date} onChange={value => setNewZoom({ ...newZoom, date: value })} />
+                    </Form.Group>
+                    <Form.Group>
+                         <Form.Label> Description </Form.Label>
+                         <Form.Control onChange={e => setNewZoom({ ...newZoom, description: e.target.value })} placeholder = "Ex: About Technology improvement for elementary schools. "/>
                     </Form.Group>
                     <Form.Group>
                          <Form.Label> Password</Form.Label>

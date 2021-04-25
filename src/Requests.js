@@ -115,3 +115,22 @@ export const getAllZooms = () => {
 export const getZoom = (id) => {
     return fetch(API_BASE+'zoom/'+id).then(response => response.json());
 };
+
+export const createInPersonEvent = (newInPersonEvent) => {
+    return fetch(API_BASE+'inPersonEvent/create', {
+        method: 'post',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer '+localStorage.getItem("access_token"),
+        },
+        body: JSON.stringify(newInPersonEvent)
+    }).then(response => response.json());
+};
+
+export const getAllInPersonEvent = () => {
+    return fetch(API_BASE+'inPersonEvent').then(response => response.json());
+};
+
+export const getInPersonEvent = (id) => {
+    return fetch(API_BASE+'inPersonEvent/'+id).then(response => response.json());
+};
