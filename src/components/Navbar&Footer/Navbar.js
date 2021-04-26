@@ -54,7 +54,7 @@ const Navbar = () => {
     }
 
     return (
-        <nav className='navbar sticky-top navbar-expand-lg navbar-dark' style={{ background: useLocation().pathname === '/' ? 'transparent' : 'rgb(30,29,91)', marginTop: useLocation().pathname === '/' ? '-113px' : '0px' }}>
+        <nav className='navbar sticky-top navbar-expand-xl navbar-dark' style={{ background: useLocation().pathname === '/' ? 'transparent' : 'rgb(30,29,91)', marginTop: useLocation().pathname === '/' ? '-113px' : '0px' }}>
             <div className='d-flex flex-grow-1'>
                 <span className='w-100 d-lg-none d-block'></span>
                 <Link to='/' className='navbar-brand' style={{ background: 'transparent' }}>
