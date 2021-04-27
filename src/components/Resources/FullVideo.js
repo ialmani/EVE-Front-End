@@ -4,6 +4,7 @@ import ReactPlayer from 'react-player'
 import { useParams } from "react-router-dom"
 import * as Requests from '../../Requests'
 import profilePic from '../../assets/profilepic.png'
+import BackButton from '../BackButton'
 
 export const FullVideo = () => {
 
@@ -22,6 +23,7 @@ export const FullVideo = () => {
 
     return (
         <div className='full-vid-body'>
+            <BackButton/>
             <div className='full-vid-container'>
                 <ReactPlayer className='react-player' url={video.video_url} fluid={false} controls={false} />
             </div>

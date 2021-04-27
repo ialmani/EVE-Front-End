@@ -243,3 +243,10 @@
     padding: 30px;
     box-shadow: 0 30px 30px rgba(0, 0, 0, 1);
 }
+.backbutton {
+    position: absolute;
+    left: 45px;
+    top: 140px;
+    padding: 10px;
+    
+}

@@ -3,6 +3,7 @@ import './NewArticle.css'
 import * as Requests from '../../Requests'
 import { useHistory } from 'react-router-dom'
 import '../Button.css'
+import BackButton from '../BackButton'
 
 const NewArticle = () => {
 
@@ -28,6 +29,7 @@ const NewArticle = () => {
 
   return (
     <div className='article-wrapper'>
+      <BackButton/>
       <div className='title'>Post a new article</div>
       <form className='form' onSubmit={createArticle}>
         <div className='input-field'>
@@ -45,7 +47,7 @@ const NewArticle = () => {
             onChange={e => setNewArticle({ ...newArticle, content: e.target.value })}
           />
         </div>
-        <input type='submit' className='newarticle-btn' />
+        <input type='submit' className='askeve-btn btnzoom' />
       </form>
     </div>
   )

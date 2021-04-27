@@ -1,9 +1,11 @@
 import React from 'react'
 import './Events.css'
+import BackButton from '../BackButton'
 
 const Events = () => {
     return (
         <div class='events-body'>
+            <BackButton/>
             <div class='events-container'>
                 <div class='events-box'>
                     <div class='events-content'>

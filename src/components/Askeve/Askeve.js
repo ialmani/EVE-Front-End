@@ -1,6 +1,7 @@
 import React from 'react'
 import emailjs from 'emailjs-com'
 import './Askeve.css'
+import BackButton from '../BackButton'
 
 const Askeve = () => {
 
@@ -18,6 +19,7 @@ const Askeve = () => {
 
   return (
     <div className='askeve-body font-roboto'>
+      <BackButton/>
       <div className='askeve-container'>
         <div className='askeve-heading1'>Ask EVE</div>
         <div className='askeve-heading2'>This form provides you with the freedom to ask the EVE team anything you would like!</div>
