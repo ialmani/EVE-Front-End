@@ -1,9 +1,9 @@
-
 import React, {useEffect, useState, useRef} from 'react'
 import {Link} from 'react-router-dom';
 import './Articles.css'
 import * as Requests from '../../Requests'
 import SearchBar from './SearchBar'
+import BackButton from '../BackButton'
 
 
 const Articles = (props) => {
@@ -40,6 +40,8 @@ const Articles = (props) => {
       if (searchTerm.length <= 0) {
         return ( 
         <div className = "articles-container">
+          <BackButton/>
+      
         {articles.map(article=>
           <div className="card mb-4">
             <div className="card-body">

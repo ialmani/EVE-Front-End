@@ -6,6 +6,7 @@ import zoompage from '../../assets/zoomLogo.png'
 import TimePicker from 'react-bootstrap-time-picker';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import BackButton from '../BackButton'
 
 import * as Requests from '../../Requests'
 import { useHistory } from 'react-router-dom'
@@ -35,6 +36,7 @@ const CreateZoomMeeting = () => {
 
     return (
         <div className = "zoompage-body">
+          <BackButton/>
             <div className = "zoom-heading">
                 CREATE A ZOOM SESSION
             </div>
@@ -63,7 +65,7 @@ const CreateZoomMeeting = () => {
                          <Form.Control  type = "password" placeholder = "optional" onChange={e => setNewZoom({ ...newZoom, password: e.target.value })}/>
                     </Form.Group>
 
-                    <Button className = "btn zoom-btn" type = "submit"> Submit</Button>
+                    <Button className = "askeve-btn btnzoom" type = "submit"> Submit</Button>
                  </Form>
                 
                 </Col>

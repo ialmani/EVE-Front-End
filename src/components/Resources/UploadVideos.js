@@ -2,8 +2,7 @@ import React, { useState } from 'react'
 import './UploadVideos.css'
 import { useHistory } from 'react-router-dom'
 import * as Requests from '../../Requests'
-import ReactPlayer from 'react-player'
-import uploadImg from "../../assets/about.png"
+import BackButton from '../BackButton'
 
 //<img src = {}/> in line 37
 
@@ -31,6 +30,7 @@ const UploadVideos = () => {
 
     return (
         <div className='upload-video-body'>
+            <BackButton/>
             <div className='upload-video-container' >
                 <div className='upload-video-wrapper'>
                     <div className='icon'><i className='fas fa-cloud-upload-alt'></i> </div>

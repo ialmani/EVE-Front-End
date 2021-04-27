@@ -3,7 +3,7 @@ import './Videos.css'
 import * as Requests from '../../Requests'
 import { Link } from 'react-router-dom'
 import ReactPlayer from 'react-player'
-
+import BackButton from '../BackButton'
 import SearchBar from '../Articles/SearchBar'
 
 const Videos = (props) => { 
@@ -40,6 +40,7 @@ const Videos = (props) => {
 
     return (
       <div>
+      <BackButton/>
       {videos.map(video => 
         <div className = "content">
           <div className = "vid">

@@ -8,12 +8,17 @@
     font-family: Roboto;
     font-weight: 400;
     font-size: 32px;
-    padding-top: 30px;
-    margin-left: 10%;
+    padding-top: 50px;
+    margin-left: 15%;
+    margin-top: 30px;
    
 }
-.zoom-btn {
+.btnzoom {
     margin-top: 20px;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 16px;
+    
 }
 
 @media screen and (max-width:445px){

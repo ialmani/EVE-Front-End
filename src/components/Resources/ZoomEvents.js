@@ -1,9 +1,11 @@
 import React from 'react'
 import './ZoomEvents.css'
+import BackButton from '../BackButton'
 
 const ZoomEvents = () => {
     return (
         <div className = "zoom-body">
+          <BackButton/>
             <div className = "zoom-heading"> Welcome to our zoom live sessions!!</div>
           
         

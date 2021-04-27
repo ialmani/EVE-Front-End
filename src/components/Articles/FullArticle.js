@@ -4,6 +4,7 @@ import './FullArticle.css'
 import * as Requests from '../../Requests'
 import profilePic from '../../assets/profilepic.png'
 import './FullArticle.css'
+import BackButton from '../BackButton'
 
 
 const FullArticle =  ()  => {
@@ -58,6 +59,7 @@ const FullArticle =  ()  => {
     return (
         <div>
             <div className='article-wrapper'>
+                <BackButton/>
                 <div className='article-content'>
                     <h3 className='article-title'>{article.title}</h3>
                     <h4 className='article-author'>{article.author}</h4>

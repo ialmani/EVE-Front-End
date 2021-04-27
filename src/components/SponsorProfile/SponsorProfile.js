@@ -53,7 +53,7 @@ const SponsorProfile = () => {
                             <div className='sponsorprofile-sidebar-menu'>
                                 <Link to='/articles/create' className='sponsorprofile-sidebar-btn'>Add Article</Link>
                                 <Link to='/videos/upload' className='sponsorprofile-sidebar-btn'>Add Video</Link> 
-                                <Link to='/settings' className='sponsorprofile-sidebar-btn'>Settings</Link> 
+                                <Link to='/zoom/meeting/create' className='sponsorprofile-sidebar-btn'>Add Event</Link> 
                             </div>
                         </div>
                     </div>
