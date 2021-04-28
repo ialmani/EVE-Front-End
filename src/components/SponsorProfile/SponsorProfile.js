@@ -4,6 +4,7 @@ import {Link, useParams} from 'react-router-dom'
 import * as Requests from '../../Requests'
 import UserArticles from './UserArticles'
 import UserVideos from './UserVideos'
+import {AiFillPlusCircle} from 'react-icons/ai'
 import 'react-pro-sidebar/dist/css/styles.css'
 import 'semantic-ui-css/semantic.min.css'
 import './SponsorProfile.css'
@@ -49,9 +50,9 @@ const SponsorProfile = () => {
                         </div>
                         <div className='sponsorprofile-sidebar-content'>
                             <div className='sponsorprofile-sidebar-menu'>
-                                <Link to='/articles/create' className='sponsorprofile-sidebar-btn'>Add Article</Link>
-                                <Link to='/videos/upload' className='sponsorprofile-sidebar-btn'>Add Video</Link> 
-                                <Link to='/zoom/meeting/create' className='sponsorprofile-sidebar-btn'>Add Event</Link> 
+                                <Link to='/articles/create' className='sponsorprofile-sidebar-btn'><AiFillPlusCircle/>  Add Article</Link>
+                                <Link to='/videos/upload' className='sponsorprofile-sidebar-btn'><AiFillPlusCircle/>  Add Video</Link> 
+                                <Link to='/zoom/meeting/create' className='sponsorprofile-sidebar-btn'><AiFillPlusCircle/>  Add Event</Link> 
                             </div>
                         </div>
                     </div>

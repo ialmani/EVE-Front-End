@@ -211,7 +211,7 @@
     margin-bottom: 10px;
     padding: 10px;
     border-radius: 10px;
-
+    width: 100%;
     transition: all ease-in 0.5s;
 }
 .sponsorprofile-sidebar-btn:hover{
@@ -219,7 +219,6 @@
     color: #ffffff;
     border-radius: 40px;
 
-    transform: translateY(-4px);
     transition-timing-function: linear;
     transition-duration: 70ms;
 }
