@@ -20,18 +20,16 @@ const SponsorProfile = () => {
       });
 
       useEffect(()=>{
-          console.log(user_id)
         Requests.getUser(user_id).then(data=>{
             setUser(data);
-            console.log(data);
         }).catch(() => null);
     },[]);
 
     useEffect(()=>{
         Requests.getAllArticles().then(data=>{
             if(data.statusCode !== 404) {
-                const newArticles = data.filter(article => article.user_id === user.id)
-                setArticles(newArticles)
+                // const newArticles = data.filter(article => article.user_id === user.id)
+                setArticles(data)
             }
         }).catch(() => null);
     },[]);
@@ -65,7 +63,7 @@ const SponsorProfile = () => {
                     </div>
                     <div className='right-side'>
                         <div className='right-tab-cont'>
-                            {tab ==0 && <UserArticles articles={articles}/>}
+                            {tab ==0 && <UserArticles articles={articles} user={user.id}/>}
                             {tab ==1 && <UserVideos/>}
                         </div>
                     </div>
