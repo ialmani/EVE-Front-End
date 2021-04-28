@@ -61,13 +61,13 @@ const SponsorProfile = () => {
                 </div>
                 <div className='right-side-container'>
                     <div className='right-tabs'>
-                        <Link onClick={() => setTab(0)} className={`user-articles ${tab == 0 ? "active" : ""}`}>My Articles</Link>
-                        <Link onClick={() => setTab(1)} className={`user-videos ${tab == 1 ? "active" : ""}`}>My Videos</Link>
+                        <Link onClick={() => setTab(0)} className={`user-articles ${tab === 0 ? "active" : ""}`}>My Articles</Link>
+                        <Link onClick={() => setTab(1)} className={`user-videos ${tab === 1 ? "active" : ""}`}>My Videos</Link>
                     </div>
                     <div className='right-side'>
                         <div className='right-tab-cont'>
-                            {tab ==0 && <UserArticles articles={articles}/>}
-                            {tab ==1 && <UserVideos/>}
+                            {tab ===0 && <UserArticles articles={articles}/>}
+                            {tab ===1 && <UserVideos/>}
                         </div>
                     </div>
                 </div>

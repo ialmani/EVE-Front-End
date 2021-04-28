@@ -20,20 +20,22 @@ const CreateZoomMeeting = () => {
         description: null,
         zoom_url: null,
         zoom_id: null,
-        description: null,
         password: null
       });
 
-      let history = useHistory();
+    const [startDate, setStartDate] = useState(null);
+    const [endDate, setEndDate] = useState(null);
 
-      const createZoom = e => {
+    let history = useHistory();
+
+    const createZoom = e => {
         e.preventDefault();
-          Requests.createZoom(newZoom).then((response) => {
+            Requests.createZoom(newZoom).then((response) => {
             console.log(response.id)
             history.push('/events/zoom');
-          }).catch(status =>
+        }).catch(status =>
             alert(status));
-      }
+    }
 
     return (
         <div className = "zoompage-body">
@@ -49,7 +51,7 @@ const CreateZoomMeeting = () => {
                          <Form.Control onChange={e => setNewZoom({ ...newZoom, title: e.target.value })} placeholder = "Ex: Group meeting "/>
                     </Form.Group>
                     <Form.Group>
-                         <Form.Label> Inviation Link</Form.Label>
+                         <Form.Label> Invitation Link</Form.Label>
                          <Form.Control type = "url" onChange={e => setNewZoom({ ...newZoom, zoom_url: e.target.value })} placeholder = "https://bsu.zoom.us/my/ialmani?pwd=bU1wN0MwdVZidVQ2SkNiaUtWeUdJUT09"/>
                     </Form.Group>
                     <Form.Group>
@@ -57,8 +59,33 @@ const CreateZoomMeeting = () => {
                          <Form.Control  onChange={e => setNewZoom({ ...newZoom, zoom_id: e.target.value })} placeholder = "468"/>
                     </Form.Group>
                     <Form.Group>
-                         <Form.Label> Start Time </Form.Label> <br></br>
-                         <DatePicker dateFormat="h:mm aa" showTimeSelect showTimeSelectOnly selected={newZoom.start_time} onChange={value => setNewZoom({ ...newZoom, start_time: value })} />
+                         <Form.Label> Start Date </Form.Label> <br></br>
+                         {/*<DatePicker dateFormat="MMMM d, yyyy h:mm aa" timeFormat="HH:mm" showTimeSelect selected={newZoom.start_datetime} onChange={value =>*/}
+                         {/*    // setNewZoom({ ...newZoom, start_time: value })*/}
+                         {/*    console.log(value)*/}
+                         {/*    } />*/}
+                        <DatePicker
+                            placeholderText="Select Start Date"
+                            showTimeSelect
+                            dateFormat="MMMM d, yyyy h:mmaa"
+                            selected={startDate}
+                            selectsStart
+                            startDate={startDate}
+                            endDate={endDate}
+                            onChange={date => setStartDate(date)}
+                        />
+                        <Form.Label> End Date </Form.Label> <br></br>
+                        <DatePicker
+                            placeholderText="Select End Date"
+                            showTimeSelect
+                            dateFormat="MMMM d, yyyy h:mmaa"
+                            selected={endDate}
+                            selectsEnd
+                            startDate={startDate}
+                            endDate={endDate}
+                            minDate={startDate}
+                            onChange={date => setEndDate(date)}
+                        />
                     </Form.Group>
                     <Form.Group>
                          <Form.Label> Date </Form.Label>
