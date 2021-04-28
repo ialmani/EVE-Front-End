@@ -36,7 +36,7 @@
 }
 
 .sponsorprofile-sidebar-name{
-    background-color: #3e3245;
+    background-color: #352d4d;
     color: #ffffff;
     padding: 20px;
 
@@ -69,10 +69,10 @@
     background-color: #5454c5;
     color: #ffffff;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     text-align: center;
     width: 100%;
-    min-height: 12vh;
+    min-height: 8vh;
     border-radius: 20px;
 }
 
@@ -118,7 +118,7 @@
 
 .user-articles, .user-videos{
     padding: 30px;
-
+    width: 50%;
     font-size: 25px;
     font-weight: bold;
 }
@@ -127,10 +127,6 @@
     background-color: #5c3bff71;
     color: #ffffff;
     border-radius: 20px;
-
-    font-size: 40px;
-
-    transform: scale(0.85);
     transition-timing-function: ease-in-out;
     transition-duration: 300ms;
 }
@@ -139,9 +135,6 @@
     background-color: #5c3bff71;
     color: #ffffff;
     border-radius: 20px;
-    font-size: 40px;
-
-    transform: scale(0.85);
     transition-timing-function: ease-in-out;
     transition-duration: 300ms;
 }
